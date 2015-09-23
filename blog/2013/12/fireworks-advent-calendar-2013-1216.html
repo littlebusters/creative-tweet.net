@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<title>スライス名をごにょごにょするFireworksのコマンドをつくりましたよ。 – Fireworks Lover Advent Calendar 2013 | creative tweet.</title>
+<script async src="/assets/js/auie.js"></script>
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="" />
+<meta property="og:title" content="スライス名をごにょごにょするFireworksのコマンドをつくりましたよ。 – Fireworks Lover Advent Calendar 2013" />
+<meta property="og:url" content="http://creative-tweet.net/blog/2013/12/fireworks-advent-calendar-2013-1216.html" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="http://creative-tweet.net/assets/img" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="スライス名をごにょごにょするFireworksのコマンドをつくりましたよ。 – Fireworks Lover Advent Calendar 2013">
+<meta name="twitter:url" content="http://creative-tweet.net/blog/2013/12/fireworks-advent-calendar-2013-1216.html">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="http://creative-tweet.net/assets/img">
+</head>
+
+
+
+
+
+
+<body>
+<header class="siteHeader" role="banner">
+<h1 id="siteSign">
+<a href="/">
+<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<section class="article-header-section">
+				<time class="publishedDatetime" datetime="2013-12-16T09:30:00&#43;09:00">2013/12/16</time>
+				<h1 class="article-title">スライス名をごにょごにょするFireworksのコマンドをつくりましたよ。 – Fireworks Lover Advent Calendar 2013</h1>
+				
+			</section>
+		</header>
+		
+		<div class="content-main">
+			
+
+<p>この記事は<a href="http://www.adventar.org/calendars/136">Fireworks Lover Advent Calendar 2013</a> 16日目の記事です。</p>
+
+<p>車輪の再開発っぽいですが、スライス名を変更するコマンドを作成しました。</p>
+
+<p>スライス名の変更だと、「<a href="http://d.hatena.ne.jp/zakira/20090612">1 slice name changer</a>」や「<a href="http://www.pixelimage.jp/blog/2011/07/pi_slice.html">Pl_Slice</a>」が有名どころだと思いますが、コマンド実行できつつも、もう少し機能が欲しかったので、接頭辞・接尾辞・連番を付加できるようなコマンドにしてみました。</p>
+
+<p>あと、しばっちさんの14日目「<a href="http://blog.1dz.jp/?eid=822">Fireworksにはスライスレイヤーに色をつけられる | Webデザインのタネ</a>」をみて、ついでにスライスの色も変更できるようにしています。テストは、すぴかあやか（@<a href="https://twitter.com/spicagraph">spicagraph</a>）さんにしていただきました、ありがとうございます！</p>
+
+<h2 id="特長:1f745717af8b5ec72f88d9b022f0932d">特長</h2>
+
+<ul>
+<li>選択範囲に複数のスライスやスライス以外のオブジェクトがあっても実行できる。</li>
+<li>連番・接頭辞・接尾辞が付加できる。</li>
+<li>コマンドで実行できるため、ショートカットを設定できる。</li>
+</ul>
+
+<h2 id="使い方:1f745717af8b5ec72f88d9b022f0932d">使い方</h2>
+
+<h3 id="基本:1f745717af8b5ec72f88d9b022f0932d">基本</h3>
+
+<p>スライスを選択後、コマンドを実行すると、ダイアログが出ますので、設定するスライス名を入力してください。選択しているスライスに名前があれば、ダイアログに予め入力されます。複数のスライスを選択している場合は、Web レイヤーの一番上にあるスライス名が入力されます。</p>
+
+<p>特長に書いた通り、複数のオブジェクトを選択した状態でもスライス名を変更できますが、その場合は大人の事情によりWeb レイヤーの一番下にあるスライス名だけが変更されます。後述のオプションを使用すれば、複数のスライスに対して連番や接頭辞などを付加できます。</p>
+
+<h3 id="オプション:1f745717af8b5ec72f88d9b022f0932d">オプション</h3>
+
+<p>半角スペース（区切り文字）に続いて、オプション文字列を入れると実行されます。オプションを指定する順番は前後しても構いません。また、現在付けているスライス名を活かしてオプションを実行する場合は、スライス名を入力せず先頭に半角スペースを入力します。この場合、スライス名が設定されていないものは、ファイル名をスライス名として設定します。</p>
+
+<p><strong>-p</strong><br />
+接頭辞を付加します。オプション文字の後に半角スペースを入れ、付加する文字列を入力してください。</p>
+
+<p><strong>-s</strong><br />
+接尾辞を付加します。オプション文字の後に半角スペースを入れ、付加する文字列を入力してください。</p>
+
+<p><strong>-o</strong><br />
+連番を付加します。オプション文字の後に半角スペースを入れ、桁数分の文字を入力してください。2桁なら「00」、3桁なら「000」という感じです。文字数を数えているだけなので、半角スペース以外の文字なら何でもOKです。Web レイヤーの下から順番に番号が付きます。</p>
+
+<p><strong>-c</strong><br />
+スライスの色を設定します。オプション文字の後に半角スペースを入れ、#と16進数6桁で色を指定してください。赤にするなら「#ff000」、青にするなら「#0000ff」という感じです。色を指定しなかった（オプション文字列の後に半角スペースのみ）場合、デフォルトの色（#00ff00）になります。</p>
+
+<h3 id="入力例:1f745717af8b5ec72f88d9b022f0932d">入力例</h3>
+
+<p><strong>「slicename」という名前に2桁の連番を付ける場合</strong></p>
+
+<pre><code>slicename -o 00
+</code></pre>
+
+<p><strong>現在のスライス名に「prefix」という接頭辞と3桁の連番を付ける場合</strong></p>
+
+<pre><code> -p prefix -o 000
+</code></pre>
+
+<p>-pの前に半角スペースを入れてください。</p>
+
+<p><strong>スライスの色を変える場合</strong></p>
+
+<pre><code> -c #ff0000
+</code></pre>
+
+<p>-cの前に半角スペースを入れてください。</p>
+
+<p>全オプションを指定した場合、名前は次の通り生成されます。連番が最後ではなく、接尾辞が最後になります。</p>
+
+<pre><code>slicename -o 00 -p prefix- -s -suffix -c #ff0000
+-&gt; prefix-slicename01-suffix
+</code></pre>
+
+<h2 id="ダウンロードとインストール:1f745717af8b5ec72f88d9b022f0932d">ダウンロードとインストール</h2>
+
+<p>下記よりダウンロードして、Extension Managerでインストールしてください。ライセンスはMITです。テストはOSXのFireworksCS6で行っていますが、不具合があればご一報ください。</p>
+
+<p>2014.2.25アップデート：1.0.1 バグフィックス</p>
+
+<ul>
+<li><a href="http://creative-tweet.net/downloads/SliceModifier-1.0.1.zxp">ZXP形式（CS5以上）</a></li>
+<li><a href="http://creative-tweet.net/downloads/SliceModifier-1.0.1.mxp">MXP形式</a></li>
+<li><a href="https://github.com/littlebusters/FwSliceModifier">GitHub/FwSliceModifier</a></li>
+</ul>
+
+<h2 id="事の発端:1f745717af8b5ec72f88d9b022f0932d">事の発端</h2>
+
+<p>実は、個人的に<a href="http://help.adobe.com/en_US/fireworks/cs/extend/index.html">Extending Fireworks</a>の翻訳（とりあえずDocument functionsだけで、最近はまったく翻訳できてないですが）をやってまして、それを公開しようかと思っていたのですが、まったく間に合わず（グダグダな翻訳を見たいという方がいらっしゃれば、BitbucketかGitHubに公開する用意はあります）。</p>
+
+<p>で、会社PCのOSのバージョンを上げる際に、バックアップを取り損ねた「1 slice name changer」をダウンロードしようかと思ったら、ページ内容が削除されているという衝撃の事実が判明して、「まぁ、ダウンロードできないならつくるかな…ネタになるし」という流れです。</p>
+
+<p>あと、いまだにFireworks使ってるの？という方もいらっしゃるかと思いますが、使えるツールを使いつつ、代替したりより高機能なものを模索というか切り替えていけばいいんじゃないですか、と思ってる人なので、ええ。</p>
+
+<p>ちなみに、作成後「Internet Archive見てみたらいいんじゃね？」ということで、まんまとサルベージできましたYO…うん、いいんだ…</p>
+
+<hr class="postsrcipt" />
+
+<p>明日は<a href="http://www.adventar.org/users/2025">hazakumi</a>さんです！</p>
+
+		</div>
+
+<div class="socialButtons">
+<div class="socialButtons_twitter">
+	<a href="https://twitter.com/intent/tweet?text=%e3%82%b9%e3%83%a9%e3%82%a4%e3%82%b9%e5%90%8d%e3%82%92%e3%81%94%e3%81%ab%e3%82%87%e3%81%94%e3%81%ab%e3%82%87%e3%81%99%e3%82%8bFireworks%e3%81%ae%e3%82%b3%e3%83%9e%e3%83%b3%e3%83%89%e3%82%92%e3%81%a4%e3%81%8f%e3%82%8a%e3%81%be%e3%81%97%e3%81%9f%e3%82%88%e3%80%82%20%e2%80%93%20Fireworks%20Lover%20Advent%20Calendar%202013&amp;url=http%3a%2f%2fcreative-tweet.net%2fblog%2f2013%2f12%2ffireworks-advent-calendar-2013-1216.html&amp;via=littlebusters" class="twitter-share-button"
+		data-lang="en"
+		data-url="http://creative-tweet.net/blog/2013/12/fireworks-advent-calendar-2013-1216.html"
+		data-text="スライス名をごにょごにょするFireworksのコマンドをつくりましたよ。 – Fireworks Lover Advent Calendar 2013"
+		data-via="littlebusters" 
+		data-count="vertical"
+	>Tweet</a>
+</div>
+<div class="socialButtons_facebook">
+	<div 
+		class="fb-like"
+		data-href="http://creative-tweet.net/blog/2013/12/fireworks-advent-calendar-2013-1216.html"
+		data-layout="box_count"
+		data-send="false"
+		data-width="100"
+		data-show-faces="false"
+	></div>
+</div>
+<div class="socialButtons_hatebu">
+	<a href="http://b.hatena.ne.jp/entry/creative-tweet.net" class="hatena-bookmark-button"
+		data-hatena-bookmark-layout="vertical"
+		data-hatena-bookmark-title="スライス名をごにょごにょするFireworksのコマンドをつくりましたよ。 – Fireworks Lover Advent Calendar 2013"
+		data-hatena-bookmark-url="http://creative-tweet.net/blog/2013/12/fireworks-advent-calendar-2013-1216.html">
+		<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		style="border: none">
+	</a>
+</div>
+<div class="socialButtons_googlep">
+	<div class="g-plusone" data-size="tall" data-href="http://creative-tweet.net/blog/2013/12/fireworks-advent-calendar-2013-1216.html"></div>
+</div>
+</div>
+
+		<ul class="pager">
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-path-basic.html" class="pager_nextItem">
+				<span class="pager_label-newer">newer: </span>
+				Sketch.appのパスについて解説するよ。【基本編】 – Sketch.app Advent Calendar 2013
+				</a>
+			</li>
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-slice.html" class="pager_prevItem">
+				<span class="pager_label-older">older: </span>
+				Sketch.appのスライスを解説するよ。 – Sketch.app Advent Calendar 2013
+				</a>
+			</li>
+			
+		</ul>
+
+	</main>
+</div>
+
+
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-Facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>

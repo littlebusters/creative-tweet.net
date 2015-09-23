@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<title>Sketch.app のかゆいところに手が届く!? プラグインを入れて使ってみよう。 | creative tweet.</title>
+<script async src="/assets/js/auie.js"></script>
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="" />
+<meta property="og:title" content="Sketch.app のかゆいところに手が届く!? プラグインを入れて使ってみよう。" />
+<meta property="og:url" content="http://creative-tweet.net/blog/2013/06/extending-sketchapp.html" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="http://creative-tweet.net/assets/img" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="Sketch.app のかゆいところに手が届く!? プラグインを入れて使ってみよう。">
+<meta name="twitter:url" content="http://creative-tweet.net/blog/2013/06/extending-sketchapp.html">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="http://creative-tweet.net/assets/img">
+</head>
+
+
+
+
+
+
+<body>
+<header class="siteHeader" role="banner">
+<h1 id="siteSign">
+<a href="/">
+<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<section class="article-header-section">
+				<time class="publishedDatetime" datetime="2013-06-03T09:30:00&#43;09:00">2013/6/3</time>
+				<h1 class="article-title">Sketch.app のかゆいところに手が届く!? プラグインを入れて使ってみよう。</h1>
+				
+			</section>
+		</header>
+		
+		<div class="content-main">
+			
+
+<p class="notics-alert">
+この記事はSketchの古いバージョンを元に書いた内容です。最新バージョンでは、動作が異なる場合があります。
+</p>
+
+<p>以前の記事（<a href="http://creative-tweet.net/blog/2013/05/introduction-of-thesketch.html">ちょっと別の世界も見てみませんか？ベクターベースのグラフィックツール Sketchを紹介してみるよ。</a>）で、Sketch.appはスクリプトによる拡張ができると書きました。しかしながらJSTalkという、新しく作るには若干学習コストのかかる言語で書く必要があり、なかなか手を出しにくい機能なのも事実です。</p>
+
+<p>そんな中、Fireworksのコマンド集<a href="https://github.com/bomberstudios/fireworks">Orange Commands</a>の中の人が、その一部をSketch.appプラグインに移植されています（しかも結構前から）。今回はこのプラグイン集を紹介してみたいと思います。
+<p class="notics">
+  <b>Sketch 3の基本。</b>というSketch 3の基本操作にフォーカスした電子書籍をリリースしました。詳しくはこちらの「<a href="http://creative-tweet.net/sketch-3-basics/">Sketch 3の基本。</a>」のページをご覧ください。
+</p>
+Sketch 2.2.4で動作を確認しているため、バージョンによっては動いたり動かなかったりすると思いますので、予めご了承ください。</p>
+
+<h2 id="プラグインを使うには:146f3ab366e447902cf7a5a031a5400d">プラグインを使うには</h2>
+
+<p>まずは、プラグインのダウンロードと解凍しておきましょう。</p>
+
+<p><strong>プラグインのGitHubリポジトリ</strong><br />
+<a href="https://github.com/sketchplugins/plugin-directory">sketchplugins/plugin-directory</a></p>
+
+<p>続いて、Sketchの環境設定でプラグインの有効化が必要ですので、［Sketch］メニューから、［Preferences］を選択します。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig1.png" alt="" />
+</p>
+
+<p>［Preferences］の［General］タブにある「Enable Scripting」をクリックして有効にすると、メニューに［Plugins］が表示されます。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig2.png" alt="" />
+</p>
+
+<p>続けて、［Plugins］メニューから［Custom Script&hellip;］を選択します。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig3.png" alt="" />
+</p>
+
+<p>JSTalkを記述するウィンドウが出てくるので、下にある歯車マークをクリックし、「Open Plugins Folder」を選択します。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig4.png" alt="" />
+</p>
+
+<p>FinderでPluginsフォルダが開きますので、その中に解凍してできたフォルダを入れると準備完了です。Gitが使える方は、このフォルダへcloneしてもOKです。</p>
+
+<p>続けてプラグインについて解説していきます。</p>
+
+<h2 id="alignグループ:146f3ab366e447902cf7a5a031a5400d">Alignグループ</h2>
+
+<p><strong>Space Horizontal</strong><br />
+選択しているオブジェクト中で一番下にあるレイヤーを基準に、オブジェクトを入力した数値分の間隔を空けて水平方向に再配置します。オブジェクトを回転している場合は、回転していない状態と見なして再配置されます（角度を0に戻すと入力した値分の間隔が空いている）。垂直方向は変化しません。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig5.png" alt="" />
+</p>
+
+<p><strong>Space Vertical</strong><br />
+選択しているオブジェクト中で一番下にあるレイヤーを基準に、オブジェクトを入力した数値分の間隔を空けて垂直方向に再配置します。オブジェクトを回転している場合は、回転していない状態と見なして再配置されます（角度を0に戻すと入力した値分の間隔が空いている）。水平方向は変化しません。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig6.png" alt="" />
+</p>
+
+<h2 id="alpha-グループ:146f3ab366e447902cf7a5a031a5400d">Alpha グループ</h2>
+
+<p><strong>Alpha N%</strong><br />
+オブジェクトのアルファを設定します。「Alpha&#8230;」は値を入力できます。</p>
+
+<h2 id="effects-グループ:146f3ab366e447902cf7a5a031a5400d">Effects グループ</h2>
+
+<p><strong>Offset</strong><br />
+入力した値分、幅と高さをオフセットしたオブジェクトを複製します（角丸の大きさや線幅は変更されません）。マイナスの値も入力できますが、オフセットした結果、幅や高さが0以下になる場合、同じ大きさのオブジェクトが複製されます。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig7.png" alt="" />
+</p>
+
+<p><strong>Repeat Horizontal</strong><br />
+選択しているオブジェクトを、入力した値の数だけ水平方向に複製します。オブジェクト同士の間隔は10pxになるようです。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig8.png" alt="" />
+</p>
+
+<p><strong>Repeat Vertical</strong><br />
+選択しているオブジェクトを、入力した値の数だけ垂直方向に複製します。オブジェクト同士の間隔は10pxになるようです。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig9.png" alt="" />
+</p>
+
+<h2 id="export-グループ:146f3ab366e447902cf7a5a031a5400d">Export グループ</h2>
+
+<p>アートボードやスライスを書き出すプラグインです。が、私の環境ではうまく実行できず機能しませんでした。GitHub でも ISSUE が上がってるようですね。以下、プラグイン名から読み取った機能です。</p>
+
+<p><strong>All Artboards as PDF</strong><br />
+全てのアートボードを PDF 形式で書き出します。</p>
+
+<p><strong>All Artboards as PNG</strong><br />
+全てのアートボードを PNG 形式で書き出します。</p>
+
+<p><strong>All Artboards as SVG</strong><br />
+全てのアートボードを SVG 形式で書き出します。</p>
+
+<p><strong>All Slice as PDF</strong><br />
+全てのスライスを PDF 形式で書き出します。</p>
+
+<p><strong>All Slice as PNG in ZIP</strong><br />
+全てのスライスを PNG 形式で書き出し ZIP 化します。</p>
+
+<p><strong>All Slice as PNG in&#8230;</strong><br />
+全てのスライスを指定した場所に PNG 形式で書き出します。</p>
+
+<p><strong>All Slice as PNG</strong><br />
+全てのスライスを PNG 形式で書き出します。</p>
+
+<p><strong>All Slice as SVG</strong><br />
+全てのスライスを SVG 形式で書き出します。</p>
+
+<p><strong>Save and Export Slices</strong><br />
+ドキュメントを保存して、スライスを書き出します。</p>
+
+<h2 id="guides-グループ:146f3ab366e447902cf7a5a031a5400d">Guides グループ</h2>
+
+<p>ガイドライン関連のプラグインです。こちらの一部も GitHub に ISSUE が上がっている通り、動作しないようです。</p>
+
+<p><strong>Add Guides Manually to Artboard</strong><br />
+任意の座標にガイドラインを作成します。値は、X, Y で入力し、垂直方向だけ作成する場合は、X 座標のみ（e.g. 10）、水平方向だけ作成する場合は、カンマ + Y 座標（e.g. ,10）と入力します。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig10.png" alt="" />
+</p>
+
+<p><strong>Around Selection</strong><br />
+選択しているオブジェクトを囲うように、ガイドラインを作成します。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig11.png" alt="" />
+</p>
+
+<p><strong>Clear All Guides in Current Artboard</strong><br />
+現在編集しているアートボードのガイドラインをすべてクリアします。</p>
+
+<p><strong>Clear All Guides in Current Page</strong><br />
+現在編集しているページのガイドラインをすべてクリアします。</p>
+
+<p><strong>Crear Horizontal Guides in Current Page</strong><br />
+現在編集しているページの水平ガイドラインをクリアします。いまいちキチンと動きませんでした。</p>
+
+<p><strong>Clear Vertical Guides in Current Page</strong><br />
+現在編集しているページの垂直ガイドラインをクリアします。いまいちキチンと動きませんでした。</p>
+
+<p><strong>Repeat Guides horizontally on Artboard</strong><br />
+水平ガイドラインをリピートして作成します。値は、開始位置（X座標）, 間隔, リピート回数の順番で入力します。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig12.png" alt="" />
+</p>
+
+<p><strong>Repeat Guides vertically on Artboard</strong><br />
+垂直ガイドラインをリピートして作成します。値は、開始位置（Y座標）, 間隔, リピート回数の順番で入力します。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig13.png" alt="" />
+</p>
+
+<h2 id="pages-グループ:146f3ab366e447902cf7a5a031a5400d">Pages グループ</h2>
+
+<p><strong>Add New Page</strong><br />
+新しいページを追加します。</p>
+
+<p><strong>Duplicate Current Page</strong><br />
+現在編集しているページを複製します。</p>
+
+<p><strong>Remove Current Page</strong><br />
+現在編集しているページを削除します。</p>
+
+<h2 id="playground-グループ:146f3ab366e447902cf7a5a031a5400d">Playground グループ</h2>
+
+<p><strong>Kitchen Sink</strong><br />
+ソースを見る限り、テスト用のプラグインを実行し、ログを出力するためのもののようです。（ただしログを見ると9行目あたりでDenyになってるので、役になっていないというか…）開発をしないのであれば、外しておいた方がいいですね。</p>
+
+<h2 id="position-グループ:146f3ab366e447902cf7a5a031a5400d">Position グループ</h2>
+
+<p><strong>Fix Position</strong><br />
+Positionの小数点以下の数値を四捨五入します。サイズも四捨五入されますが、すべてのアンカーポイントではなく、サイズ算出に使う外周のアンカーポイントのみが四捨五入されます。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig14.png" alt="" />
+</p>
+
+<p><strong>Set Position</strong><br />
+選択しているオブジェクトを、任意の X, Y 座標に移動します。四則演算可能。片方の値のみを入力した場合、オブジェクトが異次元に飛ぶので注意です。</p>
+
+<p><strong>Swap Position</strong><br />
+オブジェクトが2つ選択されている場合、各オブジェクトの左上座標を起点にオブジェクトを入れ替えます。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig15.png" alt="" />
+</p>
+
+<h2 id="properties-グループ:146f3ab366e447902cf7a5a031a5400d">Properties グループ</h2>
+
+<p><strong>Make Pill</strong><br />
+選択しているオブジェクトから、角丸が100%の矩形を作成します。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig16.png" alt="" />
+</p>
+
+<p><strong>Rotation&#8230;</strong><br />
+選択しているオブジェクトを、入力した値で回転します。複数選択している場合は、個別に回転します。グループ化されている場合、グループの角度が入力した値に設定されます。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig17.png" alt="" />
+</p>
+
+<p><strong>Set Radius&#8230;</strong><br />
+角丸を、入力した値で設定します。ただし、Radius が有効なオブジェクトに限ります。</p>
+
+<h2 id="size-グループ:146f3ab366e447902cf7a5a031a5400d">Size グループ</h2>
+
+<p><strong>Equalize Height</strong><br />
+選択しているオブジェクトの高さを、最も値の大きいオブジェクトに揃えます。高さが変更されるオブジェクトは、下方向に延長されます。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig18.png" alt="" />
+</p>
+
+<p><strong>Equalize Width</strong><br />
+選択しているオブジェクトの幅を、最も値の大きいオブジェクトに揃えます。幅が変更されるオブジェクトは、右方向に延長されます。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig19.png" alt="" />
+</p>
+
+<p><strong>Height</strong><br />
+選択しているオブジェクトの高さを、入力した値に設定します。複数選択している場合は、個別に高さが設定され、グループ化されている場合、グループの高さが入力した値に設定されます。</p>
+
+<p><strong>Scale to 4-3</strong><br />
+幅を基準に、4 : 3の大きさにスケーリングします。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig20.png" alt="" />
+</p>
+
+<p><strong>Scale to 16-9</strong><br />
+幅を基準に、16 : 9の大きさにスケーリングします。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig21.png" alt="" />
+</p>
+
+<p><strong>Set Size</strong><br />
+選択しているオブジェクトを、入力した値（ width, height ）に設定します。四則演算可能。複数選択している場合は、個別に幅と高さが設定され、グループ化されている場合、グループの幅と高さが入力した値に設定されます。片方の値のみを入力した場合、オブジェクトが異次元に飛ぶので注意です。</p>
+
+<p><strong>Width</strong><br />
+選択しているオブジェクトの幅を、入力した値に設定します。複数選択している場合は、個別に幅が設定され、グループ化されている場合、グループの幅が入力した値に設定されます。</p>
+
+<hr class="postscript" />
+
+<p>基本的なプラグインばかりですが、ちょっと足りない部分を補ってくれるものばかりです。自分でフォルダを作っていれれば、オリジナルのグループも作れますので、必要なプラグインだけインストールすることもできます。</p>
+
+<p>またプラグイン自体を利用するのもさることながら、中身を覗いて改造したり新しく作ったりできそうです。</p>
+
+		</div>
+
+<div class="socialButtons">
+<div class="socialButtons_twitter">
+	<a href="https://twitter.com/intent/tweet?text=Sketch.app%20%e3%81%ae%e3%81%8b%e3%82%86%e3%81%84%e3%81%a8%e3%81%93%e3%82%8d%e3%81%ab%e6%89%8b%e3%81%8c%e5%b1%8a%e3%81%8f%21%3f%20%e3%83%97%e3%83%a9%e3%82%b0%e3%82%a4%e3%83%b3%e3%82%92%e5%85%a5%e3%82%8c%e3%81%a6%e4%bd%bf%e3%81%a3%e3%81%a6%e3%81%bf%e3%82%88%e3%81%86%e3%80%82&amp;url=http%3a%2f%2fcreative-tweet.net%2fblog%2f2013%2f06%2fextending-sketchapp.html&amp;via=littlebusters" class="twitter-share-button"
+		data-lang="en"
+		data-url="http://creative-tweet.net/blog/2013/06/extending-sketchapp.html"
+		data-text="Sketch.app のかゆいところに手が届く!? プラグインを入れて使ってみよう。"
+		data-via="littlebusters" 
+		data-count="vertical"
+	>Tweet</a>
+</div>
+<div class="socialButtons_facebook">
+	<div 
+		class="fb-like"
+		data-href="http://creative-tweet.net/blog/2013/06/extending-sketchapp.html"
+		data-layout="box_count"
+		data-send="false"
+		data-width="100"
+		data-show-faces="false"
+	></div>
+</div>
+<div class="socialButtons_hatebu">
+	<a href="http://b.hatena.ne.jp/entry/creative-tweet.net" class="hatena-bookmark-button"
+		data-hatena-bookmark-layout="vertical"
+		data-hatena-bookmark-title="Sketch.app のかゆいところに手が届く!? プラグインを入れて使ってみよう。"
+		data-hatena-bookmark-url="http://creative-tweet.net/blog/2013/06/extending-sketchapp.html">
+		<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		style="border: none">
+	</a>
+</div>
+<div class="socialButtons_googlep">
+	<div class="g-plusone" data-size="tall" data-href="http://creative-tweet.net/blog/2013/06/extending-sketchapp.html"></div>
+</div>
+</div>
+
+		<ul class="pager">
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2013/06/battled-of-design-tool.html" class="pager_nextItem">
+				<span class="pager_label-newer">newer: </span>
+				Ps / Ai / Fw / Sketch ガチンコバトル勉強会 in 岡山を開催しましたよ。 #gcbtl
+				</a>
+			</li>
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2013/05/battle-of-design-tools.html" class="pager_prevItem">
+				<span class="pager_label-older">older: </span>
+				Ps / Ai / Fw / Sketch ガチンコバトル勉強会 in 岡山を6/22に開催しますよ。 #gcbtl
+				</a>
+			</li>
+			
+		</ul>
+
+	</main>
+</div>
+
+
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-Facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>

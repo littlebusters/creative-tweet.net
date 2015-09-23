@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programing on creative tweet.</title>
+    <link>http://creative-tweet.net/categories/programing.html</link>
+    <description>Recent content in Programing on creative tweet.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>2013/12/24 09:30:00 +09:00</lastBuildDate>
+    <atom:link href="http://creative-tweet.net/categories/programing.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Fireworksのコマンドを作ってみよう。 – Fireworks Lover Advent Calendar 2013</title>
+      <link>http://creative-tweet.net/blog/2013/12/fireworks-advent-calendar-2013-1215.html</link>
+      <pubDate>2013/12/24 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2013/12/fireworks-advent-calendar-2013-1215.html</guid>
+      <description>Fireworksのコマンドの作り方です。コマンドをつくる上で、便利な拡張機能も紹介しています。</description>
+    </item>
+    
+    <item>
+      <title>「FLAutoKerning.js」のインターフェイスを作ってみましたよ。</title>
+      <link>http://creative-tweet.net/blog/2012/05/ui-for-flautokerning.html</link>
+      <pubDate>2012/05/01 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2012/05/ui-for-flautokerning.html</guid>
+      <description>@fladdictさん作の「FLAutoKerning.js」で使用するカーニングペア情報を、ブラウザで設定できるインターフェイスを作りました。ペアでしかカーニングできないという低機能ですが、キーボード操作だけでカーニングできます。</description>
+    </item>
+    
+    <item>
+      <title>Fireworks拡張機能「Font Mixer」制作メモ</title>
+      <link>http://creative-tweet.net/blog/2012/02/font-mixer-memo.html</link>
+      <pubDate>2012/02/05 11:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2012/02/font-mixer-memo.html</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

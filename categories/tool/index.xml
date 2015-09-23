@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tool on creative tweet.</title>
+    <link>http://creative-tweet.net/categories/tool.html</link>
+    <description>Recent content in Tool on creative tweet.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>2014/12/27 09:30:00 +09:00</lastBuildDate>
+    <atom:link href="http://creative-tweet.net/categories/tool.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Sketch 3のテキストボックスで、数字キーを使わず小数点以下を入力する方法を紹介しますよ。 Sketch 3 Advent Calendar 2014</title>
+      <link>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-03.html</link>
+      <pubDate>2014/12/27 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-03.html</guid>
+      <description>Sketch 3のテキストボックスで、数字キーを使わず小数点以下を入力する方法を紹介します。</description>
+    </item>
+    
+    <item>
+      <title>Sketch 3でスライドづくりに役立つプラグインやTipsなど紹介しますよ。 Sketch 3 Advent Calendar 2014</title>
+      <link>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-25.html</link>
+      <pubDate>2014/12/25 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-25.html</guid>
+      <description>Sketch 3 でプレゼンテーションスライドを作成するためのTipやプラグインを紹介しています。</description>
+    </item>
+    
+    <item>
+      <title>大都会関係ない、裏Sketch 3 Advent CalendarでTipsを4つほど。大都会岡山 Advent Calendar 2014</title>
+      <link>http://creative-tweet.net/blog/2014/12/daitokai-advent-calendar-2014-24.html</link>
+      <pubDate>2014/12/24 12:00:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2014/12/daitokai-advent-calendar-2014-24.html</guid>
+      <description>ブログテーマに沿った大都会ネタがないので、Sketch 3 Advent Calendarの空いているところを埋めるべく、裏Sketch 3 Advent CalendarでTipsを4つ紹介します。</description>
+    </item>
+    
+    <item>
+      <title>Sketch 3でレイヤーがどこにあろうと、確実にドラッグできるキーコンビネーションを紹介しますよ。 Sketch 3 Advent Calendar 2014</title>
+      <link>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-23.html</link>
+      <pubDate>2014/12/23 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-23.html</guid>
+      <description>Sketch 3 で背面レイヤーを簡単にドラッグするためのキーコンビネーションを紹介します。</description>
+    </item>
+    
+    <item>
+      <title>たまによく使うSublimeTextのパッケージGistとTakanaを紹介しますよ。 Sublime Text Advent Calendar 2014</title>
+      <link>http://creative-tweet.net/blog/2014/12/sublime-text-advent-calendar-2014-13.html</link>
+      <pubDate>2014/12/13 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2014/12/sublime-text-advent-calendar-2014-13.html</guid>
+      <description>Sublime Text Advent Calendar 2013 の13日目の記事です。Sublime TextからGistがゴニョゴニョできるパッケージと、SCSSのライブプレビューができるTakanaを紹介します。</description>
+    </item>
+    
+    <item>
+      <title>Sketch 3のインスペクタへフォーカスする、ショートカットを紹介しますよ。 Sketch 3 Advent Calendar 2014</title>
+      <link>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-01.html</link>
+      <pubDate>2014/12/01 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-01.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sketch（や他のアプリ）で、文字詰めをする方法を解説するよ。</title>
+      <link>http://creative-tweet.net/blog/2014/10/apply-proportional-metrics-on-sketch.html</link>
+      <pubDate>2014/10/24 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2014/10/apply-proportional-metrics-on-sketch.html</guid>
+      <description>PhotoshopやIllustratorなどのAdobeプロダクト以外のOSXアプリケーションで、文字詰めをする方法を解説しています。</description>
+    </item>
+    
+    <item>
+      <title>Sketch 3の基本。という電子書籍を出しましたよ。</title>
+      <link>http://creative-tweet.net/blog/2014/07/published-the-basic-of-sketch.html</link>
+      <pubDate>2014/07/14 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2014/07/published-the-basic-of-sketch.html</guid>
+      <description>「オレオレ Sketch.app Advent Calendar 2013」をベースに、Sketch 3向けに加筆修正した電子書籍、「Sketch 3の基本。」をリリースしました。</description>
+    </item>
+    
+    <item>
+      <title>SketchでCSSプリプロセッサー向けのCSSスプライトミックスインコードを生成するプラグイン</title>
+      <link>http://creative-tweet.net/tools/sketch_css_sprite_mixin/detail.html</link>
+      <pubDate>2014/05/11 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/tools/sketch_css_sprite_mixin/detail.html</guid>
+      <description>アートボードのオブジェクトから、CSS Preprocessor（Sass/Scss/LESS/Stylus）のMixinを生成するSketchプラグインです。</description>
+    </item>
+    
+    <item>
+      <title>Sketch 3のメニューと環境設定を日本語へ意訳をしましたよ。</title>
+      <link>http://creative-tweet.net/blog/2014/04/japanese-translation-for-sketch3.html</link>
+      <pubDate>2014/04/26 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2014/04/japanese-translation-for-sketch3.html</guid>
+      <description>Sketch 3のメニューと環境設定の日本語への意訳をしてみました。SketchファイルおよびPDFファイルをダウンロードできます。</description>
+    </item>
+    
+  </channel>
+</rss>

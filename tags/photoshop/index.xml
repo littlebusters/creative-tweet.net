@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Photoshop on creative tweet.</title>
+    <link>http://creative-tweet.net/tags/photoshop.html</link>
+    <description>Recent content in Photoshop on creative tweet.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>2013/06/26 09:30:00 +09:00</lastBuildDate>
+    <atom:link href="http://creative-tweet.net/tags/photoshop.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ps / Ai / Fw / Sketch ガチンコバトル勉強会 in 岡山を開催しましたよ。 #gcbtl</title>
+      <link>http://creative-tweet.net/blog/2013/06/battled-of-design-tool.html</link>
+      <pubDate>2013/06/26 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2013/06/battled-of-design-tool.html</guid>
+      <description>6/22に開催した、Ps / Ai / Fw / Sketch ガチンコバトル勉強会 in 岡山のレポートです。</description>
+    </item>
+    
+    <item>
+      <title>Ps / Ai / Fw / Sketch ガチンコバトル勉強会 in 岡山を6/22に開催しますよ。 #gcbtl</title>
+      <link>http://creative-tweet.net/blog/2013/05/battle-of-design-tools.html</link>
+      <pubDate>2013/05/26 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2013/05/battle-of-design-tools.html</guid>
+      <description>2013年6月22日に、Photoshop / Illustrator / Fireworks / Sketch といった、デザインツールの勉強会を岡山で行います。</description>
+    </item>
+    
+  </channel>
+</rss>

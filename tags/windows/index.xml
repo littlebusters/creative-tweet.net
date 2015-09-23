@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on creative tweet.</title>
+    <link>http://creative-tweet.net/tags/windows.html</link>
+    <description>Recent content in Windows on creative tweet.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>2013/02/06 09:30:00 +09:00</lastBuildDate>
+    <atom:link href="http://creative-tweet.net/tags/windows.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>LiveReload Windows版が落ちまくるので、guard-livereloadでなんとかしてみた話。</title>
+      <link>http://creative-tweet.net/blog/2013/02/guard-livereload-installation.html</link>
+      <pubDate>2013/02/06 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2013/02/guard-livereload-installation.html</guid>
+      <description>落ちまくるLiveReload Windows Alpha版の代わりに、guard-livereloadをインストールして、Firefoxで無事LIveReloadを使えるようにする作業記録です。</description>
+    </item>
+    
+  </channel>
+</rss>

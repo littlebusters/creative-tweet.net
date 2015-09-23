@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<title>Sketch.appのインスペクタを解説するよ。【塗りと線色編】 – Sketch.app Advent Calendar 2013 | creative tweet.</title>
+<script async src="/assets/js/auie.js"></script>
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="" />
+<meta property="og:title" content="Sketch.appのインスペクタを解説するよ。【塗りと線色編】 – Sketch.app Advent Calendar 2013" />
+<meta property="og:url" content="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-fill-borders.html" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="http://creative-tweet.net/assets/img" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="Sketch.appのインスペクタを解説するよ。【塗りと線色編】 – Sketch.app Advent Calendar 2013">
+<meta name="twitter:url" content="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-fill-borders.html">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="http://creative-tweet.net/assets/img">
+</head>
+
+
+
+
+
+
+<body>
+<header class="siteHeader" role="banner">
+<h1 id="siteSign">
+<a href="/">
+<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<section class="article-header-section">
+				<time class="publishedDatetime" datetime="2013-12-10T09:30:00&#43;09:00">2013/12/10</time>
+				<h1 class="article-title">Sketch.appのインスペクタを解説するよ。【塗りと線色編】 – Sketch.app Advent Calendar 2013</h1>
+				
+			</section>
+		</header>
+		
+		<div class="content-main">
+			
+
+<p><a href="http://www.adventar.org/calendars/99">Sketch.app Advent Calender 2013</a> 10日目の記事です。</p>
+
+<p>Sketch.appのインスペクタシリーズ第4弾、塗りと線設定についてお届けします。
+<p class="notics">
+  <b>Sketch 3の基本。</b>というSketch 3の基本操作にフォーカスした電子書籍をリリースしました。詳しくはこちらの「<a href="http://creative-tweet.net/sketch-3-basics/">Sketch 3の基本。</a>」のページをご覧ください。
+</p>
+<dl class="links">
+  <dt>
+    記事の一覧
+  </dt>
+  <dd>
+    <a href="http://creative-tweet.net/blog/2013/11/sketch-app-advent-calendar-2013.html">オレオレSketch.app Advent Calendar 2013やりますよ。 | creative tweet.</a>
+  </dd>
+</dl></p>
+
+<p>使っている画像がPNG-8bitなため、グラデーション部分にトーンジャンプが見られますが、実際の画面ではきれいなグラデーションです。</p>
+
+<h2 id="塗りと線について:62fb4e9792718b2f722c6d32e5126a49">塗りと線について</h2>
+
+<p>オブジェクトにベタ塗り・グラデーション・パターン（塗りのみ）を設定します。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-10-sketch-app-advent-calendar-2013-inspector-fill-borders/show-color-inspector.png" alt="カラーインスペクタの出し方">
+</p>
+
+<p>インスペクタを出すには、FillやBordersの色の部分をクリックします。ちなみに、FillもBordersも設定できる項目は同じなので、まとめています。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-10-sketch-app-advent-calendar-2013-inspector-fill-borders/color-picker.png" alt="カラー設定">
+</p>
+
+<p>色の部分は見たまんまで、色を選択します。</p>
+
+<p>虫眼鏡マークはカラーピッカーツールです。ショートカットは<kbd>Control</kbd>＋<kbd>C</kbd>です。ショートカット自体は、この色設定を表示しなくても使えます（ただし、この場合で適用されるのは塗り色になります）。</p>
+
+<p>HexまたはRGBの数値で色を選択できます。AはAlphaで、100が不透明です。また、色相環の下にあるバーで、度合いを見ながら設定できます。</p>
+
+<p>［View］→「Show Colors」でOS標準のカラーピッカーを呼び出し、保存している色を使うこともできます。この場合は、直接的に色を適用できないので、一旦色設定を表示してからOSのカラーピッカーで色を選ぶ必要があります。</p>
+
+<p>「Back」ボタンは、前のインスペクタに戻ります。<kbd>Enter</kbd>や<kbd>Esc</kbd>でも戻ることができます。</p>
+
+<h3 id="options:62fb4e9792718b2f722c6d32e5126a49">Options</h3>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-10-sketch-app-advent-calendar-2013-inspector-fill-borders/color-piker-options.png" alt="カラーのオプション設定">
+</p>
+
+<p><strong>Noise</strong><br />
+グレースケールノイズを入れることができます。等倍表示だとモノクロノイズに見えますが、表示を拡大するとグレースケースになっています。</p>
+
+<p><strong>Blending</strong><br />
+パターンを選択している場合に、またはタイプを問わず、2つ目以降の設定をしている場合に表示されます。下にある設定との合成方法を選択します。</p>
+
+<p><strong>Opacity</strong><br />
+グラデーションまたはパターンを選択している場合に表示され、不透明度を設定する項目です。</p>
+
+<h3 id="color:62fb4e9792718b2f722c6d32e5126a49">Color</h3>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-10-sketch-app-advent-calendar-2013-inspector-fill-borders/color-pocker-swatch.png" alt="カラースウォッチ">
+</p>
+
+<p>ここで色を選択するとベタになります。＋マークでスウォッチを追加できます。ドラッグで移動と枠外に持っていくと削除できます。</p>
+
+<h3 id="gradient:62fb4e9792718b2f722c6d32e5126a49">Gradient</h3>
+
+<p>グラデーションの設定です。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-10-sketch-app-advent-calendar-2013-inspector-fill-borders/color-gradient.png" alt="グラデーションの設定">
+</p>
+
+<p><strong>Type</strong><br />
+グラデーションの種類を選択します。「Linear」は直線的なグラデーション・「Radial」は放射状のグラデーション・「Angular」は円を書くようなグラデーションです。</p>
+
+<p><strong>Flip</strong><br />
+グラデーションの色を逆転させます。</p>
+
+<p><strong>Smooth Opacity</strong><br />
+「Linear」かつポイントが3つの場合でアクティブになります。チェックするとトーンジャンプしないように、グラデーションが滑らかになります。</p>
+
+<p><strong>Swatch</strong><br />
+グラデーションのスウォッチです。ベタと同じく、＋マークでスウォッチの追加、ドラッグによる移動や枠外への移動による削除ができます。</p>
+
+<p>グラデーションを適用すると、オブジェクトにグラデーションのラインが表示されます。色を変更するには、ポイントをクリックし、スウォッチやカラーピッカーで選択します。ライン上をクリックすると、新たにポイントが作成できます。</p>
+
+<p>ポイントを選択後、<kbd>Delete</kbd>キーで削除できます。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-10-sketch-app-advent-calendar-2013-inspector-fill-borders/color-gradient-edit.png" alt="グラデーションの設定">
+</p>
+
+<p>角度による設定はできませんので、各ポイントを移動して角度を決めます。また「Radial」の場合は、放射線の形を決める楕円のハンドルがあるので、適当な形に変更しましょう。</p>
+
+<h3 id="pattern:62fb4e9792718b2f722c6d32e5126a49">Pattern</h3>
+
+<p>パターンの設定です。Fillにのみ適用できます。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-10-sketch-app-advent-calendar-2013-inspector-fill-borders/color-pattern.png" alt="パターンの設定">
+</p>
+
+<p><strong>Choose Image&#8230;</strong><br />
+パターンとする画像を選択します。あまり試していませんが、PNG/JPEG/PSD（互換あり）あたりは読み込めます。画像の透明部分はきちんと透明として扱われます。</p>
+
+<p><strong>Tile / Fill</strong><br />
+パターンの埋め方を選択します。「Tile」は名前の通りタイル状に敷き詰め、「Fill」は適用面が埋まるように画像の大きさが調整されます。</p>
+
+<p><strong>Scale</strong><br />
+「Tile」を選択するとアクティブになります。そのままですが、パターン画像の大きさです。</p>
+
+<p><strong>Swatch</strong><br />
+パターンのスウォッチです。他と同じく、＋マークでスウォッチの追加、ドラッグによる移動や枠外への移動による削除ができます。</p>
+
+		</div>
+
+<div class="socialButtons">
+<div class="socialButtons_twitter">
+	<a href="https://twitter.com/intent/tweet?text=Sketch.app%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%9a%e3%82%af%e3%82%bf%e3%82%92%e8%a7%a3%e8%aa%ac%e3%81%99%e3%82%8b%e3%82%88%e3%80%82%e3%80%90%e5%a1%97%e3%82%8a%e3%81%a8%e7%b7%9a%e8%89%b2%e7%b7%a8%e3%80%91%20%e2%80%93%20Sketch.app%20Advent%20Calendar%202013&amp;url=http%3a%2f%2fcreative-tweet.net%2fblog%2f2013%2f12%2fsketch-app-advent-calendar-2013-inspector-fill-borders.html&amp;via=littlebusters" class="twitter-share-button"
+		data-lang="en"
+		data-url="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-fill-borders.html"
+		data-text="Sketch.appのインスペクタを解説するよ。【塗りと線色編】 – Sketch.app Advent Calendar 2013"
+		data-via="littlebusters" 
+		data-count="vertical"
+	>Tweet</a>
+</div>
+<div class="socialButtons_facebook">
+	<div 
+		class="fb-like"
+		data-href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-fill-borders.html"
+		data-layout="box_count"
+		data-send="false"
+		data-width="100"
+		data-show-faces="false"
+	></div>
+</div>
+<div class="socialButtons_hatebu">
+	<a href="http://b.hatena.ne.jp/entry/creative-tweet.net" class="hatena-bookmark-button"
+		data-hatena-bookmark-layout="vertical"
+		data-hatena-bookmark-title="Sketch.appのインスペクタを解説するよ。【塗りと線色編】 – Sketch.app Advent Calendar 2013"
+		data-hatena-bookmark-url="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-fill-borders.html">
+		<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		style="border: none">
+	</a>
+</div>
+<div class="socialButtons_googlep">
+	<div class="g-plusone" data-size="tall" data-href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-fill-borders.html"></div>
+</div>
+</div>
+
+		<ul class="pager">
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-type.html" class="pager_nextItem">
+				<span class="pager_label-newer">newer: </span>
+				Sketch.appのインスペクタを解説するよ。【文字編】 – Sketch.app Advent Calendar 2013
+				</a>
+			</li>
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-link.html" class="pager_prevItem">
+				<span class="pager_label-older">older: </span>
+				Sketch.appのインスペクタを解説するよ。【スタイルリンク編】 – Sketch.app Advent Calendar 2013
+				</a>
+			</li>
+			
+		</ul>
+
+	</main>
+</div>
+
+
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-Facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>

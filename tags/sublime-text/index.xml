@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sublime Text on creative tweet.</title>
+    <link>http://creative-tweet.net/tags/sublime-text.html</link>
+    <description>Recent content in Sublime Text on creative tweet.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>2014/12/13 09:30:00 +09:00</lastBuildDate>
+    <atom:link href="http://creative-tweet.net/tags/sublime-text.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>たまによく使うSublimeTextのパッケージGistとTakanaを紹介しますよ。 Sublime Text Advent Calendar 2014</title>
+      <link>http://creative-tweet.net/blog/2014/12/sublime-text-advent-calendar-2014-13.html</link>
+      <pubDate>2014/12/13 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2014/12/sublime-text-advent-calendar-2014-13.html</guid>
+      <description>Sublime Text Advent Calendar 2013 の13日目の記事です。Sublime TextからGistがゴニョゴニョできるパッケージと、SCSSのライブプレビューができるTakanaを紹介します。</description>
+    </item>
+    
+    <item>
+      <title>Web制作者のためのSublime Textの教科書を読みましたよ。</title>
+      <link>http://creative-tweet.net/blog/2014/03/read-a-sublime-text-book.html</link>
+      <pubDate>2014/03/24 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2014/03/read-a-sublime-text-book.html</guid>
+      <description>「Web制作者のためのSublime Textの教科書」の所感と、「あなたのSublime Textを見せてください」企画のスクリーンショットと設定をここで晒します。</description>
+    </item>
+    
+  </channel>
+</rss>

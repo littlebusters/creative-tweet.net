@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<title>Sketch.appのインスペクタを解説するよ。【スタイルリンク編】 – Sketch.app Advent Calendar 2013 | creative tweet.</title>
+<script async src="/assets/js/auie.js"></script>
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="" />
+<meta property="og:title" content="Sketch.appのインスペクタを解説するよ。【スタイルリンク編】 – Sketch.app Advent Calendar 2013" />
+<meta property="og:url" content="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-link.html" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="http://creative-tweet.net/assets/img" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="Sketch.appのインスペクタを解説するよ。【スタイルリンク編】 – Sketch.app Advent Calendar 2013">
+<meta name="twitter:url" content="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-link.html">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="http://creative-tweet.net/assets/img">
+</head>
+
+
+
+
+
+
+<body>
+<header class="siteHeader" role="banner">
+<h1 id="siteSign">
+<a href="/">
+<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<section class="article-header-section">
+				<time class="publishedDatetime" datetime="2013-12-09T09:30:00&#43;09:00">2013/12/9</time>
+				<h1 class="article-title">Sketch.appのインスペクタを解説するよ。【スタイルリンク編】 – Sketch.app Advent Calendar 2013</h1>
+				
+			</section>
+		</header>
+		
+		<div class="content-main">
+			
+
+<p><a href="http://www.adventar.org/calendars/99">Sketch.app Advent Calender 2013</a> 9日目の記事です。</p>
+
+<p>Sketch.appのインスペクタシリーズ第3弾、スタイルリンクについてお届けします。
+<p class="notics">
+  <b>Sketch 3の基本。</b>というSketch 3の基本操作にフォーカスした電子書籍をリリースしました。詳しくはこちらの「<a href="http://creative-tweet.net/sketch-3-basics/">Sketch 3の基本。</a>」のページをご覧ください。
+</p>
+<dl class="links">
+  <dt>
+    記事の一覧
+  </dt>
+  <dd>
+    <a href="http://creative-tweet.net/blog/2013/11/sketch-app-advent-calendar-2013.html">オレオレSketch.app Advent Calendar 2013やりますよ。 | creative tweet.</a>
+  </dd>
+</dl></p>
+
+<h2 id="スタイルリンクについて:857e6bd665122a499c19d36347fac77c">スタイルリンクについて</h2>
+
+<p>塗りや線・ドロップシャドウなどの設定をスタイルとして登録し、それをオブジェクトに適用すると、スタイル設定がリンクされた状態になります。その状態でスタイル設定を変更すると、同じスタイルを適用しているオブジェクトの設定も変更されます。いわゆるスタイルシートと思ってもらえると、わかりやすいかもしれません。</p>
+
+<p>厳密にはインスペクタの一部ではないのですが、パネルの位置が近いのでまとめました。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-09-sketch-app-advent-calendar-2013-inspector-link/inspector-link.png" alt="リンクパネル">
+</p>
+
+<p>スタイルリンクはインスペクタパネルの上にあります。表示されていない場合は、「Inspector」の右にある「Link」ボタンをクリックしてください。</p>
+
+<p>下の画像はすでにスタイルが登録されている状態ですが、初めて開く場合は＋マークのみです。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-09-sketch-app-advent-calendar-2013-inspector-link/link-panel-detail.png" alt="リンクパネル使い方">
+</p>
+
+<p>左の斜線が入った四角は、スタイル設定は維持したままリンクのみを解除します。</p>
+
+<p>右の＋マークはスタイルを追加します。</p>
+
+<p>削除するには、なぜかドラッグでは削除できないので、コンテキストメニューから「Remove」を選択してください。</p>
+
+<p>オブジェクトにスタイルを適用する場合は、オブジェクトを選択してから適用したいスタイルをクリックします。</p>
+
+<p>スタイルに登録されるのは、「Opacity」「Blending」および「Fill」より下のスタイル設定です。特にRectangleの「Radius」は登録されませんので、個別に設定する必要があります。また、表示/非表示のチェックボックスもリンクされているので、一部だけ表示しないということはできません。リンクを切ってから設定しましょう。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-09-sketch-app-advent-calendar-2013-inspector-link/link-detail.png" alt="リンクについて">
+</p>
+
+<p>以前は、リンク機能のないスタイルパネルが別にあったのですが、いつの間にかなくなっていました。リンクで代用できるから、こちらに統合されちゃったんですかね…</p>
+
+		</div>
+
+<div class="socialButtons">
+<div class="socialButtons_twitter">
+	<a href="https://twitter.com/intent/tweet?text=Sketch.app%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%9a%e3%82%af%e3%82%bf%e3%82%92%e8%a7%a3%e8%aa%ac%e3%81%99%e3%82%8b%e3%82%88%e3%80%82%e3%80%90%e3%82%b9%e3%82%bf%e3%82%a4%e3%83%ab%e3%83%aa%e3%83%b3%e3%82%af%e7%b7%a8%e3%80%91%20%e2%80%93%20Sketch.app%20Advent%20Calendar%202013&amp;url=http%3a%2f%2fcreative-tweet.net%2fblog%2f2013%2f12%2fsketch-app-advent-calendar-2013-inspector-link.html&amp;via=littlebusters" class="twitter-share-button"
+		data-lang="en"
+		data-url="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-link.html"
+		data-text="Sketch.appのインスペクタを解説するよ。【スタイルリンク編】 – Sketch.app Advent Calendar 2013"
+		data-via="littlebusters" 
+		data-count="vertical"
+	>Tweet</a>
+</div>
+<div class="socialButtons_facebook">
+	<div 
+		class="fb-like"
+		data-href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-link.html"
+		data-layout="box_count"
+		data-send="false"
+		data-width="100"
+		data-show-faces="false"
+	></div>
+</div>
+<div class="socialButtons_hatebu">
+	<a href="http://b.hatena.ne.jp/entry/creative-tweet.net" class="hatena-bookmark-button"
+		data-hatena-bookmark-layout="vertical"
+		data-hatena-bookmark-title="Sketch.appのインスペクタを解説するよ。【スタイルリンク編】 – Sketch.app Advent Calendar 2013"
+		data-hatena-bookmark-url="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-link.html">
+		<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		style="border: none">
+	</a>
+</div>
+<div class="socialButtons_googlep">
+	<div class="g-plusone" data-size="tall" data-href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-link.html"></div>
+</div>
+</div>
+
+		<ul class="pager">
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-fill-borders.html" class="pager_nextItem">
+				<span class="pager_label-newer">newer: </span>
+				Sketch.appのインスペクタを解説するよ。【塗りと線色編】 – Sketch.app Advent Calendar 2013
+				</a>
+			</li>
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-style.html" class="pager_prevItem">
+				<span class="pager_label-older">older: </span>
+				Sketch.appのインスペクタを解説するよ。【スタイル編】 – Sketch.app Advent Calendar 2013
+				</a>
+			</li>
+			
+		</ul>
+
+	</main>
+</div>
+
+
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-Facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<title>Sketch.appのパスについて解説するよ。【結合編】 – Sketch.app Advent Calendar 2013 | creative tweet.</title>
+<script async src="/assets/js/auie.js"></script>
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="" />
+<meta property="og:title" content="Sketch.appのパスについて解説するよ。【結合編】 – Sketch.app Advent Calendar 2013" />
+<meta property="og:url" content="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-path-combine.html" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="http://creative-tweet.net/assets/img" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="Sketch.appのパスについて解説するよ。【結合編】 – Sketch.app Advent Calendar 2013">
+<meta name="twitter:url" content="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-path-combine.html">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="http://creative-tweet.net/assets/img">
+</head>
+
+
+
+
+
+
+<body>
+<header class="siteHeader" role="banner">
+<h1 id="siteSign">
+<a href="/">
+<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<section class="article-header-section">
+				<time class="publishedDatetime" datetime="2013-12-18T09:30:00&#43;09:00">2013/12/18</time>
+				<h1 class="article-title">Sketch.appのパスについて解説するよ。【結合編】 – Sketch.app Advent Calendar 2013</h1>
+				
+			</section>
+		</header>
+		
+		<div class="content-main">
+			
+
+<p><a href="http://www.adventar.org/calendars/99">Sketch.app Advent Calender 2013</a> 18日目の記事です。</p>
+
+<p>Sketch.app Advent Calender 18日目の記事です。今回はパスの結合についてです。Photoshopではシェイプの結合、Illustratorではパスファインダー、Fireworksではパスの結合などとしてお馴染みのアレです。
+<p class="notics">
+  <b>Sketch 3の基本。</b>というSketch 3の基本操作にフォーカスした電子書籍をリリースしました。詳しくはこちらの「<a href="http://creative-tweet.net/sketch-3-basics/">Sketch 3の基本。</a>」のページをご覧ください。
+</p>
+<dl class="links">
+  <dt>
+    記事の一覧
+  </dt>
+  <dd>
+    <a href="http://creative-tweet.net/blog/2013/11/sketch-app-advent-calendar-2013.html">オレオレSketch.app Advent Calendar 2013やりますよ。 | creative tweet.</a>
+  </dd>
+</dl></p>
+
+<h2 id="結合について:bf623208abb1ee81268910f83619da75">結合について</h2>
+
+<p>他のアプリでもある機能ですが、複数のパスを結合し「1つの」オブジェクトを生成する機能です。Sketch.appでは、Illustratorの<kbd>Option</kbd>キーを押しながら結合した時と同じように、再編集が可能で結合方法も後から自由に変更ができます。</p>
+
+<p>結合したいパスを選択し、［Edit］→［Combine］またはツールバーの中から結合方法を選択します。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-18-sketch-app-advent-calendar-2013-path-combine/path3-combine.png" alt="パスの結合メニューとツールバー">
+</p>
+
+<p><strong>Union</strong><br />
+パス全体を連結します。ショートカットは、<kbd>Command</kbd>＋<kbd>Option</kbd>＋<kbd>U</kbd>です。</p>
+
+<p><strong>Subtract</strong><br />
+背面のパスを前面のパスで型抜きします。ショートカットは、<kbd>Command</kbd>＋<kbd>Option</kbd>＋<kbd>S</kbd>です。</p>
+
+<p><strong>Intersect</strong><br />
+パスが交差していない部分を残します。ショートカットは、<kbd>Command</kbd>＋<kbd>Option</kbd>＋<kbd>I</kbd>です。</p>
+
+<p><strong>Difference</strong><br />
+Intersectとは逆に、背面と前面のパスが交差する部分を残します。ショートカットは、<kbd>Command</kbd>＋<kbd>Option</kbd>＋<kbd>X</kbd>です。</p>
+
+<p><strong>Reset</strong><br />
+結合したパスを作成する場合はグレーアウトしていますが、結合後のパスの一部を選択することで適用できる様になります。これを選択した場合は、結合の演算がそこで一旦リセットされます（後述）。</p>
+
+<p>結合されるとレイヤーリストの左端に三角マークがでるので、それを展開して個別に編集できます。また、パス名の右にあるマークから結合方法の変更もできます。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-18-sketch-app-advent-calendar-2013-path-combine/path3-layerlist.png" alt="レイヤーリスト上での表示">
+</p>
+
+<p>メニューやツールバー以外からやる場合は、レイヤーリストで元となるパスに結合したいパスをドラッグで重ね、リストに枠が出たら離します。同じ方法で、他のパスを追加することもできます。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-18-sketch-app-advent-calendar-2013-path-combine/path3-dad.png" alt="ドラッグ&#038;ドロップでも結合可能">
+</p>
+
+<h2 id="結合の順番について:bf623208abb1ee81268910f83619da75">結合の順番について</h2>
+
+<p>結合の演算は基本的に下から上に向かって行われますが、メニューから「Reset」またはレイヤーリストから選択できる「None」を適用した場合は順番が変わります。「None」を指定したパスから上の結合を先に行った上で、下のパスに対して「Difference」をしているようです。「None」から上でグループ化されると考えれば、わかりやすいでしょうか。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-18-sketch-app-advent-calendar-2013-path-combine/path3-combine-order.png" alt="結合の順番">
+</p>
+
+<h2 id="結合したパスを1つのパスに変換する:bf623208abb1ee81268910f83619da75">結合したパスを1つのパスに変換する</h2>
+
+<p>結合したパスを1つのパスに変換する場合は、［Edit］→［Paths］にある「Flatten」を選択するか、ツールバーのアイコンをクリックします。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-18-sketch-app-advent-calendar-2013-path-combine/path3-flatten.png" alt="パスの合体">
+</p>
+
+<h2 id="結合を解除する:bf623208abb1ee81268910f83619da75">結合を解除する</h2>
+
+<p>結合を解除するには、［Edit］→［Split］を選ぶか、ツールバーのアイコンをクリックします。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-18-sketch-app-advent-calendar-2013-path-combine/path3-split.png" alt="パスの分割">
+</p>
+
+		</div>
+
+<div class="socialButtons">
+<div class="socialButtons_twitter">
+	<a href="https://twitter.com/intent/tweet?text=Sketch.app%e3%81%ae%e3%83%91%e3%82%b9%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6%e8%a7%a3%e8%aa%ac%e3%81%99%e3%82%8b%e3%82%88%e3%80%82%e3%80%90%e7%b5%90%e5%90%88%e7%b7%a8%e3%80%91%20%e2%80%93%20Sketch.app%20Advent%20Calendar%202013&amp;url=http%3a%2f%2fcreative-tweet.net%2fblog%2f2013%2f12%2fsketch-app-advent-calendar-2013-path-combine.html&amp;via=littlebusters" class="twitter-share-button"
+		data-lang="en"
+		data-url="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-path-combine.html"
+		data-text="Sketch.appのパスについて解説するよ。【結合編】 – Sketch.app Advent Calendar 2013"
+		data-via="littlebusters" 
+		data-count="vertical"
+	>Tweet</a>
+</div>
+<div class="socialButtons_facebook">
+	<div 
+		class="fb-like"
+		data-href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-path-combine.html"
+		data-layout="box_count"
+		data-send="false"
+		data-width="100"
+		data-show-faces="false"
+	></div>
+</div>
+<div class="socialButtons_hatebu">
+	<a href="http://b.hatena.ne.jp/entry/creative-tweet.net" class="hatena-bookmark-button"
+		data-hatena-bookmark-layout="vertical"
+		data-hatena-bookmark-title="Sketch.appのパスについて解説するよ。【結合編】 – Sketch.app Advent Calendar 2013"
+		data-hatena-bookmark-url="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-path-combine.html">
+		<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		style="border: none">
+	</a>
+</div>
+<div class="socialButtons_googlep">
+	<div class="g-plusone" data-size="tall" data-href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-path-combine.html"></div>
+</div>
+</div>
+
+		<ul class="pager">
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-align.html" class="pager_nextItem">
+				<span class="pager_label-newer">newer: </span>
+				Sketch.appの整列について解説するよ。 – Sketch.app Advent Calendar 2013
+				</a>
+			</li>
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-path-advance.html" class="pager_prevItem">
+				<span class="pager_label-older">older: </span>
+				Sketch.appのパスについて解説するよ。【応用編】 – Sketch.app Advent Calendar 2013
+				</a>
+			</li>
+			
+		</ul>
+
+	</main>
+</div>
+
+
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-Facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>

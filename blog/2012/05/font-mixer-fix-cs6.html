@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<title>Font MixerがCS6（Mac版）で動かなかったようなので修正しました。 | creative tweet.</title>
+<script async src="/assets/js/auie.js"></script>
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="" />
+<meta property="og:title" content="Font MixerがCS6（Mac版）で動かなかったようなので修正しました。" />
+<meta property="og:url" content="http://creative-tweet.net/blog/2012/05/font-mixer-fix-cs6.html" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="http://creative-tweet.net/assets/img" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="Font MixerがCS6（Mac版）で動かなかったようなので修正しました。">
+<meta name="twitter:url" content="http://creative-tweet.net/blog/2012/05/font-mixer-fix-cs6.html">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="http://creative-tweet.net/assets/img">
+</head>
+
+
+
+
+
+
+<body>
+<header class="siteHeader" role="banner">
+<h1 id="siteSign">
+<a href="/">
+<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<section class="article-header-section">
+				<time class="publishedDatetime" datetime="2012-05-14T02:30:00&#43;09:00">2012/5/14</time>
+				<h1 class="article-title">Font MixerがCS6（Mac版）で動かなかったようなので修正しました。</h1>
+				
+			</section>
+		</header>
+		
+		<div class="content-main">
+			
+
+<p>Adobe Fireworks CS6 OSX版でFont Mixerが動作しなかったので、修正しました。</p>
+
+<p class="links">
+<a href="/tools/font_mixer/detail.html">Fireworksで混植ができるFont Mixer［Fireworks拡張機能］</a>
+</p>
+
+<h2 id="原因:dfa777c33a4463dbc22de4431d7e44e4">原因</h2>
+
+<p>コマンドパネルのボタンを押してもウンともスンともいわなかったため、色々と試してみました。</p>
+
+<p>その結果、コマンドの本体である.jsfファイルをcommandsフォルダに入れ、一度コマンドを直接実行すると、パネルからも実行できることがわかりました。つまり、パネル側から.jsfファイルがうまく読み込みされていない状態になっていたと考えられます。（一度コマンドを実行するとメモリー上に保持するようで、その状態だとパネルからでも実行できる）</p>
+
+<p>で、まさかと思いながらWindowsにFireworks CS6をインストールし、Font Mixerのインストール先の変更をせず試したところ、なぜかこちらは問題なく動作します。あれ？もしかしてOSXだときちんと動いてなかったの？という疑問が……特に不具合の報告はなかったので、まさかダウンロードしていただいた方が、全員がWindowsだったというミラクル？</p>
+
+<p>.jsfファイルの読み込みは、パネルのActionScriptで</p>
+
+<pre><code>fw.runScript( 'path/to/jsf')
+</code></pre>
+
+<p>を実行し、.jsfファイルを予め読み込むようにしています。ここで出てくる<code>path/to/jsf</code>の基準となるフォルダが、Commandsフォルダです。</p>
+
+<p>Font MixerはCommand Panelsフォルダにコマンドの本体である.jsfと、パネルの.swfをインストールしているので、パスは<code>../Command Panels/fontMixer.jsf</code>と指定しています。今回はこれがうまく読み込めていないようです。</p>
+
+<h2 id="修正:dfa777c33a4463dbc22de4431d7e44e4">修正</h2>
+
+<p>パスの指定に下手な小細工をしないよう、.jsfをCommandsフォルダへ移動することで、無事動作を確認。ただ、単純に移動させるだけだとコマンドメニューに表示されてしまうので、拡張子を.jsfから.fssに変更しています。デフォルトでインストールされているコマンドに.fssの拡張子がついてモノがあったため、マネをしてみました。</p>
+
+<p>なぜか、OSX版ではラベルがずれて表示されていますが、マウスオーバーすると元に戻るので、とりあえず既知のバグということで。</p>
+
+<p class="media">
+<img alt="OSX版でのパネルのラベルずれ" src="/assets/img/2012/2012-05-14-font-mixer-fix-cs6/mac_fontmixerpanel.png">
+</p>
+
+		</div>
+
+<div class="socialButtons">
+<div class="socialButtons_twitter">
+	<a href="https://twitter.com/intent/tweet?text=Font%20Mixer%e3%81%8cCS6%ef%bc%88Mac%e7%89%88%ef%bc%89%e3%81%a7%e5%8b%95%e3%81%8b%e3%81%aa%e3%81%8b%e3%81%a3%e3%81%9f%e3%82%88%e3%81%86%e3%81%aa%e3%81%ae%e3%81%a7%e4%bf%ae%e6%ad%a3%e3%81%97%e3%81%be%e3%81%97%e3%81%9f%e3%80%82&amp;url=http%3a%2f%2fcreative-tweet.net%2fblog%2f2012%2f05%2ffont-mixer-fix-cs6.html&amp;via=littlebusters" class="twitter-share-button"
+		data-lang="en"
+		data-url="http://creative-tweet.net/blog/2012/05/font-mixer-fix-cs6.html"
+		data-text="Font MixerがCS6（Mac版）で動かなかったようなので修正しました。"
+		data-via="littlebusters" 
+		data-count="vertical"
+	>Tweet</a>
+</div>
+<div class="socialButtons_facebook">
+	<div 
+		class="fb-like"
+		data-href="http://creative-tweet.net/blog/2012/05/font-mixer-fix-cs6.html"
+		data-layout="box_count"
+		data-send="false"
+		data-width="100"
+		data-show-faces="false"
+	></div>
+</div>
+<div class="socialButtons_hatebu">
+	<a href="http://b.hatena.ne.jp/entry/creative-tweet.net" class="hatena-bookmark-button"
+		data-hatena-bookmark-layout="vertical"
+		data-hatena-bookmark-title="Font MixerがCS6（Mac版）で動かなかったようなので修正しました。"
+		data-hatena-bookmark-url="http://creative-tweet.net/blog/2012/05/font-mixer-fix-cs6.html">
+		<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		style="border: none">
+	</a>
+</div>
+<div class="socialButtons_googlep">
+	<div class="g-plusone" data-size="tall" data-href="http://creative-tweet.net/blog/2012/05/font-mixer-fix-cs6.html"></div>
+</div>
+</div>
+
+		<ul class="pager">
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2012/06/nifty-de-wimax.html" class="pager_nextItem">
+				<span class="pager_label-newer">newer: </span>
+				@niftyでWorld WiMAXが使いにくい件
+				</a>
+			</li>
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2012/05/ui-for-flautokerning.html" class="pager_prevItem">
+				<span class="pager_label-older">older: </span>
+				「FLAutoKerning.js」のインターフェイスを作ってみましたよ。
+				</a>
+			</li>
+			
+		</ul>
+
+	</main>
+</div>
+
+
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-Facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>

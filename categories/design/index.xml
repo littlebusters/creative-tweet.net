@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Design on creative tweet.</title>
+    <link>http://creative-tweet.net/categories/design.html</link>
+    <description>Recent content in Design on creative tweet.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>2014/12/27 09:30:00 +09:00</lastBuildDate>
+    <atom:link href="http://creative-tweet.net/categories/design.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Sketch 3のテキストボックスで、数字キーを使わず小数点以下を入力する方法を紹介しますよ。 Sketch 3 Advent Calendar 2014</title>
+      <link>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-03.html</link>
+      <pubDate>2014/12/27 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-03.html</guid>
+      <description>Sketch 3のテキストボックスで、数字キーを使わず小数点以下を入力する方法を紹介します。</description>
+    </item>
+    
+    <item>
+      <title>Sketch.appとSketch Mirrorの使い方を解説するよ。 – Sketch.app Advent Calendar 2013</title>
+      <link>http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-sketch-mirror.html</link>
+      <pubDate>2013/12/22 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-sketch-mirror.html</guid>
+      <description>Sketch.app Advent Calender 2013 22日目の記事です。今回はSketch.appのアートボードを、iOSでプレビューできるSketch Mirrorの解説をお届けします。</description>
+    </item>
+    
+    <item>
+      <title>ロゴやマーク・写真素材などの公式ダウンロードページのまとめ</title>
+      <link>http://creative-tweet.net/blog/2013/01/material-download.html</link>
+      <pubDate>2013/01/15 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2013/01/material-download.html</guid>
+      <description>企業やサービスのロゴ・マークなどのダウンロードと利用規約の書かれたページをまとめました。</description>
+    </item>
+    
+    <item>
+      <title>往年の名フォント「Chicago」 #LOVEFONT</title>
+      <link>http://creative-tweet.net/blog/2012/12/lovefont-chicago.html</link>
+      <pubDate>2012/12/10 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2012/12/lovefont-chicago.html</guid>
+      <description>大都会岡山 Advent Calendar 2012で、#LOVEFONT。Chicagoについて軽く。</description>
+    </item>
+    
+  </channel>
+</rss>

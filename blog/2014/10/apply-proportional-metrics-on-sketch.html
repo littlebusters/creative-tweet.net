@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<title>Sketch（や他のアプリ）で、文字詰めをする方法を解説するよ。 | creative tweet.</title>
+<script async src="/assets/js/auie.js"></script>
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="" />
+<meta property="og:title" content="Sketch（や他のアプリ）で、文字詰めをする方法を解説するよ。" />
+<meta property="og:url" content="http://creative-tweet.net/blog/2014/10/apply-proportional-metrics-on-sketch.html" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="http://creative-tweet.net/assets/img" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="Sketch（や他のアプリ）で、文字詰めをする方法を解説するよ。">
+<meta name="twitter:url" content="http://creative-tweet.net/blog/2014/10/apply-proportional-metrics-on-sketch.html">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="http://creative-tweet.net/assets/img">
+</head>
+
+
+
+
+
+
+<body>
+<header class="siteHeader" role="banner">
+<h1 id="siteSign">
+<a href="/">
+<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<section class="article-header-section">
+				<time class="publishedDatetime" datetime="2014-10-24T09:30:00&#43;09:00">2014/10/24</time>
+				<h1 class="article-title">Sketch（や他のアプリ）で、文字詰めをする方法を解説するよ。</h1>
+				
+				<img src="/assets/img/2014/2014-10-24-apply-proportional-metrics-on-sketch/proportional-metrics-visual.png" class="hero" alt="">
+				
+			</section>
+		</header>
+		
+		<div class="content-main">
+			
+
+<p>文字詰めができるアプリケーションというと、やはりAdobeのプロダクトがその筆頭でしょう。裏を返せば、それ以外のアプリケーションでは、まともに文字詰めができるものがない、という状況です。Sketchが大々的にフィーチャーされる最中、やはり文字詰めができないことを気になさっている方が大勢いらっしゃいました。</p>
+
+<p>しかし、OpenTypeの機能を使うことで、実は文字詰めができることはご存知でしょうか？</p>
+
+<p>今回は、Sketchをはじめとした、Adobeアプリケーション以外で文字詰めをする方法をご紹介します。</p>
+
+<p>タイトルには「Sketch」と入れましたが、それ以外のアプリケーションでも以下の条件を満たせば、文字詰めできる可能性は高いです。</p>
+
+<p>フォントがOpenTypeフォントである
+:   OpenTypeフォントの文字ごとに設定されている、プロポーショナルメトリクスの値を使用するため、OpenTypeフォントである必要があります。</p>
+
+<p>使うアプリケーションで、OSのフォントパネルまたはTypographyパネルを表示できる
+:   OpenTypeフォントの機能を使うために、OSのフォントパネルからTypographyパネルを表示する必要があります。「フォントパネル」としていますが、実際に使うTypographyパネルが表示できれば、その経緯は問いません。</p>
+
+<h2 id="opentypeの機能を使って文字詰めをする手順:abd0b204facbada8181505f107299213">OpenTypeの機能を使って文字詰めをする手順</h2>
+
+<p>ここでは、Sketchを使って解説を進めます。</p>
+
+<p>まずは文字を適当に入力し、OpenTypeフォントを適用します。ここでは、OSXにバンドルされている「ヒラギノ角ゴシックProN W3」を使っています。</p>
+
+<p class="media">
+  <img src="/assets/img/2014/2014-10-24-apply-proportional-metrics-on-sketch/input-text.png" alt="適当にテキストを入力" class="media-flexibleBounding">
+</p>
+
+<p>OSのフォントパネルを表示します。Sketchでは、「<strong>View → Show Fonts</strong>」です。</p>
+
+<p class="media">
+  <img src="/assets/img/2014/2014-10-24-apply-proportional-metrics-on-sketch/view-show-fonts-panel.png" alt="View → Show Fontsを選択" class="media-flexibleBounding">
+</p>
+
+<p>表示されたフォントパネルにある「歯車」マークから、「Typography&hellip;（タイポグラフィ&hellip;）」を選択します。</p>
+
+<p class="media">
+  <img src="/assets/img/2014/2014-10-24-apply-proportional-metrics-on-sketch/fonts-panel-click-giar.png" alt="Fontsパネルの歯車をから、Typograpy...を選択する" class="media-flexibleBounding">
+</p>
+
+<p>Typographyパネルが表示されたら、「Text Spacing（文字間隔）」を展開します。</p>
+
+<p class="media">
+  <img src="/assets/img/2014/2014-10-24-apply-proportional-metrics-on-sketch/typography-panel.png" alt="Text Spacingをクリックして展開" class="media-flexibleBounding">
+</p>
+
+<p>テキストの内容を選択し、「Alternate Proportional Widths（代替プロポーショナル幅）」を適用すると、文字に設定されているプロポーショナルメトリクスに応じて、文字が詰まります。</p>
+
+<p class="media">
+  <img src="/assets/img/2014/2014-10-24-apply-proportional-metrics-on-sketch/apply-proportional-metrics.png" alt="テキストを選択し、Alternate Proportional Widthsを適用する" class="media-flexibleBounding">
+</p>
+
+<p class="media">
+  <img src="/assets/img/2014/2014-10-24-apply-proportional-metrics-on-sketch/result-apply-proportional-metrics.png" alt="プロポーショナルメトリクスの未適用／適用の比較" class="media-flexibleBounding">
+</p>
+
+<p>スクリーンキャスト
+:   <a href="https://v.usetapes.com/p3Gil2rqOJ">Sketchでプロポーショナルメトリクスを適用</a></p>
+
+<p>ちなみに似たような「Proportional Widths（プロポーショナル幅）」という項目がありますが、こちらはプロポーショナル字形を使うオプションで、参照される文字コード（CID）が違います。</p>
+
+<p>また、フォントがプロポーショナル字形を持っている必要があり、さらにアプリケーションによっては、プロポーショナル字形を持っているにも関わらず、きちんと適用されないことがあるようです。使えたらラッキーぐらいで思っておきましょう。</p>
+
+<p>プロポーショナル字形については、こちらで詳しく解説されています。
+:   <a href="http://d.hatena.ne.jp/works014/20141015">プロポーショナル字形とは何か &#8211; なんでやねんDTP</a></p>
+
+<p>ということで、あえて「Proportional Widths（プロポーショナル幅）」を使う必要はありません。</p>
+
+<h3 id="illustratorとの比較:abd0b204facbada8181505f107299213">Illustratorとの比較</h3>
+
+<p>あまり意味はないですが、SketchとIllustratorの比較です。Illustratorで文字を作成し、ビットマップとしてSketchへコピー &amp; ペーストしています。バウンディングボックスを基準にしているため、ほぼ同じ位置にはなっていますが、若干のずれはあります。</p>
+
+<ul>
+<li><strong>Illustrator CC 2014.1.0</strong> : プロポーショナルメトリクス有効 ＋ カーニング「0」</li>
+<li><strong>Sketch 3.1.1</strong> : プロポーショナルメトリクス有効 ＋ Kern &gt; Use None</li>
+</ul>
+
+<p class="media">
+  <img src="/assets/img/2014/2014-10-24-apply-proportional-metrics-on-sketch/ai-sketch-none-kern.png" alt="SketchとIllustratorの比較（プロポーショナルメトリクスあり／カーニングなし）" class="media-flexibleBounding">
+</p>
+
+<ul>
+<li><strong>Illustrator CC 2014.1.0</strong> : プロポーショナルメトリクス有効 ＋ カーニング「自動」</li>
+<li><strong>Sketch 3.1.1</strong> : プロポーショナルメトリクス有効 ＋ Kern &gt; Use Default</li>
+</ul>
+
+<p class="media">
+  <img src="/assets/img/2014/2014-10-24-apply-proportional-metrics-on-sketch/ai-sketch-default-kern.png" alt="SketchとIllustratorの比較（プロポーショナルメトリクスあり／カーニングあり）" class="media-flexibleBounding">
+</p>
+
+<p>Sketchでは行頭の文字がやや詰まっている状態ですが、全体的にはほぼ同等な感じです。そもそも「Sketchで文字組」というのは、本来の用途ではないと思うので、これで十分ではないでしょうか（きちんと文字組するのであれば、InDesignやIllustratorを使った方がいいですね）。</p>
+
+<h2 id="その他のopentypeの機能と利用できるアプリケーション:abd0b204facbada8181505f107299213">その他のOpenTypeの機能と利用できるアプリケーション</h2>
+
+<p>Typographyパネルには「Text Spacing」以外にも項目があり、合字やルビなどのOpenTypeの機能も使うことができます。パネルに表示されつつも、実際に有効になるかどうかは、フォントやアプリケーションによって異なります。</p>
+
+<p>また、アプリケーションによって、Typographyパネルに表示される項目そのものが異なります。</p>
+
+<p>例えば「Keynote &#8217;09」では、Sketchで表示されている項目にプラスして異字体まで使えますが、「Keynote 6」は異字体を使えるものの、なぜか他の項目がオミットされています。（OSX 10.10をまだインストールしていないので、最新版のKeynoteでどうなっているのかはわかりません…）</p>
+
+<p class="media">
+  <img src="/assets/img/2014/2014-10-24-apply-proportional-metrics-on-sketch/keynote-spec.png" alt="Keynote &#039;09とKeynote 6では、Typographyパネルの項目が異なる" class="media-flexibleBounding">
+</p>
+
+<p>その他でTypographyパネルを表示して、プロポーショナルメトリクスが適用できることを確認できたのは、以下のアプリケーションです。</p>
+
+<ul>
+<li>Sketch</li>
+<li>Pixelmator</li>
+<li>Keynote &#8217;09</li>
+<li>iMovie &#8217;09</li>
+<li>テキストエディット</li>
+<li>Jedit X</li>
+<li>Acron</li>
+</ul>
+
+<hr class="postscript" />
+
+<p>おそらく、結構前から使えたんじゃないかなぁと思うのですが、つい先日、iMovieで「<a href="http://creative-tweet.net/blog/2014/07/published-the-basic-of-sketch.html">Sketch 3の基本。</a>」のスクリーンキャストを編集している際に、偶然にも発見に至りました。これで「文字詰めが手動」と言われ続けたSketch（をはじめとした非Adobeプロダクト）が、少しは利用しやすくなったのでは？と思います。</p>
+
+		</div>
+
+<div class="socialButtons">
+<div class="socialButtons_twitter">
+	<a href="https://twitter.com/intent/tweet?text=Sketch%ef%bc%88%e3%82%84%e4%bb%96%e3%81%ae%e3%82%a2%e3%83%97%e3%83%aa%ef%bc%89%e3%81%a7%e3%80%81%e6%96%87%e5%ad%97%e8%a9%b0%e3%82%81%e3%82%92%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95%e3%82%92%e8%a7%a3%e8%aa%ac%e3%81%99%e3%82%8b%e3%82%88%e3%80%82&amp;url=http%3a%2f%2fcreative-tweet.net%2fblog%2f2014%2f10%2fapply-proportional-metrics-on-sketch.html&amp;via=littlebusters" class="twitter-share-button"
+		data-lang="en"
+		data-url="http://creative-tweet.net/blog/2014/10/apply-proportional-metrics-on-sketch.html"
+		data-text="Sketch（や他のアプリ）で、文字詰めをする方法を解説するよ。"
+		data-via="littlebusters" 
+		data-count="vertical"
+	>Tweet</a>
+</div>
+<div class="socialButtons_facebook">
+	<div 
+		class="fb-like"
+		data-href="http://creative-tweet.net/blog/2014/10/apply-proportional-metrics-on-sketch.html"
+		data-layout="box_count"
+		data-send="false"
+		data-width="100"
+		data-show-faces="false"
+	></div>
+</div>
+<div class="socialButtons_hatebu">
+	<a href="http://b.hatena.ne.jp/entry/creative-tweet.net" class="hatena-bookmark-button"
+		data-hatena-bookmark-layout="vertical"
+		data-hatena-bookmark-title="Sketch（や他のアプリ）で、文字詰めをする方法を解説するよ。"
+		data-hatena-bookmark-url="http://creative-tweet.net/blog/2014/10/apply-proportional-metrics-on-sketch.html">
+		<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		style="border: none">
+	</a>
+</div>
+<div class="socialButtons_googlep">
+	<div class="g-plusone" data-size="tall" data-href="http://creative-tweet.net/blog/2014/10/apply-proportional-metrics-on-sketch.html"></div>
+</div>
+</div>
+
+		<ul class="pager">
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2014/11/sketch-3-basics-was-completed.html" class="pager_nextItem">
+				<span class="pager_label-newer">newer: </span>
+				Sketch 3の基本的な使い方を解説した「Sketch 3の基本。」が完成しましたよ。その経緯とかを少し。
+				</a>
+			</li>
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2014/07/finished-sketch-workshop-in-metropolis-okayama.html" class="pager_prevItem">
+				<span class="pager_label-older">older: </span>
+				Sketch勉強会 in 大都会岡山を開催しましたよ。
+				</a>
+			</li>
+			
+		</ul>
+
+	</main>
+</div>
+
+
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-Facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>

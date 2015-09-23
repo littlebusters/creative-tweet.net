@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<title>画像をRetina対応で書き出しする、Fireworksの拡張機能作ったよ。 | creative tweet.</title>
+<script async src="/assets/js/auie.js"></script>
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="" />
+<meta property="og:title" content="画像をRetina対応で書き出しする、Fireworksの拡張機能作ったよ。" />
+<meta property="og:url" content="http://creative-tweet.net/blog/2012/12/retina-image-exporter.html" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="http://creative-tweet.net/assets/img" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="画像をRetina対応で書き出しする、Fireworksの拡張機能作ったよ。">
+<meta name="twitter:url" content="http://creative-tweet.net/blog/2012/12/retina-image-exporter.html">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="http://creative-tweet.net/assets/img">
+</head>
+
+
+
+
+
+
+<body>
+<header class="siteHeader" role="banner">
+<h1 id="siteSign">
+<a href="/">
+<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<section class="article-header-section">
+				<time class="publishedDatetime" datetime="2012-12-06T09:30:00&#43;09:00">2012/12/6</time>
+				<h1 class="article-title">画像をRetina対応で書き出しする、Fireworksの拡張機能作ったよ。</h1>
+				
+			</section>
+		</header>
+		
+		<div class="content-main">
+			
+
+<p><a title="Fireworks Lover Advent Calendar 2012" href="http://www.adventar.org/calendars/14" target="_blank">Fireworks Lover Advent Calendar 2012</a>の7日目の記事です。</p>
+
+<p>スマートフォン対応の案件も増える中、少々面倒なモノの1つにRetina対応の画像準備があったりします。もちろんFireworks Loverな私ですから、FireworksでRetina対応画像の書き出しができる拡張機能を探してみるわけですが、バシャログさんの拡張機能しか見当たりませんでした。</p>
+
+<p>参考：<a title="【Fireworks】Retina対応用にページを分けるFireworksコマンド | バシャログ。" href="http://c-brains.jp/blog/wsg/12/06/12-193119.php" target="_blank">【Fireworks】Retina対応用にページを分けるFireworksコマンド | バシャログ。</a></p>
+
+<p>こちらで十分機能は満たしているんですが、ちょっと違うアプローチで俺得拡張機能を作ってみました（半分ネタです）。</p>
+
+<p>@2xで作成するのが通常だと思いますが、過去の資産を利用するにあたり、あえて拡大する方向に。<small>ほら、Retina向けに×2倍とかで作成して、奇数ピクセルでストローク引いてるところとか、縮小したらボケちゃうじゃない？</small>スクリプトの処理を拡大から縮小に変更するのは、まぁ比較的簡単にできるので…。あとは、書き出したあとに不要な画像の整理をしないでもいいように、接尾辞が付いているもののみRetina向けの書き出しします。</p>
+
+<p class="link">
+<a href="/tools/retina_image_exporter/detail.html">Retina画像の書き出しを補助する［Fireworks拡張機能］ </a>
+</p>
+
+<h2 id="できること:ad8ccf1d7e782d8f4697055651fef27f">できること</h2>
+
+<ul>
+<li>非Retinaで作成した特定の接尾辞の付いたスライスを、Retina対応（2倍の大きさ）で書き出しができます。</li>
+<li>非Retinaの画像も同時に書き出しを行います。</li>
+</ul>
+
+<h2 id="使い方:ad8ccf1d7e782d8f4697055651fef27f">使い方</h2>
+
+<p>Retinaで書き出をしたいスライスの名前に、特定の接尾辞を付けます。デフォルトは「_x2」です。</p>
+
+<p class="media">
+<img alt="スライス名の設定" src="/assets/img/2012-12-07-retina-image-exporter/setting.png">
+</p>
+
+<p>スクリプトを実行すると、接尾辞の入力を促されるので、スライスに付けた接尾辞を入力してください。</p>
+
+<p class="media">
+<img alt="接尾辞の入力" src="/assets/img/2012-12-07-retina-image-exporter/postfix.png">
+</p>
+
+<p>2回ほど書き出しダイアログが表示されます。1回目のダイヤログがRetina向け画像の書き出し、2回目のダイヤログが通常画像の書き出しです。それぞれ書き出しが必要なスライスを選択した状態になっていますので、適当に設定して書き出ししてください。</p>
+
+<p>きちんと書き出しができました。</p>
+
+<p class="media">x
+<img alt="書き出し結果" src="/assets/img/2012-12-07-retina-image-exporter/exported.png">
+</p>
+
+<h2 id="注意点:ad8ccf1d7e782d8f4697055651fef27f">注意点</h2>
+
+<ul>
+<li>ページを複製して拡大しているので、割と負荷が大きいと思います。</li>
+</ul>
+
+<h2 id="バシャログさん作のコマンドとの違い:ad8ccf1d7e782d8f4697055651fef27f">バシャログさん作のコマンドとの違い</h2>
+
+<ul>
+<li>スライス名に接尾辞が必要。</li>
+<li>ページを増やさない。（処理のため一時的な複製あり）</li>
+<li>画像を拡大し、Retina向けの画像を生成。</li>
+<li>書き出しまでやってしまうお節介。</li>
+</ul>
+
+<h2 id="ちょっと詳しい動作説明:ad8ccf1d7e782d8f4697055651fef27f">ちょっと詳しい動作説明</h2>
+
+<ol>
+<li>まずは、Webレイヤーにオブジェクトがあるかどうかを判定しています。</li>
+<li>オブジェクトがあるようなら、現在のページを複製します。</li>
+<li>@1x向けの画像を書き出しし、複製したページを削除します。</li>
+<li>スライス名に接尾辞があれば、またページを複製します。</li>
+<li>ページを拡大（解像度を2倍）して、接尾辞がついたスライスを@2x向けの画像を書き出しします。</li>
+<li>書き出しのダイヤログを出し、処理が終わったら複製したページを削除します。</li>
+</ol>
+
+<hr class="postscript">
+
+<p>というわけで、半分ネタ半分本気の俺得拡張機能の紹介でした。</p>
+
+		</div>
+
+<div class="socialButtons">
+<div class="socialButtons_twitter">
+	<a href="https://twitter.com/intent/tweet?text=%e7%94%bb%e5%83%8f%e3%82%92Retina%e5%af%be%e5%bf%9c%e3%81%a7%e6%9b%b8%e3%81%8d%e5%87%ba%e3%81%97%e3%81%99%e3%82%8b%e3%80%81Fireworks%e3%81%ae%e6%8b%a1%e5%bc%b5%e6%a9%9f%e8%83%bd%e4%bd%9c%e3%81%a3%e3%81%9f%e3%82%88%e3%80%82&amp;url=http%3a%2f%2fcreative-tweet.net%2fblog%2f2012%2f12%2fretina-image-exporter.html&amp;via=littlebusters" class="twitter-share-button"
+		data-lang="en"
+		data-url="http://creative-tweet.net/blog/2012/12/retina-image-exporter.html"
+		data-text="画像をRetina対応で書き出しする、Fireworksの拡張機能作ったよ。"
+		data-via="littlebusters" 
+		data-count="vertical"
+	>Tweet</a>
+</div>
+<div class="socialButtons_facebook">
+	<div 
+		class="fb-like"
+		data-href="http://creative-tweet.net/blog/2012/12/retina-image-exporter.html"
+		data-layout="box_count"
+		data-send="false"
+		data-width="100"
+		data-show-faces="false"
+	></div>
+</div>
+<div class="socialButtons_hatebu">
+	<a href="http://b.hatena.ne.jp/entry/creative-tweet.net" class="hatena-bookmark-button"
+		data-hatena-bookmark-layout="vertical"
+		data-hatena-bookmark-title="画像をRetina対応で書き出しする、Fireworksの拡張機能作ったよ。"
+		data-hatena-bookmark-url="http://creative-tweet.net/blog/2012/12/retina-image-exporter.html">
+		<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		style="border: none">
+	</a>
+</div>
+<div class="socialButtons_googlep">
+	<div class="g-plusone" data-size="tall" data-href="http://creative-tweet.net/blog/2012/12/retina-image-exporter.html"></div>
+</div>
+</div>
+
+		<ul class="pager">
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2012/12/lovefont-chicago.html" class="pager_nextItem">
+				<span class="pager_label-newer">newer: </span>
+				往年の名フォント「Chicago」 #LOVEFONT
+				</a>
+			</li>
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2012/10/fw-ex-paste-from-ai.html" class="pager_prevItem">
+				<span class="pager_label-older">older: </span>
+				イラレからペーストの拡張機能作りました。
+				</a>
+			</li>
+			
+		</ul>
+
+	</main>
+</div>
+
+
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-Facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>

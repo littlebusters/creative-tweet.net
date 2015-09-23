@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<title>Sketch.appのText on Pathを解説するよ。 – Sketch.app Advent Calendar 2013 | creative tweet.</title>
+<script async src="/assets/js/auie.js"></script>
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="" />
+<meta property="og:title" content="Sketch.appのText on Pathを解説するよ。 – Sketch.app Advent Calendar 2013" />
+<meta property="og:url" content="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-text-on-path.html" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="http://creative-tweet.net/assets/img" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="Sketch.appのText on Pathを解説するよ。 – Sketch.app Advent Calendar 2013">
+<meta name="twitter:url" content="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-text-on-path.html">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="http://creative-tweet.net/assets/img">
+</head>
+
+
+
+
+
+
+<body>
+<header class="siteHeader" role="banner">
+<h1 id="siteSign">
+<a href="/">
+<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<section class="article-header-section">
+				<time class="publishedDatetime" datetime="2013-12-21T09:30:00&#43;09:00">2013/12/21</time>
+				<h1 class="article-title">Sketch.appのText on Pathを解説するよ。 – Sketch.app Advent Calendar 2013</h1>
+				
+			</section>
+		</header>
+		
+		<div class="content-main">
+			
+
+<p><a href="http://www.adventar.org/calendars/99">Sketch.app Advent Calender 2013</a> 21日目の記事です。今回はパスに文字を沿わせる、Text on Pathについて解説していきます。
+<p class="notics">
+  <b>Sketch 3の基本。</b>というSketch 3の基本操作にフォーカスした電子書籍をリリースしました。詳しくはこちらの「<a href="http://creative-tweet.net/sketch-3-basics/">Sketch 3の基本。</a>」のページをご覧ください。
+</p>
+<dl class="links">
+  <dt>
+    記事の一覧
+  </dt>
+  <dd>
+    <a href="http://creative-tweet.net/blog/2013/11/sketch-app-advent-calendar-2013.html">オレオレSketch.app Advent Calendar 2013やりますよ。 | creative tweet.</a>
+  </dd>
+</dl></p>
+
+<p>大概のグラフィックツールについている機能ですが、もちろんSketch.appにも搭載されています。</p>
+
+<h2 id="使い方:b6b340bd9c1d9caa61cbd9cbbc1d69d8">使い方</h2>
+
+<p>テキストオブジェクトと、それを沿わせるパスを準備します。パスはテキストオブジェクトの背面に配置しておきます。便宜上、線を着色していますが、透明でも大丈夫です。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-21-sketch-app-advent-calendar-2013-text-on-path/top-object.png" alt="用意するオブジェクト">
+</p>
+
+<p>テキストオブジェクトを選択し、［Edit］から「Text on Path」を選びます。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-21-sketch-app-advent-calendar-2013-text-on-path/top-menu.png" alt="メニューから選択">
+</p>
+
+<p>その後、テキストオブジェクトのバウンディングボックスが、パスのバウンディングボックスへかかるように移動させると、開始アンカーから終了アンカーに向けてテキストが流し込まれます。ちなみに、バウンディングボックスが重なればいいので、動かすのはどちらのオブジェクトでもよいです。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-21-sketch-app-advent-calendar-2013-text-on-path/top-move.png" alt="オブジェクトのバウンディングボックスを重ねる">
+</p>
+
+<p>おおよそ、テキストオブジェクトの矩形とパスが交わったところから、テキストが流し込まれます。テキストオブジェクトのすぐ下にあるパスに沿うため、前後関係が入れ替わったりすると事故に繋がる可能性が高いので、とりあえずグループ化しておくのがオススメです。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-21-sketch-app-advent-calendar-2013-text-on-path/top-cross.png" alt="交わった部分が開始位置">
+</p>
+
+<p>テキストが一カ所に集まってしまう場合は、テキストオブジェクトの位置が悪いので、適当にドラッグして調整してください。テキストオブジェクトがうまく選択できない場合は、レイヤーパネルから選ぶとストレスが減ります。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-21-sketch-app-advent-calendar-2013-text-on-path/top-ajust.png" alt="オブジェクトの位置を調整する">
+</p>
+
+<p>また［Edit］→［Paths］にある、「Reverse Order」や回転などを利用してテキストの位置を調整できます。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-21-sketch-app-advent-calendar-2013-text-on-path/top-reverse.png" alt="パスの方向を反転">
+</p>
+
+<p>ちなみに途中で改行しても、改行された行にもパスに沿って配置されます。パスのカーブによってはかなり文字がかぶりますが…</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-21-sketch-app-advent-calendar-2013-text-on-path/top-line-break.png" alt="改行も大丈夫">
+</p>
+
+		</div>
+
+<div class="socialButtons">
+<div class="socialButtons_twitter">
+	<a href="https://twitter.com/intent/tweet?text=Sketch.app%e3%81%aeText%20on%20Path%e3%82%92%e8%a7%a3%e8%aa%ac%e3%81%99%e3%82%8b%e3%82%88%e3%80%82%20%e2%80%93%20Sketch.app%20Advent%20Calendar%202013&amp;url=http%3a%2f%2fcreative-tweet.net%2fblog%2f2013%2f12%2fsketch-app-advent-calendar-2013-text-on-path.html&amp;via=littlebusters" class="twitter-share-button"
+		data-lang="en"
+		data-url="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-text-on-path.html"
+		data-text="Sketch.appのText on Pathを解説するよ。 – Sketch.app Advent Calendar 2013"
+		data-via="littlebusters" 
+		data-count="vertical"
+	>Tweet</a>
+</div>
+<div class="socialButtons_facebook">
+	<div 
+		class="fb-like"
+		data-href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-text-on-path.html"
+		data-layout="box_count"
+		data-send="false"
+		data-width="100"
+		data-show-faces="false"
+	></div>
+</div>
+<div class="socialButtons_hatebu">
+	<a href="http://b.hatena.ne.jp/entry/creative-tweet.net" class="hatena-bookmark-button"
+		data-hatena-bookmark-layout="vertical"
+		data-hatena-bookmark-title="Sketch.appのText on Pathを解説するよ。 – Sketch.app Advent Calendar 2013"
+		data-hatena-bookmark-url="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-text-on-path.html">
+		<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		style="border: none">
+	</a>
+</div>
+<div class="socialButtons_googlep">
+	<div class="g-plusone" data-size="tall" data-href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-text-on-path.html"></div>
+</div>
+</div>
+
+		<ul class="pager">
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-sketch-mirror.html" class="pager_nextItem">
+				<span class="pager_label-newer">newer: </span>
+				Sketch.appとSketch Mirrorの使い方を解説するよ。 – Sketch.app Advent Calendar 2013
+				</a>
+			</li>
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-mask.html" class="pager_prevItem">
+				<span class="pager_label-older">older: </span>
+				Sketch.appのマスクについて解説するよ。 – Sketch.app Advent Calendar 2013
+				</a>
+			</li>
+			
+		</ul>
+
+	</main>
+</div>
+
+
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-Facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>

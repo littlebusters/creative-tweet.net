@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<title>Retina画像の書き出しを補助する［Fireworks拡張機能］ | creative tweet.</title>
+<script async src="/assets/js/auie.js"></script>
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Retina画像の書き出しを補助する［Fireworks拡張機能］" />
+<meta property="og:url" content="http://creative-tweet.net/tools/retina_image_exporter/detail.html" />
+<meta property="og:description" content="特定の接尾語がついているスライスを拡大し、Retina用画像として書き出しと、通常の画像も書き出すFireworksの拡張機能です。" />
+<meta property="og:image" content="http://creative-tweet.net/assets/img/site-ogp.png" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="Retina画像の書き出しを補助する［Fireworks拡張機能］">
+<meta name="twitter:url" content="http://creative-tweet.net/tools/retina_image_exporter/detail.html">
+<meta name="twitter:description" content="特定の接尾語がついているスライスを拡大し、Retina用画像として書き出しと、通常の画像も書き出すFireworksの拡張機能です。">
+<meta name="twitter:image" content="http://creative-tweet.net/assets/img/site-ogp.png">
+</head>
+
+
+
+
+
+
+<body>
+<header class="siteHeader is-retina画像の書き出しを補助する［fireworks拡張機能］" role="banner">
+<h1 id="siteSign">
+<a href="/">
+<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+<p class="layout-signal">tools/fireworks</p>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<div class="tool-hero">
+				<img src="/assets/img/tools-retina_image_exporter/retina-image-exporter-symbol.svg" alt="">
+			</div>
+			<section>
+				<h1 class="toolName">Retina Image Exporter</h1>
+			</section>
+		</header>
+
+		<div class="downloadLink">
+			<a href="http://creative-tweet.net/downloads/RetinaImageExporter-2.0.0.zxp" class="btn_toolDownload">ZXP形式をダウンロード</a>
+			<ul class="tool_data">
+				<li>ver.2.0.0</li>
+				<li>4KB</li>
+				<li>CS5 &amp; later</li>
+			</ul>
+		</div>
+
+		<div class="downloadLink">
+			<a href="http://creative-tweet.net/downloads/RetinaImageExporter-2.0.0.mxp" class="btn_toolDownload">MXP形式をダウンロード</a>
+			<ul class="tool_data">
+				<li>ver.2.0.0</li>
+				<li>8KB</li>
+				<li>CS3 &amp; CS6</li>
+			</ul>
+		</div>
+		
+		<div class="content-main">
+			
+
+<h2 id="これは何:23d3c1f978a74345500b8f6e975fbc05">これは何？</h2>
+
+<p>Fireworksでオブジェクトを拡大し、高解像度デバイス向けの画像の書き出しを行う拡張機能です。@1x画像の解像度を2倍にした上で、@2xとして書き出します。@1xと@2xを同時に書き出せます。</p>
+
+<h2 id="動作環境とライセンス:23d3c1f978a74345500b8f6e975fbc05">動作環境とライセンス</h2>
+
+<p>Fireworks CS3以上 / MITライセンス</p>
+
+<h2 id="使い方:23d3c1f978a74345500b8f6e975fbc05">使い方</h2>
+
+<p>高解像度で書き出したいスライスの名前に、任意の接尾辞を付けます（コマンド実行時のデフォルトは「_2x」です）。図では、左の画像に接尾辞を付けました。</p>
+
+<p><img src="/assets/img/tools-retina_image_exporter/rie_fig01.png" alt="" />
+</p>
+
+<p>スクリプトを実行します。最初に接尾辞の入力を促されますので、任意の接尾辞にした場合は入力してください。</p>
+
+<p><img src="/assets/img/tools-retina_image_exporter/rie_fig02.png" alt="" />
+</p>
+
+<p>「書き出しダイアログ」は、高解像度で書き出すスライスがあれば2回、そうでなければ1回表示されます。最初の書き出しダイアログは@1x、2回のダイアログが表示されれば@2xになります（旧バージョンと逆になりました）。書き出しするスライスが選択された状態になっていますので、設定を変更しお好きなフォルダへ書き出ししてください。</p>
+
+<p>接尾辞を付けたスライスのみ、@2xの画像が書き出されました。</p>
+
+<p><img src="/assets/img/tools-retina_image_exporter/rie_fig03.png" alt="" />
+</p>
+
+<h2 id="既知のバグ-仕様:23d3c1f978a74345500b8f6e975fbc05">既知のバグ / 仕様</h2>
+
+<ul>
+<li>解像度を倍にして書き出す性質上、ビットマップの画質は大幅に落ちます。シンボル化したビットマップを、50%の大きさで使えば回避できます。</li>
+<li>テクスチャは拡大されません。</li>
+<li>マスターページやオブジェクトを複数のページで共有している場合、リンクを切る動作を行わないため、オリジナルに影響を及ぼします。別ファイルとして実行するか、ページを複製してリンクを切ってください。</li>
+</ul>
+
+<h2 id="履歴:23d3c1f978a74345500b8f6e975fbc05">履歴</h2>
+
+<dl class="versionHistory">
+<dt>2.0.0［2013.4.30］</dt>
+<dd>Photoshopライブエフェクトのスケールに対応。</dd>
+<dd>@2xの書き出し画像名に、接尾辞を付加。</dd>
+<dt>1.1.0［2013.4.16］</dt>
+<dd>mxp形式を追加</dd>
+<dt>1.1.0［2013.2.1］</dt>
+<dd>書き出しオプションのデフォルトを、「書き出し：画像のみ」に、「ページ」オプションのチェックボックスを「選択したスライスのみ」だけに変更。</dd>
+<dt>1.0.1［2012.12.7］</dt>
+<dd>レイヤーが3つ以上ある場合にうまく動作しない不具合を修正。</dd>
+<dd>スライス名が設定されていない場合、エラーが出てしまう不具合を修正。</dd>
+<dt>1.0.0［2012.12.7］</dt>
+<dd>初リリース</dd>
+</dl>
+
+		</div>
+
+	</main>
+</div>
+
+
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-Facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>

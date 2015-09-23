@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mixture on creative tweet.</title>
+    <link>http://creative-tweet.net/tags/mixture.html</link>
+    <description>Recent content in Mixture on creative tweet.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>2013/10/28 09:30:00 +09:00</lastBuildDate>
+    <atom:link href="http://creative-tweet.net/tags/mixture.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>iOSのブラウザスクリーンショットは、mixtureとRollPaperを組み合わせるとラクだった件</title>
+      <link>http://creative-tweet.net/blog/2013/10/easy-to-take-screenshot.html</link>
+      <pubDate>2013/10/28 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2013/10/easy-to-take-screenshot.html</guid>
+      <description>MIXTUERとRollpaperを使うと、スマートデバイスでページ全体のスクリーンショットを撮るのが楽になりますよ、というお話です。</description>
+    </item>
+    
+  </channel>
+</rss>

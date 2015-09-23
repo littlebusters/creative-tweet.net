@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<title>非Retinaディスプレイで、HiDPIのスクリーンショットを撮る方法とツールたちを紹介しますよ。 | creative tweet.</title>
+<script async src="/assets/js/auie.js"></script>
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="" />
+<meta property="og:title" content="非Retinaディスプレイで、HiDPIのスクリーンショットを撮る方法とツールたちを紹介しますよ。" />
+<meta property="og:url" content="http://creative-tweet.net/blog/2015/09/screenshot-by-hidpi-on-osx.html" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="http://creative-tweet.net/assets/img" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="非Retinaディスプレイで、HiDPIのスクリーンショットを撮る方法とツールたちを紹介しますよ。">
+<meta name="twitter:url" content="http://creative-tweet.net/blog/2015/09/screenshot-by-hidpi-on-osx.html">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="http://creative-tweet.net/assets/img">
+</head>
+
+
+
+
+
+
+<body>
+<header class="siteHeader" role="banner">
+<h1 id="siteSign">
+<a href="/">
+<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<section class="article-header-section">
+				<time class="publishedDatetime" datetime="2015-09-24T09:30:00&#43;09:00">2015/9/24</time>
+				<h1 class="article-title">非Retinaディスプレイで、HiDPIのスクリーンショットを撮る方法とツールたちを紹介しますよ。</h1>
+				
+				<img src="/assets/img/2015/screenshot-by-hidpi-on-osx/screenshot-by-hidpi-on-osx-hero.png" class="hero" alt="">
+				
+			</section>
+		</header>
+		
+		<div class="content-main">
+			
+
+<p>私が普段使っているMacは非RetinaモデルのiMacなのですが、5月22日に発売された「Illustratorとベクターデータの教科書」で使っているスクリーンショットは、いわゆるRetinaの解像度で撮ったものだったりします。</p>
+
+<p>今更な感じもしますが、非Retinaモデルで高解像度（HiDPI）のスクリーンショットを撮る方法と、ディスプレイ解像度の切り替え時に便利なアプリケーションを紹介したいと思います。</p>
+
+<h2 id="非retina機でhidpiを設定するには:0c310688c0b599a671d40caa5eeb877f">非Retina機でHiDPIを設定するには</h2>
+
+<p>Appleが配布している、「Quartz Debuger」というツールを使います。<a href="https://developer.apple.com/downloads/">ツールのダウンロードページ</a>から、「Graphics Tools for Xcode N.N（N.Nは数字）」をダウンロードしましょう。ただし、このページへアクセするにはApple Developerへのユーザー登録が必要です。</p>
+
+<p>ダウンロードしたディスクイメージに入っている「Quartz Debuger.app」をインストールします。</p>
+
+<p class="media">
+<img src="/assets/img/2015/screenshot-by-hidpi-on-osx/quartz-debug-app.png" class="media-flexibleBounding" alt="ダウンロードしたディスクイメージに入っている「Quartz Debug.app」">
+</p>
+
+<p>インストールといってもインストーラーはないので、適当なところで良いと思いますが、アプリケーション → ユーティリティーあたりへコピーするのが無難でしょうかね。</p>
+
+<p>ちなみに、Xcodeで［Xcode］メニューから［Open Developer Tools］→［More Developer Tools&hellip;］からも、ダウンロードセンターへアクセスできます。</p>
+
+<p class="media">
+<img src="/assets/img/2015/screenshot-by-hidpi-on-osx/access-download-center-from-xcode.png" class="media-flexibleBounding" alt="">
+</p>
+
+<p>「Quartz Debuger」を立ち上げたら、［Window］メニューから［UI Resolution］を選択します。</p>
+
+<p class="media">
+<img src="/assets/img/2015/screenshot-by-hidpi-on-osx/select-ui-resolution.png" class="media-flexibleBounding" alt="">
+</p>
+
+<p>表示されたウィンドウの「Enable HiDPI display modes」にチェックを入れます。</p>
+
+<p class="media">
+<img src="/assets/img/2015/screenshot-by-hidpi-on-osx/ui-resolution-window.png" class="media-flexibleBounding" alt="">
+</p>
+
+<p>「ログアウトしないと設定が有効にならないよ」というダイアログが表示されますので、ドキュメントの保存などを終わらせてログアウトしましょう。</p>
+
+<p class="media">
+<img src="/assets/img/2015/screenshot-by-hidpi-on-osx/enabled-alert.png" class="media-flexibleBounding" alt="">
+</p>
+
+<p>再ログイン後、環境設定のディスプレイを開き、［解像度］のラジオボタンを［変更］にすると、変更可能な解像度が表示されます。リストの一番下にある非Retinaでは見慣れない「（HiDPI）」という項目を選択すると、高解像度化することができます。</p>
+
+<p class="media">
+<img src="/assets/img/2015/screenshot-by-hidpi-on-osx/display-control-panel.png" class="media-flexibleBounding" alt="">
+</p>
+
+<p>HiDPIにするとiMac 27インチであれば、1280×720px相当で画面がレンダリングされます。単純に画面が拡大した状態ですが、アクセシビリティの画面拡大と異なり、1pxを2pxでレンダリングしているので、エッジもぼやけず綺麗に表示されます。</p>
+
+<h2 id="解像度を元に戻す:0c310688c0b599a671d40caa5eeb877f">解像度を元に戻す</h2>
+
+<p>元に戻すには、同じく環境設定のディスプレイからiMac向けの解像度を選択します。</p>
+
+<p>ただ1つ欠点がありまして、HiDPIから通常の解像度に戻すと、各アプリケーションのウィンドウはHiDPI時の論理的な大きさを保持してしまうため、HiDPIにする前の大きさに戻すことができません。</p>
+
+<p>これを解決するため、「<a href="https://cordlessdog.com/stay/">Stay</a>」というウィンドウの配置を記憶・復元してくれるアプリケーションを使います。</p>
+
+<p class="linkSection">
+ダウンロード：<a href="https://cordlessdog.com/stay/">Codeless Dog: Stay</a>
+</p>
+
+<p>$15の有償ソフトウェアですが、試用期間（確か14日間）があるので、とりあえず試すことはできます。また、<a href="https://itunes.apple.com/jp/app/stay/id435410196?mt=12">Mac App Store版</a>もあるみたいなので、ライセンス管理とかが面倒ならこちらから購入してもいいと思います。（為替レート的にMac App Storeで買ったほうがちょっと安いかも？）</p>
+
+<h2 id="stayを使う:0c310688c0b599a671d40caa5eeb877f">Stayを使う</h2>
+
+<p>使い方は簡単です。Stayを起動すると右上にディスプレイっぽいアイコンが表示されるので、その中から「Store Windows for All Applications」を選択してウィンドウの配置を記録しておきます。</p>
+
+<p class="media">
+<img src="/assets/img/2015/screenshot-by-hidpi-on-osx/stay-store-window.png" class="media-flexibleBounding" alt="">
+</p>
+
+<p>あとは解像度が元に戻る際に勝手に復元してくれます。強制的に戻す場合は、戻す時は「Restore Windows」を選択すればOKです。</p>
+
+<p class="media">
+<img src="/assets/img/2015/screenshot-by-hidpi-on-osx/stay-restore-window.png" class="media-flexibleBounding" alt="">
+</p>
+
+<p>ひとまずウィンドウの位置さえ戻ればよかったため、深くは使い込んでませんが、ApplescriptやShellを走らせたり、Storeしているウィンドウを管理したりと、他にもいろいろとできるようです。</p>
+
+<p>ただ、ウィンドウの位置を復元するだけですので、例えば閉じてしまった特定のフォルダを元に戻すということはできないため、そこだけは注意が必要です。</p>
+
+<p class="media">
+<img src="/assets/img/2015/screenshot-by-hidpi-on-osx/stay-pref-panel.png" class="media-flexibleBounding" alt="StayのPreferencesパネル">
+</p>
+
+<p>正直、そこまで使う必要もないTipsですが、ひとまずメモということで。</p>
+
+		</div>
+
+<div class="socialButtons">
+<div class="socialButtons_twitter">
+	<a href="https://twitter.com/intent/tweet?text=%e9%9d%9eRetina%e3%83%87%e3%82%a3%e3%82%b9%e3%83%97%e3%83%ac%e3%82%a4%e3%81%a7%e3%80%81HiDPI%e3%81%ae%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88%e3%82%92%e6%92%ae%e3%82%8b%e6%96%b9%e6%b3%95%e3%81%a8%e3%83%84%e3%83%bc%e3%83%ab%e3%81%9f%e3%81%a1%e3%82%92%e7%b4%b9%e4%bb%8b%e3%81%97%e3%81%be%e3%81%99%e3%82%88%e3%80%82&amp;url=http%3a%2f%2fcreative-tweet.net%2fblog%2f2015%2f09%2fscreenshot-by-hidpi-on-osx.html&amp;via=littlebusters" class="twitter-share-button"
+		data-lang="en"
+		data-url="http://creative-tweet.net/blog/2015/09/screenshot-by-hidpi-on-osx.html"
+		data-text="非Retinaディスプレイで、HiDPIのスクリーンショットを撮る方法とツールたちを紹介しますよ。"
+		data-via="littlebusters" 
+		data-count="vertical"
+	>Tweet</a>
+</div>
+<div class="socialButtons_facebook">
+	<div 
+		class="fb-like"
+		data-href="http://creative-tweet.net/blog/2015/09/screenshot-by-hidpi-on-osx.html"
+		data-layout="box_count"
+		data-send="false"
+		data-width="100"
+		data-show-faces="false"
+	></div>
+</div>
+<div class="socialButtons_hatebu">
+	<a href="http://b.hatena.ne.jp/entry/creative-tweet.net" class="hatena-bookmark-button"
+		data-hatena-bookmark-layout="vertical"
+		data-hatena-bookmark-title="非Retinaディスプレイで、HiDPIのスクリーンショットを撮る方法とツールたちを紹介しますよ。"
+		data-hatena-bookmark-url="http://creative-tweet.net/blog/2015/09/screenshot-by-hidpi-on-osx.html">
+		<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		style="border: none">
+	</a>
+</div>
+<div class="socialButtons_googlep">
+	<div class="g-plusone" data-size="tall" data-href="http://creative-tweet.net/blog/2015/09/screenshot-by-hidpi-on-osx.html"></div>
+</div>
+</div>
+
+		<ul class="pager">
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-03.html" class="pager_prevItem">
+				<span class="pager_label-older">older: </span>
+				Sketch 3のテキストボックスで、数字キーを使わず小数点以下を入力する方法を紹介しますよ。 Sketch 3 Advent Calendar 2014
+				</a>
+			</li>
+			
+		</ul>
+
+	</main>
+</div>
+
+
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-Facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>

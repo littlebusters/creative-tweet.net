@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<title>Sketch.app 環境設定の「General」タブを解説するよ。 – Sketch.app Advent Calendar 2013 | creative tweet.</title>
+<script async src="/assets/js/auie.js"></script>
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="" />
+<meta property="og:title" content="Sketch.app 環境設定の「General」タブを解説するよ。 – Sketch.app Advent Calendar 2013" />
+<meta property="og:url" content="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-pref-general.html" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="http://creative-tweet.net/assets/img" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="Sketch.app 環境設定の「General」タブを解説するよ。 – Sketch.app Advent Calendar 2013">
+<meta name="twitter:url" content="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-pref-general.html">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="http://creative-tweet.net/assets/img">
+</head>
+
+
+
+
+
+
+<body>
+<header class="siteHeader" role="banner">
+<h1 id="siteSign">
+<a href="/">
+<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<section class="article-header-section">
+				<time class="publishedDatetime" datetime="2013-12-03T09:30:00&#43;09:00">2013/12/3</time>
+				<h1 class="article-title">Sketch.app 環境設定の「General」タブを解説するよ。 – Sketch.app Advent Calendar 2013</h1>
+				
+			</section>
+		</header>
+		
+		<div class="content-main">
+			
+
+<p><a href="http://www.adventar.org/calendars/99">Sketch.app Advent Calender 2013</a> 3日目の記事です。</p>
+
+<p>今回から3回に分けて、Sketch.appの環境設定についてお届けします。その初回は「General」です。
+<p class="notics">
+  <b>Sketch 3の基本。</b>というSketch 3の基本操作にフォーカスした電子書籍をリリースしました。詳しくはこちらの「<a href="http://creative-tweet.net/sketch-3-basics/">Sketch 3の基本。</a>」のページをご覧ください。
+</p>
+<dl class="links">
+  <dt>
+    記事の一覧
+  </dt>
+  <dd>
+    <a href="http://creative-tweet.net/blog/2013/11/sketch-app-advent-calendar-2013.html">オレオレSketch.app Advent Calendar 2013やりますよ。 | creative tweet.</a>
+  </dd>
+</dl></p>
+
+<h2 id="generalタブについて:c0a0d2dac8a2cb2dd097575044cbb719">Generalタブについて</h2>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-03-sketch-app-advent-calendar-2013-pref-general/general-panel.png" alt="環境設定のGeneralタブ">
+</p>
+
+<p>「General」タブは、残り2つのタブから（多分）溢れた項目の設定ができます。</p>
+
+<p>今更、環境設定の出し方が分からない方もいらっしゃらないと思いますが、［Sketch］メニューの中にある［Preference］・ショートカットは<kbd>Command</kbd>＋<kbd>,</kbd>です。</p>
+
+<p>あと、バージョンを明記してませんでしたが、記事は2.4.1をベースに書いています。</p>
+
+<h3 id="at-launch:c0a0d2dac8a2cb2dd097575044cbb719">At launch</h3>
+
+<p>チェックを入れておくと、Sketch.appを立ち上げと同時に新規ドキュメントを自動的に作成します。</p>
+
+<h3 id="undo:c0a0d2dac8a2cb2dd097575044cbb719">Undo</h3>
+
+<p>チェックを入れると、同様の動作はグループ化され、グループごとのUndoになります。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-03-sketch-app-advent-calendar-2013-pref-general/general-undo.png" alt="Undo設定の比較。チェックありだと同様の操作がまとめられ、元に戻る。">
+</p>
+
+<p>例えば、移動を3回繰り返した場合、チェックを入れている場合は3回前の座標、チェックを入れていない場合は、1回前の座標に戻ります。</p>
+
+<h3 id="font-rendering:c0a0d2dac8a2cb2dd097575044cbb719">Font Rendering</h3>
+
+<p>チェックを入れるとサブピクセルによるフォントレンダリングになり、スクリーン上と同じ見た目になります。下の注意書きは、「iOSデバイスはサプピクセルレンダリングに対応していないので、チェックを外してね！」ということで、iOS向けの制作物であればオフにしておきましょう。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-03-sketch-app-advent-calendar-2013-pref-general/general-sub-pixel.png" alt="サブピクセルレンダリングと通常のレンダリングの比較">
+</p>
+
+<p>細かい説明は省きますが、サブピクセルレンダリングをオンにすると、特性上 設定した色以外でスムージングされます。文字を画像化する場合は、オフの方が幸せかもしれません。</p>
+
+<p>設定の反映は、Sketch.appを再起動する必要があります。</p>
+
+<h3 id="font-inspector:c0a0d2dac8a2cb2dd097575044cbb719">Font Inspector</h3>
+
+<p>チェックを入れると、フォントリストでフォントのプレビューが表示されます。</p>
+
+<h3 id="vector-import:c0a0d2dac8a2cb2dd097575044cbb719">Vector Import</h3>
+
+<p>チェックを入れると、PDFおよびEPSファイルをビットマップレイヤーとして挿入します。オプションを押しておくと、設定している逆の動作をします。</p>
+
+<p>あまり使う機能ではないと思いますが、正直いうと、インポートをどこからするのかが不明で、設定が有効なのかどうかわかりませんｗ チェックした状態で、PDF・EPSファイルをドキュメントにドラッグ &amp; ドロップするとうまく読み込めないので、多分この設定かなとは思いますが…</p>
+
+<p>一応、Insertメニューから挿入した場合は必ずビットマップになりますし、チェックを外した状態なら、PDF・EPSファイルをドラッグ &amp; ドロップで編集可能なデータとして読み込めます（これは、あくまで読み込めるレベルですが）。</p>
+
+<h3 id="sketch-mirror:c0a0d2dac8a2cb2dd097575044cbb719">Sketch Mirror</h3>
+
+<p>チェックを入れておくと、編集しているアートボードをSketch Mirrorで表示します。Sketch側でオブジェクトを選んだ瞬間、Mirror側はそのアートボードに切り替わります。</p>
+
+<hr class="postscript" />
+
+<p>バージョンが上がって環境設定もずいぶんと充実してきましたね。設定できていないところがあれば、ぜひ見直してみてください。</p>
+
+		</div>
+
+<div class="socialButtons">
+<div class="socialButtons_twitter">
+	<a href="https://twitter.com/intent/tweet?text=Sketch.app%20%e7%92%b0%e5%a2%83%e8%a8%ad%e5%ae%9a%e3%81%ae%e3%80%8cGeneral%e3%80%8d%e3%82%bf%e3%83%96%e3%82%92%e8%a7%a3%e8%aa%ac%e3%81%99%e3%82%8b%e3%82%88%e3%80%82%20%e2%80%93%20Sketch.app%20Advent%20Calendar%202013&amp;url=http%3a%2f%2fcreative-tweet.net%2fblog%2f2013%2f12%2fsketch-app-advent-calendar-2013-pref-general.html&amp;via=littlebusters" class="twitter-share-button"
+		data-lang="en"
+		data-url="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-pref-general.html"
+		data-text="Sketch.app 環境設定の「General」タブを解説するよ。 – Sketch.app Advent Calendar 2013"
+		data-via="littlebusters" 
+		data-count="vertical"
+	>Tweet</a>
+</div>
+<div class="socialButtons_facebook">
+	<div 
+		class="fb-like"
+		data-href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-pref-general.html"
+		data-layout="box_count"
+		data-send="false"
+		data-width="100"
+		data-show-faces="false"
+	></div>
+</div>
+<div class="socialButtons_hatebu">
+	<a href="http://b.hatena.ne.jp/entry/creative-tweet.net" class="hatena-bookmark-button"
+		data-hatena-bookmark-layout="vertical"
+		data-hatena-bookmark-title="Sketch.app 環境設定の「General」タブを解説するよ。 – Sketch.app Advent Calendar 2013"
+		data-hatena-bookmark-url="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-pref-general.html">
+		<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		style="border: none">
+	</a>
+</div>
+<div class="socialButtons_googlep">
+	<div class="g-plusone" data-size="tall" data-href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-pref-general.html"></div>
+</div>
+</div>
+
+		<ul class="pager">
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-pref-canvas.html" class="pager_nextItem">
+				<span class="pager_label-newer">newer: </span>
+				Sketch.app 環境設定の「Canvas」タブを解説するよ。 – Sketch.app Advent Calendar 2013
+				</a>
+			</li>
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-basic-knowledge.html" class="pager_prevItem">
+				<span class="pager_label-older">older: </span>
+				Sketch.appの基礎知識や操作・よく使うショートカットなどを紹介するよ。 – Sketch.app Advent Calendar 2013
+				</a>
+			</li>
+			
+		</ul>
+
+	</main>
+</div>
+
+
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-Facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>

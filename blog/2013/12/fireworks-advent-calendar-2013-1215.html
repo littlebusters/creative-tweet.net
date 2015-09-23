@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<title>Fireworksのコマンドを作ってみよう。 – Fireworks Lover Advent Calendar 2013 | creative tweet.</title>
+<script async src="/assets/js/auie.js"></script>
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="" />
+<meta property="og:title" content="Fireworksのコマンドを作ってみよう。 – Fireworks Lover Advent Calendar 2013" />
+<meta property="og:url" content="http://creative-tweet.net/blog/2013/12/fireworks-advent-calendar-2013-1215.html" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="http://creative-tweet.net/assets/img" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="Fireworksのコマンドを作ってみよう。 – Fireworks Lover Advent Calendar 2013">
+<meta name="twitter:url" content="http://creative-tweet.net/blog/2013/12/fireworks-advent-calendar-2013-1215.html">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="http://creative-tweet.net/assets/img">
+</head>
+
+
+
+
+
+
+<body>
+<header class="siteHeader" role="banner">
+<h1 id="siteSign">
+<a href="/">
+<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<section class="article-header-section">
+				<time class="publishedDatetime" datetime="2013-12-24T09:30:00&#43;09:00">2013/12/24</time>
+				<h1 class="article-title">Fireworksのコマンドを作ってみよう。 – Fireworks Lover Advent Calendar 2013</h1>
+				
+			</section>
+		</header>
+		
+		<div class="content-main">
+			
+
+<p>この記事は<a href="http://www.adventar.org/calendars/136">Fireworks Lover Advent Calendar 2013</a> の空いていた15日目の記事です。あと若干のリクエストがあったので書いております。</p>
+
+<p>さまざまな方が解説されている中、あえて今一度Fireworksのコマンドの作り方を書いてみます。</p>
+
+<h2 id="fireworksのコマンドについて:927651539619460ed9118a9faf42913a">Fireworksのコマンドについて</h2>
+
+<p>Macromedia時代のバージョン3のころからある、スクリプトによる機能拡張です。そのスクリプトもJavaScriptをベースに拡張しているため、割とウェブやっている方なら親和性が高いのではないでしょうか。</p>
+
+<h2 id="必要なもの:927651539619460ed9118a9faf42913a">必要なもの</h2>
+
+<p>Adobe Fireworks
+:   これがないとはじまりません。</p>
+
+<p>お好きなエディター
+:   私はSublimeTextを使っています。.jsfをJavaScriptとして開くようにしているので、コード補完やハイライトなどでなかなか捗ります。</p>
+
+<p>JavaScriptの知識
+:   今更「var ゴニョゴニョ」とかは解説しませんので、例えば[とほほのJavaScriptリファレンス][2]で、目的の項目が探せるぐらいの知識は必要です。複雑なことをしなければ、そこまで高いレベルは必要ありません。</p>
+
+<h2 id="あると捗るもの:927651539619460ed9118a9faf42913a">あると捗るもの</h2>
+
+<h3 id="dom-inspector-fireworksコマンドパネル:927651539619460ed9118a9faf42913a">Dom Inspector（Fireworksコマンドパネル）</h3>
+
+<p>現在選択しているオブジェクトやドキュメントの情報を視覚的に表示してくれます。属性値の変更が可能であれば、このパネルから変更ができます。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-24-fireworks-advent-calendar-2013-1215/fwadcmd-inspector.png" alt="DOM Inspector">
+</p>
+
+<dl class="links">
+    <dt>ダウンロード</dt>
+    <dd><a href="http://fireworks.abeall.com/extensions/panels/">Aaron Beall &#8211; Fireworks Guru &#8211; Panels</a></dd>
+</dl>
+
+<p>ここの一覧にあります。DownloadをクリックするとSWFが再生されるので、それを保存してCoomand Panelsフォルダに入れてください。</p>
+
+<p>ちなみにこのパネルの右下にある、自動更新（auto refresh）にチェックを入れておくと、テキストオブジェクトの編集時にテキストの部分選択ができなくなるので注意してください。</p>
+
+<h3 id="fireworks-console-fireworksコマンドパネル:927651539619460ed9118a9faf42913a">Fireworks Console（Fireworksコマンドパネル）</h3>
+
+<p>Adobe謹製のデバッガーがないので、これを使います。以前は、<code>alert()</code>でアラートを表示しながらデバッグという、古典的な方法を取らざるを得ませんでしたが、これのおかげでかなり捗るようになりました。</p>
+
+<p class="media">
+  <img src="http://creative-tweet.net/blog/wp-content/uploads/2013/12/fwadcmd-console.png" alt="Fireworks Console">
+</p>
+
+<p>パネルの上部は、スクリプトを直接書いて実行できます。お決まりの<code>fw.getDocumentDOM()</code>と<code>fw.selection</code>は、それぞれdomとselとして定義されているので、ここでは不要です。</p>
+
+<p>console.log()などで、パネルの下にログを表示できます。配列やオブジェクトも文字列として出力してくれます。Autoのチェックボックスは入れておく方がいいでしょう。手動でログ出力するには、その左にある「Print .jsf log」ボタンをクリックします。</p>
+
+<dl class="links">
+    <dt>ダウンロード</dt>
+    <dd><a href="http://johndunning.com/fireworks/about/FWConsole">Fireworks Console &#8211; Adobe Fireworks Extensions, Commands and Panels &#8211; johndunning.com</a></dd>
+</dl>
+
+<h3 id="commands-fireworksコマンドパネル:927651539619460ed9118a9faf42913a">Commands（Fireworksコマンドパネル）</h3>
+
+<p>Fireworks Consoleと同じ作者のコマンドパネルです。PhotoshopやIllustratorのアクションパネルにボタンモードがあると思いますが、それをFireworksで実現します。またスタイルやメニュー項目など、コマンド以外もクリック一つで実行できるようになります。</p>
+
+<p class="media">
+  <img src="http://creative-tweet.net/blog/wp-content/uploads/2013/12/fwadcmd-commands.png" alt="Commandsパネル">
+</p>
+
+<p>ショートカットを設定するまでもないんだけど、たまに使うようなコマンドをFavorite（星マークを付ける）に登録しておけば、メニューから辿らなくてもすぐに使えて便利です。私は、開発中はショートカットを設定しないので、これをよく使っています。</p>
+
+<dl class="links">
+    <dt>ダウンロード</dt>
+    <dd><a href="http://johndunning.com/fireworks/about/Commands">Commands &#8211; Adobe Fireworks Extensions, Commands and Panels &#8211; johndunning.com</a></dd>
+</dl>
+
+<h2 id="一番簡単なコマンドの作り方:927651539619460ed9118a9faf42913a">一番簡単なコマンドの作り方</h2>
+
+<p>いろんなブログで言及されていますが、ヒストリーから「手順をコマンドとして保存」をすることで、簡単にコマンドが作成できます。</p>
+
+<p>が、定型のモノしか保存できないため、やはり自分の欲しい機能はカスタマイズするしかありません。</p>
+
+<h2 id="コマンドをカスタマイズしてみよう:927651539619460ed9118a9faf42913a">コマンドをカスタマイズしてみよう</h2>
+
+<p>保存ボタンの横にある「手順をコピー」をクリックすると、その手順のスクリプトが取得できます。今回はこれを元に、数値入力してオブジェクトの移動ができるようなコマンドを作ってみます。</p>
+
+<p class="media">
+  <img src="http://creative-tweet.net/blog/wp-content/uploads/2013/12/fwadcmd-history-panel.png" alt="手順のコピー">
+</p>
+
+<p>まずはオブジェクトを移動させ、手順をコピーするとこんなスクリプトが取得できるはずです。</p>
+
+<pre><code>fw.getDocumentDOM().moveSelectionBy({x:140, y:93}, false, false);
+</code></pre>
+
+<p>ひとまず、これをエディタにペーストして保存しましょう。ファイル名には自由に付けて大丈夫です。拡張子は.jsfになります。</p>
+
+<p>保存場所ですが、わかりやすいところに作成したフォルダに保存した後、OSXなら <code>/Users/[User]/Library/Application Support/Adobe/Fireworks CS6/Commands</code> へフォルダのエイリアスを、Windowsなら <code>C:¥Users¥[User]¥AppData¥Roaming¥Adobe¥Fireworks CS6¥Commands</code> へフォルダのショートカットを入れると、Fireworks側できちんと認識してくれます。（途中の[User]の部分はご自身の環境に合わせて読み替えてください）</p>
+
+<p>逆にCommandsフォルダにフォルダを作って、エイリアス/ショートカットをわかりやすいところに作成でもいいのですが、完全にアンインストールした時に一緒に消しちゃった！という自体になりかねないので、前者をお薦めします。</p>
+
+<p>で、項目を分解してザックリと解説すると、</p>
+
+<p><strong>fw</strong>は、jQueryでいうところの$です。</p>
+
+<p><strong>getDocumentDOM()</strong>は、ドキュメントの構造体を取得するものです。乱暴に言うと、ドキュメントはHTMLのDOMツリーのように構成されており、現在開いているドキュメントのサイズやオブジェクト・パターンなどの情報を一気に取得します。<br />
+多くの場合、<code>var dom = fw.getDocumentDOM();</code>といった感じで変数に収めて使い回しますが、今回はしません。</p>
+
+<p><strong>moveSelectionBy()</strong>は、選択範囲を動かすメソッドです。ドキュメントである<a href="http://help.adobe.com/en_US/fireworks/cs/extend/WS5b3ccc516d4fbf351e63e3d1183c94856c-7c8c.html">Adobe Fireworks * dom.moveSelectionBy()</a>を見てみると、「指定された数値分の移動またはコピー」ができるメソッドということがわかります。</p>
+
+<p><strong>{x:140, y:93}</strong>が移動距離です。X座標に+140px、Y座標に+93px移動していることがわかります。</p>
+
+<p><strong>false（1つ目）</strong>は、先ほどのドキュメント見ると、bMakeCopyの項目にあたり、移動させるかコピーするかを決める真偽値ということがわかります。falseが移動のみです。</p>
+
+<p><strong>false（2つ目）</strong>は、こちらもドキュメントを確認してみると、パスのアンカーを選択している場合に、アンカーを動かすかオブジェクト全体を動かすかを決める真偽値ということがわかります。falseを指定するとオブジェクト全体を動かします。</p>
+
+<p>とりあえず目的のコマンドを作成するには、</p>
+
+<ol>
+<li>コマンドを実行</li>
+<li>数値を入力する</li>
+<li>入力した数値で移動させる</li>
+</ol>
+
+<p>という感じになるので、ヒストリーから作成したコマンドの<code>{x:140, y:93}</code>の部分を書き換えればいいということになります。</p>
+
+<h2 id="入力のインターフェイス:927651539619460ed9118a9faf42913a">入力のインターフェイス</h2>
+
+<p>コマンドで使える入力インターフェイスは、JavaScriptの<code>alert()</code>や<code>prompt()</code>などがあります。今回は数値の入力が必要なので<code>prompt()</code>を使い、下記のように書き換えます。</p>
+
+<pre><code>prompt( '移動するX軸の距離を入力してください。', '' );&lt;br /&gt;
+fw.getDocumentDOM().moveSelectionBy({x:140, y:93}, false, false);
+</code></pre>
+
+<p>とりあえずダイアログが出て、数値は入力できるようになりました。しかし、このままでは入力した数値が使えないので、さらに下記のように変更します。</p>
+
+<p>もしダイアログのメッセージが文字化けする場合は、文字コードをShift_JISに変更してみてください。</p>
+
+<pre><code>var x = prompt( '移動するX軸の距離を入力してください。', '' );
+console.log( x );
+fw.getDocumentDOM().moveSelectionBy({x:140, y:93}, false, false);
+</code></pre>
+
+<p>これで入力した値が使えるようになりました。さらにログをFireworks Consoleに出力できるようにしたので、入力した値がコンソールに出ていればOKです。Y座標も同じようにします。（ちなみにFireworks Consoleが入っていないFwで、<code>console.log()</code>を実行するとエラーになるので、もし配布することがあればご注意を）</p>
+
+<pre><code>var x = prompt( '移動するX軸の距離を入力してください。', '' );
+var y = prompt( '移動するY軸の距離を入力してください。', '' );
+console.log( x, y );
+fw.getDocumentDOM().moveSelectionBy({x:140, y:93}, false, false);
+</code></pre>
+
+<p>2回ダイアログがでて、X/Yとも入力できるようになりました。続いて、移動先の座標を入力された座標にしたいので、<code>{x:140, y:93}</code>の部分を変更します。</p>
+
+<pre><code>var x = prompt( '移動するX軸の距離を入力してください。', '' );
+var y = prompt( '移動するY軸の距離を入力してください。', '' );
+console.log( x, y );
+fw.getDocumentDOM().moveSelectionBy({x:x, y:y}, false, false);
+</code></pre>
+
+<p>これでひとまず完成です。カーソルキーとどちらが早いか？という話もありますが、とりあえず距離を指定して移動できるようになりました。</p>
+
+<h2 id="さらにカスタマイズ:927651539619460ed9118a9faf42913a">さらにカスタマイズ</h2>
+
+<p>ザックリとつくったので、当然ながら入力された値のチェックができてなかったり（個人的に使うのなら不要ですが）、ダイアログを2回出してそれぞれ入力していたりと、ちょっと貧弱ですね。ダイアログを1つにまとめてみたり、四則演算できるようにしたりと改造できるポイントはありますので、ぜひチャレンジしてみてください。</p>
+
+<p>これを元に<a href="https://github.com/littlebusters/FwExtensions/blob/master/object_move.jsf">私が作ったコマンドはこちら</a>です。あと先日公開した<a href="https://github.com/littlebusters/FwSliceModifier">Slice Modifier</a>もソースを公開しております。ご覧のいただくとわかると思いますが、ほとんどがJavaScriptでFireworksのメソッドを使っているのは、オブジェクトを処理するときぐらいなのです。</p>
+
+<p>え、ドキュメントが英語で分かりづらい？ メソッド名から大体機能は想像できると思いますが、ほんの一部をつたない英語力でシコシコと翻訳したものを貼っておきますねっ<a href="https://github.com/littlebusters/ExtendingFireworksTranslation">littlebusters/ExtendingFireworksTranslation</a></p>
+
+<p>あの発表があってからモチベーションが下がって途中やめなので、誰か続き頼む。</p>
+
+<p>というわけで、よいFireworks コマンドライフを！</p>
+
+		</div>
+
+<div class="socialButtons">
+<div class="socialButtons_twitter">
+	<a href="https://twitter.com/intent/tweet?text=Fireworks%e3%81%ae%e3%82%b3%e3%83%9e%e3%83%b3%e3%83%89%e3%82%92%e4%bd%9c%e3%81%a3%e3%81%a6%e3%81%bf%e3%82%88%e3%81%86%e3%80%82%20%e2%80%93%20Fireworks%20Lover%20Advent%20Calendar%202013&amp;url=http%3a%2f%2fcreative-tweet.net%2fblog%2f2013%2f12%2ffireworks-advent-calendar-2013-1215.html&amp;via=littlebusters" class="twitter-share-button"
+		data-lang="en"
+		data-url="http://creative-tweet.net/blog/2013/12/fireworks-advent-calendar-2013-1215.html"
+		data-text="Fireworksのコマンドを作ってみよう。 – Fireworks Lover Advent Calendar 2013"
+		data-via="littlebusters" 
+		data-count="vertical"
+	>Tweet</a>
+</div>
+<div class="socialButtons_facebook">
+	<div 
+		class="fb-like"
+		data-href="http://creative-tweet.net/blog/2013/12/fireworks-advent-calendar-2013-1215.html"
+		data-layout="box_count"
+		data-send="false"
+		data-width="100"
+		data-show-faces="false"
+	></div>
+</div>
+<div class="socialButtons_hatebu">
+	<a href="http://b.hatena.ne.jp/entry/creative-tweet.net" class="hatena-bookmark-button"
+		data-hatena-bookmark-layout="vertical"
+		data-hatena-bookmark-title="Fireworksのコマンドを作ってみよう。 – Fireworks Lover Advent Calendar 2013"
+		data-hatena-bookmark-url="http://creative-tweet.net/blog/2013/12/fireworks-advent-calendar-2013-1215.html">
+		<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		style="border: none">
+	</a>
+</div>
+<div class="socialButtons_googlep">
+	<div class="g-plusone" data-size="tall" data-href="http://creative-tweet.net/blog/2013/12/fireworks-advent-calendar-2013-1215.html"></div>
+</div>
+</div>
+
+		<ul class="pager">
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-links.html" class="pager_nextItem">
+				<span class="pager_label-newer">newer: </span>
+				Sketch.appのリソースと購入方法を紹介するよ。 – Sketch.app Advent Calendar 2013
+				</a>
+			</li>
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-tips.html" class="pager_prevItem">
+				<span class="pager_label-older">older: </span>
+				Sketch.appの小ネタやTipsを紹介するよ。 – Sketch.app Advent Calendar 2013
+				</a>
+			</li>
+			
+		</ul>
+
+	</main>
+</div>
+
+
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-Facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>

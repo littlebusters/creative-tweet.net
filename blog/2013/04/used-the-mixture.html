@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<title>黒い画面が苦手でも大丈夫！GUIビルドツール MIXTUREを使ってみたよ。 | creative tweet.</title>
+<script async src="/assets/js/auie.js"></script>
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="" />
+<meta property="og:title" content="黒い画面が苦手でも大丈夫！GUIビルドツール MIXTUREを使ってみたよ。" />
+<meta property="og:url" content="http://creative-tweet.net/blog/2013/04/used-the-mixture.html" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="http://creative-tweet.net/assets/img" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="黒い画面が苦手でも大丈夫！GUIビルドツール MIXTUREを使ってみたよ。">
+<meta name="twitter:url" content="http://creative-tweet.net/blog/2013/04/used-the-mixture.html">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="http://creative-tweet.net/assets/img">
+</head>
+
+
+
+
+
+
+<body>
+<header class="siteHeader" role="banner">
+<h1 id="siteSign">
+<a href="/">
+<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<section class="article-header-section">
+				<time class="publishedDatetime" datetime="2013-04-24T09:30:00&#43;09:00">2013/4/24</time>
+				<h1 class="article-title">黒い画面が苦手でも大丈夫！GUIビルドツール MIXTUREを使ってみたよ。</h1>
+				
+			</section>
+		</header>
+		
+		<div class="content-main">
+			
+
+<p class="media">
+  <img src="/assets/img/2013/2013-04-24-used-the-mixture/used_the_mixture_main.png" alt="" />
+</p>
+
+<p class="notics-alert">
+この記事はmixtureの古いバージョンで書かれたものです。またmixture自体はフリー化し、メンテナンスが行われていないため、使用する場合はご注意ください。できれば他のStatic Site Generatorに乗り換えることをお勧めします。
+</p>
+
+<p>ブログ自体はWordPressを使用していますが、それ以外のディレクトリは静的HTMLを使っています。特にFireworksの拡張機能を配布しているページは、配布物が増えるたびにグローバルナビを書き換えたり、コンテンツの細かいところを書き換えたりとちょっと面倒です。ここで、気になっていたMIXTUREを使って再構築した備忘録ついでに。</p>
+
+<p>MIXTURE についてはこちら
+:   <a href="http://mixture.io/">Mixture &#8211; A rapid prototyping and static site generation tool for designers and developers</a></p>
+
+<p>MIXTUREはLiquidテンプレートエンジンを使った、静的サイトジェネレーターです。主に以下のような機能があります。</p>
+
+<ul>
+<li>Liquid と HAML テンプレートエンジン（内容自体にはMarkdownが使えます）</li>
+<li>プリプロセッサーのコンパイル（ Sass / LESS / Stylus / CoffeeScript / Compass ）</li>
+<li>CSS や Javascript の Mixifier</li>
+<li>画像の最適化（OptiPNG / JPEGTran）</li>
+<li>デバッグ</li>
+<li>ローカルサーバー</li>
+<li>ライブリロード（デバイス同期あり：<a href="http://www.youtube.com/watch?v=ER-la4wunyo&amp;list=LLzjZ5b8kZQGmAjX2dzlzY_Q&amp;feature=mh_lolz">YouTube</a>）</li>
+</ul>
+
+<p>一部のツールは、通称「黒い画面」と格闘する必要がありますが、MIXTURE をインストールすればその必要もなく、インストーラーをポチポチするだけで簡単に使い始められます。また、こういったツールは OSX だけだったりするんですが、Windows にも対応しています。（ただし、 Win版は .Net Framework 4.5 が必要）</p>
+
+<p>MIXTURE は頻繁にアップデートされているため、この内容の通りテストしても動かない場合がありますので、ご了承ください。</p>
+
+<h2 id="準備:b8f73c83a74a20f8edd650f689d903e0">準備</h2>
+
+<p>まずは、MIXTURE をダウンロードします。</p>
+
+<dl class="links">
+  <dt>
+    MIXTUREのダウンロード
+  </dt>
+  
+  <dd>
+    <a href="http://mixture.io/#download" target="_blank" title="Mixture - A rapid prototyping and static site generation tool for designers and developers">Mixture &#8211; A rapid prototyping and static site generation tool for designers and developers</a>
+  </dd>
+</dl>
+
+<p>インストールして起動すると、最初にベースとする Boilerplate を選ぶ画面になります。Bootstrap を始め、BourbonやSassaparillaなども選択できますし、一から構築するための「Empty」もあります。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-04-24-used-the-mixture/mixture_fig3_boilerplates.png" alt="" />
+</p>
+
+<p>今回は再構築ですので、「Empty」を選んですすめました。</p>
+
+<p>Boilerplateを選ぶと、フォルダを選ぶダイアログが表示されます。ここで選んだフォルダに、必要なファイルがダウンロードされるので、いちいちサイトからダウンロードするという手間がかかりません。</p>
+
+<h2 id="ダウンロードされたフォルダの中身:b8f73c83a74a20f8edd650f689d903e0">ダウンロードされたフォルダの中身</h2>
+
+<p>選んだフォルダには以下のような構成になります。（BoilerplateがEmptyの場合）</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-04-24-used-the-mixture/mixture_fig1_structure.png" alt="" />
+</p>
+
+<p><strong>assets</strong>
+:   共通で使うリソースを入れるフォルダになります。</p>
+
+<p><strong>models</strong>
+:   JSONファイルを置きます。このJSONは、他のファイルから変数っぽく呼び出して使うことができます。ある意味データベースみたいなものと思えばわかりやすいでしょうか。</p>
+
+<p><strong>templates</strong>
+:   このフォルダには、レイアウトとコンテンツの元となるファイルを入れていきます。「includes」と「layouts」は後述します。</p>
+
+<p><strong>mixture.json</strong>
+:   プロジェクトの名称や説明・プリプロセッサーの出力場所など、サイト全体の設定をします。</p>
+
+<p>選んだBoilerplateによっては、compassフォルダがあったりBourbonフォルダがあったります。（あとpackage.pngとfavicon.icoがありますが、今更 説明は不要でしょう）</p>
+
+<h2 id="とりあえずプレビューしてみる:b8f73c83a74a20f8edd650f689d903e0">とりあえずプレビューしてみる</h2>
+
+<p>ダウンロードが終わり準備ができると、下図のようなウィンドウが表示されます。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-04-24-used-the-mixture/mixture_fig4_dafaultwindow.png" alt="" />
+</p>
+
+<p>左のメニューですが、</p>
+
+<p><strong>ToDo</strong>
+:   ファイルの中でコメントに「TODO:hogehoge」と書いておくと、ここに表示されます。</p>
+
+<p><strong>Errors</strong>
+:   エラー箇所が表示されます。“Houston, we have a problem!”と表示されるのが、何気に面白いですね。![][3]</p>
+
+<p><strong>Directory</strong>
+:   現在MIXTUREで監視しているディレクトリを開きます。</p>
+
+<p><strong>View Locally</strong>
+:   ローカルサーバを立ち上げてプレビューできます。</p>
+
+<p><strong>Publish</strong>
+:   MIXTUREサーバにアップロードします。</p>
+
+<p><strong>View Online</strong>
+:   Publishでアップロードしたコンテンツをプレビューできます。</p>
+
+<p><strong>Settings</strong>
+:   サイトの設定を行う、mixture.jsonを開きます（.json に割り当てられたアプリが開きます）。</p>
+
+<p><strong>Tools</strong>
+:   HTMLへの変換と、Browser Stockでのプレビューができます。Browser Stockを使うには、アカウント設定でAPIの登録が必要なようです。</p>
+
+<p><strong>Recent</strong>
+:   最近使ったプロジェクトが表示されます。</p>
+
+<p><strong>Open</strong>
+:   MIXTUREで管理されているフォルダを選んで開けます。管理外のフォルダを開いた場合、Boilerplateを選ぶ画面になります。</p>
+
+<p>ですので、ひとまず「View Locally」でプレビューしてみましょう。MIXTUREがサーバ機能も持っているので、これを使ってプレビューすることができます。</p>
+
+<p>このとき表示されているファイルが「templates/index.liquid」で、コンテンツはLiquidファイルとしてtemplatesに入れるようになっています。またサブディレクトリの作成も単純で、「templates/about/about.liquid」とフォルダとファイルを作れば、このファイルへのURLは「<a href="http://localhost:7774/about/about」となります。">http://localhost:7774/about/about」となります。</a></p>
+
+<p>index.liquidを開いて一部を変更・保存すると、「View Locally」中は、ライブリロードが有効になっているので、すぐに変更が反映されます。</p>
+
+<h2 id="レイアウトの変更:b8f73c83a74a20f8edd650f689d903e0">レイアウトの変更</h2>
+
+<p>index.liquidはコンテンツだけの記述になっており、ベースとなるレイアウト情報は「templates/layouts/layout.liquid」に記述されています。さらにこのlayout.liquidを見て行くと、{% include &ldquo;header&rdquo; %}という記述があり、「templates/includes/header.liquid」を呼び出しているのがわかります。</p>
+
+<p>このように、レイアウトは主にこの2種類のファイルを使って構築します。イメージとしては、layoutsがDreamweaverのテンプレート、includesがライブラリといった感じでしょうか。</p>
+
+<h2 id="グローバルモデルの活用:b8f73c83a74a20f8edd650f689d903e0">グローバルモデルの活用</h2>
+
+<p>modelsフォルダにJSONファイルを置いておくことで、templatesフォルダ内にある同じ名前のLiquidファイルから値を呼び出すことができます。これはコンテンツ部分のLiquidファイルだけで呼び出せるのではなく、共通のレイアウト部分であるlayout.liquidやincludesフォルダ以下のファイルからでも呼び出すことが可能です。</p>
+
+<p>つまり、ページ毎で内容は変わるけどレイアウトとして共通化できる部分は、コンテンツのLiquidファイルではなく、レイアウトのLiquidファイルに入れておくことができます。（いわゆる必要な要素を削除したとかの事故が起きにくい）</p>
+
+<h3 id="実際に使ってみる:b8f73c83a74a20f8edd650f689d903e0">実際に使ってみる</h3>
+
+<p>「models/index.json」を作成し、以下のように記述します。</p>
+
+<pre><code>{ 
+  &quot;twitter&quot;: &quot;@littlebusters&quot;
+}
+</code></pre>
+
+<p>さらに、index.liquid のどこかに、</p>
+
+<pre><code>{{ model.twitter }}
+</code></pre>
+
+<p>と記述すれば、「@littlebusters」と出力されます（&rdquo;model&rdquo;はnamescpace）。完全にパターン化しておけば、JSONファイルの変更だけで、コンテンツを更新することも可能です。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-04-24-used-the-mixture/mixture_fig7_globalmodel.png" alt="" />
+  <span class="mediaCaption">画像内が {{ twitter }} になっていますが、正しくは {{ model.twitter }} です。</span>
+</p>
+
+<h2 id="liquid-のテンプレートタグ:b8f73c83a74a20f8edd650f689d903e0">Liquid のテンプレートタグ</h2>
+
+<p>前項で実は記述してしまったんですが、Liquidテンプレートタグは以下のように書きます。</p>
+
+<pre><code>{{ &quot;app.css&quot; | asset_url | stylesheet_tag }}
+</code></pre>
+
+<p>こんな感じで記述をすると、&rdquo;asset_url&rdquo;の部分でapp.cssを探して相対パスを自動的に生成し、stylesheet_tagでlink要素が生成されます。asset_urlやstylesheet_tagの部分がフィルターで、渡した値に対していろいろと処理をしてくれます。</p>
+
+<p>画像なんかでも、src属性の値として、</p>
+
+<pre><code>{{ &quot;imagefilename.png&quot; | asset_url }}
+</code></pre>
+
+<p>と記述してやれば、ファイルのパスを自動的に生成します。同じファイル名がある場合でも、正しいファイルにリンクされてました。（細かいテストはしてないので、どういう動作になっているかわかりませんが…）</p>
+
+<p>他にも分岐（if）だったり、繰り返し（for）もあり、modelsと併用すれば、リストの書き出しなんかも簡単にできるようです。これ以外のタグやフィルターについては、ドキュメントを参照してください。</p>
+
+<dl class="links">
+  <dt>
+    MIXTURE のドキュメントサイト
+  </dt>
+  
+  <dd>
+    <a href="http://docs.mixture.io/" target="_blank" title="Welcome : Mixture Documentation">Welcome : Mixture Documentation</a>
+  </dd>
+</dl>
+
+<h2 id="画像の最適化とcssやjsのminifier:b8f73c83a74a20f8edd650f689d903e0">画像の最適化とCSSやJSのMinifier</h2>
+
+<p>画像やCSS・Javascriptをフォルダに入れるだけで、ファイルの最適化やMinifierが行われます。</p>
+
+<p>MIXTUREで最適化されたPNGファイルを見てみましたが、不要な情報を削除しているだけのようです。本格的にファイルサイズを下げるなら他のツールが必要になりますが、とりあえずフォルダに入れるだけで最適化されるのは楽ですね。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-04-24-used-the-mixture/mixture_fig6_pngminifier.png" alt="オリジナルのFireworks PNGは193KB、MIXTUREで最適化されたPNGは61KB、ImageOptimaで最適化されたPNGは139KB" />
+</p>
+
+<p>CSSやJavascriptはホントに入れるだけで、hogehoge.min.jsやfugafuga.min.cssが生成されます。</p>
+
+<p>この辺りの有効化・無効化は、mixture.jsonで設定できるようです。</p>
+
+<h2 id="書き出し:b8f73c83a74a20f8edd650f689d903e0">書き出し</h2>
+
+<p>一通り組み上がったら、Toolsにある「Convert to HTML」をしてみましょう。「convert_html」というフォルダが生成され、その中に必要なリソースが保存されます。そのままサーバにアップすればコンテンツを公開することができます。ただし、asset_urlで取得しているものは、うまく取得できていないことがありますので、念のため確認しましょう（特にWindows版）。</p>
+
+<hr class="postscript" />
+
+<p>というわけで、駆け足の説明になりましたが、とりあえず雰囲気でサクっと作ってみるとか、CMS までは入らないけど、少し簡単な方法で静的HTMLを作りたいという時の選択肢にはなるかなと思います。</p>
+
+<p>クライアントにExcelなどのスプレッドシートからJSONを出力できるマクロを提供しておけば、MIXTUREと組み合わせてHTMLを書かなくてもページを作成するとか（大規模なサイトには向きませんが）、オレオレフレームワークを作ってみるとか、いろいろとできそうな感じです。</p>
+
+<p>公開時は有償だったのですが、どうやらビジネスモデルに問題があったようでフリー化されました。アップデートは提供するということなんですが、内蔵されているSassが若干古くなってるので、本気で使うには少しつらいかもしれません…</p>
+
+<p>間違いがありましたら、Twitter（<a href="http://twitter.com/littlebusters">@littlebusters</a>） や Facebook ページ（<a href="http://www.facebook.com/creative.tweet">creative tweet.</a>）などにお知らせいただけると幸いです。</section></p>
+
+		</div>
+
+<div class="socialButtons">
+<div class="socialButtons_twitter">
+	<a href="https://twitter.com/intent/tweet?text=%e9%bb%92%e3%81%84%e7%94%bb%e9%9d%a2%e3%81%8c%e8%8b%a6%e6%89%8b%e3%81%a7%e3%82%82%e5%a4%a7%e4%b8%88%e5%a4%ab%ef%bc%81GUI%e3%83%93%e3%83%ab%e3%83%89%e3%83%84%e3%83%bc%e3%83%ab%20MIXTURE%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%a6%e3%81%bf%e3%81%9f%e3%82%88%e3%80%82&amp;url=http%3a%2f%2fcreative-tweet.net%2fblog%2f2013%2f04%2fused-the-mixture.html&amp;via=littlebusters" class="twitter-share-button"
+		data-lang="en"
+		data-url="http://creative-tweet.net/blog/2013/04/used-the-mixture.html"
+		data-text="黒い画面が苦手でも大丈夫！GUIビルドツール MIXTUREを使ってみたよ。"
+		data-via="littlebusters" 
+		data-count="vertical"
+	>Tweet</a>
+</div>
+<div class="socialButtons_facebook">
+	<div 
+		class="fb-like"
+		data-href="http://creative-tweet.net/blog/2013/04/used-the-mixture.html"
+		data-layout="box_count"
+		data-send="false"
+		data-width="100"
+		data-show-faces="false"
+	></div>
+</div>
+<div class="socialButtons_hatebu">
+	<a href="http://b.hatena.ne.jp/entry/creative-tweet.net" class="hatena-bookmark-button"
+		data-hatena-bookmark-layout="vertical"
+		data-hatena-bookmark-title="黒い画面が苦手でも大丈夫！GUIビルドツール MIXTUREを使ってみたよ。"
+		data-hatena-bookmark-url="http://creative-tweet.net/blog/2013/04/used-the-mixture.html">
+		<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		style="border: none">
+	</a>
+</div>
+<div class="socialButtons_googlep">
+	<div class="g-plusone" data-size="tall" data-href="http://creative-tweet.net/blog/2013/04/used-the-mixture.html"></div>
+</div>
+</div>
+
+		<ul class="pager">
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2013/04/retina-image-exporter-200.html" class="pager_nextItem">
+				<span class="pager_label-newer">newer: </span>
+				Retina画像書き出しをバージョンアップしました。
+				</a>
+			</li>
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2013/04/psle_scaler-100.html" class="pager_prevItem">
+				<span class="pager_label-older">older: </span>
+				Photoshopライブエフェクトが拡大縮小できるFireworksの拡張機能つくったよ。
+				</a>
+			</li>
+			
+		</ul>
+
+	</main>
+</div>
+
+
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-Facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>

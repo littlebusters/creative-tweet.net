@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<title>Sketch.appのインスペクタを解説するよ。【スタイル編】 – Sketch.app Advent Calendar 2013 | creative tweet.</title>
+<script async src="/assets/js/auie.js"></script>
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="" />
+<meta property="og:title" content="Sketch.appのインスペクタを解説するよ。【スタイル編】 – Sketch.app Advent Calendar 2013" />
+<meta property="og:url" content="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-style.html" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="http://creative-tweet.net/assets/img" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="Sketch.appのインスペクタを解説するよ。【スタイル編】 – Sketch.app Advent Calendar 2013">
+<meta name="twitter:url" content="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-style.html">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="http://creative-tweet.net/assets/img">
+</head>
+
+
+
+
+
+
+<body>
+<header class="siteHeader" role="banner">
+<h1 id="siteSign">
+<a href="/">
+<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<section class="article-header-section">
+				<time class="publishedDatetime" datetime="2013-12-08T09:30:00&#43;09:00">2013/12/8</time>
+				<h1 class="article-title">Sketch.appのインスペクタを解説するよ。【スタイル編】 – Sketch.app Advent Calendar 2013</h1>
+				
+			</section>
+		</header>
+		
+		<div class="content-main">
+			
+
+<p><a href="http://www.adventar.org/calendars/99">Sketch.app Advent Calender 2013</a> 8日目の記事です。</p>
+
+<p>Sketch.appのインスペクタシリーズ第2弾、スタイリングについてお届けします。
+<p class="notics">
+  <b>Sketch 3の基本。</b>というSketch 3の基本操作にフォーカスした電子書籍をリリースしました。詳しくはこちらの「<a href="http://creative-tweet.net/sketch-3-basics/">Sketch 3の基本。</a>」のページをご覧ください。
+</p>
+<dl class="links">
+  <dt>
+    記事の一覧
+  </dt>
+  <dd>
+    <a href="http://creative-tweet.net/blog/2013/11/sketch-app-advent-calendar-2013.html">オレオレSketch.app Advent Calendar 2013やりますよ。 | creative tweet.</a>
+  </dd>
+</dl></p>
+
+<h2 id="スタイル設定について:f83ac191919c55609feff95806df498c">スタイル設定について</h2>
+
+<p>オブジェクトに塗りや線などを設定する項目です。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-08-sketch-app-advent-calendar-2013-inspector-style/inspector-style.png" alt="インスペクタのスタイル設定">
+</p>
+
+<h3 id="fill:f83ac191919c55609feff95806df498c">Fill</h3>
+
+<p>オブジェクトに塗りを設定します。＋マークで塗りを追加でき、最大4つまで設定できます。Fill 1から順に重ねられ、チェックマークをオフにすると、一時的にその塗りを適用外にできます。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-08-sketch-app-advent-calendar-2013-inspector-style/style-fill.png" alt="塗りの設定">
+</p>
+
+<p>色の部分をクリックすると、ベタ塗り・グラデーションなどの塗りのタイプを選択できます（これについては後日）。</p>
+
+<p>余白をドラッグして順番を変えたり、枠外に移動させて設定を削除できたりします。</p>
+
+<h3 id="borders:f83ac191919c55609feff95806df498c">Borders</h3>
+
+<p>オブジェクトに線を設定します。こちらも少なくとも20以上は重ねて設定ができます。チェックマークをオフにすると、一時的にその線を適用外にできます。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-08-sketch-app-advent-calendar-2013-inspector-style/style-borders.png" alt="線の設定">
+</p>
+
+<p>ちょっと掴みにくいですが、塗りと同じく余白をドラッグして順番を変えたり、枠外に移動させて設定を削除できたりします。</p>
+
+<p>「Borders」の右にある三角マークでオプションの表示/非表示をします。</p>
+
+<p><strong>Positon</strong><br />
+線の描画をパスのどの位置から行うかを設定します。</p>
+
+<p><strong>Size</strong><br />
+線の太さを設定します。</p>
+
+<p><strong>Color</strong><br />
+線の色を設定します。</p>
+
+<p><strong>Start Arrow / End Arrow</strong><br />
+パスの両端を矢印にします。</p>
+
+<p><strong>Ends</strong><br />
+パスの両端の描画処理を設定します。</p>
+
+<p><strong>Joins</strong><br />
+パスが繋がっている部分の処理を設定します。</p>
+
+<p><strong>Dash / Gap</strong><br />
+破線の設定です。</p>
+
+<h3 id="shadows-inner-shadows:f83ac191919c55609feff95806df498c">Shadows / Inner Shadows</h3>
+
+<p>ドロップシャドウ/インナーシャドウを設定します。こちらも少なくとも10以上は重ねて設定できます。チェックマークやドラッグでの移動・削除は塗り・線と同じです。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-08-sketch-app-advent-calendar-2013-inspector-style/style-shadow.png" alt="ドロップシャドウ・インナーシャドウの設定">
+</p>
+
+<p>一応、Photoshopと同等の設定をして並べてみましたが、ほぼ一緒ですね。</p>
+
+<p><strong>X/Y</strong><br />
+シャドウの位置を設定します。正数で右と下、負数で左と上に移動します。</p>
+
+<p><strong>Blur</strong><br />
+ボケ脚を設定します。</p>
+
+<p><strong>Spread</strong><br />
+ボケ脚の開始部分を調整します。</p>
+
+<p><strong>Color</strong><br />
+シャドウの色を設定します。</p>
+
+<h3 id="blur:f83ac191919c55609feff95806df498c">Blur</h3>
+
+<p>タイトルバーの右にある上下三角からぼかしの種類を選択できます。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-08-sketch-app-advent-calendar-2013-inspector-style/style-blur.png" alt="ぼかしの設定">
+</p>
+
+<p><strong>Gaussian Blur</strong><br />
+いわゆる「ぼかし」です。Amountで適用量を設定します。</p>
+
+<p><strong>Motion Blur</strong><br />
+設定した方向にぼかします。Amountで適用量を、Angleで角度を設定します。</p>
+
+<p><strong>Zoom Blur</strong><br />
+1点に向かってぼかしを適用します。Amountで適用量を、Originで中心点を設定します。</p>
+
+<p><strong>Background Blur</strong><br />
+オブジェクトを通して背面のオブジェクトがボケます（iOS7のロック画面から解除のためにスライドさせた感じ）。不透明度などを調整しないとボケているのが見えないかも…</p>
+
+<h3 id="reflection:f83ac191919c55609feff95806df498c">Reflection</h3>
+
+<p>選択しているオブジェクトの下に、反射して映り込んだエフェクトを加えます。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-08-sketch-app-advent-calendar-2013-inspector-style/style-reflection.png" alt="反射の設定">
+</p>
+
+<p><strong>Strength</strong><br />
+反射しているオブジェクトの大きさを設定します。右に行くほど反射の度合いが大きくなります。</p>
+
+<p><strong>Distance</strong><br />
+オブジェクトから反射しているオブジェクトの距離を設定します。右に行くほどオブジェクトが離れます。</p>
+
+		</div>
+
+<div class="socialButtons">
+<div class="socialButtons_twitter">
+	<a href="https://twitter.com/intent/tweet?text=Sketch.app%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%9a%e3%82%af%e3%82%bf%e3%82%92%e8%a7%a3%e8%aa%ac%e3%81%99%e3%82%8b%e3%82%88%e3%80%82%e3%80%90%e3%82%b9%e3%82%bf%e3%82%a4%e3%83%ab%e7%b7%a8%e3%80%91%20%e2%80%93%20Sketch.app%20Advent%20Calendar%202013&amp;url=http%3a%2f%2fcreative-tweet.net%2fblog%2f2013%2f12%2fsketch-app-advent-calendar-2013-inspector-style.html&amp;via=littlebusters" class="twitter-share-button"
+		data-lang="en"
+		data-url="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-style.html"
+		data-text="Sketch.appのインスペクタを解説するよ。【スタイル編】 – Sketch.app Advent Calendar 2013"
+		data-via="littlebusters" 
+		data-count="vertical"
+	>Tweet</a>
+</div>
+<div class="socialButtons_facebook">
+	<div 
+		class="fb-like"
+		data-href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-style.html"
+		data-layout="box_count"
+		data-send="false"
+		data-width="100"
+		data-show-faces="false"
+	></div>
+</div>
+<div class="socialButtons_hatebu">
+	<a href="http://b.hatena.ne.jp/entry/creative-tweet.net" class="hatena-bookmark-button"
+		data-hatena-bookmark-layout="vertical"
+		data-hatena-bookmark-title="Sketch.appのインスペクタを解説するよ。【スタイル編】 – Sketch.app Advent Calendar 2013"
+		data-hatena-bookmark-url="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-style.html">
+		<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		style="border: none">
+	</a>
+</div>
+<div class="socialButtons_googlep">
+	<div class="g-plusone" data-size="tall" data-href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-style.html"></div>
+</div>
+</div>
+
+		<ul class="pager">
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-link.html" class="pager_nextItem">
+				<span class="pager_label-newer">newer: </span>
+				Sketch.appのインスペクタを解説するよ。【スタイルリンク編】 – Sketch.app Advent Calendar 2013
+				</a>
+			</li>
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-basic.html" class="pager_prevItem">
+				<span class="pager_label-older">older: </span>
+				Sketch.appのインスペクタを解説するよ。【基本情報編】 – Sketch.app Advent Calendar 2013
+				</a>
+			</li>
+			
+		</ul>
+
+	</main>
+</div>
+
+
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-Facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>

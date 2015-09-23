@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<title>「FLAutoKerning.js」のインターフェイスを作ってみましたよ。 | creative tweet.</title>
+<script async src="/assets/js/auie.js"></script>
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="" />
+<meta property="og:title" content="「FLAutoKerning.js」のインターフェイスを作ってみましたよ。" />
+<meta property="og:url" content="http://creative-tweet.net/blog/2012/05/ui-for-flautokerning.html" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="http://creative-tweet.net/assets/img" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="「FLAutoKerning.js」のインターフェイスを作ってみましたよ。">
+<meta name="twitter:url" content="http://creative-tweet.net/blog/2012/05/ui-for-flautokerning.html">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="http://creative-tweet.net/assets/img">
+</head>
+
+
+
+
+
+
+<body>
+<header class="siteHeader" role="banner">
+<h1 id="siteSign">
+<a href="/">
+<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<section class="article-header-section">
+				<time class="publishedDatetime" datetime="2012-05-01T09:30:00&#43;09:00">2012/5/1</time>
+				<h1 class="article-title">「FLAutoKerning.js」のインターフェイスを作ってみましたよ。</h1>
+				
+			</section>
+		</header>
+		
+		<div class="content-main">
+			
+
+<p>@<a href="https://twitter.com/fladdict">fladdict</a>さん作の「<a href="http://fladdict.net/blog/2011/02/auto-kerning.html">FLAutoKerning.js</a>」で使用するカーニングペア情報を、ブラウザで設定できるインターフェイスをつくってみました。</p>
+
+<p>ペアでしかカーニングできないという低機能ですが、キーボード操作だけでカーニングできます。ただし、モリサワの<a href="http://typesquare.com/">TypeSquare</a>向けに作成していますので、他のWebフォントで使えるかどうかは未検証です。実際にご利用の際は、ご自身のサーバに設置してお使いください。（ライセンス的なアレで）</p>
+
+<ul>
+<li><a href="http://creative-tweet.net/apps/kerning-tuner/">Kerning Tuner デモページ</a>（デモはWebフォントを読み込んでいません。）</li>
+<li><a href="https://github.com/littlebusters/KerningTuner">ソース（github）</a></li>
+</ul>
+
+<h2 id="設置方法:fb8371977e9e3b2b9eb4b2cdbd56e827">設置方法</h2>
+
+<ol>
+<li>ソースをダウンロードし、index.htmlにご自身のTypeSquareで取得できるscript要素をコピペしてください。また、予め使用するフォントが決まっているなら、input#font_familyのvalue属性を、fontfamily.cssにあるclass名にしておくと良いと思います！</li>
+<li>「<a href="http://fladdict.net/blog/2011/02/auto-kerning.html">FLAutoKerning.js</a>」をダウンロードし、特にソースを変更していないならindex.htmlと同じ階層へ入れます。</li>
+<li>ローカルなりリモートなりへ設置してアクセス。</li>
+</ol>
+
+<h2 id="画面の説明と使い方:fb8371977e9e3b2b9eb4b2cdbd56e827">画面の説明と使い方</h2>
+
+<p class="media">
+<img src="/assets/img/2012/2012-05-01-ui-for-flautokerning/kerningtuner-ui.png" alt="" />
+</p>
+
+<ol>
+<li>Aは、カーニングする文字を設定します。文字を入力し、enterとかtabで確定です。確定した場合は、入力した文字にWebフォントを適用するため、画面を一旦リロードします。</li>
+<li>Bは、Aで入力した文字を表示し、実際の詰め具合を確認できます。</li>
+<li>Cは、カーニングの値です。左右の矢印キーまたは数値入力でカーニングしてください。</li>
+<li>Dは、左右の矢印キーでカーニングした際の増減値を設定します。enterとかtabで設定を確定します。</li>
+<li>Eは、カーニングペア情報を出力したtextarea要素を表示/非表示します。これをFLAutoKerning.processの第2引数として設定してやればOKです。</li>
+<li>Fは、現在適用しているWebフォントです。デフォルトでリュウミンLが設定されているので、お好みで変更してください。</li>
+<li>Gは、今まで設定したカーニングペア情報を表示します。「x」をクリックすることで、そのペア情報のみ削除できます。文字ペアが同じ場合は、上書きされます。</li>
+</ol>
+
+<p>順番としては、まずはFのフォントを変更し、Dを調整しつつA→Cの繰り返しになるかと思います。程よくペアの編集ができたらEからソースをコピーしてください。</p>
+
+<h2 id="ライセンスなど:fb8371977e9e3b2b9eb4b2cdbd56e827">ライセンスなど</h2>
+
+<p>とりあえずMITとして公開しておきます。</p>
+
+<h2 id="その他:fb8371977e9e3b2b9eb4b2cdbd56e827">その他</h2>
+
+<p>日本語のWebフォントもずいぶんと出揃って来ておりまして、思い思いのフォントを使える環境も整ってきました。しかし、フォントが詰め情報を持っていないようなので、二の足を踏んでる場合もあるんじゃないでしょうか。</p>
+
+<p>で、きれいな文字組を少しでも手軽にできたらいいなぁと思いから、FLAutoKerning.jsのカーニングペア情報を生成できるアプリ的なものを作成してみました。</p>
+
+<p>また、先の通り<a href="https://github.com/littlebusters/KerningTuner">Githubで公開</a>しておりますので、ご自由にいじってやってください。正直JavaScriptを覗かれると恥ずかしい限りですが、ご興味のある方はいろいろとご指摘いただけると幸いです。</p>
+
+<p>カーニングペア情報を公開すると、みんな幸せになれるかも！</p>
+
+		</div>
+
+<div class="socialButtons">
+<div class="socialButtons_twitter">
+	<a href="https://twitter.com/intent/tweet?text=%e3%80%8cFLAutoKerning.js%e3%80%8d%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%bf%e3%83%bc%e3%83%95%e3%82%a7%e3%82%a4%e3%82%b9%e3%82%92%e4%bd%9c%e3%81%a3%e3%81%a6%e3%81%bf%e3%81%be%e3%81%97%e3%81%9f%e3%82%88%e3%80%82&amp;url=http%3a%2f%2fcreative-tweet.net%2fblog%2f2012%2f05%2fui-for-flautokerning.html&amp;via=littlebusters" class="twitter-share-button"
+		data-lang="en"
+		data-url="http://creative-tweet.net/blog/2012/05/ui-for-flautokerning.html"
+		data-text="「FLAutoKerning.js」のインターフェイスを作ってみましたよ。"
+		data-via="littlebusters" 
+		data-count="vertical"
+	>Tweet</a>
+</div>
+<div class="socialButtons_facebook">
+	<div 
+		class="fb-like"
+		data-href="http://creative-tweet.net/blog/2012/05/ui-for-flautokerning.html"
+		data-layout="box_count"
+		data-send="false"
+		data-width="100"
+		data-show-faces="false"
+	></div>
+</div>
+<div class="socialButtons_hatebu">
+	<a href="http://b.hatena.ne.jp/entry/creative-tweet.net" class="hatena-bookmark-button"
+		data-hatena-bookmark-layout="vertical"
+		data-hatena-bookmark-title="「FLAutoKerning.js」のインターフェイスを作ってみましたよ。"
+		data-hatena-bookmark-url="http://creative-tweet.net/blog/2012/05/ui-for-flautokerning.html">
+		<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		style="border: none">
+	</a>
+</div>
+<div class="socialButtons_googlep">
+	<div class="g-plusone" data-size="tall" data-href="http://creative-tweet.net/blog/2012/05/ui-for-flautokerning.html"></div>
+</div>
+</div>
+
+		<ul class="pager">
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2012/05/font-mixer-fix-cs6.html" class="pager_nextItem">
+				<span class="pager_label-newer">newer: </span>
+				Font MixerがCS6（Mac版）で動かなかったようなので修正しました。
+				</a>
+			</li>
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2012/02/font-mixer-150.html" class="pager_prevItem">
+				<span class="pager_label-older">older: </span>
+				Fireworksの混植拡張機能、Font Mixerをバージョンアップしました。
+				</a>
+			</li>
+			
+		</ul>
+
+	</main>
+</div>
+
+
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-Facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>

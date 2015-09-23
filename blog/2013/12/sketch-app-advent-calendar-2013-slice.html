@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<title>Sketch.appのスライスを解説するよ。 – Sketch.app Advent Calendar 2013 | creative tweet.</title>
+<script async src="/assets/js/auie.js"></script>
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="" />
+<meta property="og:title" content="Sketch.appのスライスを解説するよ。 – Sketch.app Advent Calendar 2013" />
+<meta property="og:url" content="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-slice.html" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="http://creative-tweet.net/assets/img" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="Sketch.appのスライスを解説するよ。 – Sketch.app Advent Calendar 2013">
+<meta name="twitter:url" content="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-slice.html">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="http://creative-tweet.net/assets/img">
+</head>
+
+
+
+
+
+
+<body>
+<header class="siteHeader" role="banner">
+<h1 id="siteSign">
+<a href="/">
+<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<section class="article-header-section">
+				<time class="publishedDatetime" datetime="2013-12-15T09:30:00&#43;09:00">2013/12/15</time>
+				<h1 class="article-title">Sketch.appのスライスを解説するよ。 – Sketch.app Advent Calendar 2013</h1>
+				
+			</section>
+		</header>
+		
+		<div class="content-main">
+			
+
+<p><a href="http://www.adventar.org/calendars/99">Sketch.app Advent Calender 2013</a> 15日目の記事です。</p>
+
+<p>今回は、Sketch.appのスライスについて解説していきます。
+<p class="notics">
+  <b>Sketch 3の基本。</b>というSketch 3の基本操作にフォーカスした電子書籍をリリースしました。詳しくはこちらの「<a href="http://creative-tweet.net/sketch-3-basics/">Sketch 3の基本。</a>」のページをご覧ください。
+</p>
+<dl class="links">
+  <dt>
+    記事の一覧
+  </dt>
+  <dd>
+    <a href="http://creative-tweet.net/blog/2013/11/sketch-app-advent-calendar-2013.html">オレオレSketch.app Advent Calendar 2013やりますよ。 | creative tweet.</a>
+  </dd>
+</dl></p>
+
+<p>Sketch.appのスライスは、書き出しフォーマットとその詳細を個別に設定できないことを除けば、割と使いやすくできています。その設定も結局は、JPEGminiやImageAlphaなどのツールを通すので、できないならできないでなんとかなります。</p>
+
+<p>そのスライスを作成するには、書き出しモードから自分でスライスを設定するか、オブジェクトを基準にしてスライスを作成する方法の2つがあります。</p>
+
+<p>自分でスライスを設定するには、まずは［File］から［Export&#8230;］を選び、書き出しモードにします。ショートカットは<kbd>Command</kbd>＋<kbd>Shift</kbd>＋<kbd>E</kbd>です。「Inspector」が「Slices」に変わっていれば、書き出しモードになっています。この状態でアートボード上をドラッグすれば、スライスを作成できます（ちなみに、スライス on スライスも可能です）。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-15-sketch-app-advent-calendar-2013-slice/slice-export-mode.png" alt="書き出しモード">
+</p>
+
+<p>書き出しモードにする際、スライスが1つも設定されていない場合は、「アートボードを基準にしたスライスを作りますか？」というダイアログが表示されます。アートボードを丸ごと書き出す場合は、「Create」を選んでください。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-15-sketch-app-advent-calendar-2013-slice/slice-dialoge.png" alt="スライスを作成するダイアログ">
+</p>
+
+<p>オブジェクトを基準にスライスを作成する場合は、オブジェクトを選択して［File］にある［Add Slice For Selection］を選びます（画像ではショートカットがありますが、個別で設定しているもので、デフォルトではありません）。通常はこちらを使うことが多いでしょう。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-15-sketch-app-advent-calendar-2013-slice/slice-add-slice.png" alt="選択範囲からスライスの作成">
+</p>
+
+<p>選択範囲から作成する場合は、オブジェクトごとにスライスが作成されます。グループ化されている場合は、グループで1スライスになります。スライス名はオブジェクト名がそのままは反映されますので、きちんと名前を付けておきましょう。</p>
+
+<p>書き出しモードはスライス部分以外をクリックすると、書き出しモードが終了してしまうので、クリックしたい衝動に駆られたら、迷わずスライスをクリックしましょう。<kbd>Tab</kbd>キーでの選択や、レイヤーリストがスライスリストになっているので、ここでも選択できます。</p>
+
+<h2 id="slicesパネル:1c98fac94827db8ac609029ae4d45e1a">Slicesパネル</h2>
+
+<h3 id="export-all:1c98fac94827db8ac609029ae4d45e1a">Export All</h3>
+
+<p>現在のドキュメントで設定されているスライスをすべて書き出します。ちなみに、ボタンを押さなくても<kbd>Enter</kbd>キーで保存ダイアログを表示できます。ただし、他のアートボードで設定しているスライスも書き出されるので、ご注意を。</p>
+
+<h3 id="スライス名とサイズ-座標:1c98fac94827db8ac609029ae4d45e1a">スライス名とサイズ・座標</h3>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-15-sketch-app-advent-calendar-2013-slice/slice-basic-info.png" alt="スライスの情報">
+</p>
+
+<p>現在選択しているスライスの名前やサイズ・座標です。ここで変更すれば、スライスの変更ができます。</p>
+
+<h3 id="書き出すオブジェクト-レイヤー-の選択:1c98fac94827db8ac609029ae4d45e1a">書き出すオブジェクト（レイヤー）の選択</h3>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-15-sketch-app-advent-calendar-2013-slice/slice-select-objects.png" alt="書き出すオブジェクトの選択">
+</p>
+
+<p>「Include all layers」を選択すると、範囲内のオブジェクトを全て含んだ状態で書き出します。</p>
+
+<p>「Only include the following」は、下のリストで選択したオブジェクトのみを書き出します。リストには、選択しているスライスの範囲にかかっているオブジェクトが表示されます。</p>
+
+<p>本来は透過させるオブジェクトでも、作成中は背景を入れたりすることがありますが、そういう場合に背景のチェックマークを外しておけば、背景のない状態で書き出しができます。</p>
+
+<p>が、スライスが作成された直後の状態で、親になっているグループにチェックが入っていれば、それに内包されるオブジェクトにチェックがなくとも全て書き出されます。一部だけを書き出したい場合は、親についているチェックを一旦外し、書き出したい部分だけにチェックを入れる必要があります。</p>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-15-sketch-app-advent-calendar-2013-slice/slice-select-children.png" alt="個別に書き出すには">
+</p>
+
+<h3 id="trim-transparent-pixels:1c98fac94827db8ac609029ae4d45e1a">Trim transparent pixels</h3>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-15-sketch-app-advent-calendar-2013-slice/slice-trim-transparent.png" alt="透明なピクセルを削除">
+</p>
+
+<p>ここをチェックしておくと、オブジェクトの境界より大きなスライスを作成していても、透明部分のピクセルを自動的にカットしてくれます。正確にスライスを作成しなくても大丈夫です。</p>
+
+<h3 id="also-export-as:1c98fac94827db8ac609029ae4d45e1a">Also export as</h3>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-15-sketch-app-advent-calendar-2013-slice/slice-export-hdpi.png" alt="同時に別解像度を書き出すオプション">
+</p>
+
+<p>そのままですが、@2xまたは@1xを同時に書き出す場合にチェックしておきます。@1xで作成している場合は「Double size」を、@2xで作成している場合は「Half size」を選択します。</p>
+
+<h3 id="プレビュー-書き出し-他のアプリへ:1c98fac94827db8ac609029ae4d45e1a">プレビュー / 書き出し / 他のアプリへ</h3>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-15-sketch-app-advent-calendar-2013-slice/slice-exporting.png" alt="書き出しプレビューやアプリとの連携">
+</p>
+
+<p>左は小さくて見えづらいですが、現在選択しているスライスのサムネールです。これ自体をドラッグして、特定のフォルダに入れたりアートボードに配置したりできます。</p>
+
+<p>「Export」ボタンで現在のスライスを書き出します。ダイアログが表示されるので、書き出しフォーマットを選択して書き出しましょう。書き出せるフォーマットは「PNG」「JPG」「TIFF」「PDF」「EPS」「SVG」です。</p>
+
+<p>右はメールやメッセージ、Twitterなどに渡すことができます。</p>
+
+<h3 id="create-slice-form-artboards:1c98fac94827db8ac609029ae4d45e1a">Create Slice form Artboards</h3>
+
+<p class="media">
+  <img src="/assets/img/2013/2013-12-15-sketch-app-advent-calendar-2013-slice/slice-create-artboard.png" alt="アートボードからスライスを作成">
+</p>
+
+<p>アートボードの大きさを基準にしたスライスを作成できます。</p>
+
+		</div>
+
+<div class="socialButtons">
+<div class="socialButtons_twitter">
+	<a href="https://twitter.com/intent/tweet?text=Sketch.app%e3%81%ae%e3%82%b9%e3%83%a9%e3%82%a4%e3%82%b9%e3%82%92%e8%a7%a3%e8%aa%ac%e3%81%99%e3%82%8b%e3%82%88%e3%80%82%20%e2%80%93%20Sketch.app%20Advent%20Calendar%202013&amp;url=http%3a%2f%2fcreative-tweet.net%2fblog%2f2013%2f12%2fsketch-app-advent-calendar-2013-slice.html&amp;via=littlebusters" class="twitter-share-button"
+		data-lang="en"
+		data-url="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-slice.html"
+		data-text="Sketch.appのスライスを解説するよ。 – Sketch.app Advent Calendar 2013"
+		data-via="littlebusters" 
+		data-count="vertical"
+	>Tweet</a>
+</div>
+<div class="socialButtons_facebook">
+	<div 
+		class="fb-like"
+		data-href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-slice.html"
+		data-layout="box_count"
+		data-send="false"
+		data-width="100"
+		data-show-faces="false"
+	></div>
+</div>
+<div class="socialButtons_hatebu">
+	<a href="http://b.hatena.ne.jp/entry/creative-tweet.net" class="hatena-bookmark-button"
+		data-hatena-bookmark-layout="vertical"
+		data-hatena-bookmark-title="Sketch.appのスライスを解説するよ。 – Sketch.app Advent Calendar 2013"
+		data-hatena-bookmark-url="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-slice.html">
+		<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		style="border: none">
+	</a>
+</div>
+<div class="socialButtons_googlep">
+	<div class="g-plusone" data-size="tall" data-href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-slice.html"></div>
+</div>
+</div>
+
+		<ul class="pager">
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2013/12/fireworks-advent-calendar-2013-1216.html" class="pager_nextItem">
+				<span class="pager_label-newer">newer: </span>
+				スライス名をごにょごにょするFireworksのコマンドをつくりましたよ。 – Fireworks Lover Advent Calendar 2013
+				</a>
+			</li>
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-guides.html" class="pager_prevItem">
+				<span class="pager_label-older">older: </span>
+				Sketch.appのガイド周りを解説するよ。 – Sketch.app Advent Calendar 2013
+				</a>
+			</li>
+			
+		</ul>
+
+	</main>
+</div>
+
+
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-Facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>

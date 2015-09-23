@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Review on creative tweet.</title>
+    <link>http://creative-tweet.net/categories/review.html</link>
+    <description>Recent content in Review on creative tweet.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>2014/06/23 09:30:00 +09:00</lastBuildDate>
+    <atom:link href="http://creative-tweet.net/categories/review.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>「レスポンシブWebデザイン入門—モバイルファーストの考え方からのアプローチ」を読みましたよ。</title>
+      <link>http://creative-tweet.net/blog/2014/06/read-a-primer-on-rwd.html</link>
+      <pubDate>2014/06/23 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2014/06/read-a-primer-on-rwd.html</guid>
+      <description>前川昌幸さんの著書「レスポンシブWebデザイン入門—モバイルファーストの考え方からのアプローチ」を読みましたので、その所感を少々。</description>
+    </item>
+    
+    <item>
+      <title>Web制作者のためのSublime Textの教科書を読みましたよ。</title>
+      <link>http://creative-tweet.net/blog/2014/03/read-a-sublime-text-book.html</link>
+      <pubDate>2014/03/24 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2014/03/read-a-sublime-text-book.html</guid>
+      <description>「Web制作者のためのSublime Textの教科書」の所感と、「あなたのSublime Textを見せてください」企画のスクリーンショットと設定をここで晒します。</description>
+    </item>
+    
+    <item>
+      <title>翔泳社「Fireworks標準デザイン講座」にFont Mixerが掲載された件。</title>
+      <link>http://creative-tweet.net/blog/2012/09/fireworks-std-design.html</link>
+      <pubDate>2012/09/16 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2012/09/fireworks-std-design.html</guid>
+      <description>拙作Fireworks拡張機能 Font Mixerが、翔泳社「Fireworks標準デザイン講座」に掲載されました。</description>
+    </item>
+    
+  </channel>
+</rss>
