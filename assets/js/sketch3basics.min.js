@@ -1,0 +1,1 @@
+jQuery(function(s){var n=s(".table-of-contents-chapter");n.on("click",function(n){var e=s(this).children(".table-of-contents-topics");e.hasClass("is-hidden")?e.removeClass("is-hidden"):e.addClass("is-hidden")})});

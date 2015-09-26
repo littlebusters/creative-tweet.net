@@ -19,6 +19,15 @@
     </item>
     
     <item>
+      <title>Sketch 3の基本操作を解説した電子書籍「Sketch 3の基本。」</title>
+      <link>http://creative-tweet.net/sketch-3-basics.html</link>
+      <pubDate>2015/04/29 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/sketch-3-basics.html</guid>
+      <description>「Sketch 3の基本。」は、新しいクリエイティブツールとして注目を集める、Sketch 3の基本的な使い方にフォーカスした電子書籍です。</description>
+    </item>
+    
+    <item>
       <title>Sketchでレイヤー名を正規表現でリネームするSketchプラグイン</title>
       <link>http://creative-tweet.net/tools/sketch_regexp_rename/detail.html</link>
       <pubDate>2015/01/23 09:30:00 +09:00</pubDate>
@@ -88,15 +97,6 @@
       
       <guid>http://creative-tweet.net/blog/2014/12/sublime-text-advent-calendar-2014-13.html</guid>
       <description>Sublime Text Advent Calendar 2013 の13日目の記事です。Sublime TextからGistがゴニョゴニョできるパッケージと、SCSSのライブプレビューができるTakanaを紹介します。</description>
-    </item>
-    
-    <item>
-      <title>Sketch 3のインスペクタへフォーカスする、ショートカットを紹介しますよ。 Sketch 3 Advent Calendar 2014</title>
-      <link>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-01.html</link>
-      <pubDate>2014/12/01 09:30:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-01.html</guid>
-      <description></description>
     </item>
     
   </channel>
