@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<title>WordPressからHugoへ移行して、ビルドとデプロイを自動化した話 | creative tweet.</title>
+<script async src="/assets/js/auie.js"></script>
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="" />
+<meta property="og:title" content="WordPressからHugoへ移行して、ビルドとデプロイを自動化した話" />
+<meta property="og:url" content="http://creative-tweet.net/blog/2015/10/good-bye-wordpress.html" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="http://creative-tweet.net/assets/img" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="WordPressからHugoへ移行して、ビルドとデプロイを自動化した話">
+<meta name="twitter:url" content="http://creative-tweet.net/blog/2015/10/good-bye-wordpress.html">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="http://creative-tweet.net/assets/img">
+</head>
+
+
+
+
+
+
+<body>
+<header class="siteHeader" role="banner">
+<h1 id="siteSign">
+<a href="/">
+<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<section class="article-header-section">
+				<time class="publishedDatetime" datetime="2015-10-01T09:30:50&#43;09:00">2015/10/1</time>
+				<h1 class="article-title">WordPressからHugoへ移行して、ビルドとデプロイを自動化した話</h1>
+				
+				<img src="/assets/img/2015/good-bye-wordpress/good-bye-wordpress-hero.png" class="hero" alt="">
+				
+			</section>
+		</header>
+		
+		<div class="content-main">
+			
+
+<p>サイトをリニューアルついでに、WordPressからHugoへ乗り換えました。</p>
+
+<p>そもそもWordPressはブログ以外に使っていなかったにも関わらず、アップデートやらセキュリティやらを気にするのにも疲れておりまして、Static Site Generatorへ乗り換えようと思っていました。</p>
+
+<p>Static Site Generatorといえば、<a href="http://jekyllrb.com/">Jekyll</a>や<a href="https://middlemanapp.com/jp/">Middleman</a>などが知られていると思います。</p>
+
+<p>私自身もサイトの一部のカテゴリーで、JekyllをラップしたようなGUIツールであるmixtureを使っていました。</p>
+
+<p>もちろん、それに移行する手もあったのですが、たった数ページの変換にも結構な時間を取られていたことや、そもそも開発・サービスが終わってしまったこともあって、その選択肢を取ることはできませんでした。</p>
+
+<p>そんな折、Hugoという単語を見かけるようになり、変換が早いと聞き及んだため「んじゃ、これで試してみるか」ぐらいの勢いで乗り換えを行いました（ちなみに移行そのものは、1年ぐらい前から計画していたんですね…）。</p>
+
+<ul>
+<li><a href="http://t32k.me/mol/log/hugo/">Jekyllが許されるのは小学生までだよね - MOL</a></li>
+<li><a href="http://re-dzine.net/2015/01/hugo/">MiddlemanからHugoへ移行した | REFLECTDESIGN</a></li>
+</ul>
+
+<p>あとは、<a href="http://gohugo.io/community/press/">Press, Blogs and Media Coverage</a>にまとめられている日本語のページをご覧ください。</p>
+
+<p>ちなみにどれぐらい早いかというと、記事84ページ ＋ カテゴリー14ページ ＋ タグ46ページをローカル環境で変換して150ms前後です。先述のmixtureを使って5ページ分をいわゆるビルドすると、正確には測っていませんが少なくとも2分ぐらいはかかっていました。</p>
+
+<p>というわけで、今回はWordPressからHugoへ移行して、デプロイまでを自動化したその概要をお伝えします。大まかな手順は次の通りです。</p>
+
+<ol>
+<li>Hugoの準備</li>
+<li>WordPressからHugoへコンテンツの変換</li>
+<li>レイアウト作成</li>
+<li>ビルドとデプロイ環境の準備</li>
+</ol>
+
+<h2 id="hugoの準備:ea08428c4d088db888e83aff3b5c67e0">Hugoの準備</h2>
+
+<p>Hugoは、Go言語で作られたStatic Site Generatorです。Go言語自体のインストールは不要で、各プラットフォームのパッケージをインストールすれば使うことができます。</p>
+
+<ul class="links">
+    <li><a href="https://gohugo.io/">Hugo - https://gohugo.io/</a></li>
+</ul>
+
+<p>OSXをお使いでHomebrewがインストールされていれば、次のコマンドでもインストール可能です。</p>
+
+<pre><code>$ brew install hugo
+</code></pre>
+
+<p>Hugoでは初期化したりビルドインサーバーを立ち上げたりと、多少なりともターミナルでの操作が必須です。とはいえ、そこまで難しい操作はなく、ターミナルの操作に多少慣れていれば十分に扱えるでしょう。</p>
+
+<h2 id="コンテンツをwordpressからhugoへ変換する:ea08428c4d088db888e83aff3b5c67e0">コンテンツをWordPressからHugoへ変換する</h2>
+
+<p>「<a href="https://github.com/SchumacherFM/wordpress-to-hugo-exporter">WordPress to Hugo Exporter</a>」というWordPressのプラグインを使用して、投稿している記事やページをMarkdownへ変換しました。変換したものはZIPでダウンロードできます。画像関連もこの中に含まれているので、別途ダウンロードする必要はありません。</p>
+
+<p>ただ、WordPressのアップローダを使ってアップしたものは<code>wp-content/upload/</code>へ格納されており、変換したMarkdownでもそのフルパスで画像の場所が記述されています。</p>
+
+<p>新しいサイトではリソースの位置を変更したため、それに合わせてSublime Textの［Find → Find in Files&hellip;］でディレクトリを指定して一括で書き換えました。</p>
+
+<h2 id="レイアウト作成:ea08428c4d088db888e83aff3b5c67e0">レイアウト作成</h2>
+
+<p>レイアウトについては、他のStatic Site Generatorと同じように、テンプレートファイルを作成し、その中にスクリプトを埋め込んでいきます。</p>
+
+<ul class="links">
+    <li><a href="http://gohugo.io/overview/introduction/">Hugo Documents</a></li>
+</ul>
+
+<p>今回はHTMLを使って記述しましたが、Go言語のHTMLテンプレートエンジンである<a href="https://github.com/yosssi/ace">Ace</a>や<a href="https://github.com/eknkc/amber">Amber</a>を使って、JadeやSlimのように記述することもできるようです。</p>
+
+<p>作成方法などの詳細を書くと長くなってしまいますので割愛しますが、例えば<a href="http://creative-tweet.net/blog.html">ブログ記事一覧</a>はこんな感じになっています。</p>
+
+<pre><code>{{ partial &quot;head.html&quot; }}
+&lt;header class=&quot;siteHeader{{ if eq .Title &quot;creative tweet.&quot; }} is-top{{ else }} is-{{ lower .Title }}{{ end }}&quot; role=&quot;banner&quot;&gt;
+{{ partial &quot;header.html&quot; }}
+&lt;/header&gt;
+
+&lt;h1 class=&quot;cat_title icon-{{ .Title }}&quot;&gt;{{ lower .Title }}&lt;/h1&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+	&lt;main role=&quot;main&quot; class=&quot;main&quot;&gt;
+	{{ range .Data.Pages.GroupByDate &quot;2006&quot; }}
+	&lt;section class=&quot;articleGroup&quot;&gt;
+		&lt;h2 class=&quot;articleList_cat-key&quot;&gt;{{ .Key }}&lt;/h2&gt;
+		&lt;ul class=&quot;articleList&quot;&gt;
+			{{ range .Pages }}
+				{{ .Render &quot;li&quot;}}
+			{{ end }}
+		&lt;/ul&gt;
+	&lt;/section&gt;
+	{{ end }}
+	&lt;/main&gt;
+&lt;/div&gt;
+
+{{ partial &quot;footer.html&quot; }}
+</code></pre>
+
+<p><code>partial</code>では他のファイルを読み込んだり、<code>{{ .Title }}</code>では記事のタイトルを読み込んだりしています。</p>
+
+<p>自分で作成しなくともテーマが配布されているので、そこからカスタマイズするということも可能です。</p>
+
+<h2 id="ページの作成:ea08428c4d088db888e83aff3b5c67e0">ページの作成</h2>
+
+<p>ページの内容そのものを作るには、初期化して作成される<code>content</code>ディレクトへMarkdownファイルを作成し、ファイルの先頭にタイトルや日付・カテゴリーなどの設定を記述してから記事を書き始めます。</p>
+
+<p>次のコマンドを実行すると、その雛形が記述された状態でファイルを生成してくれます（雛形も自分で作成できます）。</p>
+
+<pre><code>$ hugo new path/to/filename.md
+</code></pre>
+
+<p>また次のコマンドを実行するとビルドインサーバーが立ち上がり、表示されたURLへアクセスすればブラウザで確認することができます。ちなみに<code>--watch</code>は、ライブリロードを有効にするオプションです。</p>
+
+<pre><code>$ hugo server --watch
+</code></pre>
+
+<h2 id="ビルドとデプロイ環境の準備:ea08428c4d088db888e83aff3b5c67e0">ビルドとデプロイ環境の準備</h2>
+
+<p class="media">
+    <img src="/assets/img/2015/good-bye-wordpress/generate-and-build-deploy.png" alt="">
+</p>
+
+<p>最終的にビルドしてサーバーへデプロイ（アップロード）する必要があります。</p>
+
+<p>以前はWordPressを使ったり、WordPress管理外ファイルはFTPSを使っていたり、ファイルの管理面でも一部だけGitで管理していたりと、いろいろとごちゃごちゃになっていました。</p>
+
+<p>今回は、サイト全体をGitで管理しつつ最終的なデプロイもこれに絡めてやってみようということで、CIサービスの<a href="http://wercker.com/">wercker</a>と<a href="http://deploybot.com/">DEPLOYBOT</a>を使うことにしました。</p>
+
+<p>公開までの流れは無駄なリソースを使っている感じですが、次のようにしています。</p>
+
+<ol>
+<li>ローカルで記事の作成やレイアウトなどの開発→適当にコミット</li>
+<li>最終的な確認ができたらBitbucketのプライベートリポジトリへプッシュ</li>
+<li>BitBucketへプッシュされたら、Werkerでデータをプルしてビルド</li>
+<li>ビルドが成功したら、そのデータをGitHubの公開リポジトリへデプロイ（プッシュ）</li>
+<li>GitHubへデプロイされたら、DEPLOYBOTでFTPSを使ってレンタルサーバーへデプロイ</li>
+</ol>
+
+<p>設定などの詳細はこれまた割愛しますが、私は2を実行するだけで開発データはBitbucketへ、ビルドした公開データはGitHubへバックアップしつつ、自動的に公開までできるようになりました。</p>
+
+<p>もちろんそれぞれにコミットが残っているので、ロールバックも簡単にできます。</p>
+
+<p>ちなみにGitHub Pageを使えば4で終わるのですが、ものの試しでDEPLOYBOTを使ってみようかなと思って、あえてレンタルサーバーで公開するようにしています。</p>
+
+<p>あとURLがどうしても変更になってしまうため、必要に応じて<code>.htaccess</code>でリダイレクトするように設定しました。</p>
+
+<h2 id="wordpressからhugoへ移行してみて:ea08428c4d088db888e83aff3b5c67e0">WordPressからHugoへ移行してみて</h2>
+
+<p>まずは「サイトにログインして、画像をアップして…」という煩わしさがありません。ローカルでほぼ完結するので、プレビューが正しければ、そのままプッシュするだけというのは、実にラクです。</p>
+
+<p>コメント欄をつけられないなどの課題もありますが、そこは外部サービスに頼ったりすれば解決できるかなと。</p>
+
+<p>自サイトを実験の場として使っているかたもいらっしゃると思うので、手放しでおすすめできるものではありませんが、記事を書くだけというのであれば、移行を考えてもいいんじゃないでしょうか。</p>
+
+<hr class="postscript">
+
+<p>今回割愛した部分は、また日を置いて公開できればと思います。</p>
+
+		</div>
+
+<div class="socialButtons">
+<div class="socialButtons_twitter">
+	<a href="https://twitter.com/intent/tweet?text=WordPress%e3%81%8b%e3%82%89Hugo%e3%81%b8%e7%a7%bb%e8%a1%8c%e3%81%97%e3%81%a6%e3%80%81%e3%83%93%e3%83%ab%e3%83%89%e3%81%a8%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4%e3%82%92%e8%87%aa%e5%8b%95%e5%8c%96%e3%81%97%e3%81%9f%e8%a9%b1&amp;url=http%3a%2f%2fcreative-tweet.net%2fblog%2f2015%2f10%2fgood-bye-wordpress.html&amp;via=littlebusters" class="twitter-share-button"
+		data-lang="en"
+		data-url="http://creative-tweet.net/blog/2015/10/good-bye-wordpress.html"
+		data-text="WordPressからHugoへ移行して、ビルドとデプロイを自動化した話"
+		data-via="littlebusters" 
+		data-count="vertical"
+	>Tweet</a>
+</div>
+<div class="socialButtons_facebook">
+	<div 
+		class="fb-like"
+		data-href="http://creative-tweet.net/blog/2015/10/good-bye-wordpress.html"
+		data-layout="box_count"
+		data-send="false"
+		data-width="100"
+		data-show-faces="false"
+	></div>
+</div>
+<div class="socialButtons_hatebu">
+	<a href="http://b.hatena.ne.jp/entry/creative-tweet.net" class="hatena-bookmark-button"
+		data-hatena-bookmark-layout="vertical"
+		data-hatena-bookmark-title="WordPressからHugoへ移行して、ビルドとデプロイを自動化した話"
+		data-hatena-bookmark-url="http://creative-tweet.net/blog/2015/10/good-bye-wordpress.html">
+		<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		style="border: none">
+	</a>
+</div>
+<div class="socialButtons_googlep">
+	<div class="g-plusone" data-size="tall" data-href="http://creative-tweet.net/blog/2015/10/good-bye-wordpress.html"></div>
+</div>
+</div>
+
+		<ul class="pager">
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2015/09/screenshot-by-hidpi-on-osx.html" class="pager_prevItem">
+				<span class="pager_label-older">older: </span>
+				非Retinaディスプレイで、HiDPIのスクリーンショットを撮る方法とツールたちを紹介しますよ。
+				</a>
+			</li>
+			
+		</ul>
+
+	</main>
+</div>
+
+
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>

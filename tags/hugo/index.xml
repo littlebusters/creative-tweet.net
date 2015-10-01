@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Service on creative tweet.</title>
-    <link>http://creative-tweet.net/categories/service.html</link>
-    <description>Recent content in Service on creative tweet.</description>
+    <title>Hugo on creative tweet.</title>
+    <link>http://creative-tweet.net/tags/hugo.html</link>
+    <description>Recent content in Hugo on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
     <lastBuildDate>2015/10/01 09:30:50 +09:00</lastBuildDate>
-    <atom:link href="http://creative-tweet.net/categories/service.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://creative-tweet.net/tags/hugo.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>WordPressからHugoへ移行して、ビルドとデプロイを自動化した話</title>
@@ -16,15 +16,6 @@
       
       <guid>http://creative-tweet.net/blog/2015/10/good-bye-wordpress.html</guid>
       <description>ブログで使っていたWordPressから、サイト全体をStatic Site GeneratorのHugoへ移行し、ビルドとデプロイまでを自動化したその概要です。</description>
-    </item>
-    
-    <item>
-      <title>TinyPNGは無劣化じゃないよ！！というお話。</title>
-      <link>http://creative-tweet.net/blog/2012/10/tinypng-isnot-lossless-compression.html</link>
-      <pubDate>2012/10/20 09:30:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2012/10/tinypng-isnot-lossless-compression.html</guid>
-      <description>一部でTinyPNGが可逆っぽく出回っていたので、不幸な方が増えないために記事を書きました。</description>
     </item>
     
   </channel>
