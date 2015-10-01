@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+<channel>
+	<title>creative tweet.</title>
+	<atom:link href="http://creative-tweet.net/blog/change-feed-uri.xml" rel="self" type="application/rss+xml" />
+	<link>http://creative-tweet.net/blog/change-feed-uri.xml</link>
+	<description>ウェブを中心に、ものづくりをフガフガする万なブログ。</description>
+	<lastBuildDate>Thu, 24 Sep 2015 09:30:00 +0900</lastBuildDate>
+	<language>ja</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<item>
+		<title>フィードのURIが変更になりました。</title>
+		<link>http://creative-tweet.net/blog.html</link>
+		<pubDate>Thu, 24 Sep 2015 09:30:00 +0900</pubDate>
+		<dc:creator><![CDATA[littlebusters]]></dc:creator>
+
+		<guid isPermaLink="false">http://creative-tweet.net/blog.html</guid>
+		<description><![CDATA[ブログのフィードのURIが変更になりました。]]></description>
+				<content:encoded><![CDATA[<p>WordPressからHugoに移行したため、ブログのフィードのURIが変更になりました。よろしければ再登録をお願いします。]]></content:encoded>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>
