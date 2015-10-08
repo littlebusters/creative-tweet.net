@@ -79,7 +79,7 @@
 <ol>
 <li>Hugoの準備</li>
 <li>WordPressからHugoへコンテンツの変換</li>
-<li>レイアウト作成</li>
+<li>テンプレート作成</li>
 <li>ビルドとデプロイ環境の準備</li>
 </ol>
 
@@ -102,13 +102,13 @@
 
 <p>「<a href="https://github.com/SchumacherFM/wordpress-to-hugo-exporter">WordPress to Hugo Exporter</a>」というWordPressのプラグインを使用して、投稿している記事やページをMarkdownへ変換しました。変換したものはZIPでダウンロードできます。画像関連もこの中に含まれているので、別途ダウンロードする必要はありません。</p>
 
-<p>ただ、WordPressのアップローダを使ってアップしたものは<code>wp-content/upload/</code>へ格納されており、変換したMarkdownでもそのフルパスで画像の場所が記述されています。</p>
+<p>ただ、WordPressのアップローダを使ってアップしたものは<code>wp-content/uploads/</code>へ格納されており、変換したMarkdownでもそのフルパスで画像の場所が記述されています。</p>
 
 <p>新しいサイトではリソースの位置を変更したため、それに合わせてSublime Textの［Find → Find in Files&hellip;］でディレクトリを指定して一括で書き換えました。</p>
 
-<h2 id="レイアウト作成:ea08428c4d088db888e83aff3b5c67e0">レイアウト作成</h2>
+<h2 id="テンプレート作成:ea08428c4d088db888e83aff3b5c67e0">テンプレート作成</h2>
 
-<p>レイアウトについては、他のStatic Site Generatorと同じように、テンプレートファイルを作成し、その中にスクリプトを埋め込んでいきます。</p>
+<p>テンプレート（いわゆるテーマ）については、他のStatic Site Generatorと同じように、テンプレートファイルを作成し、その中にスクリプトを埋め込んでいきます。</p>
 
 <ul class="links">
     <li><a href="http://gohugo.io/overview/introduction/">Hugo Documents</a></li>
@@ -178,7 +178,7 @@
 <ol>
 <li>ローカルで記事の作成やレイアウトなどの開発→適当にコミット</li>
 <li>最終的な確認ができたらBitbucketのプライベートリポジトリへプッシュ</li>
-<li>BitBucketへプッシュされたら、Werkerでデータをプルしてビルド</li>
+<li>Bitbucketへプッシュされたら、Werkerでデータをプルしてビルド</li>
 <li>ビルドが成功したら、そのデータをGitHubの公開リポジトリへデプロイ（プッシュ）</li>
 <li>GitHubへデプロイされたら、DEPLOYBOTでFTPSを使ってレンタルサーバーへデプロイ</li>
 </ol>
