@@ -6,8 +6,26 @@
     <description>Recent content in Blogs on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2015/10/01 09:30:50 +09:00</lastBuildDate>
+    <lastBuildDate>2015/10/15 09:31:00 +09:00</lastBuildDate>
     <atom:link href="http://creative-tweet.net/blog.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hugoをセットアップしてデプロイするまで［後編］CIサービスでビルドからデプロイを自動化するまで</title>
+      <link>http://creative-tweet.net/blog/2015/10/usage-hugo-2.html</link>
+      <pubDate>2015/10/15 09:31:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2015/10/usage-hugo-2.html</guid>
+      <description>CIサービスを利用して、Hugoのビルドからデプロイまでを自動化する手順を解説しています。</description>
+    </item>
+    
+    <item>
+      <title>Hugoをセットアップしてデプロイするまで［前編］Hugoのセットアップからビルドするまで</title>
+      <link>http://creative-tweet.net/blog/2015/10/usage-hugo-1.html</link>
+      <pubDate>2015/10/15 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2015/10/usage-hugo-1.html</guid>
+      <description>WordPressからHugoへの移行手順と、Hugoのセットアップやテンプレートの作成からビルドするまでを解説しています。</description>
+    </item>
     
     <item>
       <title>WordPressからHugoへ移行して、ビルドとデプロイを自動化した話</title>
@@ -79,24 +97,6 @@
       
       <guid>http://creative-tweet.net/blog/2014/12/daitokai-advent-calendar-2014-22.html</guid>
       <description>12月24日に発売される「プロとして恥ずかしくない 新・WEBデザインの大原則」の著者として執筆しましたので、この書籍を少しご紹介します。</description>
-    </item>
-    
-    <item>
-      <title>たまによく使うSublimeTextのパッケージGistとTakanaを紹介しますよ。 Sublime Text Advent Calendar 2014</title>
-      <link>http://creative-tweet.net/blog/2014/12/sublime-text-advent-calendar-2014-13.html</link>
-      <pubDate>2014/12/13 09:30:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2014/12/sublime-text-advent-calendar-2014-13.html</guid>
-      <description>Sublime Text Advent Calendar 2013 の13日目の記事です。Sublime TextからGistがゴニョゴニョできるパッケージと、SCSSのライブプレビューができるTakanaを紹介します。</description>
-    </item>
-    
-    <item>
-      <title>Sketch 3のインスペクタへフォーカスする、ショートカットを紹介しますよ。 Sketch 3 Advent Calendar 2014</title>
-      <link>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-01.html</link>
-      <pubDate>2014/12/01 09:30:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-01.html</guid>
-      <description></description>
     </item>
     
   </channel>

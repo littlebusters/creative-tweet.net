@@ -6,8 +6,26 @@
     <description>Recent content in Tool on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2015/10/01 09:30:50 +09:00</lastBuildDate>
+    <lastBuildDate>2015/10/15 09:31:00 +09:00</lastBuildDate>
     <atom:link href="http://creative-tweet.net/categories/tool.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hugoをセットアップしてデプロイするまで［後編］CIサービスでビルドからデプロイを自動化するまで</title>
+      <link>http://creative-tweet.net/blog/2015/10/usage-hugo-2.html</link>
+      <pubDate>2015/10/15 09:31:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2015/10/usage-hugo-2.html</guid>
+      <description>CIサービスを利用して、Hugoのビルドからデプロイまでを自動化する手順を解説しています。</description>
+    </item>
+    
+    <item>
+      <title>Hugoをセットアップしてデプロイするまで［前編］Hugoのセットアップからビルドするまで</title>
+      <link>http://creative-tweet.net/blog/2015/10/usage-hugo-1.html</link>
+      <pubDate>2015/10/15 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2015/10/usage-hugo-1.html</guid>
+      <description>WordPressからHugoへの移行手順と、Hugoのセットアップやテンプレートの作成からビルドするまでを解説しています。</description>
+    </item>
     
     <item>
       <title>WordPressからHugoへ移行して、ビルドとデプロイを自動化した話</title>
@@ -79,24 +97,6 @@
       
       <guid>http://creative-tweet.net/blog/2014/10/apply-proportional-metrics-on-sketch.html</guid>
       <description>PhotoshopやIllustratorなどのAdobeプロダクト以外のOSXアプリケーションで、文字詰めをする方法を解説しています。</description>
-    </item>
-    
-    <item>
-      <title>Sketch 3の基本。という電子書籍を出しましたよ。</title>
-      <link>http://creative-tweet.net/blog/2014/07/published-the-basic-of-sketch.html</link>
-      <pubDate>2014/07/14 09:30:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2014/07/published-the-basic-of-sketch.html</guid>
-      <description>「オレオレ Sketch.app Advent Calendar 2013」をベースに、Sketch 3向けに加筆修正した電子書籍、「Sketch 3の基本。」をリリースしました。</description>
-    </item>
-    
-    <item>
-      <title>SketchでCSSプリプロセッサー向けのCSSスプライトミックスインコードを生成するプラグイン</title>
-      <link>http://creative-tweet.net/tools/sketch_css_sprite_mixin/detail.html</link>
-      <pubDate>2014/05/11 09:30:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/tools/sketch_css_sprite_mixin/detail.html</guid>
-      <description>アートボードのオブジェクトから、CSS Preprocessor（Sass/Scss/LESS/Stylus）のMixinを生成するSketchプラグインです。</description>
     </item>
     
   </channel>
