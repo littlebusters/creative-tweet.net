@@ -343,7 +343,7 @@ tags:
 
 <p>コンテンツを元に、最終的なHTMLを生成するためのテンプレート、いわゆるテーマを作成します。</p>
 
-<p>ファイルは、「layouts」ディレクトリへ格納します。最低限必要なファイルは、セクションやタクソノミーのページ一覧を作成するための「list.html」と、単一ページを生成するための「single.html」です。これらのファイルは<code>layouts/_default</code>へ格納します。</p>
+<p>ファイルは、「layouts」ディレクトリへ格納します。最低限必要なファイルは、セクションやタクソノミーのページ一覧を作成するための<code>list.html</code>と、単一ページを生成するための<code>single.html</code>です。これらのファイルは<code>layouts/_default</code>へ格納します。</p>
 
 <p>今回はHTMLを使って記述しましたが、Go言語のHTMLテンプレートエンジンである<a href="https://github.com/yosssi/ace">Ace</a>や<a href="https://github.com/eknkc/amber">Amber</a>を使って、JadeやSlimのように記述することもできるようです。</p>
 
@@ -383,9 +383,9 @@ tags:
     </li>
 </ul>
 
-<p>「layouts」ディレクトリ直下にある「index.html」がホームのテンプレートとして使われます。</p>
+<p>「layouts」ディレクトリ直下にある<code>index.html</code>がホームのテンプレートとして使われます。</p>
 
-<p>「index.html」が存在しなかった場合は、<code>layouts/_default/list.html</code>が、さらに「list.html」も存在しなかった場合は、<code>layouts/_default/single.html</code>がテンプレートとして適用されます。</p>
+<p><code>index.html</code>が存在しなかった場合は、<code>layouts/_default/list.html</code>が、さらに<code>list.html</code>も存在しなかった場合は、<code>layouts/_default/single.html</code>がテンプレートとして適用されます。</p>
 
 <p>ここからは、私が作成したコードを見ていきます（コードは整形済み、<a href="https://gist.github.com/littlebusters/ab0ee0b2dd9d35530daa#file-index-html">実際のソース</a>）。</p>
 
@@ -528,7 +528,7 @@ tags:
 
 <p>個別ページでは、セクション単位での変更や、個別にテンプレートを指定することもできます。</p>
 
-<p>「layouts」ディレクトリ直下にセクション名のディレクトリを作成し、「single.html」を格納します。「blog」セクションであれば<code>layouts/blog/single.html</code>です。</p>
+<p>「layouts」ディレクトリ直下にセクション名のディレクトリを作成し、<code>single.html</code>を格納します。「blog」セクションであれば<code>layouts/blog/single.html</code>です。</p>
 
 <ol>
 <li>/layouts/TYPE-or-SECTION/LAYOUT.html</li>
@@ -541,7 +541,7 @@ tags:
 
 <p>1・2で「TYPE-orSECTION」とありますが、任意のディレクトリを「type」としてセクションの代わりに使うことができるようです（今回は使っていません）。</p>
 
-<p>また1の「LAYOUT.html」については、「section「または「type」ディレクトリへ「single.html」以外の名前で作成したテンプレートを指します。</p>
+<p>また1の「LAYOUT.html」については、「section「または「type」ディレクトリへ<code>single.html</code>以外の名前で作成したテンプレートを指します。</p>
 
 <p>個別にテンプレートを適用できる仕組みで、例えば「blog」セクションで、一部だけを「pickup.html（<code>layouts/blog/pickup.html</code>）」というテンプレートを適用するには、「blog」セクションに属するコンテンツのメタデータへ次のように記述します。</p>
 
@@ -669,6 +669,8 @@ tags:
 </code></pre>
 
 <p>おそらく一瞬で生成されると思います。生成された「public」ディレクトリの中身を公開ディレクトリへアップすれば、ひとまずHugoでのサイト制作は完了です。</p>
+
+<p>後編は「<a href="/blog/2015/10/usage-hugo-2.html">CIサービスでビルドからデプロイを自動化するまで</a>」です。</p>
 
 		</div>
 

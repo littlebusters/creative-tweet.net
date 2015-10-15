@@ -71,7 +71,7 @@
 
 <p>ここからは、3〜5で使っているwerckerとDEPLOYBOTの設定について解説していきます。</p>
 
-<p>進めるにあたり、BitbucketとGitHubへあらかじめリポジトリを作成しておく必要があります。</p>
+<p>進めるにあたり、BitbucketとGitHubへあらかじめリポジトリを作成しておきましょう。</p>
 
 <h3 id="werckerでapplicationを作成する:3f81e60b460c4714b908b2944f6f0aca">werckerでApplicationを作成する</h3>
 
@@ -81,7 +81,7 @@
     <img src="/assets/img/2015/usage-hugo-2/wercker-step01.png" alt="">
 </p>
 
-<p>画面が切り替わり、「Choose a Git provider」で、Bitbucketを選択します。</p>
+<p>画面が切り替わり、<b>Choose a Git provider</b>で、Bitbucketを選択します。</p>
 
 <p class="media">
     <img src="/assets/img/2015/usage-hugo-2/wercker-step02.png" alt="">
@@ -93,13 +93,13 @@
     <img src="/assets/img/2015/usage-hugo-2/wercker-step03.png" alt="">
 </p>
 
-<p>続いて「Select a repository」に切り替わり、リポジトリの一覧が表示されます。使用するリポジトリを選択し、［Use selected repo］ボタンをクリックします。</p>
+<p>続いて<b>Select a repository</b>に切り替わり、リポジトリの一覧が表示されます。使用するリポジトリを選択し、［Use selected repo］ボタンをクリックします。</p>
 
 <p class="media">
     <img src="/assets/img/2015/usage-hugo-2/wercker-step04.png" alt="">
 </p>
 
-<p>「Select owner」のセクションでは、オーナーを選択します。おそらく自分のアカウントしか表示されていないと思いますので、そのまま［Use selected owner］ボタンをクリックします。</p>
+<p><b>Select owner</b>のセクションでは、オーナーを選択します。おそらく自分のアカウントしか表示されていないと思いますので、そのまま［Use selected owner］ボタンをクリックします。</p>
 
 <p class="media">
     <img src="/assets/img/2015/usage-hugo-2/wercker-step05.png" alt="">
@@ -133,7 +133,7 @@
     <img src="/assets/img/2015/usage-hugo-2/wercker-step09.png" alt="">
 </p>
 
-<p>左メニューの「SSH Keys」を選択し、［Generate new key pair］ボタンをクリックします。</p>
+<p>左メニューの<b>SSH Keys</b>を選択し、［Generate new key pair］ボタンをクリックします。</p>
 
 <p class="media">
     <img src="/assets/img/2015/usage-hugo-2/wercker-step10.png" alt="">
@@ -153,7 +153,7 @@
 
 <h3 id="デプロイする対象を設定する:3f81e60b460c4714b908b2944f6f0aca">デプロイする対象を設定する</h3>
 
-<p>続けて、左メニューの「targets」へアクセスしデプロイする対象を設定していきます。［Add deploy target］のプルダウンメニューから「custom deploy」を選択します。</p>
+<p>続けて、左メニューの<b>targets</b>へアクセスしデプロイする対象を設定していきます。［Add deploy target］のプルダウンメニューから「custom deploy」を選択します。</p>
 
 <p class="media">
     <img src="/assets/img/2015/usage-hugo-2/wercker-step13.png" alt="">
@@ -165,7 +165,7 @@
     <img src="/assets/img/2015/usage-hugo-2/wercker-step14.png" alt="">
 </p>
 
-<p>Saveできると「Deploy pipeline」という項目が表示されますので、［Add new variable］ボタンをクリックして変数を追加します。</p>
+<p>Saveできると<b>Deploy pipeline</b>という項目が表示されますので、［Add new variable］ボタンをクリックして変数を追加します。</p>
 
 <p><b>Environment variable</b>へは変数名を入力します。今回は「GITHUB_DEPLOY_KEY」としました。</p>
 
@@ -183,13 +183,13 @@
 
 <h3 id="githubのリポジトリへデプロイキーを設定する:3f81e60b460c4714b908b2944f6f0aca">GitHubのリポジトリへデプロイキーを設定する</h3>
 
-<p>GitHubへアクセスし、該当のリポジトリへアクセスします。右にある「Settings」メニューへアクセスします。</p>
+<p>GitHubへアクセスし、該当のリポジトリへアクセスします。右にある<b>Settings</b>メニューへアクセスします。</p>
 
 <p class="media">
     <img src="/assets/img/2015/usage-hugo-2/wercker-step17.png" alt="">
 </p>
 
-<p>続いて左にある「Deploy Key」へアクセスします。</p>
+<p>続いて左にある<b>Deploy Key</b>へアクセスします。</p>
 
 <p>［Add deploy key］ボタンをクリックし、Titleへ適当な名前を、Keyへ先ほどコピーした内容をペーストし、書き込めるように「Allow write access」にチェックを入れて［Add key］ボタンをクリックします。</p>
 
@@ -360,7 +360,13 @@ deploy:
 
 <p>設定は以上です。</p>
 
-<p>これでローカルからプッシュするだけで、あとは勝手にレンタルサーバーへアップロードできるようになりました。</p>
+<p>これでローカルからプッシュするだけで、あとはCIサービスがビルドからレンタルサーバーへのデプロイまでをやってくれるようになりました。</p>
+
+<p>前回も書きましたが、ローカルでのバックアップはほぼ不要（元ファイルはGit管理外のため）で、ロールバックも簡単に行えます。</p>
+
+<p>CMS自体のお守りからも解放されるので、余計な心配がかからなくなりました。</p>
+
+<p>もちろん、サービスが落ちていたら使えないわけですから万能なわけではありませんが、そのリスクはどんなサービスを使っていても一緒ですね。</p>
 
 		</div>
 
