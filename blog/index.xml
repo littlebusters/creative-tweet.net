@@ -6,8 +6,17 @@
     <description>Recent content in Blogs on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2015/10/15 09:31:00 +09:00</lastBuildDate>
+    <lastBuildDate>2015/10/27 01:00:00 +09:00</lastBuildDate>
     <atom:link href="http://creative-tweet.net/blog.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Sketch 3が3.4へアップデート！その内容をざっくりまとめました。</title>
+      <link>http://creative-tweet.net/blog/2015/10/sketch-has-been-updated-to-3.4.html</link>
+      <pubDate>2015/10/27 01:00:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2015/10/sketch-has-been-updated-to-3.4.html</guid>
+      <description>Sketch 3が3.4へアップデートしました。この記事ではその内容を簡単にまとめています。</description>
+    </item>
     
     <item>
       <title>Hugoをセットアップしてデプロイするまで［後編］CIサービスでビルドからデプロイを自動化するまで</title>
@@ -88,15 +97,6 @@
       
       <guid>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-23.html</guid>
       <description>Sketch 3 で背面レイヤーを簡単にドラッグするためのキーコンビネーションを紹介します。</description>
-    </item>
-    
-    <item>
-      <title>大都会からの刺客として「プロとして恥ずかしくない 新・WEBデザインの大原則」の執筆に参加しました。 大都会岡山 Advent Calendar 2014</title>
-      <link>http://creative-tweet.net/blog/2014/12/daitokai-advent-calendar-2014-22.html</link>
-      <pubDate>2014/12/22 09:30:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2014/12/daitokai-advent-calendar-2014-22.html</guid>
-      <description>12月24日に発売される「プロとして恥ずかしくない 新・WEBデザインの大原則」の著者として執筆しましたので、この書籍を少しご紹介します。</description>
     </item>
     
   </channel>
