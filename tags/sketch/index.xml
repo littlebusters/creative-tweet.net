@@ -6,8 +6,17 @@
     <description>Recent content in Sketch on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2015/10/27 01:00:00 +09:00</lastBuildDate>
+    <lastBuildDate>2015/12/04 12:02:00 +09:00</lastBuildDate>
     <atom:link href="http://creative-tweet.net/tags/sketch.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Sketch 3でこれできないの？にお答えします。Sketch 3 Advent Calendar 2015</title>
+      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-04.html</link>
+      <pubDate>2015/12/04 12:02:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-04.html</guid>
+      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。初回は画像補正です。</description>
+    </item>
     
     <item>
       <title>Sketch 3が3.4へアップデート！その内容をざっくりまとめました。</title>
@@ -88,15 +97,6 @@
       
       <guid>http://creative-tweet.net/blog/2014/07/finished-sketch-workshop-in-metropolis-okayama.html</guid>
       <description>Sketch勉強会 in 大都会岡山の開催レポートです。</description>
-    </item>
-    
-    <item>
-      <title>Sketch 3の基本。という電子書籍を出しましたよ。</title>
-      <link>http://creative-tweet.net/blog/2014/07/published-the-basic-of-sketch.html</link>
-      <pubDate>2014/07/14 09:30:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2014/07/published-the-basic-of-sketch.html</guid>
-      <description>「オレオレ Sketch.app Advent Calendar 2013」をベースに、Sketch 3向けに加筆修正した電子書籍、「Sketch 3の基本。」をリリースしました。</description>
     </item>
     
   </channel>

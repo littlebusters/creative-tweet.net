@@ -61,8 +61,10 @@
 
 <p>ブログ自体はWordPressを使用していますが、それ以外のディレクトリは静的HTMLを使っています。特にFireworksの拡張機能を配布しているページは、配布物が増えるたびにグローバルナビを書き換えたり、コンテンツの細かいところを書き換えたりとちょっと面倒です。ここで、気になっていたMIXTUREを使って再構築した備忘録ついでに。</p>
 
-<p>MIXTURE についてはこちら
-:   <a href="http://mixture.io/">Mixture &#8211; A rapid prototyping and static site generation tool for designers and developers</a></p>
+<dl>
+<dt>MIXTURE についてはこちら</dt>
+<dd><a href="http://mixture.io/">Mixture &#8211; A rapid prototyping and static site generation tool for designers and developers</a></dd>
+</dl>
 
 <p>MIXTUREはLiquidテンプレートエンジンを使った、静的サイトジェネレーターです。主に以下のような機能があります。</p>
 
@@ -112,17 +114,16 @@
   <img src="/assets/img/2013/2013-04-24-used-the-mixture/mixture_fig1_structure.png" alt="" />
 </p>
 
-<p><strong>assets</strong>
-:   共通で使うリソースを入れるフォルダになります。</p>
-
-<p><strong>models</strong>
-:   JSONファイルを置きます。このJSONは、他のファイルから変数っぽく呼び出して使うことができます。ある意味データベースみたいなものと思えばわかりやすいでしょうか。</p>
-
-<p><strong>templates</strong>
-:   このフォルダには、レイアウトとコンテンツの元となるファイルを入れていきます。「includes」と「layouts」は後述します。</p>
-
-<p><strong>mixture.json</strong>
-:   プロジェクトの名称や説明・プリプロセッサーの出力場所など、サイト全体の設定をします。</p>
+<dl>
+<dt><strong>assets</strong></dt>
+<dd>共通で使うリソースを入れるフォルダになります。</dd>
+<dt><strong>models</strong></dt>
+<dd>JSONファイルを置きます。このJSONは、他のファイルから変数っぽく呼び出して使うことができます。ある意味データベースみたいなものと思えばわかりやすいでしょうか。</dd>
+<dt><strong>templates</strong></dt>
+<dd>このフォルダには、レイアウトとコンテンツの元となるファイルを入れていきます。「includes」と「layouts」は後述します。</dd>
+<dt><strong>mixture.json</strong></dt>
+<dd>プロジェクトの名称や説明・プリプロセッサーの出力場所など、サイト全体の設定をします。</dd>
+</dl>
 
 <p>選んだBoilerplateによっては、compassフォルダがあったりBourbonフォルダがあったります。（あとpackage.pngとfavicon.icoがありますが、今更 説明は不要でしょう）</p>
 
@@ -136,35 +137,28 @@
 
 <p>左のメニューですが、</p>
 
-<p><strong>ToDo</strong>
-:   ファイルの中でコメントに「TODO:hogehoge」と書いておくと、ここに表示されます。</p>
-
-<p><strong>Errors</strong>
-:   エラー箇所が表示されます。“Houston, we have a problem!”と表示されるのが、何気に面白いですね。![][3]</p>
-
-<p><strong>Directory</strong>
-:   現在MIXTUREで監視しているディレクトリを開きます。</p>
-
-<p><strong>View Locally</strong>
-:   ローカルサーバを立ち上げてプレビューできます。</p>
-
-<p><strong>Publish</strong>
-:   MIXTUREサーバにアップロードします。</p>
-
-<p><strong>View Online</strong>
-:   Publishでアップロードしたコンテンツをプレビューできます。</p>
-
-<p><strong>Settings</strong>
-:   サイトの設定を行う、mixture.jsonを開きます（.json に割り当てられたアプリが開きます）。</p>
-
-<p><strong>Tools</strong>
-:   HTMLへの変換と、Browser Stockでのプレビューができます。Browser Stockを使うには、アカウント設定でAPIの登録が必要なようです。</p>
-
-<p><strong>Recent</strong>
-:   最近使ったプロジェクトが表示されます。</p>
-
-<p><strong>Open</strong>
-:   MIXTUREで管理されているフォルダを選んで開けます。管理外のフォルダを開いた場合、Boilerplateを選ぶ画面になります。</p>
+<dl>
+<dt><strong>ToDo</strong></dt>
+<dd>ファイルの中でコメントに「TODO:hogehoge」と書いておくと、ここに表示されます。</dd>
+<dt><strong>Errors</strong></dt>
+<dd>エラー箇所が表示されます。“Houston, we have a problem!”と表示されるのが、何気に面白いですね。![][3]</dd>
+<dt><strong>Directory</strong></dt>
+<dd>現在MIXTUREで監視しているディレクトリを開きます。</dd>
+<dt><strong>View Locally</strong></dt>
+<dd>ローカルサーバを立ち上げてプレビューできます。</dd>
+<dt><strong>Publish</strong></dt>
+<dd>MIXTUREサーバにアップロードします。</dd>
+<dt><strong>View Online</strong></dt>
+<dd>Publishでアップロードしたコンテンツをプレビューできます。</dd>
+<dt><strong>Settings</strong></dt>
+<dd>サイトの設定を行う、mixture.jsonを開きます（.json に割り当てられたアプリが開きます）。</dd>
+<dt><strong>Tools</strong></dt>
+<dd>HTMLへの変換と、Browser Stockでのプレビューができます。Browser Stockを使うには、アカウント設定でAPIの登録が必要なようです。</dd>
+<dt><strong>Recent</strong></dt>
+<dd>最近使ったプロジェクトが表示されます。</dd>
+<dt><strong>Open</strong></dt>
+<dd>MIXTUREで管理されているフォルダを選んで開けます。管理外のフォルダを開いた場合、Boilerplateを選ぶ画面になります。</dd>
+</dl>
 
 <p>ですので、ひとまず「View Locally」でプレビューしてみましょう。MIXTUREがサーバ機能も持っているので、これを使ってプレビューすることができます。</p>
 
@@ -259,7 +253,9 @@
 
 <p>公開時は有償だったのですが、どうやらビジネスモデルに問題があったようでフリー化されました。アップデートは提供するということなんですが、内蔵されているSassが若干古くなってるので、本気で使うには少しつらいかもしれません…</p>
 
-<p>間違いがありましたら、Twitter（<a href="http://twitter.com/littlebusters">@littlebusters</a>） や Facebook ページ（<a href="http://www.facebook.com/creative.tweet">creative tweet.</a>）などにお知らせいただけると幸いです。</section></p>
+<p>間違いがありましたら、Twitter（<a href="http://twitter.com/littlebusters">@littlebusters</a>） や Facebook ページ（[creative tweet.][5]）などにお知らせいただけると幸いです。</section></p>
+
+<p>[5]: <a href="http://www.facebook.com/creative.tweet">http://www.facebook.com/creative.tweet</a></p>
 
 		</div>
 

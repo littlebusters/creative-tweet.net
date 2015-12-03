@@ -6,8 +6,17 @@
     <description>Recent content in Sketch 3 on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2015/10/27 01:00:00 +09:00</lastBuildDate>
+    <lastBuildDate>2015/12/04 12:02:00 +09:00</lastBuildDate>
     <atom:link href="http://creative-tweet.net/tags/sketch-3.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Sketch 3でこれできないの？にお答えします。Sketch 3 Advent Calendar 2015</title>
+      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-04.html</link>
+      <pubDate>2015/12/04 12:02:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-04.html</guid>
+      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。初回は画像補正です。</description>
+    </item>
     
     <item>
       <title>Sketch 3が3.4へアップデート！その内容をざっくりまとめました。</title>
@@ -88,15 +97,6 @@
       
       <guid>http://creative-tweet.net/blog/2014/10/apply-proportional-metrics-on-sketch.html</guid>
       <description>PhotoshopやIllustratorなどのAdobeプロダクト以外のOSXアプリケーションで、文字詰めをする方法を解説しています。</description>
-    </item>
-    
-    <item>
-      <title>Sketch勉強会 in 大都会岡山を開催しましたよ。</title>
-      <link>http://creative-tweet.net/blog/2014/07/finished-sketch-workshop-in-metropolis-okayama.html</link>
-      <pubDate>2014/07/29 09:30:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2014/07/finished-sketch-workshop-in-metropolis-okayama.html</guid>
-      <description>Sketch勉強会 in 大都会岡山の開催レポートです。</description>
     </item>
     
   </channel>

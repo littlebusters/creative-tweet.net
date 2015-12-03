@@ -6,8 +6,17 @@
     <description>Recent content in Creative on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2014/12/25 09:30:00 +09:00</lastBuildDate>
+    <lastBuildDate>2015/12/04 12:02:00 +09:00</lastBuildDate>
     <atom:link href="http://creative-tweet.net/categories/creative.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Sketch 3でこれできないの？にお答えします。Sketch 3 Advent Calendar 2015</title>
+      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-04.html</link>
+      <pubDate>2015/12/04 12:02:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-04.html</guid>
+      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。初回は画像補正です。</description>
+    </item>
     
     <item>
       <title>Sketch 3でスライドづくりに役立つプラグインやTipsなど紹介しますよ。 Sketch 3 Advent Calendar 2014</title>
@@ -88,15 +97,6 @@
       
       <guid>http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-tips.html</guid>
       <description>Sketch.app Advent Calender 2013 24日目の記事です。今回はSketch.appで使える（かもしれない）小ネタやTipsをお届けします。</description>
-    </item>
-    
-    <item>
-      <title>Sketch.appの解説しきれなかった機能を紹介するよ。 – Sketch.app Advent Calendar 2013</title>
-      <link>http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-functions.html</link>
-      <pubDate>2013/12/23 09:30:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-functions.html</guid>
-      <description>Sketch.app Advent Calender 2013 23日目の記事です。今回はこれまでに紹介できなかった機能についての解説をお届けします。</description>
     </item>
     
   </channel>
