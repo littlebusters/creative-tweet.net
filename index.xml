@@ -6,11 +6,20 @@
     <description>Recent content on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2015/12/04 12:02:00 +09:00</lastBuildDate>
+    <lastBuildDate>2015/12/07 12:02:00 +09:00</lastBuildDate>
     <atom:link href="http://creative-tweet.net/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Sketch 3でこれできないの？にお答えします。Sketch 3 Advent Calendar 2015</title>
+      <title>Sketch 3でこれできないの？にお答えします。［その2 移行編］ - Sketch 3 Advent Calendar 2015</title>
+      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-07.html</link>
+      <pubDate>2015/12/07 12:02:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-07.html</guid>
+      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。Mac App Store版から直販版に移行した時のプラグインやらアートボードのプリセットの復活方法です。</description>
+    </item>
+    
+    <item>
+      <title>Sketch 3でこれできないの？にお答えします。［その1 画像補正編］ - Sketch 3 Advent Calendar 2015</title>
       <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-04.html</link>
       <pubDate>2015/12/04 12:02:00 +09:00</pubDate>
       
@@ -88,15 +97,6 @@
       
       <guid>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-03.html</guid>
       <description>Sketch 3のテキストボックスで、数字キーを使わず小数点以下を入力する方法を紹介します。</description>
-    </item>
-    
-    <item>
-      <title>Sketch 3でスライドづくりに役立つプラグインやTipsなど紹介しますよ。 Sketch 3 Advent Calendar 2014</title>
-      <link>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-25.html</link>
-      <pubDate>2014/12/25 09:30:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-25.html</guid>
-      <description>Sketch 3 でプレゼンテーションスライドを作成するためのTipやプラグインを紹介しています。</description>
     </item>
     
   </channel>
