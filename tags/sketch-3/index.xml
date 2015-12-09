@@ -6,8 +6,17 @@
     <description>Recent content in Sketch 3 on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2015/12/07 12:02:00 +09:00</lastBuildDate>
+    <lastBuildDate>2015/12/10 12:02:00 +09:00</lastBuildDate>
     <atom:link href="http://creative-tweet.net/tags/sketch-3.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Sketch 3でこれできないの？にお答えします。［その3 背面レイヤー選択編］ - Sketch 3 Advent Calendar 2015</title>
+      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-10.html</link>
+      <pubDate>2015/12/10 12:02:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-10.html</guid>
+      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。レイヤーの背面にあるレイヤーの選択方法についてです。</description>
+    </item>
     
     <item>
       <title>Sketch 3でこれできないの？にお答えします。［その2 移行編］ - Sketch 3 Advent Calendar 2015</title>
@@ -88,15 +97,6 @@
       
       <guid>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-01.html</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Sketch 3の基本的な使い方を解説した「Sketch 3の基本。」が完成しましたよ。その経緯とかを少し。</title>
-      <link>http://creative-tweet.net/blog/2014/11/sketch-3-basics-was-completed.html</link>
-      <pubDate>2014/11/20 09:30:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2014/11/sketch-3-basics-was-completed.html</guid>
-      <description>Sketch 3の基本操作を解説した「Sketch 3の基本。」が完成しました。今回は、ほんの内容以外の部分を少し書き綴っています。</description>
     </item>
     
   </channel>
