@@ -6,8 +6,71 @@
     <description>Recent content in Creative on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2015/12/10 12:02:00 +09:00</lastBuildDate>
+    <lastBuildDate>2015/12/19 12:02:00 +09:00</lastBuildDate>
     <atom:link href="http://creative-tweet.net/categories/creative.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Sketch 3でこれできないの？にお答えします。［その10 アルファなしPNG編］ - Sketch 3 Advent Calendar 2015</title>
+      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-19.html</link>
+      <pubDate>2015/12/19 12:02:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-19.html</guid>
+      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。Sketch 3でのPNG24の生成について。</description>
+    </item>
+    
+    <item>
+      <title>Sketch 3でこれできないの？にお答えします。［その9 アートボードに整列編］ - Sketch 3 Advent Calendar 2015</title>
+      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-18.html</link>
+      <pubDate>2015/12/18 12:02:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-18.html</guid>
+      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。意外と知られていないかもしれない、アートボードに整列について。</description>
+    </item>
+    
+    <item>
+      <title>Sketch 3でこれできないの？にお答えします。［その8 Open PathのBorder Position変更編］ - Sketch 3 Advent Calendar 2015</title>
+      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-17.html</link>
+      <pubDate>2015/12/17 12:02:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-17.html</guid>
+      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。今回はOpen PathのBorder Positionの変更についてです。</description>
+    </item>
+    
+    <item>
+      <title>Sketch 3でこれできないの？にお答えします。［その7 Local Sharingを世界へ編］ - Sketch 3 Advent Calendar 2015</title>
+      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-16.html</link>
+      <pubDate>2015/12/16 12:02:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-16.html</guid>
+      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。3.4からの新機能、Local Sharingを使ったTipsです。</description>
+    </item>
+    
+    <item>
+      <title>Sketch 3でこれできないの？にお答えします。［その6 シンボル内のテキスト編］ - Sketch 3 Advent Calendar 2015</title>
+      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-15.html</link>
+      <pubDate>2015/12/15 12:02:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-15.html</guid>
+      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。実はグループの共有だけじゃないシンボル内にあるテキストの使い方についてです。</description>
+    </item>
+    
+    <item>
+      <title>Sketch 3でこれできないの？にお答えします。［その5 複数のマシンへのインストール編］ - Sketch 3 Advent Calendar 2015</title>
+      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-13.html</link>
+      <pubDate>2015/12/13 12:02:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-13.html</guid>
+      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。直販版の上限インストール数についてです。</description>
+    </item>
+    
+    <item>
+      <title>Sketch 3でこれできないの？にお答えします。［その4 他プラットフォームでの確認編］ - Sketch 3 Advent Calendar 2015</title>
+      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-12.html</link>
+      <pubDate>2015/12/12 12:02:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-12.html</guid>
+      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。他のプラットフォームでの確認方法についてです。</description>
+    </item>
     
     <item>
       <title>Sketch 3でこれできないの？にお答えします。［その3 背面レイヤー選択編］ - Sketch 3 Advent Calendar 2015</title>
@@ -34,69 +97,6 @@
       
       <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-04.html</guid>
       <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。初回は画像補正です。</description>
-    </item>
-    
-    <item>
-      <title>Sketch 3でスライドづくりに役立つプラグインやTipsなど紹介しますよ。 Sketch 3 Advent Calendar 2014</title>
-      <link>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-25.html</link>
-      <pubDate>2014/12/25 09:30:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-25.html</guid>
-      <description>Sketch 3 でプレゼンテーションスライドを作成するためのTipやプラグインを紹介しています。</description>
-    </item>
-    
-    <item>
-      <title>大都会関係ない、裏Sketch 3 Advent CalendarでTipsを4つほど。大都会岡山 Advent Calendar 2014</title>
-      <link>http://creative-tweet.net/blog/2014/12/daitokai-advent-calendar-2014-24.html</link>
-      <pubDate>2014/12/24 12:00:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2014/12/daitokai-advent-calendar-2014-24.html</guid>
-      <description>ブログテーマに沿った大都会ネタがないので、Sketch 3 Advent Calendarの空いているところを埋めるべく、裏Sketch 3 Advent CalendarでTipsを4つ紹介します。</description>
-    </item>
-    
-    <item>
-      <title>大都会からの刺客として「プロとして恥ずかしくない 新・WEBデザインの大原則」の執筆に参加しました。 大都会岡山 Advent Calendar 2014</title>
-      <link>http://creative-tweet.net/blog/2014/12/daitokai-advent-calendar-2014-22.html</link>
-      <pubDate>2014/12/22 09:30:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2014/12/daitokai-advent-calendar-2014-22.html</guid>
-      <description>12月24日に発売される「プロとして恥ずかしくない 新・WEBデザインの大原則」の著者として執筆しましたので、この書籍を少しご紹介します。</description>
-    </item>
-    
-    <item>
-      <title>Sketch 3のインスペクタへフォーカスする、ショートカットを紹介しますよ。 Sketch 3 Advent Calendar 2014</title>
-      <link>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-01.html</link>
-      <pubDate>2014/12/01 09:30:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-01.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sketch（や他のアプリ）で、文字詰めをする方法を解説するよ。</title>
-      <link>http://creative-tweet.net/blog/2014/10/apply-proportional-metrics-on-sketch.html</link>
-      <pubDate>2014/10/24 09:30:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2014/10/apply-proportional-metrics-on-sketch.html</guid>
-      <description>PhotoshopやIllustratorなどのAdobeプロダクト以外のOSXアプリケーションで、文字詰めをする方法を解説しています。</description>
-    </item>
-    
-    <item>
-      <title>Sketch 3のメニューと環境設定を日本語へ意訳をしましたよ。</title>
-      <link>http://creative-tweet.net/blog/2014/04/japanese-translation-for-sketch3.html</link>
-      <pubDate>2014/04/26 09:30:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2014/04/japanese-translation-for-sketch3.html</guid>
-      <description>Sketch 3のメニューと環境設定の日本語への意訳をしてみました。SketchファイルおよびPDFファイルをダウンロードできます。</description>
-    </item>
-    
-    <item>
-      <title>Sketch.appがメジャーアップデートでSketch 3になりましたよ。</title>
-      <link>http://creative-tweet.net/blog/2014/04/sketch-3-is-new-available.html</link>
-      <pubDate>2014/04/16 09:30:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2014/04/sketch-3-is-new-available.html</guid>
-      <description>Sketch.appがバージョン3にメジャーアップデートしたので、少し使ってみたインプレッションです。</description>
     </item>
     
   </channel>

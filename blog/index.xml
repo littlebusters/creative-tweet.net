@@ -6,8 +6,71 @@
     <description>Recent content in Blogs on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2015/12/10 12:02:00 +09:00</lastBuildDate>
+    <lastBuildDate>2015/12/19 12:02:00 +09:00</lastBuildDate>
     <atom:link href="http://creative-tweet.net/blog.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Sketch 3でこれできないの？にお答えします。［その10 アルファなしPNG編］ - Sketch 3 Advent Calendar 2015</title>
+      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-19.html</link>
+      <pubDate>2015/12/19 12:02:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-19.html</guid>
+      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。Sketch 3でのPNG24の生成について。</description>
+    </item>
+    
+    <item>
+      <title>Sketch 3でこれできないの？にお答えします。［その9 アートボードに整列編］ - Sketch 3 Advent Calendar 2015</title>
+      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-18.html</link>
+      <pubDate>2015/12/18 12:02:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-18.html</guid>
+      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。意外と知られていないかもしれない、アートボードに整列について。</description>
+    </item>
+    
+    <item>
+      <title>Sketch 3でこれできないの？にお答えします。［その8 Open PathのBorder Position変更編］ - Sketch 3 Advent Calendar 2015</title>
+      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-17.html</link>
+      <pubDate>2015/12/17 12:02:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-17.html</guid>
+      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。今回はOpen PathのBorder Positionの変更についてです。</description>
+    </item>
+    
+    <item>
+      <title>Sketch 3でこれできないの？にお答えします。［その7 Local Sharingを世界へ編］ - Sketch 3 Advent Calendar 2015</title>
+      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-16.html</link>
+      <pubDate>2015/12/16 12:02:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-16.html</guid>
+      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。3.4からの新機能、Local Sharingを使ったTipsです。</description>
+    </item>
+    
+    <item>
+      <title>Sketch 3でこれできないの？にお答えします。［その6 シンボル内のテキスト編］ - Sketch 3 Advent Calendar 2015</title>
+      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-15.html</link>
+      <pubDate>2015/12/15 12:02:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-15.html</guid>
+      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。実はグループの共有だけじゃないシンボル内にあるテキストの使い方についてです。</description>
+    </item>
+    
+    <item>
+      <title>Sketch 3でこれできないの？にお答えします。［その5 複数のマシンへのインストール編］ - Sketch 3 Advent Calendar 2015</title>
+      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-13.html</link>
+      <pubDate>2015/12/13 12:02:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-13.html</guid>
+      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。直販版の上限インストール数についてです。</description>
+    </item>
+    
+    <item>
+      <title>Sketch 3でこれできないの？にお答えします。［その4 他プラットフォームでの確認編］ - Sketch 3 Advent Calendar 2015</title>
+      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-12.html</link>
+      <pubDate>2015/12/12 12:02:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-12.html</guid>
+      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。他のプラットフォームでの確認方法についてです。</description>
+    </item>
     
     <item>
       <title>Sketch 3でこれできないの？にお答えします。［その3 背面レイヤー選択編］ - Sketch 3 Advent Calendar 2015</title>
@@ -34,69 +97,6 @@
       
       <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-04.html</guid>
       <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。初回は画像補正です。</description>
-    </item>
-    
-    <item>
-      <title>Sketch 3が3.4へアップデート！その内容をざっくりまとめました。</title>
-      <link>http://creative-tweet.net/blog/2015/10/sketch-has-been-updated-to-3.4.html</link>
-      <pubDate>2015/10/27 01:00:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2015/10/sketch-has-been-updated-to-3.4.html</guid>
-      <description>Sketch 3が3.4へアップデートしました。この記事ではその内容を簡単にまとめています。</description>
-    </item>
-    
-    <item>
-      <title>Hugoをセットアップしてデプロイするまで［後編］CIサービスでビルドからデプロイを自動化するまで</title>
-      <link>http://creative-tweet.net/blog/2015/10/usage-hugo-2.html</link>
-      <pubDate>2015/10/15 09:31:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2015/10/usage-hugo-2.html</guid>
-      <description>CIサービスを利用して、Hugoのビルドからデプロイまでを自動化する手順を解説しています。</description>
-    </item>
-    
-    <item>
-      <title>Hugoをセットアップしてデプロイするまで［前編］Hugoのセットアップからビルドするまで</title>
-      <link>http://creative-tweet.net/blog/2015/10/usage-hugo-1.html</link>
-      <pubDate>2015/10/15 09:30:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2015/10/usage-hugo-1.html</guid>
-      <description>WordPressからHugoへの移行手順と、Hugoのセットアップやテンプレートの作成からビルドするまでを解説しています。</description>
-    </item>
-    
-    <item>
-      <title>WordPressからHugoへ移行して、ビルドとデプロイを自動化した話</title>
-      <link>http://creative-tweet.net/blog/2015/10/good-bye-wordpress.html</link>
-      <pubDate>2015/10/01 09:30:50 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2015/10/good-bye-wordpress.html</guid>
-      <description>ブログで使っていたWordPressから、サイト全体をStatic Site GeneratorのHugoへ移行し、ビルドとデプロイまでを自動化したその概要です。</description>
-    </item>
-    
-    <item>
-      <title>非Retinaディスプレイで、HiDPIのスクリーンショットを撮る方法とツールたちを紹介しますよ。</title>
-      <link>http://creative-tweet.net/blog/2015/09/screenshot-by-hidpi-on-osx.html</link>
-      <pubDate>2015/09/24 11:50:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2015/09/screenshot-by-hidpi-on-osx.html</guid>
-      <description>非Retinaディスプレイで、HiDPIのスクリーンショットを撮る方法とツールたちを紹介しますよ。</description>
-    </item>
-    
-    <item>
-      <title>Sketch 3のテキストボックスで、数字キーを使わず小数点以下を入力する方法を紹介しますよ。 Sketch 3 Advent Calendar 2014</title>
-      <link>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-03.html</link>
-      <pubDate>2014/12/27 09:30:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-03.html</guid>
-      <description>Sketch 3のテキストボックスで、数字キーを使わず小数点以下を入力する方法を紹介します。</description>
-    </item>
-    
-    <item>
-      <title>Sketch 3でスライドづくりに役立つプラグインやTipsなど紹介しますよ。 Sketch 3 Advent Calendar 2014</title>
-      <link>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-25.html</link>
-      <pubDate>2014/12/25 09:30:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-25.html</guid>
-      <description>Sketch 3 でプレゼンテーションスライドを作成するためのTipやプラグインを紹介しています。</description>
     </item>
     
   </channel>
