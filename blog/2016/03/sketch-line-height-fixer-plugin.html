@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<title>古いSketch 3向けに、行間問題を緩和するプラグインを作りました。 | creative tweet.</title>
+<script async src="/assets/js/auie.js"></script>
+
+
+
+
+
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="古いSketch 3向けに、行間問題を緩和するプラグインを作りました。" />
+<meta property="og:url" content="http://creative-tweet.net/blog/2016/03/sketch-line-height-fixer-plugin.html" />
+<meta property="og:description" content="「やむを得ない理由でSketch 3.4.xを使わざるを得ないマン」向けに、行間問題をごにょごにょして扱いやすくするプラグインを作成しました。" />
+<meta property="og:image" content="http://creative-tweet.net/assets/img/2016/line-height-fixer/line-height-fixer-ogp.png" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="古いSketch 3向けに、行間問題を緩和するプラグインを作りました。">
+<meta name="twitter:url" content="http://creative-tweet.net/blog/2016/03/sketch-line-height-fixer-plugin.html">
+<meta name="twitter:description" content="「やむを得ない理由でSketch 3.4.xを使わざるを得ないマン」向けに、行間問題をごにょごにょして扱いやすくするプラグインを作成しました。">
+<meta name="twitter:image" content="http://creative-tweet.net/assets/img/2016/line-height-fixer/line-height-fixer-ogp.png">
+</head>
+<body>
+<header class="siteHeader" role="banner">
+<h1 id="siteSign">
+<a href="/">
+<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<section class="article-header-section">
+				<time class="publishedDatetime" datetime="2016-03-06T04:20:00&#43;09:00">2016/3/6</time>
+				<h1 class="article-title">古いSketch 3向けに、行間問題を緩和するプラグインを作りました。</h1>
+				
+				<img src="/assets/img/2016/line-height-fixer/line-height-fixer-hero.png" class="hero" alt="">
+				
+			</section>
+		</header>
+		
+		<div class="content-main">
+			
+
+<p>Sketch 3.6にアップデートされ、長年の問題であった行間問題がかなり改善されました。</p>
+
+<p>ただ、Sketch 3.5からOSX 10.10以降の対応となったため、やむを得ない理由でOSX 10.9を使っている場合、この恩恵を受けられません。</p>
+
+<p>今回は、そんな「やむを得ない理由でSketch 3.4.xを使わざるを得ないマン」向けに、行間問題をごにょごにょして扱いやすくするプラグインを作成しました。</p>
+
+<p>Sketchのテキストレイヤーでは、1文字目のフォントがそのテキストレイヤー全体の行間処理を引っ張ります（完全に検証しているわけではないため、そのような動作に見える、ということです）。つまり、和文の1文字目を欧文にすることで、「ずれる」現象を回避することができます（ただし途中に行間の大きいZapfinoなどを使うと、そちらに引っ張られます）。</p>
+
+<p>とはいえ、1文字目に欧文フォントを指定できるレイヤーは限られていると思いますので、Adobe Blankを利用して1文字目を無理やり欧文フォントにしてやります。</p>
+
+<p>Adobe Blankは、「目に見えない」という特殊なフォントで、これを適用したテキストはテキスト情報はあるものの、文字としての実体は画面に表示されなくなります。この特性を利用して、Adobe Blankを適用した半角スペースを1文字目に挿入し、意図的に見えなくしつつ欧文フォントを適用するという手法を、プラグインで実行できるように作成しました。</p>
+
+<div class="media">
+    <img src="/assets/img/2016/line-height-fixer/sketch-line-height-fixer.gif">
+    <p class="mediaCaption">Hackedの行間が途中おかしくなりますが、同時にLine-heightを動かしているためです。単体で値を変化させる場合は、この現象は起きません。</p>
+</div>
+
+<p class="annotation">
+半角スペース以外の文字でも良いのですが、気にせずコピー & ペーストした時に害が少ないかつ気づきやすいのではないかということで、半角スペースにしています。
+</p>
+
+<h2 id="インストール:1da97dfb534c2894375ae2f09a8fef31">インストール</h2>
+
+<p>プラグインをダウンロードし、<code>LineHeight Fixer.sketchplugin</code>ファイルをダブルクリックしてインストールします。Plugins Directoryにはあえて登録してませんので、Sketch Toolboxではインストールできません。</p>
+
+<ul class="links">
+    <li>プラグインリポジトリ：<a href="https://github.com/littlebusters/Sketch-Line-Height-Fixer">Sketch Line-height Fixer</a></li>
+    <li><a href="https://github.com/littlebusters/Sketch-Line-Height-Fixer/archive/master.zip">プラグインのダウンロード</a></li>
+</ul>
+
+<p>またAdobe Blankが必要ですので、リポジトリからダウンロードし、OpenType（.otf）版をあらかじめインストールしておいてください。インストールされていない場合でもプラグイン自体は実行できますが、「インストールしてね」というメッセージが表示されるのみとなります。</p>
+
+<ul class="links">
+    <li>Adobe Blankリポジトリ：<a href="https://github.com/adobe-fonts/adobe-blank">Adobe Blank</a></li>
+    <li><a href="https://github.com/adobe-fonts/adobe-blank/archive/master.zip">フォントのダウンロード</a></li>
+</ul>
+
+<h2 id="使い方:1da97dfb534c2894375ae2f09a8fef31">使い方</h2>
+
+<p>テキストレイヤーを選択し、プラグインを実行してください。複数のレイヤーを選択していても実行できます。</p>
+
+<p>すでに1文字目が半角スペースの場合は、処理を行いません。ただ、1文字目が半角スペースかどうかを判定しているだけなので、任意で半角スペースを入れている場合は</p>
+
+<ol>
+<li>半角スペースを先頭に挿入する</li>
+<li>そのスペースを選択し、Adobe Blankを適用する</li>
+</ol>
+
+<p>を、手動で行ってください。</p>
+
+<h2 id="注意など:1da97dfb534c2894375ae2f09a8fef31">注意など</h2>
+
+<p>100%動作を保証するものではありません。なんらかのリスクがあることは承知の上で、ご利用ください。</p>
+
+<p>あとチームで使う場合は、スペースがあるかどうか見た目にわからないため、必ず意識合わせをしておくほうが事故になりづらいと思います。</p>
+
+<p>不要なスペースを無理やり消すという方法を用いて解決しているため、万が一当たり前のように使われて今後の負の遺産になってもなぁ（大げさ）……と思ってましたが、Sketch 3.6で行間問題がかなり改善されたため、今回公開することにしました。</p>
+
+<p>Sketch 3.4.xをお使いの皆さんが、早くバージョンアップできますよう。</p>
+
+		</div>
+
+		<section class="article-taxonomy">
+			<h2 class="article-taxonomy-headding">tags</h2>
+			<ul class="tags">
+				
+				<li class="tagsItem"><a href="/tags/sketch.html">Sketch</a> </li>
+				
+				<li class="tagsItem"><a href="/tags/sketch-3.html">Sketch 3</a> </li>
+				
+			</ul>
+		</section>
+
+<div class="socialButtons">
+<div class="socialButtons_twitter">
+	<a href="https://twitter.com/intent/tweet?text=%e5%8f%a4%e3%81%84Sketch%203%e5%90%91%e3%81%91%e3%81%ab%e3%80%81%e8%a1%8c%e9%96%93%e5%95%8f%e9%a1%8c%e3%82%92%e7%b7%a9%e5%92%8c%e3%81%99%e3%82%8b%e3%83%97%e3%83%a9%e3%82%b0%e3%82%a4%e3%83%b3%e3%82%92%e4%bd%9c%e3%82%8a%e3%81%be%e3%81%97%e3%81%9f%e3%80%82&amp;url=http%3a%2f%2fcreative-tweet.net%2fblog%2f2016%2f03%2fsketch-line-height-fixer-plugin.html&amp;via=littlebusters" class="twitter-share-button"
+		data-lang="en"
+		data-url="http://creative-tweet.net/blog/2016/03/sketch-line-height-fixer-plugin.html"
+		data-text="古いSketch 3向けに、行間問題を緩和するプラグインを作りました。"
+		data-via="littlebusters" 
+		data-count="vertical"
+	>Tweet</a>
+</div>
+<div class="socialButtons_facebook">
+	<div 
+		class="fb-like"
+		data-href="http://creative-tweet.net/blog/2016/03/sketch-line-height-fixer-plugin.html"
+		data-layout="box_count"
+		data-send="false"
+		data-width="100"
+		data-show-faces="false"
+	></div>
+</div>
+<div class="socialButtons_hatebu">
+	<a href="http://b.hatena.ne.jp/entry/creative-tweet.net" class="hatena-bookmark-button"
+		data-hatena-bookmark-layout="vertical"
+		data-hatena-bookmark-title="古いSketch 3向けに、行間問題を緩和するプラグインを作りました。"
+		data-hatena-bookmark-url="http://creative-tweet.net/blog/2016/03/sketch-line-height-fixer-plugin.html">
+		<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		style="border: none">
+	</a>
+</div>
+<div class="socialButtons_googlep">
+	<div class="g-plusone" data-size="tall" data-href="http://creative-tweet.net/blog/2016/03/sketch-line-height-fixer-plugin.html"></div>
+</div>
+</div>
+
+		<ul class="pager">
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2016/02/invision-lab-craft-impression.html" class="pager_prevItem">
+				<span class="pager_label-older">older: </span>
+				ダミー作成に超便利！Sketch 3に機能を追加するInVision Craftを試してみた。
+				</a>
+			</li>
+			
+		</ul>
+
+	</main>
+</div>
+
+
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>
