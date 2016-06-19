@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<title>Fireworksのファイル構成をJSONとして書き出すFw to JSON［Fireworks拡張機能］ | creative tweet.</title>
+<script async src="/assets/js/auie.js"></script>
+
+
+
+
+
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Fireworksのファイル構成をJSONとして書き出すFw to JSON［Fireworks拡張機能］" />
+<meta property="og:url" content="http://creative-tweet.net/tools/fw_to_json/detail.html" />
+<meta property="og:description" content="FireworksのDocumentDOMを、JSONとして書き出す拡張機能です。書き出したJSONは、Sketch Pluginを使ってSketchへ取り込むこともできます。" />
+<meta property="og:image" content="http://creative-tweet.net/assets/img/site-ogp.png" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="Fireworksのファイル構成をJSONとして書き出すFw to JSON［Fireworks拡張機能］">
+<meta name="twitter:url" content="http://creative-tweet.net/tools/fw_to_json/detail.html">
+<meta name="twitter:description" content="FireworksのDocumentDOMを、JSONとして書き出す拡張機能です。書き出したJSONは、Sketch Pluginを使ってSketchへ取り込むこともできます。">
+<meta name="twitter:image" content="http://creative-tweet.net/assets/img/site-ogp.png">
+</head>
+<body>
+<header class="siteHeader is-fireworksのファイル構成をjsonとして書き出すfw to json［fireworks拡張機能］" role="banner">
+<h1 id="siteSign">
+<a href="/">
+<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<section class="article-header-section">
+				<time class="publishedDatetime" datetime="2016-06-20T12:00:00&#43;09:00">
+				release: 2016/6/20
+				</time>
+				
+				<h1 class="article-title">Fireworksのファイル構成をJSONとして書き出すFw to JSON［Fireworks拡張機能］</h1>
+				
+				<div class="tool-hero">
+					<img src="/assets/img/tools-fw-to-json/fw-to-json-symbol.svg" alt="">
+				</div>
+				
+			</section>
+		</header>
+
+		
+		<div class="downloadLink">
+			<a href="https://github.com/littlebusters/Fw-to-JSON/archive/master.zip" class="btn_toolDownload">ダウンロード</a>
+			<ul class="tool_data">
+				<li>ver.1.0.0</li>
+			</ul>
+		</div>
+		
+		
+		<div class="content-main">
+			
+
+<h2 id="これは何">これは何？</h2>
+
+<p>FireworksのDocumentDOMを、JSONとして書き出す拡張機能です。</p>
+
+<h2 id="動作環境とライセンス">動作環境とライセンス</h2>
+
+<p>OS X版 Fireworks CS6（Windows版とCS5以下は未テスト） / MITライセンス</p>
+
+<h2 id="使い方">使い方</h2>
+
+<p>JSON形式で書き出したいファイルを開きます。</p>
+
+<div class="media">
+    <a href="/assets/img/2016/fireworks-to-sketch/fig01-create-fw-document.png"><img src="/assets/img/2016/fireworks-to-sketch/fig01-create-fw-document.png" alt=""></a>
+</div>
+
+<p>プラグインを実行します。</p>
+
+<div class="media">
+    <img src="/assets/img/2016/fireworks-to-sketch/fig02-run-plugin-on-fireworks.png" alt="">
+</div>
+
+<p>JSONファイルの書き出し先を選択します。</p>
+
+<div class="media">
+    <img src="/assets/img/2016/fireworks-to-sketch/fig03-choose-export-folder.png" alt="">
+</div>
+
+<p>書き出しが終わると、書き出したオブジェクト数を表示します。必要なリソースファイルを、JSONファイルの書き出し先に指定した同階層のフォルダへ格納されます。</p>
+
+<div class="media">
+    <img src="/assets/img/2016/fireworks-to-sketch/fig05-displayed-dialog.png" alt="">
+</div>
+
+<p>あとは焼くなり煮るなりして料理してください。拙作の「<a href="/tools/sketch_fwjson_to_layers/detail.html">JSON to Layersプラグイン</a>」で、Sketch 3へ取り込むこともできます。</p>
+
+<h2 id="仕様">仕様</h2>
+
+<ul>
+<li>FireworksのDocumentDOMを、JSONとして書き出します。構造やプロパティ名などは、元と同じになるようにしていますが、一部のプロパティを削除したり独自のプロパティを追加したりしており、オリジナルそのままではありません。</li>
+<li>JSONファイルは、Fireworksドキュメントと同一名で保存します。リソースファイルを格納するフォルダは、「<code>fw2json-exported-</code> ＋ Fireworksドキュメント名」です。</li>
+<li>塗りや線にパターン・テクスチャを適用している場合、オリジナルのパターンおよびテクスチャファイルが存在すれば、リソースフォルダへ書き出します。
+
+<ul>
+<li>したがって、Fireworks内蔵のパターン・テクスチャは必ず書き出しされます。</li>
+<li>オリジナルの場合、ファイルを読み込んだ場所が記録されているため、その場所へファイルを配置するか、改めてファイルを読み込んでください。ファイルが存在しない場合、プロパティとして<code>false</code>を設定します。</li>
+</ul></li>
+<li>塗りや線にパターンを適用している場合、その適用されているオブジェクトそのものをビットマップファイルとして書き出します。これは、パターンの開始位置を正確に再現するため、パターンファイルとは別に書き出しを行っています。</li>
+<li>書き出しする際は、オブジェクト1つずつ新規ドキュメントを作成しコピー &amp; ペースト、保存を繰り返しますので、かなりの負荷が予測されます。非表示にしているオブジェクトも書き出しに含まれますので、不要なページやレイヤー（シンボル含む）は整理してからプラグインを実行すれば、書き出し時間を短縮できます。Fireworks ConsoleやDOM Inspectorをインストールしている場合は、インスペクタを非表示にした状態でFireworksを再起動させるか、プラグインマネージャーで無効化してください。</li>
+<li>ドキュメントに配置されているシンボルインスタンスを元に、シンボルを書き出します。同一シンボルからつくられているインスタンスでも、配置している大きさが異なる場合は、異なるシンボルとして書き出します。</li>
+<li>配置されているインスタンスは、シンボルとのリンクを解除して中のオブジェクトを走査します。したがって、プラグイン実行後は必ず<strong>保存せずに閉じて</strong>ください。</li>
+</ul>
+
+<h2 id="既知のバグ">既知のバグ</h2>
+
+<ul>
+<li>今のところ確認できていません。</li>
+</ul>
+
+<h2 id="履歴">履歴</h2>
+
+<dl class="versionHistory">
+<dt>1.0.0［2016.6.19］</dt>
+<dd>初リリース</dd>
+</dl>
+
+		</div>
+
+		<div class="socialButtons">
+<div class="socialButtons_twitter">
+	<a href="https://twitter.com/intent/tweet?text=Fireworks%e3%81%ae%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e6%a7%8b%e6%88%90%e3%82%92JSON%e3%81%a8%e3%81%97%e3%81%a6%e6%9b%b8%e3%81%8d%e5%87%ba%e3%81%99Fw%20to%20JSON%ef%bc%bbFireworks%e6%8b%a1%e5%bc%b5%e6%a9%9f%e8%83%bd%ef%bc%bd&amp;url=http%3a%2f%2fcreative-tweet.net%2ftools%2ffw_to_json%2fdetail.html&amp;via=littlebusters" class="twitter-share-button"
+		data-lang="en"
+		data-url="http://creative-tweet.net/tools/fw_to_json/detail.html"
+		data-text="Fireworksのファイル構成をJSONとして書き出すFw to JSON［Fireworks拡張機能］"
+		data-via="littlebusters" 
+		data-count="vertical"
+	>Tweet</a>
+</div>
+<div class="socialButtons_facebook">
+	<div 
+		class="fb-like"
+		data-href="http://creative-tweet.net/tools/fw_to_json/detail.html"
+		data-layout="box_count"
+		data-send="false"
+		data-width="100"
+		data-show-faces="false"
+	></div>
+</div>
+<div class="socialButtons_hatebu">
+	<a href="http://b.hatena.ne.jp/entry/creative-tweet.net" class="hatena-bookmark-button"
+		data-hatena-bookmark-layout="vertical"
+		data-hatena-bookmark-title="Fireworksのファイル構成をJSONとして書き出すFw to JSON［Fireworks拡張機能］"
+		data-hatena-bookmark-url="http://creative-tweet.net/tools/fw_to_json/detail.html">
+		<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		style="border: none">
+	</a>
+</div>
+<div class="socialButtons_googlep">
+	<div class="g-plusone" data-size="tall" data-href="http://creative-tweet.net/tools/fw_to_json/detail.html"></div>
+</div>
+</div>
+
+	</main>
+</div>
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>

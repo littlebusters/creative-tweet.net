@@ -6,8 +6,35 @@
     <description>Recent content in Tool on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2016/03/06 04:20:00 +09:00</lastBuildDate>
+    <lastBuildDate>2016/06/20 09:30:00 +09:00</lastBuildDate>
     <atom:link href="http://creative-tweet.net/categories/tool.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>特定のJSONファイルを読み込んで、レイヤーを生成するSketch 3向けプラグイン</title>
+      <link>http://creative-tweet.net/tools/sketch_fwjson_to_layers/detail.html</link>
+      <pubDate>2016/06/20 09:30:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/tools/sketch_fwjson_to_layers/detail.html</guid>
+      <description>FireworksのDocumentDOMを、JSONとして書き出す拡張機能です。書き出したJSONは、Sketch Pluginを使ってSketchへ取り込むこともできます。</description>
+    </item>
+    
+    <item>
+      <title>FireworksからJSONをエクスポートして、そのJSONをSketch 3へインポートするプラグインを作りました。</title>
+      <link>http://creative-tweet.net/blog/2016/06/fireworks-to-sketch.html</link>
+      <pubDate>2016/06/20 12:00:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2016/06/fireworks-to-sketch.html</guid>
+      <description>Fireworks PNGをJSONとして書き出すコマンドと、そのJSONをSketch 3へインポートするプラグインをつくりました。</description>
+    </item>
+    
+    <item>
+      <title>Fireworksのファイル構成をJSONとして書き出すFw to JSON［Fireworks拡張機能］</title>
+      <link>http://creative-tweet.net/tools/fw_to_json/detail.html</link>
+      <pubDate>2016/06/20 12:00:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/tools/fw_to_json/detail.html</guid>
+      <description>FireworksのDocumentDOMを、JSONとして書き出す拡張機能です。書き出したJSONは、Sketch Pluginを使ってSketchへ取り込むこともできます。</description>
+    </item>
     
     <item>
       <title>古いSketch 3向けに、行間問題を緩和するプラグインを作りました。</title>
@@ -70,33 +97,6 @@
       
       <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-15.html</guid>
       <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。実はグループの共有だけじゃないシンボル内にあるテキストの使い方についてです。</description>
-    </item>
-    
-    <item>
-      <title>Sketch 3でこれできないの？にお答えします。［その5 複数のマシンへのインストール編］ - Sketch 3 Advent Calendar 2015</title>
-      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-13.html</link>
-      <pubDate>2015/12/13 12:02:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-13.html</guid>
-      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。直販版の上限インストール数についてです。</description>
-    </item>
-    
-    <item>
-      <title>Sketch 3でこれできないの？にお答えします。［その4 他プラットフォームでの確認編（Marketchプラグイン）］ - Sketch 3 Advent Calendar 2015</title>
-      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-12.html</link>
-      <pubDate>2015/12/12 12:02:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-12.html</guid>
-      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。他のプラットフォームでの確認方法についてです。</description>
-    </item>
-    
-    <item>
-      <title>Sketch 3でこれできないの？にお答えします。［その3 背面レイヤー選択編］ - Sketch 3 Advent Calendar 2015</title>
-      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-10.html</link>
-      <pubDate>2015/12/10 12:02:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-10.html</guid>
-      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。レイヤーの背面にあるレイヤーの選択方法についてです。</description>
     </item>
     
   </channel>

@@ -6,8 +6,26 @@
     <description>Recent content in Fireworks on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2013/12/24 09:30:00 +09:00</lastBuildDate>
+    <lastBuildDate>2016/06/20 12:00:00 +09:00</lastBuildDate>
     <atom:link href="http://creative-tweet.net/tags/fireworks.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>FireworksからJSONをエクスポートして、そのJSONをSketch 3へインポートするプラグインを作りました。</title>
+      <link>http://creative-tweet.net/blog/2016/06/fireworks-to-sketch.html</link>
+      <pubDate>2016/06/20 12:00:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2016/06/fireworks-to-sketch.html</guid>
+      <description>Fireworks PNGをJSONとして書き出すコマンドと、そのJSONをSketch 3へインポートするプラグインをつくりました。</description>
+    </item>
+    
+    <item>
+      <title>Fireworksのファイル構成をJSONとして書き出すFw to JSON［Fireworks拡張機能］</title>
+      <link>http://creative-tweet.net/tools/fw_to_json/detail.html</link>
+      <pubDate>2016/06/20 12:00:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/tools/fw_to_json/detail.html</guid>
+      <description>FireworksのDocumentDOMを、JSONとして書き出す拡張機能です。書き出したJSONは、Sketch Pluginを使ってSketchへ取り込むこともできます。</description>
+    </item>
     
     <item>
       <title>Fireworksのコマンドを作ってみよう。 – Fireworks Lover Advent Calendar 2013</title>
@@ -79,24 +97,6 @@
       
       <guid>http://creative-tweet.net/tools/paste_from_ai/detail.html</guid>
       <description>IllustratorからFireworksへテキストボックスをコピー &amp;amp; ペーストした場合に、幅が大きくなってしまう現象を回避できる拡張機能です。複数オブジェクトのペーストにも対応。</description>
-    </item>
-    
-    <item>
-      <title>FWUGLTでしゃべってきましたよ。</title>
-      <link>http://creative-tweet.net/blog/2013/03/fwuglt_in_co-edo.html</link>
-      <pubDate>2013/03/22 09:30:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2013/03/fwuglt_in_co-edo.html</guid>
-      <description>Fireworks User Group Lightning Talkで「敢えて@1xでRetina対応をしてみる」というお題でしゃべってきました。スライドと当日のデモファイルをアップしています。</description>
-    </item>
-    
-    <item>
-      <title>画像をRetina対応で書き出しする、Fireworksの拡張機能作ったよ。</title>
-      <link>http://creative-tweet.net/blog/2012/12/retina-image-exporter.html</link>
-      <pubDate>2012/12/06 09:30:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2012/12/retina-image-exporter.html</guid>
-      <description>Fireworks Lover Advent Calendar 2012 7日目の記事です。Retina対応画像を書き出す、Fireworksの拡張機能を作りました！</description>
     </item>
     
   </channel>

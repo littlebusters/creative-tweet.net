@@ -63,12 +63,12 @@
 </p>
 Sketch 2.2.4で動作を確認しているため、バージョンによっては動いたり動かなかったりすると思いますので、予めご了承ください。</p>
 
-<h2 id="プラグインを使うには:146f3ab366e447902cf7a5a031a5400d">プラグインを使うには</h2>
+<h2 id="プラグインを使うには">プラグインを使うには</h2>
 
 <p>まずは、プラグインのダウンロードと解凍しておきましょう。</p>
 
 <p><strong>プラグインのGitHubリポジトリ</strong><br />
-[sketchplugins/plugin-directory][3]</p>
+<a href="https://github.com/sketchplugins/plugin-directory">sketchplugins/plugin-directory</a></p>
 
 <p>続いて、Sketchの環境設定でプラグインの有効化が必要ですので、［Sketch］メニューから、［Preferences］を選択します。</p>
 
@@ -98,7 +98,7 @@ Sketch 2.2.4で動作を確認しているため、バージョンによって�
 
 <p>続けてプラグインについて解説していきます。</p>
 
-<h2 id="alignグループ:146f3ab366e447902cf7a5a031a5400d">Alignグループ</h2>
+<h2 id="alignグループ">Alignグループ</h2>
 
 <p><strong>Space Horizontal</strong><br />
 選択しているオブジェクト中で一番下にあるレイヤーを基準に、オブジェクトを入力した数値分の間隔を空けて水平方向に再配置します。オブジェクトを回転している場合は、回転していない状態と見なして再配置されます（角度を0に戻すと入力した値分の間隔が空いている）。垂直方向は変化しません。</p>
@@ -114,12 +114,12 @@ Sketch 2.2.4で動作を確認しているため、バージョンによって�
   <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig6.png" alt="" />
 </p>
 
-<h2 id="alpha-グループ:146f3ab366e447902cf7a5a031a5400d">Alpha グループ</h2>
+<h2 id="alpha-グループ">Alpha グループ</h2>
 
 <p><strong>Alpha N%</strong><br />
 オブジェクトのアルファを設定します。「Alpha&#8230;」は値を入力できます。</p>
 
-<h2 id="effects-グループ:146f3ab366e447902cf7a5a031a5400d">Effects グループ</h2>
+<h2 id="effects-グループ">Effects グループ</h2>
 
 <p><strong>Offset</strong><br />
 入力した値分、幅と高さをオフセットしたオブジェクトを複製します（角丸の大きさや線幅は変更されません）。マイナスの値も入力できますが、オフセットした結果、幅や高さが0以下になる場合、同じ大きさのオブジェクトが複製されます。</p>
@@ -142,7 +142,7 @@ Sketch 2.2.4で動作を確認しているため、バージョンによって�
   <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig9.png" alt="" />
 </p>
 
-<h2 id="export-グループ:146f3ab366e447902cf7a5a031a5400d">Export グループ</h2>
+<h2 id="export-グループ">Export グループ</h2>
 
 <p>アートボードやスライスを書き出すプラグインです。が、私の環境ではうまく実行できず機能しませんでした。GitHub でも ISSUE が上がってるようですね。以下、プラグイン名から読み取った機能です。</p>
 
@@ -173,7 +173,7 @@ Sketch 2.2.4で動作を確認しているため、バージョンによって�
 <p><strong>Save and Export Slices</strong><br />
 ドキュメントを保存して、スライスを書き出します。</p>
 
-<h2 id="guides-グループ:146f3ab366e447902cf7a5a031a5400d">Guides グループ</h2>
+<h2 id="guides-グループ">Guides グループ</h2>
 
 <p>ガイドライン関連のプラグインです。こちらの一部も GitHub に ISSUE が上がっている通り、動作しないようです。</p>
 
@@ -217,7 +217,7 @@ Sketch 2.2.4で動作を確認しているため、バージョンによって�
   <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig13.png" alt="" />
 </p>
 
-<h2 id="pages-グループ:146f3ab366e447902cf7a5a031a5400d">Pages グループ</h2>
+<h2 id="pages-グループ">Pages グループ</h2>
 
 <p><strong>Add New Page</strong><br />
 新しいページを追加します。</p>
@@ -228,12 +228,12 @@ Sketch 2.2.4で動作を確認しているため、バージョンによって�
 <p><strong>Remove Current Page</strong><br />
 現在編集しているページを削除します。</p>
 
-<h2 id="playground-グループ:146f3ab366e447902cf7a5a031a5400d">Playground グループ</h2>
+<h2 id="playground-グループ">Playground グループ</h2>
 
 <p><strong>Kitchen Sink</strong><br />
 ソースを見る限り、テスト用のプラグインを実行し、ログを出力するためのもののようです。（ただしログを見ると9行目あたりでDenyになってるので、役になっていないというか…）開発をしないのであれば、外しておいた方がいいですね。</p>
 
-<h2 id="position-グループ:146f3ab366e447902cf7a5a031a5400d">Position グループ</h2>
+<h2 id="position-グループ">Position グループ</h2>
 
 <p><strong>Fix Position</strong><br />
 Positionの小数点以下の数値を四捨五入します。サイズも四捨五入されますが、すべてのアンカーポイントではなく、サイズ算出に使う外周のアンカーポイントのみが四捨五入されます。</p>
@@ -252,7 +252,7 @@ Positionの小数点以下の数値を四捨五入します。サイズも四捨
   <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig15.png" alt="" />
 </p>
 
-<h2 id="properties-グループ:146f3ab366e447902cf7a5a031a5400d">Properties グループ</h2>
+<h2 id="properties-グループ">Properties グループ</h2>
 
 <p><strong>Make Pill</strong><br />
 選択しているオブジェクトから、角丸が100%の矩形を作成します。</p>
@@ -271,7 +271,7 @@ Positionの小数点以下の数値を四捨五入します。サイズも四捨
 <p><strong>Set Radius&#8230;</strong><br />
 角丸を、入力した値で設定します。ただし、Radius が有効なオブジェクトに限ります。</p>
 
-<h2 id="size-グループ:146f3ab366e447902cf7a5a031a5400d">Size グループ</h2>
+<h2 id="size-グループ">Size グループ</h2>
 
 <p><strong>Equalize Height</strong><br />
 選択しているオブジェクトの高さを、最も値の大きいオブジェクトに揃えます。高さが変更されるオブジェクトは、下方向に延長されます。</p>
@@ -315,8 +315,6 @@ Positionの小数点以下の数値を四捨五入します。サイズも四捨
 <p>基本的なプラグインばかりですが、ちょっと足りない部分を補ってくれるものばかりです。自分でフォルダを作っていれれば、オリジナルのグループも作れますので、必要なプラグインだけインストールすることもできます。</p>
 
 <p>またプラグイン自体を利用するのもさることながら、中身を覗いて改造したり新しく作ったりできそうです。</p>
-
-<p>[3]: <a href="https://github.com/sketchplugins/plugin-directory">https://github.com/sketchplugins/plugin-directory</a></p>
 
 		</div>
 

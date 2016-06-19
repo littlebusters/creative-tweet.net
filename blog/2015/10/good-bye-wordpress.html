@@ -83,7 +83,7 @@
 <li>ビルドとデプロイ環境の準備</li>
 </ol>
 
-<h2 id="hugoの準備:ea08428c4d088db888e83aff3b5c67e0">Hugoの準備</h2>
+<h2 id="hugoの準備">Hugoの準備</h2>
 
 <p>Hugoは、Go言語で作られたStatic Site Generatorです。Go言語自体のインストールは不要で、各プラットフォームのパッケージをインストールすれば使うことができます。</p>
 
@@ -98,7 +98,7 @@
 
 <p>Hugoでは初期化したりビルドインサーバーを立ち上げたりと、多少なりともターミナルでの操作が必須です。とはいえ、そこまで難しい操作はなく、ターミナルの操作に多少慣れていれば十分に扱えるでしょう。</p>
 
-<h2 id="コンテンツをwordpressからhugoへ変換する:ea08428c4d088db888e83aff3b5c67e0">コンテンツをWordPressからHugoへ変換する</h2>
+<h2 id="コンテンツをwordpressからhugoへ変換する">コンテンツをWordPressからHugoへ変換する</h2>
 
 <p>「<a href="https://github.com/SchumacherFM/wordpress-to-hugo-exporter">WordPress to Hugo Exporter</a>」というWordPressのプラグインを使用して、投稿している記事やページをMarkdownへ変換しました。変換したものはZIPでダウンロードできます。画像関連もこの中に含まれているので、別途ダウンロードする必要はありません。</p>
 
@@ -106,7 +106,7 @@
 
 <p>新しいサイトではリソースの位置を変更したため、それに合わせてSublime Textの［Find → Find in Files&hellip;］でディレクトリを指定して一括で書き換えました。</p>
 
-<h2 id="テンプレート作成:ea08428c4d088db888e83aff3b5c67e0">テンプレート作成</h2>
+<h2 id="テンプレート作成">テンプレート作成</h2>
 
 <p>テンプレート（いわゆるテーマ）については、他のStatic Site Generatorと同じように、テンプレートファイルを作成し、その中にスクリプトを埋め込んでいきます。</p>
 
@@ -147,7 +147,7 @@
 
 <p>自分で作成しなくともテーマが配布されているので、そこからカスタマイズするということも可能です。</p>
 
-<h2 id="ページの作成:ea08428c4d088db888e83aff3b5c67e0">ページの作成</h2>
+<h2 id="ページの作成">ページの作成</h2>
 
 <p>ページの内容そのものを作るには、初期化して作成される<code>content</code>ディレクトへMarkdownファイルを作成し、ファイルの先頭にタイトルや日付・カテゴリーなどの設定を記述してから記事を書き始めます。</p>
 
@@ -161,7 +161,7 @@
 <pre><code>$ hugo server --watch
 </code></pre>
 
-<h2 id="ビルドとデプロイ環境の準備:ea08428c4d088db888e83aff3b5c67e0">ビルドとデプロイ環境の準備</h2>
+<h2 id="ビルドとデプロイ環境の準備">ビルドとデプロイ環境の準備</h2>
 
 <p class="media">
     <img src="/assets/img/2015/good-bye-wordpress/generate-and-build-deploy.png" alt="">
@@ -191,7 +191,7 @@
 
 <p>あとURLがどうしても変更になってしまうため、必要に応じて<code>.htaccess</code>でリダイレクトするように設定しました。</p>
 
-<h2 id="wordpressからhugoへ移行してみて:ea08428c4d088db888e83aff3b5c67e0">WordPressからHugoへ移行してみて</h2>
+<h2 id="wordpressからhugoへ移行してみて">WordPressからHugoへ移行してみて</h2>
 
 <p>まずは「サイトにログインして、画像をアップして…」という煩わしさがありません。ローカルでほぼ完結するので、プレビューが正しければ、そのままプッシュするだけというのは、実にラクです。</p>
 

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<title>FireworksからJSONをエクスポートして、そのJSONをSketch 3へインポートするプラグインを作りました。 | creative tweet.</title>
+<script async src="/assets/js/auie.js"></script>
+
+
+
+
+
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="FireworksからJSONをエクスポートして、そのJSONをSketch 3へインポートするプラグインを作りました。" />
+<meta property="og:url" content="http://creative-tweet.net/blog/2016/06/fireworks-to-sketch.html" />
+<meta property="og:description" content="Fireworks PNGをJSONとして書き出すコマンドと、そのJSONをSketch 3へインポートするプラグインをつくりました。" />
+<meta property="og:image" content="http://creative-tweet.net/assets/img/2016/fireworks-to-sketch/fireworks-to-sketch-3-ogp.png" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="FireworksからJSONをエクスポートして、そのJSONをSketch 3へインポートするプラグインを作りました。">
+<meta name="twitter:url" content="http://creative-tweet.net/blog/2016/06/fireworks-to-sketch.html">
+<meta name="twitter:description" content="Fireworks PNGをJSONとして書き出すコマンドと、そのJSONをSketch 3へインポートするプラグインをつくりました。">
+<meta name="twitter:image" content="http://creative-tweet.net/assets/img/2016/fireworks-to-sketch/fireworks-to-sketch-3-ogp.png">
+</head>
+<body>
+<header class="siteHeader" role="banner">
+<h1 id="siteSign">
+<a href="/">
+<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<section class="article-header-section">
+				<time class="publishedDatetime" datetime="2016-06-20T12:00:00&#43;09:00">2016/6/20</time>
+				<h1 class="article-title">FireworksからJSONをエクスポートして、そのJSONをSketch 3へインポートするプラグインを作りました。</h1>
+				
+				<img src="/assets/img/2016/fireworks-to-sketch/fireworks-to-sketch-3-hero.png" class="hero" alt="">
+				
+			</section>
+		</header>
+		
+		<div class="content-main">
+			
+
+<p>タイトルの通りですが、FireworksからJSONファイルを書き出すコマンドと、そのJSONファイルを読み込み可能な限りFireworksの構造をSketch 3へ取り込むプラグインを作りました。</p>
+
+<p>Fireworksの開発が2013年に事実上中止し、次期OS XことmacOSではAdobe CS6シリーズの動作に必要なJava SE 6がサポート外となることから、他のツールへ移行された方が大半でしょう。そのような状況で、いまさら過去のFireworks PNGを扱うことも少なくなっていると思いますが、開けなくなる前にコンバートする方法の一つとして作成しました。</p>
+
+<p>こんな感じです。</p>
+
+<p><iframe name='quickcast' src='http://quick.as/embed/pk7yuzz8b' scrolling='no' frameborder='0' width='100%' allowfullscreen></iframe><script src='http://quick.as/embed/script/1.60'></script></p>
+
+<h2 id="インストール">インストール</h2>
+
+<h3 id="fw-to-json">Fw to JSON</h3>
+
+<ul class="links">
+<li><a href="https://github.com/littlebusters/Fw-to-JSON/archive/master.zip">コマンドのダウンロード</a></li>
+<li><a href="https://github.com/littlebusters/Fw-to-JSON">Fw to JSONリポジトリ</a></li>
+</ul>
+
+<p>Fireworksコマンドは、次のどちらかのフォルダへ入れてください。Windowsのかたは、お手数ですがググってください。ちなみにOS X版でしかテストできていません。</p>
+
+<pre><code>~/Library/Application Support/Adobe/Fireworks CS6/Commands
+
+/Applications/Adobe Fireworks CS6/Configuration/Commands
+</code></pre>
+
+<h3 id="fwjson-to-layers">FwJSON to Layers</h3>
+
+<ul class="links">
+<li><a href="https://github.com/littlebusters/JSON-to-Layers/archive/master.zip">プラグインのダウンロード</a></li>
+<li><a href="https://github.com/littlebusters/JSON-to-Layers">JSON to Layresリポジトリ</a></li>
+</ul>
+
+<p>ZIPをダウンロードした場合は、伸張したフォルダにある<code>.sketchplugin</code>ファイルをダブルクリックすればインストールできます。</p>
+
+<p>Sketch Toolでインストールされたいかたは、現在Plugins DirectoryへPull Requestを投げてるので少々お待ちください。</p>
+
+<p>READMEには書いていませんが、開発を始めたのがSketch 3.4.xあたりだったため、このバージョン以上であれば動作する可能性はあります（が、環境を整える時間が取れないため、互換性テストはしていません）。</p>
+
+<h2 id="使い方">使い方</h2>
+
+<p>まずは、FireworksでJSON形式としてエクスポートしたいファイルを開きます。新規で作成している場合は、1度保存してください。</p>
+
+<div class="media">
+    <a href="/assets/img/2016/fireworks-to-sketch/fig01-create-fw-document.png"><img src="/assets/img/2016/fireworks-to-sketch/fig01-create-fw-document.png" alt=""></a>
+</div>
+
+<p>コマンドから「Fw to JSON」を実行します。<b>Fireworks Console</b>と<b>DOM Inspector</b>をインストールされている場合は、処理に時間がかかり落ちる確率が高くなるため、インスペクタを非表示した上でFireworksを再起動してからコマンドを実行してください。</p>
+
+<div class="media">
+    <img src="/assets/img/2016/fireworks-to-sketch/fig02-run-plugin-on-fireworks.png" alt=""
+</div>
+
+<p>表示されたダイアログで保存先を選択します。</p>
+
+<div class="media">
+    <img src="/assets/img/2016/fireworks-to-sketch/fig03-choose-export-folder.png" alt="">
+</div>
+
+<p>もし警告が出たら、「同じ名前のファイルが存在するので上書きしてもいい？」って怪しい英語で聞いてます。</p>
+
+<div class="media">
+    <img src="/assets/img/2016/fireworks-to-sketch/fig04-alert.png" alt="">
+</div>
+
+<p>エクスポートが始まったら、アラートが出るまで眺めておいてください。</p>
+
+<div class="media">
+    <img src="/assets/img/2016/fireworks-to-sketch/fig05-displayed-dialog.png" alt="">
+    <p class="mediaCaption">エクスポートしたオブジェクト数やテクスチャ数を、それとなしに表示します。</p>
+</div>
+
+<p>エクスポートが終わったらSketch 3で新規ドキュメントを作成し、プラグインを実行します。</p>
+
+<div class="media">
+    <img src="/assets/img/2016/fireworks-to-sketch/fig07-run-plugin-on-sketch.png" alt="">
+</div>
+
+<p>ダイアログで先ほどエクスポートしたJSONファイルを選択します。</p>
+
+<div class="media">
+    <img src="/assets/img/2016/fireworks-to-sketch/fig06-choose-json-file.png" alt="">
+</div>
+
+<p>少し待つとインポート完了です。この記事に使用した画像の内容程度だと一瞬ですが、3.5MBぐらいのJSONファイルを読み込むと、20〜30秒ほどかかります。</p>
+
+<div class="media">
+    <a href="/assets/img/2016/fireworks-to-sketch/fig08-result.png"><img src="/assets/img/2016/fireworks-to-sketch/fig08-result.png" alt=""></a>
+</div>
+
+<div class="media">
+    <a href="/assets/img/2016/fireworks-to-sketch/fig09-layer-structure.png"><img src="/assets/img/2016/fireworks-to-sketch/fig09-layer-structure.png" alt=""></a>
+    <p class="mediaCaption">レイヤー構造もこの通り。</p>
+</div>
+<div class="media">
+    <a href="/assets/img/2016/fireworks-to-sketch/fig10-path.png"><img src="/assets/img/2016/fireworks-to-sketch/fig10-path.png" alt=""></a>
+    <p class="mediaCaption">パスもきちんと編集可能な状態です。</p>
+</div>
+<div class="media">
+    <a href="/assets/img/2016/fireworks-to-sketch/fig11-text-properties.png"><img src="/assets/img/2016/fireworks-to-sketch/fig11-text-properties.png" alt=""></a>
+    <p class="mediaCaption">テキストも可能な限り再現します。処理の違いにより、位置がずれます。</p>
+</div>
+
+<p>詳しい仕様等は各ページをご確認ください。</p>
+
+<h2 id="経緯的なもの">経緯的なもの</h2>
+
+<p>Fireworks PNGをPhotoshopで開くことはできますが、再現率は100%ではありません。もちろん、拙作のプラグインを用いてSketch 3へインポートしても、欠落する情報は多々あります。ただ、ひとまず汎用的なJSON形式で書き出せるだけの情報を残しておけば、他でも流用しやすくできるのでは？ ということつくり始めたものです（そういう意味でいうと、JSON to Layersはおまけ的な位置づけ）。</p>
+
+<p>JSONであれば、Photoshop・IllustratorはJSXで、CocoaScriptに対応しているAcorn等でも、取り込むことはできるんじゃないでしょうか（その労力に見合うかはおいといて）。個人的にFireworksの代替アプリとして推している、Affinity DesignerがCocoaScriptに対応すれば最強なんですけどね。</p>
+
+<p>極力必要な情報は書き出すようにしていますが、コトの発端がSketch 3で取り込むことだったため、すべての状況には対応しきれていないかもしれません。そこはPull Requestをお待ちしてます。</p>
+
+<hr class="postscript">
+
+<p>Fireworks向けのコマンド制作はこれが最後になるでしょう。まだFireworksを使ってる方は、そろそろ「おやすみ」と言ってあげていい頃じゃないでしょうか。</p>
+
+		</div>
+
+		<section class="article-taxonomy">
+			<h2 class="article-taxonomy-headding">tags</h2>
+			<ul class="tags">
+				
+				<li class="tagsItem"><a href="/tags/sketch.html">Sketch</a> </li>
+				
+				<li class="tagsItem"><a href="/tags/sketch-3.html">Sketch 3</a> </li>
+				
+				<li class="tagsItem"><a href="/tags/fireworks.html">Fireworks</a> </li>
+				
+			</ul>
+		</section>
+
+<div class="socialButtons">
+<div class="socialButtons_twitter">
+	<a href="https://twitter.com/intent/tweet?text=Fireworks%e3%81%8b%e3%82%89JSON%e3%82%92%e3%82%a8%e3%82%af%e3%82%b9%e3%83%9d%e3%83%bc%e3%83%88%e3%81%97%e3%81%a6%e3%80%81%e3%81%9d%e3%81%aeJSON%e3%82%92Sketch%203%e3%81%b8%e3%82%a4%e3%83%b3%e3%83%9d%e3%83%bc%e3%83%88%e3%81%99%e3%82%8b%e3%83%97%e3%83%a9%e3%82%b0%e3%82%a4%e3%83%b3%e3%82%92%e4%bd%9c%e3%82%8a%e3%81%be%e3%81%97%e3%81%9f%e3%80%82&amp;url=http%3a%2f%2fcreative-tweet.net%2fblog%2f2016%2f06%2ffireworks-to-sketch.html&amp;via=littlebusters" class="twitter-share-button"
+		data-lang="en"
+		data-url="http://creative-tweet.net/blog/2016/06/fireworks-to-sketch.html"
+		data-text="FireworksからJSONをエクスポートして、そのJSONをSketch 3へインポートするプラグインを作りました。"
+		data-via="littlebusters" 
+		data-count="vertical"
+	>Tweet</a>
+</div>
+<div class="socialButtons_facebook">
+	<div 
+		class="fb-like"
+		data-href="http://creative-tweet.net/blog/2016/06/fireworks-to-sketch.html"
+		data-layout="box_count"
+		data-send="false"
+		data-width="100"
+		data-show-faces="false"
+	></div>
+</div>
+<div class="socialButtons_hatebu">
+	<a href="http://b.hatena.ne.jp/entry/creative-tweet.net" class="hatena-bookmark-button"
+		data-hatena-bookmark-layout="vertical"
+		data-hatena-bookmark-title="FireworksからJSONをエクスポートして、そのJSONをSketch 3へインポートするプラグインを作りました。"
+		data-hatena-bookmark-url="http://creative-tweet.net/blog/2016/06/fireworks-to-sketch.html">
+		<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		style="border: none">
+	</a>
+</div>
+<div class="socialButtons_googlep">
+	<div class="g-plusone" data-size="tall" data-href="http://creative-tweet.net/blog/2016/06/fireworks-to-sketch.html"></div>
+</div>
+</div>
+
+		<ul class="pager">
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2016/03/sketch-line-height-fixer-plugin.html" class="pager_prevItem">
+				<span class="pager_label-older">older: </span>
+				古いSketch 3向けに、行間問題を緩和するプラグインを作りました。
+				</a>
+			</li>
+			
+		</ul>
+
+	</main>
+</div>
+
+
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>

@@ -82,7 +82,7 @@
 
 <p>MIXTURE は頻繁にアップデートされているため、この内容の通りテストしても動かない場合がありますので、ご了承ください。</p>
 
-<h2 id="準備:b8f73c83a74a20f8edd650f689d903e0">準備</h2>
+<h2 id="準備">準備</h2>
 
 <p>まずは、MIXTURE をダウンロードします。</p>
 
@@ -106,7 +106,7 @@
 
 <p>Boilerplateを選ぶと、フォルダを選ぶダイアログが表示されます。ここで選んだフォルダに、必要なファイルがダウンロードされるので、いちいちサイトからダウンロードするという手間がかかりません。</p>
 
-<h2 id="ダウンロードされたフォルダの中身:b8f73c83a74a20f8edd650f689d903e0">ダウンロードされたフォルダの中身</h2>
+<h2 id="ダウンロードされたフォルダの中身">ダウンロードされたフォルダの中身</h2>
 
 <p>選んだフォルダには以下のような構成になります。（BoilerplateがEmptyの場合）</p>
 
@@ -127,7 +127,7 @@
 
 <p>選んだBoilerplateによっては、compassフォルダがあったりBourbonフォルダがあったります。（あとpackage.pngとfavicon.icoがありますが、今更 説明は不要でしょう）</p>
 
-<h2 id="とりあえずプレビューしてみる:b8f73c83a74a20f8edd650f689d903e0">とりあえずプレビューしてみる</h2>
+<h2 id="とりあえずプレビューしてみる">とりあえずプレビューしてみる</h2>
 
 <p>ダウンロードが終わり準備ができると、下図のようなウィンドウが表示されます。</p>
 
@@ -166,19 +166,19 @@
 
 <p>index.liquidを開いて一部を変更・保存すると、「View Locally」中は、ライブリロードが有効になっているので、すぐに変更が反映されます。</p>
 
-<h2 id="レイアウトの変更:b8f73c83a74a20f8edd650f689d903e0">レイアウトの変更</h2>
+<h2 id="レイアウトの変更">レイアウトの変更</h2>
 
 <p>index.liquidはコンテンツだけの記述になっており、ベースとなるレイアウト情報は「templates/layouts/layout.liquid」に記述されています。さらにこのlayout.liquidを見て行くと、{% include &ldquo;header&rdquo; %}という記述があり、「templates/includes/header.liquid」を呼び出しているのがわかります。</p>
 
 <p>このように、レイアウトは主にこの2種類のファイルを使って構築します。イメージとしては、layoutsがDreamweaverのテンプレート、includesがライブラリといった感じでしょうか。</p>
 
-<h2 id="グローバルモデルの活用:b8f73c83a74a20f8edd650f689d903e0">グローバルモデルの活用</h2>
+<h2 id="グローバルモデルの活用">グローバルモデルの活用</h2>
 
 <p>modelsフォルダにJSONファイルを置いておくことで、templatesフォルダ内にある同じ名前のLiquidファイルから値を呼び出すことができます。これはコンテンツ部分のLiquidファイルだけで呼び出せるのではなく、共通のレイアウト部分であるlayout.liquidやincludesフォルダ以下のファイルからでも呼び出すことが可能です。</p>
 
 <p>つまり、ページ毎で内容は変わるけどレイアウトとして共通化できる部分は、コンテンツのLiquidファイルではなく、レイアウトのLiquidファイルに入れておくことができます。（いわゆる必要な要素を削除したとかの事故が起きにくい）</p>
 
-<h3 id="実際に使ってみる:b8f73c83a74a20f8edd650f689d903e0">実際に使ってみる</h3>
+<h3 id="実際に使ってみる">実際に使ってみる</h3>
 
 <p>「models/index.json」を作成し、以下のように記述します。</p>
 
@@ -199,7 +199,7 @@
   <span class="mediaCaption">画像内が {{ twitter }} になっていますが、正しくは {{ model.twitter }} です。</span>
 </p>
 
-<h2 id="liquid-のテンプレートタグ:b8f73c83a74a20f8edd650f689d903e0">Liquid のテンプレートタグ</h2>
+<h2 id="liquid-のテンプレートタグ">Liquid のテンプレートタグ</h2>
 
 <p>前項で実は記述してしまったんですが、Liquidテンプレートタグは以下のように書きます。</p>
 
@@ -227,7 +227,7 @@
   </dd>
 </dl>
 
-<h2 id="画像の最適化とcssやjsのminifier:b8f73c83a74a20f8edd650f689d903e0">画像の最適化とCSSやJSのMinifier</h2>
+<h2 id="画像の最適化とcssやjsのminifier">画像の最適化とCSSやJSのMinifier</h2>
 
 <p>画像やCSS・Javascriptをフォルダに入れるだけで、ファイルの最適化やMinifierが行われます。</p>
 
@@ -241,7 +241,7 @@
 
 <p>この辺りの有効化・無効化は、mixture.jsonで設定できるようです。</p>
 
-<h2 id="書き出し:b8f73c83a74a20f8edd650f689d903e0">書き出し</h2>
+<h2 id="書き出し">書き出し</h2>
 
 <p>一通り組み上がったら、Toolsにある「Convert to HTML」をしてみましょう。「convert_html」というフォルダが生成され、その中に必要なリソースが保存されます。そのままサーバにアップすればコンテンツを公開することができます。ただし、asset_urlで取得しているものは、うまく取得できていないことがありますので、念のため確認しましょう（特にWindows版）。</p>
 
@@ -253,9 +253,7 @@
 
 <p>公開時は有償だったのですが、どうやらビジネスモデルに問題があったようでフリー化されました。アップデートは提供するということなんですが、内蔵されているSassが若干古くなってるので、本気で使うには少しつらいかもしれません…</p>
 
-<p>間違いがありましたら、Twitter（<a href="http://twitter.com/littlebusters">@littlebusters</a>） や Facebook ページ（[creative tweet.][5]）などにお知らせいただけると幸いです。</section></p>
-
-<p>[5]: <a href="http://www.facebook.com/creative.tweet">http://www.facebook.com/creative.tweet</a></p>
+<p>間違いがありましたら、Twitter（<a href="http://twitter.com/littlebusters">@littlebusters</a>） や Facebook ページ（<a href="http://www.facebook.com/creative.tweet">creative tweet.</a>）などにお知らせいただけると幸いです。</section></p>
 
 		</div>
 

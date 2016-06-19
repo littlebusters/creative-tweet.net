@@ -59,7 +59,7 @@
 
 <p>またHugoのドキュメントを元に、動作した結果を記述しています。筆者はGo言語のお作法をよく理解していませんので、その辺りで間違いがありましたら優しくご指摘ただけると幸いです。</p>
 
-<h2 id="hugoの準備:4773257c33277453aea8261147d6ab51">Hugoの準備</h2>
+<h2 id="hugoの準備">Hugoの準備</h2>
 
 <p>これは前回も記述していますが、サイトからプラットフォームに合わせたインストーラーをダウンロードし、ローカルで実行してください。</p>
 
@@ -74,7 +74,7 @@
 
 <p>私自身はHomebrewでインストールしたため、それを前提で進めます。</p>
 
-<h3 id="homebrewについて:4773257c33277453aea8261147d6ab51">Homebrewについて</h3>
+<h3 id="homebrewについて">Homebrewについて</h3>
 
 <p>今回の内容とは直接関係ないのですが、「Homebrew便利だよ！」と言われるがままインストースしたのち、きちんと<code>brew update</code>や<code>brew doctor</code>してますか？</p>
 
@@ -84,7 +84,7 @@
 
 <p>このあたりを説明しだすときりがないので、詳しく知りたい方はこもりまさあきさんの電子書籍「<a href="https://leanpub.com/defwd">Development Environments for Web Designers</a>」をお勧めします。未完のまま随分アップデートされていませんが、このあたりの基礎は学べると思います。</p>
 
-<h2 id="wordpressのコンテンツをhugo向けに書き出し:4773257c33277453aea8261147d6ab51">WordPressのコンテンツをHugo向けに書き出し</h2>
+<h2 id="wordpressのコンテンツをhugo向けに書き出し">WordPressのコンテンツをHugo向けに書き出し</h2>
 
 <p>プラグインを使ってWordPressから投稿やページを書き出します。</p>
 
@@ -100,7 +100,7 @@
 
 <p>またテーマファイルに付随しているCSSやJavaScriptも含まれていませんので、必要であれば別途ダウンロードしておきましょう。</p>
 
-<h2 id="hugoを使う:4773257c33277453aea8261147d6ab51">Hugoを使う</h2>
+<h2 id="hugoを使う">Hugoを使う</h2>
 
 <p>ここからHugoを使ってサイトを制作していきます。</p>
 
@@ -108,7 +108,7 @@
     Hugoのサイトも当然ながらHugoで作成されています。<a href="https://github.com/spf13/hugo/tree/master/docs">サイトのソースも公開されている</a>ので、ドキュメントを見ていて気になるところがあればチェックしてみましょう。
 </p>
 
-<h3 id="hugoで新規サイトを生成する:4773257c33277453aea8261147d6ab51">Hugoで新規サイトを生成する</h3>
+<h3 id="hugoで新規サイトを生成する">Hugoで新規サイトを生成する</h3>
 
 <ul class="links">
     <li>
@@ -155,7 +155,7 @@ CSSやJavaScriptなど、HTMLで使うリソースデータを格納するディ
 <p><strong>config.toml</strong><br />
 サイトの設定ファイルです。次項で説明します。</p>
 
-<h3 id="config-toml:4773257c33277453aea8261147d6ab51">config.toml</h3>
+<h3 id="config-toml">config.toml</h3>
 
 <ul class="links">
     <li>
@@ -165,7 +165,7 @@ CSSやJavaScriptなど、HTMLで使うリソースデータを格納するディ
 
 <p>サイト名やベースURLなどの基本情報から、サイト全体で使うパラメータを設定するファイルです。雛形はTOML形式ですが、WordPress to Hugo Exporterで生成される通り、YAML形式でも記述できます。記述のフォーマットは「<a href="https://gohugo.io/overview/configuration/">ドキュメント</a>」ページの最下部にありますので、参照してください。</p>
 
-<h3 id="流用するデータを格納して-記述を修正する:4773257c33277453aea8261147d6ab51">流用するデータを格納して、記述を修正する</h3>
+<h3 id="流用するデータを格納して-記述を修正する">流用するデータを格納して、記述を修正する</h3>
 
 <p>ダウンロードしたMarkdownファイルは「content」ディレクトリへ、画像やCSS・JavaScriptは「static」ディレクトリへ入れてください。基本的にディレクトリ構造はそのままURLに使われます。</p>
 
@@ -183,7 +183,7 @@ http://creative-tweet.net/blog/wp-content/uploads/2014/12/hoge.png
 
 <p>ちなみに検索置換だけでは変更しきれなかったため、記事の内容をリファインついでにパスを追記していきました。</p>
 
-<h2 id="記事の作成:4773257c33277453aea8261147d6ab51">記事の作成</h2>
+<h2 id="記事の作成">記事の作成</h2>
 
 <p>Hugoの記事はMarkdown形式で記述し、「content」ディレクトリへ保存します。WordPressから書き出したファイルは、もちろんMarddown形式になっているのでHugoでそのまま使うことができます。</p>
 
@@ -191,7 +191,7 @@ http://creative-tweet.net/blog/wp-content/uploads/2014/12/hoge.png
     reStructuredText形式でも記述できるようです。
 </p>
 
-<h3 id="メタデータ:4773257c33277453aea8261147d6ab51">メタデータ</h3>
+<h3 id="メタデータ">メタデータ</h3>
 
 <ul class="links">
     <li>
@@ -243,7 +243,7 @@ tags:
 
 <p><code>layout</code>と<code>url</code>は制作の都合で、<code>leadimage</code>は不要なため削除しました。</p>
 
-<h3 id="ショートコード:4773257c33277453aea8261147d6ab51">ショートコード</h3>
+<h3 id="ショートコード">ショートコード</h3>
 
 <ul class="links">
     <li>
@@ -266,7 +266,7 @@ tags:
 
 <p>例では「%」が2バイト文字になっていますが、実際には1バイトを使ってください。</p>
 
-<h3 id="コンテンツの構造:4773257c33277453aea8261147d6ab51">コンテンツの構造</h3>
+<h3 id="コンテンツの構造">コンテンツの構造</h3>
 
 <ul class="links">
     <li>
@@ -295,7 +295,7 @@ tags:
 <pre><code>/blog/2015/10/good-bye-wordpress.html
 </code></pre>
 
-<h4 id="セクション:4773257c33277453aea8261147d6ab51">セクション</h4>
+<h4 id="セクション">セクション</h4>
 
 <p>「content」ディレクトリ直下のディレクトリがセクションにあたり、上記の例では「blog」がそれに該当します。</p>
 
@@ -325,7 +325,7 @@ tags:
 -&gt; /url/string.html
 </code></pre>
 
-<h2 id="開発環境の生成:4773257c33277453aea8261147d6ab51">開発環境の生成</h2>
+<h2 id="開発環境の生成">開発環境の生成</h2>
 
 <p>Hugoとは関係ありませんが、今回はサイトの見た目を変更するため、gulpで処理するためのディレクトリを作成しました。ルートになっているディレクトリへ「_dev」ディレクトリを作成し、gulpで処理するファイルを入れています。</p>
 
@@ -333,7 +333,7 @@ tags:
 
 <p>gulpで処理したファイルは、<code>static</code>ディレクトリへ出力するようにしています。</p>
 
-<h2 id="テンプレートの作成:4773257c33277453aea8261147d6ab51">テンプレートの作成</h2>
+<h2 id="テンプレートの作成">テンプレートの作成</h2>
 
 <ul class="links">
     <li>
@@ -347,7 +347,7 @@ tags:
 
 <p>今回はHTMLを使って記述しましたが、Go言語のHTMLテンプレートエンジンである<a href="https://github.com/yosssi/ace">Ace</a>や<a href="https://github.com/eknkc/amber">Amber</a>を使って、JadeやSlimのように記述することもできるようです。</p>
 
-<h3 id="ビルドインサーバの立ち上げ:4773257c33277453aea8261147d6ab51">ビルドインサーバの立ち上げ</h3>
+<h3 id="ビルドインサーバの立ち上げ">ビルドインサーバの立ち上げ</h3>
 
 <p>まずはビルドインサーバを立ち上げ、ブラウザで確認しながら作成できるようにします。ターミナルで次のコマンドを実行しましょう。</p>
 
@@ -360,7 +360,7 @@ tags:
 
 <p>最後の<code>-v</code>オプションをつけておくと、ターミナルへデバッグ情報を書き出してくれるため、エラーの特定がしやすくなります。</p>
 
-<h3 id="既存のテーマを使う:4773257c33277453aea8261147d6ab51">既存のテーマを使う</h3>
+<h3 id="既存のテーマを使う">既存のテーマを使う</h3>
 
 <p>ひとまずHugoを試してみたい場合は、テーマファイルを使うと良いかもしれません。</p>
 
@@ -375,7 +375,7 @@ tags:
 <pre><code>theme: steam
 </code></pre>
 
-<h3 id="トップページ-ホームページ-の作成:4773257c33277453aea8261147d6ab51">トップページ（ホームページ）の作成</h3>
+<h3 id="トップページ-ホームページ-の作成">トップページ（ホームページ）の作成</h3>
 
 <ul class="links">
     <li>
@@ -389,7 +389,7 @@ tags:
 
 <p>ここからは、私が作成したコードを見ていきます（コードは整形済み、<a href="https://gist.github.com/littlebusters/ab0ee0b2dd9d35530daa#file-index-html">実際のソース</a>）。</p>
 
-<p>ヘッダーとフッターは、<a href="#partials:4773257c33277453aea8261147d6ab51">後述のパーシャルテンプレート</a>を使い、共通化したものを読み込んでいます。</p>
+<p>ヘッダーとフッターは、<a href="#partials">後述のパーシャルテンプレート</a>を使い、共通化したものを読み込んでいます。</p>
 
 <pre><code>{{ partial &quot;head.html&quot; . }}
 </code></pre>
@@ -441,7 +441,7 @@ tags:
 
 <p>toolsセクションはblogセクションとほぼ同じため、解説は省略します。また、writtingセクションは変更することがほとんどないためベタ書きです。</p>
 
-<h3 id="セクション-1:4773257c33277453aea8261147d6ab51">セクション</h3>
+<h3 id="セクション-1">セクション</h3>
 
 <ul class="links">
     <li>
@@ -518,7 +518,7 @@ tags:
     </li>
 </ul>
 
-<h3 id="個別ページ:4773257c33277453aea8261147d6ab51">個別ページ</h3>
+<h3 id="個別ページ">個別ページ</h3>
 
 <ul class="links">
     <li>
@@ -607,7 +607,7 @@ tags:
 
 <p><code>{{ .NextInSection.Permalink }}</code>はパーマネントリンクの取得、<code>{{ .NextInSection.LinkTitle }}</code>は記事タイトルの取得です。</p>
 
-<h3 id="partials:4773257c33277453aea8261147d6ab51">パーシャルテンプレート</h3>
+<h3 id="partials">パーシャルテンプレート</h3>
 
 <ul class="links">
     <li>

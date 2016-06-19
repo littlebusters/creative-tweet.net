@@ -6,8 +6,17 @@
     <description>Recent content in Fireworks Extension on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2013/04/16 09:30:00 +09:00</lastBuildDate>
+    <lastBuildDate>2016/06/20 12:00:00 +09:00</lastBuildDate>
     <atom:link href="http://creative-tweet.net/tags/fireworks-extension.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Fireworksのファイル構成をJSONとして書き出すFw to JSON［Fireworks拡張機能］</title>
+      <link>http://creative-tweet.net/tools/fw_to_json/detail.html</link>
+      <pubDate>2016/06/20 12:00:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/tools/fw_to_json/detail.html</guid>
+      <description>FireworksのDocumentDOMを、JSONとして書き出す拡張機能です。書き出したJSONは、Sketch Pluginを使ってSketchへ取り込むこともできます。</description>
+    </item>
     
     <item>
       <title>Photoshopライブエフェクトが拡大縮小できるPsLE Scaler［Fireworks拡張機能］</title>

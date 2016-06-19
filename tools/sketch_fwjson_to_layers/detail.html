@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<title>特定のJSONファイルを読み込んで、レイヤーを生成するSketch 3向けプラグイン | creative tweet.</title>
+<script async src="/assets/js/auie.js"></script>
+
+
+
+
+
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="特定のJSONファイルを読み込んで、レイヤーを生成するSketch 3向けプラグイン" />
+<meta property="og:url" content="http://creative-tweet.net/tools/sketch_fwjson_to_layers/detail.html" />
+<meta property="og:description" content="FireworksのDocumentDOMを、JSONとして書き出す拡張機能です。書き出したJSONは、Sketch Pluginを使ってSketchへ取り込むこともできます。" />
+<meta property="og:image" content="http://creative-tweet.net/assets/img/site-ogp.png" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="特定のJSONファイルを読み込んで、レイヤーを生成するSketch 3向けプラグイン">
+<meta name="twitter:url" content="http://creative-tweet.net/tools/sketch_fwjson_to_layers/detail.html">
+<meta name="twitter:description" content="FireworksのDocumentDOMを、JSONとして書き出す拡張機能です。書き出したJSONは、Sketch Pluginを使ってSketchへ取り込むこともできます。">
+<meta name="twitter:image" content="http://creative-tweet.net/assets/img/site-ogp.png">
+</head>
+<body>
+<header class="siteHeader is-特定のjsonファイルを読み込んで、レイヤーを生成するsketch 3向けプラグイン" role="banner">
+<h1 id="siteSign">
+<a href="/">
+<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<section class="article-header-section">
+				<time class="publishedDatetime" datetime="2016-06-20T09:30:00&#43;09:00">
+				release: 2016/6/20
+				</time>
+				
+				<h1 class="article-title">特定のJSONファイルを読み込んで、レイヤーを生成するSketch 3向けプラグイン</h1>
+				
+				<div class="tool-hero">
+					<img src="/assets/img/tools-sketch_fwjson_to_layers/fwjson-to-layers-symbol.svg" alt="">
+				</div>
+				
+			</section>
+		</header>
+
+		
+		<div class="downloadLink">
+			<a href="https://github.com/littlebusters/JSON-to-Layers/archive/master.zip" class="btn_toolDownload">ダウンロード</a>
+			<ul class="tool_data">
+				<li>ver.1.0.0</li>
+			</ul>
+		</div>
+		
+		
+		<div class="content-main">
+			
+
+<h2 id="これは何">これは何？</h2>
+
+<p>Fw to JSONプラグインを使って</p>
+
+<h2 id="動作環境とライセンス">動作環境とライセンス</h2>
+
+<p>Sketch 3.8以上（ただし3.4.x以上であれば動作する可能性はありますが、テストが十分ではありません） / MITライセンス</p>
+
+<h2 id="使い方">使い方</h2>
+
+<p>Fw to JSONで書き出したJSONファイルが必要です。事前に準備しておいてください。</p>
+
+<p>新しくドキュメントを作成し、プラグインを実行します。</p>
+
+<div class="media">
+    <img src="/assets/img/2016/fireworks-to-sketch/fig07-run-plugin-on-sketch.png" alt="">
+</div>
+
+<p>Fw to JSONで書き出したJSONを選択します。</p>
+
+<div class="media">
+    <img src="/assets/img/2016/fireworks-to-sketch/fig06-choose-json-file.png" alt="">
+</div>
+
+<p>少し待つとインポートが完了します。</p>
+
+<div class="media">
+    <a href="/assets/img/2016/fireworks-to-sketch/fig08-result.png"><img src="/assets/img/2016/fireworks-to-sketch/fig08-result.png" alt=""></a>
+</div>
+
+<h2 id="仕様">仕様</h2>
+
+<ul>
+<li>Fireworks上にある特定のブレンドモード・borderへのパターン・テクスチャの適用など、Sketch 3では再現できないものがあります。
+
+<ul>
+<li>特定のブレンドモード</li>
+<li>特定のエフェクト</li>
+<li>多くのBorder関連プロパティ</li>
+<li>テキストの変形</li>
+</ul></li>
+<li>Fireworks側の塗りへのパターンを適用している場合、パターンファイルを適用するのではなく、パターンを適用し書き出した画像をパターンとして適用します。これはアプリケーション間で、パターン開始位置の処理が異なるためです。</li>
+<li>ページとステートは、アートボードとして作成します。ページは水平方向、ステートは垂直方向へアートボードを展開します。</li>
+<li>テキストエンジンの違いから、テキストレイヤーの位置がずれます。</li>
+</ul>
+
+<h2 id="既知のバグ">既知のバグ</h2>
+
+<ul>
+<li>今のところ確認できていません（Sketch 3.8未満の不具合は除く）。</li>
+</ul>
+
+<h2 id="履歴">履歴</h2>
+
+<dl class="versionHistory">
+<dt>1.0.0［2016.6.19］</dt>
+<dd>初リリース</dd>
+</dl>
+
+		</div>
+
+		<div class="socialButtons">
+<div class="socialButtons_twitter">
+	<a href="https://twitter.com/intent/tweet?text=%e7%89%b9%e5%ae%9a%e3%81%aeJSON%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e8%aa%ad%e3%81%bf%e8%be%bc%e3%82%93%e3%81%a7%e3%80%81%e3%83%ac%e3%82%a4%e3%83%a4%e3%83%bc%e3%82%92%e7%94%9f%e6%88%90%e3%81%99%e3%82%8bSketch%203%e5%90%91%e3%81%91%e3%83%97%e3%83%a9%e3%82%b0%e3%82%a4%e3%83%b3&amp;url=http%3a%2f%2fcreative-tweet.net%2ftools%2fsketch_fwjson_to_layers%2fdetail.html&amp;via=littlebusters" class="twitter-share-button"
+		data-lang="en"
+		data-url="http://creative-tweet.net/tools/sketch_fwjson_to_layers/detail.html"
+		data-text="特定のJSONファイルを読み込んで、レイヤーを生成するSketch 3向けプラグイン"
+		data-via="littlebusters" 
+		data-count="vertical"
+	>Tweet</a>
+</div>
+<div class="socialButtons_facebook">
+	<div 
+		class="fb-like"
+		data-href="http://creative-tweet.net/tools/sketch_fwjson_to_layers/detail.html"
+		data-layout="box_count"
+		data-send="false"
+		data-width="100"
+		data-show-faces="false"
+	></div>
+</div>
+<div class="socialButtons_hatebu">
+	<a href="http://b.hatena.ne.jp/entry/creative-tweet.net" class="hatena-bookmark-button"
+		data-hatena-bookmark-layout="vertical"
+		data-hatena-bookmark-title="特定のJSONファイルを読み込んで、レイヤーを生成するSketch 3向けプラグイン"
+		data-hatena-bookmark-url="http://creative-tweet.net/tools/sketch_fwjson_to_layers/detail.html">
+		<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		style="border: none">
+	</a>
+</div>
+<div class="socialButtons_googlep">
+	<div class="g-plusone" data-size="tall" data-href="http://creative-tweet.net/tools/sketch_fwjson_to_layers/detail.html"></div>
+</div>
+</div>
+
+	</main>
+</div>
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>

@@ -57,7 +57,7 @@
 
 <p>掲載しているスクリーンショットは、すでに設定済みのものを削除したり再設定したりしています。従って、はじめて設定する場合とは異なる場合がありますので、その辺りはよしなに補正をお願いします。</p>
 
-<h2 id="ビルドとデプロイ:3f81e60b460c4714b908b2944f6f0aca">ビルドとデプロイ</h2>
+<h2 id="ビルドとデプロイ">ビルドとデプロイ</h2>
 
 <p>「<a href="/blog/2015/10/good-bye-wordpress.html">WordPressからHugoへ移行して、ビルドとデプロイを自動化した話</a>」の通り、次のプロセスを経て公開するようにしています。</p>
 
@@ -73,7 +73,7 @@
 
 <p>進めるにあたり、BitbucketとGitHubへあらかじめリポジトリを作成しておきましょう。</p>
 
-<h3 id="werckerでapplicationを作成する:3f81e60b460c4714b908b2944f6f0aca">werckerでApplicationを作成する</h3>
+<h3 id="werckerでapplicationを作成する">werckerでApplicationを作成する</h3>
 
 <p>ヘッダーの「＋Create」から「Application」を選択して進めます。</p>
 
@@ -123,7 +123,7 @@
     <img src="/assets/img/2015/usage-hugo-2/wercker-step08.png" alt="">
 </p>
 
-<h3 id="デプロイキーを生成する:3f81e60b460c4714b908b2944f6f0aca">デプロイキーを生成する</h3>
+<h3 id="デプロイキーを生成する">デプロイキーを生成する</h3>
 
 <p>HugoでビルドしたのちにGitHubへデプロイするため、リポジトリへアクセスできるようにSSH Keyを生成・設定します。</p>
 
@@ -151,7 +151,7 @@
     <img src="/assets/img/2015/usage-hugo-2/wercker-step12.png" alt="">
 </p>
 
-<h3 id="デプロイする対象を設定する:3f81e60b460c4714b908b2944f6f0aca">デプロイする対象を設定する</h3>
+<h3 id="デプロイする対象を設定する">デプロイする対象を設定する</h3>
 
 <p>続けて、左メニューの<b>targets</b>へアクセスしデプロイする対象を設定していきます。［Add deploy target］のプルダウンメニューから「custom deploy」を選択します。</p>
 
@@ -181,7 +181,7 @@
     <img src="/assets/img/2015/usage-hugo-2/wercker-step16.png" alt="">
 </p>
 
-<h3 id="githubのリポジトリへデプロイキーを設定する:3f81e60b460c4714b908b2944f6f0aca">GitHubのリポジトリへデプロイキーを設定する</h3>
+<h3 id="githubのリポジトリへデプロイキーを設定する">GitHubのリポジトリへデプロイキーを設定する</h3>
 
 <p>GitHubへアクセスし、該当のリポジトリへアクセスします。右にある<b>Settings</b>メニューへアクセスします。</p>
 
@@ -199,7 +199,7 @@
 
 <p>おそらくパスワードを聞かれるので、パスワードを入力すると追加されます。</p>
 
-<h3 id="wercker-ymlを作成する:3f81e60b460c4714b908b2944f6f0aca">wercker.ymlを作成する</h3>
+<h3 id="wercker-ymlを作成する">wercker.ymlを作成する</h3>
 
 <p>ウェブで設定が完了したら、ローカルの作業へ戻ります。</p>
 
@@ -254,7 +254,7 @@ deploy:
 
 <p>一通り設定できたら、きちんと動作するかBitbucketへプッシュしてみましょう。プッシュできたら、werckerのApplication一覧からアクセスすれば進捗を確認できます。</p>
 
-<h2 id="deploybotでレンタルサーバーへデプロイ:3f81e60b460c4714b908b2944f6f0aca">DEPLOYBOTでレンタルサーバーへデプロイ</h2>
+<h2 id="deploybotでレンタルサーバーへデプロイ">DEPLOYBOTでレンタルサーバーへデプロイ</h2>
 
 <p><b>Dashboard</b>へアクセスし、ハイライトされている「<b>Connetct a repository</b>」クリックします。</p>
 

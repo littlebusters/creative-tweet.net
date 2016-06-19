@@ -69,7 +69,7 @@
   </dd>
 </dl></p>
 
-<h2 id="インスペクタ-inspector-とは:800033fdffb6a2b218d8485346149895">インスペクタ（Inspector）とは</h2>
+<h2 id="インスペクタ-inspector-とは">インスペクタ（Inspector）とは</h2>
 
 <p>インスペクタは、オブジェクトのサイズや位置などの情報や、色やドロップシャドウなどの設定を行うパネルです。</p>
 
@@ -83,11 +83,11 @@
   <img src="/assets/img/2013/2013-12-07-sketch-app-advent-calendar-2013-inspector-basic/objectproperty.png" alt="インスペクタの一覧">
 </p>
 
-<h3 id="オブジェクト名:800033fdffb6a2b218d8485346149895">オブジェクト名</h3>
+<h3 id="オブジェクト名">オブジェクト名</h3>
 
 <p>現在選択しているオブジェクト名が表示されます。</p>
 
-<h3 id="radius:800033fdffb6a2b218d8485346149895">Radius</h3>
+<h3 id="radius">Radius</h3>
 
 <p>「Rectangle（Rounded含む）」では角丸の大きさを設定します。「Star」では、内側の頂点を描く円の半径になります。外側の円に対する比率になりますので、「0.5」を入力すると半分の大きさになります。</p>
 
@@ -95,11 +95,11 @@
   <img src="/assets/img/2013/2013-12-07-sketch-app-advent-calendar-2013-inspector-basic/prop-radius.png" alt="Radiusの設定">
 </p>
 
-<h3 id="opacity:800033fdffb6a2b218d8485346149895">Opacity</h3>
+<h3 id="opacity">Opacity</h3>
 
 <p>不透明度です。数字キーの1〜0に10%〜100%で割り当てられています。</p>
 
-<h3 id="blending:800033fdffb6a2b218d8485346149895">Blending</h3>
+<h3 id="blending">Blending</h3>
 
 <p>下のレイヤーの色とどうブレンドするか指定します。例えば、白から下にかけて赤になるグラデーションの上に、青から右にかけて白になるグラデーションを乗せ、上のオブジェクトにそれぞれのブレンドモードを適用すると以下のようになります。</p>
 
@@ -128,15 +128,15 @@
 <li>Luminosity: 輝度</li>
 </ul>
 
-<h3 id="position:800033fdffb6a2b218d8485346149895">Position</h3>
+<h3 id="position">Position</h3>
 
 <p>アートボードの左上からの位置（X/Y）とオブジェクトの角度（Rotate）です。</p>
 
-<h3 id="size:800033fdffb6a2b218d8485346149895">Size</h3>
+<h3 id="size">Size</h3>
 
 <p>オブジェクトのサイズです。下の鍵マークのオン/オフで、サイズ変更時の比率を保かどうか設定します。</p>
 
-<h3 id="line:800033fdffb6a2b218d8485346149895">Line</h3>
+<h3 id="line">Line</h3>
 
 <p>アンカーポイントが2点の線オブジェクトの場合、以下の項目が設定できます。</p>
 
@@ -155,7 +155,7 @@
 
 <p>距離が測れるため、定規っぽく使えます。ただ座標を変更しても、Lengthに（逆も然り）すぐ反映されませんので、選択解除→選択（tab→shift+tab）で更新する必要があります。</p>
 
-<h3 id="points:800033fdffb6a2b218d8485346149895">Points</h3>
+<h3 id="points">Points</h3>
 
 <p>「Star」と「Polygon」で設定できる頂点の数です。</p>
 
@@ -163,7 +163,7 @@
   <img src="/assets/img/2013/2013-12-07-sketch-app-advent-calendar-2013-inspector-basic/prop-points.png" alt="Pointsの設定">
 </p>
 
-<h3 id="equilateral:800033fdffb6a2b218d8485346149895">Equilateral</h3>
+<h3 id="equilateral">Equilateral</h3>
 
 <p>「Triangle」で表示され、チェックするとオブジェクトを正三角形にします。</p>
 
@@ -171,7 +171,7 @@
   <img src="/assets/img/2013/2013-12-07-sketch-app-advent-calendar-2013-inspector-basic/prop-equilateral.png" alt="正三角形の設定">
 </p>
 
-<h3 id="spiral:800033fdffb6a2b218d8485346149895">Spiral</h3>
+<h3 id="spiral">Spiral</h3>
 
 <p>「Spiral」で設定できる項目です。「Begin」と「Size」は似たような感じの項目です。</p>
 
@@ -184,11 +184,9 @@
 <p><strong>Strength</strong><br />
 巻き具合を調整します。右に行くほど巻く回数が少なくなります。</p>
 
-<h3 id="click-through-when-selecting:800033fdffb6a2b218d8485346149895">Click-through when selecting</h3>
+<h3 id="click-through-when-selecting">Click-through when selecting</h3>
 
-<p>グループ化されたオブジェクトを選ぶと表示されます。「[Sketch.app 環境設定の「Layers」タブを解説するよ。][2]」で解説しましたが、これにチェックを入れておくと、グループ内のオブジェクトをダイレクトに選択できるようになります。グループ内のグループオブジェクトがある場合、「Click-through when selecting」のオプションが有効であれば、さらにそのグループ内のオブジェクトもダイレクトに選択できます。</p>
-
-<p>[2]: <a href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-pref-layers.html">http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-pref-layers.html</a></p>
+<p>グループ化されたオブジェクトを選ぶと表示されます。「<a href="http://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-pref-layers.html">Sketch.app 環境設定の「Layers」タブを解説するよ。</a>」で解説しましたが、これにチェックを入れておくと、グループ内のオブジェクトをダイレクトに選択できるようになります。グループ内のグループオブジェクトがある場合、「Click-through when selecting」のオプションが有効であれば、さらにそのグループ内のオブジェクトもダイレクトに選択できます。</p>
 
 		</div>
 
