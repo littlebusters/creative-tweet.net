@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Photoshop on creative tweet.</title>
-    <link>http://creative-tweet.net/tags/photoshop.html</link>
-    <description>Recent content in Photoshop on creative tweet.</description>
+    <title>creative tweet.</title>
+    <link>http://creative-tweet.net/tags/photoshop.xml</link>
+    <description>Recent content on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2013/06/26 09:30:00 +09:00</lastBuildDate>
-    <atom:link href="http://creative-tweet.net/tags/photoshop.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/photoshop.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Ps / Ai / Fw / Sketch ガチンコバトル勉強会 in 岡山を開催しましたよ。 #gcbtl</title>

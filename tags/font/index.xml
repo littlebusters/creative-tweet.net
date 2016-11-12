@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Font on creative tweet.</title>
-    <link>http://creative-tweet.net/tags/font.html</link>
-    <description>Recent content in Font on creative tweet.</description>
+    <title>creative tweet.</title>
+    <link>http://creative-tweet.net/tags/font.xml</link>
+    <description>Recent content on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2012/12/10 09:30:00 +09:00</lastBuildDate>
-    <atom:link href="http://creative-tweet.net/tags/font.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/font.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>往年の名フォント「Chicago」 #LOVEFONT</title>

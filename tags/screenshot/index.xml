@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Screenshot on creative tweet.</title>
-    <link>http://creative-tweet.net/tags/screenshot.html</link>
-    <description>Recent content in Screenshot on creative tweet.</description>
+    <title>creative tweet.</title>
+    <link>http://creative-tweet.net/tags/screenshot.xml</link>
+    <description>Recent content on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2013/10/28 09:30:00 +09:00</lastBuildDate>
-    <atom:link href="http://creative-tweet.net/tags/screenshot.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/screenshot.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>iOSのブラウザスクリーンショットは、mixtureとRollPaperを組み合わせるとラクだった件</title>

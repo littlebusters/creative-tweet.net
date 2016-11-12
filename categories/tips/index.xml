@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tips on creative tweet.</title>
-    <link>http://creative-tweet.net/categories/tips.html</link>
-    <description>Recent content in Tips on creative tweet.</description>
+    <title>creative tweet.</title>
+    <link>http://creative-tweet.net/categories/tips.xml</link>
+    <description>Recent content on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2015/09/24 11:50:00 +09:00</lastBuildDate>
-    <atom:link href="http://creative-tweet.net/categories/tips.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/tips.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>非Retinaディスプレイで、HiDPIのスクリーンショットを撮る方法とツールたちを紹介しますよ。</title>

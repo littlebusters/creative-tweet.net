@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>creative tweet.</title>
-    <link>http://creative-tweet.net/</link>
+    <link>http://creative-tweet.net/index.xml</link>
     <description>Recent content on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
     <lastBuildDate>2016/06/20 09:30:00 +09:00</lastBuildDate>
-    <atom:link href="http://creative-tweet.net/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>特定のJSONファイルを読み込んで、レイヤーを生成するSketch 3向けプラグイン</title>
