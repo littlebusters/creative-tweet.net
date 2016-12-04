@@ -9,6 +9,51 @@
     <atom:link href="/tags/sketch-3.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>コマンドパレットからメニューやプラグインなどを実行できるSketch Actionプラグイン - Sketch Plugin Advent Calendar 2016</title>
+      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-05.html</link>
+      <pubDate>2016/12/05 12:00:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-05.html</guid>
+      <description>Sketch Plugin Advent Calendar 2016 5日目。Sketch Actionを紹介します。</description>
+    </item>
+    
+    <item>
+      <title>コマンドパレットからメニューやプラグインなどを実行できるSketch Runnerプラグイン - Sketch Plugin Advent Calendar 2016</title>
+      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-04.html</link>
+      <pubDate>2016/12/04 12:00:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-04.html</guid>
+      <description>Sketch Plugin Advent Calendar 2016 4日目。Sketch Runnerを紹介します。</description>
+    </item>
+    
+    <item>
+      <title>スウォッチを書き出し／読み込みできるSketch Palettesプラグイン - Sketch Plugin Advent Calendar 2016</title>
+      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-03.html</link>
+      <pubDate>2016/12/03 12:00:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-03.html</guid>
+      <description>Sketch Plugin Advent Calendar 2016 3日目。Sketch Palettesを紹介します。</description>
+    </item>
+    
+    <item>
+      <title>パスをパスで分割できるDivideプラグイン - Sketch Plugin Advent Calendar 2016</title>
+      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-02.html</link>
+      <pubDate>2016/12/02 12:00:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-02.html</guid>
+      <description>Sketch Plugin Advent Calendar 2016 2日目。Divideを紹介します。</description>
+    </item>
+    
+    <item>
+      <title>HSL色空間で色選択できるHSL Color Pickerプラグイン - Sketch Plugin Advent Calendar 2016</title>
+      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-01.html</link>
+      <pubDate>2016/12/01 12:00:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-01.html</guid>
+      <description>Sketch Plugin Advent Calendar 2016 1日目。HSL Color Pickerを紹介します。</description>
+    </item>
+    
+    <item>
       <title>特定のJSONファイルを読み込んで、レイヤーを生成するSketch 3向けプラグイン</title>
       <link>http://creative-tweet.net/tools/sketch_fwjson_to_layers/detail.html</link>
       <pubDate>2016/06/20 09:30:00 +09:00</pubDate>
@@ -51,51 +96,6 @@
       
       <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-19.html</guid>
       <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。Sketch 3でのPNG24の生成について。</description>
-    </item>
-    
-    <item>
-      <title>Sketch 3でこれできないの？にお答えします。［その9 アートボードに整列編］ - Sketch 3 Advent Calendar 2015</title>
-      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-18.html</link>
-      <pubDate>2015/12/18 12:02:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-18.html</guid>
-      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。意外と知られていないかもしれない、アートボードに整列について。</description>
-    </item>
-    
-    <item>
-      <title>Sketch 3でこれできないの？にお答えします。［その8 Open PathのBorder Position変更編］ - Sketch 3 Advent Calendar 2015</title>
-      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-17.html</link>
-      <pubDate>2015/12/17 12:02:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-17.html</guid>
-      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。今回はOpen PathのBorder Positionの変更についてです。</description>
-    </item>
-    
-    <item>
-      <title>Sketch 3でこれできないの？にお答えします。［その7 Local Sharingを世界へ編］ - Sketch 3 Advent Calendar 2015</title>
-      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-16.html</link>
-      <pubDate>2015/12/16 12:02:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-16.html</guid>
-      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。3.4からの新機能、Local Sharingを使ったTipsです。</description>
-    </item>
-    
-    <item>
-      <title>Sketch 3でこれできないの？にお答えします。［その6 シンボル内のテキスト編］ - Sketch 3 Advent Calendar 2015</title>
-      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-15.html</link>
-      <pubDate>2015/12/15 12:02:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-15.html</guid>
-      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。実はグループの共有だけじゃないシンボル内にあるテキストの使い方についてです。</description>
-    </item>
-    
-    <item>
-      <title>Sketch 3でこれできないの？にお答えします。［その5 複数のマシンへのインストール編］ - Sketch 3 Advent Calendar 2015</title>
-      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-13.html</link>
-      <pubDate>2015/12/13 12:02:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-13.html</guid>
-      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。直販版の上限インストール数についてです。</description>
     </item>
     
   </channel>
