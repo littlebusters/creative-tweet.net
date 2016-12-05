@@ -6,8 +6,17 @@
     <description>Recent content in Blog-rsses on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2016/12/05 12:00:00 +09:00</lastBuildDate>
+    <lastBuildDate>2016/12/06 12:00:00 +09:00</lastBuildDate>
     <atom:link href="/blog.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Shared Text Styleを書き出し・読み込みできるShared Text Stylesプラグイン - Sketch Plugin Advent Calendar 2016</title>
+      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-06.html</link>
+      <pubDate>2016/12/06 12:00:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-06.html</guid>
+      <description>Sketch Plugin Advent Calendar 2016 5日目。Shared Text Stylesを紹介します。</description>
+    </item>
     
     <item>
       <title>コマンドパレットからメニューやプラグインなどを実行できるSketch Actionプラグイン - Sketch Plugin Advent Calendar 2016</title>
@@ -88,15 +97,6 @@
       
       <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-19.html</guid>
       <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。Sketch 3でのPNG24の生成について。</description>
-    </item>
-    
-    <item>
-      <title>Sketch 3でこれできないの？にお答えします。［その9 アートボードに整列編］ - Sketch 3 Advent Calendar 2015</title>
-      <link>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-18.html</link>
-      <pubDate>2015/12/18 12:02:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2015/12/sketch-advent-calendar-18.html</guid>
-      <description>Sketch 3 Advent Calendar 2015で、Sketch 3でこれできないの？にお答えします。意外と知られていないかもしれない、アートボードに整列について。</description>
     </item>
     
   </channel>
