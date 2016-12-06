@@ -9,12 +9,21 @@
     <atom:link href="/tags/sketch.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>キーボードですべての辺をリサイズできるKeyboard Resizeプラグイン - Sketch Plugin Advent Calendar 2016</title>
+      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-07.html</link>
+      <pubDate>2016/12/07 12:00:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-07.html</guid>
+      <description>Sketch Plugin Advent Calendar 2016 7日目。Keyboard Resizeを紹介します。</description>
+    </item>
+    
+    <item>
       <title>Shared Text Styleを書き出し・読み込みできるShared Text Stylesプラグイン - Sketch Plugin Advent Calendar 2016</title>
       <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-06.html</link>
       <pubDate>2016/12/06 12:00:00 +09:00</pubDate>
       
       <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-06.html</guid>
-      <description>Sketch Plugin Advent Calendar 2016 5日目。Shared Text Stylesを紹介します。</description>
+      <description>Sketch Plugin Advent Calendar 2016 6日目。Shared Text Stylesを紹介します。</description>
     </item>
     
     <item>
@@ -87,15 +96,6 @@
       
       <guid>http://creative-tweet.net/blog/2016/03/sketch-line-height-fixer-plugin.html</guid>
       <description>「やむを得ない理由でSketch 3.4.xを使わざるを得ないマン」向けに、行間問題をごにょごにょして扱いやすくするプラグインを作成しました。</description>
-    </item>
-    
-    <item>
-      <title>ダミー作成に超便利！Sketch 3に機能を追加するInVision Craftを試してみた。</title>
-      <link>http://creative-tweet.net/blog/2016/02/invision-lab-craft-impression.html</link>
-      <pubDate>2016/02/10 01:20:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2016/02/invision-lab-craft-impression.html</guid>
-      <description>InVisonよりリリースされた、ダミーデータの生成に便利な「Craft」を試してみました。</description>
     </item>
     
   </channel>
