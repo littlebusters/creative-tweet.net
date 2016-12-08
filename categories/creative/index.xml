@@ -9,6 +9,15 @@
     <atom:link href="/categories/creative.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>シンボルを整頓できるSymbol Organizerプラグイン - Sketch Plugin Advent Calendar 2016</title>
+      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-09.html</link>
+      <pubDate>2016/12/09 12:00:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-09.html</guid>
+      <description>Sketch Plugin Advent Calendar 2016 9日目。Symbol Organizerを紹介します。</description>
+    </item>
+    
+    <item>
       <title>簡易の算術コマンドを使ってオブジェクトをリサイズできるResize Commandsプラグイン - Sketch Plugin Advent Calendar 2016</title>
       <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-08.html</link>
       <pubDate>2016/12/08 12:00:00 +09:00</pubDate>
@@ -87,15 +96,6 @@
       
       <guid>http://creative-tweet.net/blog/2016/06/fireworks-to-sketch.html</guid>
       <description>Fireworks PNGをJSONとして書き出すコマンドと、そのJSONをSketch 3へインポートするプラグインをつくりました。</description>
-    </item>
-    
-    <item>
-      <title>古いSketch 3向けに、行間問題を緩和するプラグインを作りました。</title>
-      <link>http://creative-tweet.net/blog/2016/03/sketch-line-height-fixer-plugin.html</link>
-      <pubDate>2016/03/06 04:20:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2016/03/sketch-line-height-fixer-plugin.html</guid>
-      <description>「やむを得ない理由でSketch 3.4.xを使わざるを得ないマン」向けに、行間問題をごにょごにょして扱いやすくするプラグインを作成しました。</description>
     </item>
     
   </channel>

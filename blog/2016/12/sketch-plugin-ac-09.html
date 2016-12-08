@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<title>シンボルを整頓できるSymbol Organizerプラグイン - Sketch Plugin Advent Calendar 2016 | creative tweet.</title>
+<script async src="/assets/js/auie.js"></script>
+
+
+
+
+
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="シンボルを整頓できるSymbol Organizerプラグイン - Sketch Plugin Advent Calendar 2016" />
+<meta property="og:url" content="http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-09.html" />
+<meta property="og:description" content="Sketch Plugin Advent Calendar 2016 9日目。Symbol Organizerを紹介します。" />
+<meta property="og:image" content="http://creative-tweet.net/assets/img/2016/spac2016-09/spac2016-09-ogp.png" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="シンボルを整頓できるSymbol Organizerプラグイン - Sketch Plugin Advent Calendar 2016">
+<meta name="twitter:url" content="http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-09.html">
+<meta name="twitter:description" content="Sketch Plugin Advent Calendar 2016 9日目。Symbol Organizerを紹介します。">
+<meta name="twitter:image" content="http://creative-tweet.net/assets/img/2016/spac2016-09/spac2016-09-ogp.png">
+</head>
+<body>
+<header class="siteHeader" role="banner">
+<h1 id="siteSign">
+<a href="/">
+<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<section class="article-header-section">
+				<time class="publishedDatetime" datetime="2016-12-09T12:00:00&#43;09:00">2016/12/9</time>
+				<h1 class="article-title">シンボルを整頓できるSymbol Organizerプラグイン - Sketch Plugin Advent Calendar 2016</h1>
+				
+			</section>
+		</header>
+		
+		<div class="content-main">
+			<p>Sketchプラグインを適当に選んで紹介していく、<a href="http://www.adventar.org/calendars/2013">Sketch Plugin Advent Calendar 2016</a> 9日目は、シンボルを整頓できる「Symbol Organizer」です。</p>
+
+<dl class="links">
+<dt>GitHub</dt>
+    <dd><a href="https://github.com/sonburn/symbol-organizer">https://github.com/sonburn/symbol-organizer</a></dd>
+</dl>
+
+<p>シンボルのネストからはじまり、Group ResizingときてInstanceのOverrideが実装され、シンボルの活用なしにSketchは語れないわけですが、そのシンボルがSymbolsページへ整理されず溜まっていくという問題がありました。
+このプラグインは、そんな魔境と化したSymbolsページに、光をもたらします（おおげさ）。</p>
+
+<p>使い方ですが、ショートカット<kbd>Command</kbd> ＋ <kbd>Option</kbd> ＋ <kbd>Shift</kbd> ＋ <kbd>O</kbd>で表示されるダイアログへ、ソートするレベルや順番などを設定して実行しましょう。設定項目については次の通りです。</p>
+
+<p class="media">
+    <img src="/assets/img/2016/spac2016-09/symbol-organizer-ui.png" alt="">
+</p>
+
+<h2 id="granularity">Granularity</h2>
+
+<p>シンボル名に「スラッシュ（/）」を用いることで階層化ができますが、どの階層でグループ化して整列するかを選択します。</p>
+
+<p class="media">
+    <img src="/assets/img/2016/spac2016-09/granularity.png" alt="">
+</p>
+
+<p>ここがちょっと分かりづらいのですが、ひとまずiOS UI Designテンプレートを使って試してみると、どういった動作なのかが理解しやすいでしょう。</p>
+
+<h2 id="sort-order">Sort order</h2>
+
+<p>レイヤーリストで並び替える順番を、レイヤー名の昇順（A-Z）か降順か（Z-A）を選択します。</p>
+
+<h2 id="sort-direction">Sort Direction</h2>
+
+<p>アートボードのソートする方向を、水平（Horizontal）または垂直（Vertical）から選択します。</p>
+
+<h2 id="max-per-row-column">Max per row/column</h2>
+
+<p>1列/行あたりのアートボード数を設定ます。入力しなければ、ある分だけ並びます。</p>
+
+<h2 id="horizontal-spacing">Horizontal spacing</h2>
+
+<p>アートボード間の水平方向の空きを設定ます。</p>
+
+<h2 id="vertical-spacing">Vertical spacing</h2>
+
+<p>アートボード間の垂直方向の空きを設定ます。</p>
+
+<h2 id="remove-unused-symbols">Remove Unused symbols</h2>
+
+<p>使っていないシンボルを削除します。</p>
+
+<p>もちろん、最初から整理しておけばよいのですが、何事にもイレギュラーが発生しますからね…ちなみに、単純に並び替えるだけいいよということであれば、<a href="https://github.com/marianomike/sketch-organizesymbols">Organize Symbols</a>という単機能なプラグインもあります。</p>
+
+<hr>
+
+<p>それでは、楽しいSketchライフを。</p>
+		</div>
+
+		<section class="article-taxonomy">
+			<h2 class="article-taxonomy-headding">tags</h2>
+			<ul class="tags">
+				
+				<li class="tagsItem"><a href="/tags/sketch.html">Sketch</a> </li>
+				
+				<li class="tagsItem"><a href="/tags/sketch-3.html">Sketch 3</a> </li>
+				
+				<li class="tagsItem"><a href="/tags/sketch-plugin.html">Sketch Plugin</a> </li>
+				
+			</ul>
+		</section>
+
+<div class="socialButtons">
+<div class="socialButtons_twitter">
+	<a href="https://twitter.com/intent/tweet?text=%e3%82%b7%e3%83%b3%e3%83%9c%e3%83%ab%e3%82%92%e6%95%b4%e9%a0%93%e3%81%a7%e3%81%8d%e3%82%8bSymbol%20Organizer%e3%83%97%e3%83%a9%e3%82%b0%e3%82%a4%e3%83%b3%20-%20Sketch%20Plugin%20Advent%20Calendar%202016&amp;url=http%3a%2f%2fcreative-tweet.net%2fblog%2f2016%2f12%2fsketch-plugin-ac-09.html&amp;via=littlebusters" class="twitter-share-button"
+		data-lang="en"
+		data-url="http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-09.html"
+		data-text="シンボルを整頓できるSymbol Organizerプラグイン - Sketch Plugin Advent Calendar 2016"
+		data-via="littlebusters" 
+		data-count="vertical"
+	>Tweet</a>
+</div>
+<div class="socialButtons_facebook">
+	<div 
+		class="fb-like"
+		data-href="http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-09.html"
+		data-layout="box_count"
+		data-send="false"
+		data-width="100"
+		data-show-faces="false"
+	></div>
+</div>
+<div class="socialButtons_hatebu">
+	<a href="http://b.hatena.ne.jp/entry/creative-tweet.net/blog/2016/12/sketch-plugin-ac-09.html" class="hatena-bookmark-button"
+		data-hatena-bookmark-layout="vertical"
+		data-hatena-bookmark-title="シンボルを整頓できるSymbol Organizerプラグイン - Sketch Plugin Advent Calendar 2016"
+		data-hatena-bookmark-url="http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-09.html">
+		<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		style="border: none">
+	</a>
+</div>
+<div class="socialButtons_googlep">
+	<div class="g-plusone" data-size="tall" data-href="http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-09.html"></div>
+</div>
+</div>
+
+		<ul class="pager">
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-08.html" class="pager_prevItem">
+				<span class="pager_label-older">older: </span>
+				簡易の算術コマンドを使ってオブジェクトをリサイズできるResize Commandsプラグイン - Sketch Plugin Advent Calendar 2016
+				</a>
+			</li>
+			
+		</ul>
+
+	</main>
+</div>
+
+
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>
