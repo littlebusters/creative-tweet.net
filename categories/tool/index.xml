@@ -9,6 +9,15 @@
     <atom:link href="/categories/tool.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>レイヤー名を変更するRename ItとRegexp Renameプラグイン - Sketch Plugin Advent Calendar 2016</title>
+      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-11.html</link>
+      <pubDate>2016/12/11 12:00:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-11.html</guid>
+      <description>Sketch Plugin Advent Calendar 2016 11日目。Rename ItとRegexp Renameを紹介します。</description>
+    </item>
+    
+    <item>
       <title>塗りと線の色を入れ替えるSwap Fill &amp; Borderプラグイン - Sketch Plugin Advent Calendar 2016</title>
       <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-10.html</link>
       <pubDate>2016/12/10 12:00:00 +09:00</pubDate>
@@ -87,15 +96,6 @@
       
       <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-02.html</guid>
       <description>Sketch Plugin Advent Calendar 2016 2日目。Divideを紹介します。</description>
-    </item>
-    
-    <item>
-      <title>HSL色空間で色選択できるHSL Color Pickerプラグイン - Sketch Plugin Advent Calendar 2016</title>
-      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-01.html</link>
-      <pubDate>2016/12/01 12:00:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-01.html</guid>
-      <description>Sketch Plugin Advent Calendar 2016 1日目。HSL Color Pickerを紹介します。</description>
     </item>
     
   </channel>
