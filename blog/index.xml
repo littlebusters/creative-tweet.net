@@ -6,8 +6,17 @@
     <description>Recent content in Blog-rsses on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2016/12/12 12:00:00 +09:00</lastBuildDate>
+    <lastBuildDate>2016/12/13 12:00:00 +09:00</lastBuildDate>
     <atom:link href="/blog.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>書き出すSVGを自動的に圧縮してくれるSVGO Compressorプラグイン - Sketch Plugin Advent Calendar 2016</title>
+      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-13.html</link>
+      <pubDate>2016/12/13 12:00:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-13.html</guid>
+      <description>Sketch Plugin Advent Calendar 2016 13日目。SVGO Compressorを紹介します。</description>
+    </item>
     
     <item>
       <title>アートボードから画面遷移図を生成するUser Flowsプラグイン - Sketch Plugin Advent Calendar 2016</title>
@@ -88,15 +97,6 @@
       
       <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-04.html</guid>
       <description>Sketch Plugin Advent Calendar 2016 4日目。Sketch Runnerを紹介します。</description>
-    </item>
-    
-    <item>
-      <title>スウォッチを書き出し／読み込みできるSketch Palettesプラグイン - Sketch Plugin Advent Calendar 2016</title>
-      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-03.html</link>
-      <pubDate>2016/12/03 12:00:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-03.html</guid>
-      <description>Sketch Plugin Advent Calendar 2016 3日目。Sketch Palettesを紹介します。</description>
     </item>
     
   </channel>
