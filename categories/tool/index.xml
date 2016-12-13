@@ -9,6 +9,15 @@
     <atom:link href="/categories/tool.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>オブジェクトに合わせてガイドを引くSketch Guidesプラグイン - Sketch Plugin Advent Calendar 2016</title>
+      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-14.html</link>
+      <pubDate>2016/12/14 12:00:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-14.html</guid>
+      <description>Sketch Plugin Advent Calendar 2016 14日目。Sketch Guidesを紹介します。</description>
+    </item>
+    
+    <item>
       <title>書き出すSVGを自動的に圧縮してくれるSVGO Compressorプラグイン - Sketch Plugin Advent Calendar 2016</title>
       <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-13.html</link>
       <pubDate>2016/12/13 12:00:00 +09:00</pubDate>
@@ -87,15 +96,6 @@
       
       <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-05.html</guid>
       <description>Sketch Plugin Advent Calendar 2016 5日目。Sketch Actionを紹介します。</description>
-    </item>
-    
-    <item>
-      <title>コマンドパレットからメニューやプラグインなどを実行できるSketch Runnerプラグイン - Sketch Plugin Advent Calendar 2016</title>
-      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-04.html</link>
-      <pubDate>2016/12/04 12:00:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-04.html</guid>
-      <description>Sketch Plugin Advent Calendar 2016 4日目。Sketch Runnerを紹介します。</description>
     </item>
     
   </channel>
