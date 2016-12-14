@@ -6,8 +6,17 @@
     <description>Recent content in Blog-rsses on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2016/12/14 12:00:00 +09:00</lastBuildDate>
+    <lastBuildDate>2016/12/15 12:00:00 +09:00</lastBuildDate>
     <atom:link href="/blog.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>コントラスト値を計測してくれるColor Contrast Analyserプラグイン - Sketch Plugin Advent Calendar 2016</title>
+      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-15.html</link>
+      <pubDate>2016/12/15 12:00:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-15.html</guid>
+      <description>Sketch Plugin Advent Calendar 2016 15日目。Color Contrast Analyserを紹介します。</description>
+    </item>
     
     <item>
       <title>オブジェクトに合わせてガイドを引くSketch Guidesプラグイン - Sketch Plugin Advent Calendar 2016</title>
@@ -88,15 +97,6 @@
       
       <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-06.html</guid>
       <description>Sketch Plugin Advent Calendar 2016 6日目。Shared Text Stylesを紹介します。</description>
-    </item>
-    
-    <item>
-      <title>コマンドパレットからメニューやプラグインなどを実行できるSketch Actionプラグイン - Sketch Plugin Advent Calendar 2016</title>
-      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-05.html</link>
-      <pubDate>2016/12/05 12:00:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-05.html</guid>
-      <description>Sketch Plugin Advent Calendar 2016 5日目。Sketch Actionを紹介します。</description>
     </item>
     
   </channel>
