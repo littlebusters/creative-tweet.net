@@ -9,6 +9,15 @@
     <atom:link href="/categories/creative.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>アートボードをHTMLとして書き出し、ブラウザ上でスペックを確認できるMarkechプラグイン - Sketch Plugin Advent Calendar 2016</title>
+      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-16.html</link>
+      <pubDate>2016/12/16 12:00:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-16.html</guid>
+      <description>Sketch Plugin Advent Calendar 2016 16日目。アートボードをHTMLとして書き出し、ブラウザ上でスペックを確認できるMarkechを紹介します。</description>
+    </item>
+    
+    <item>
       <title>コントラスト値を計測してくれるColor Contrast Analyserプラグイン - Sketch Plugin Advent Calendar 2016</title>
       <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-15.html</link>
       <pubDate>2016/12/15 12:00:00 +09:00</pubDate>
@@ -87,15 +96,6 @@
       
       <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-07.html</guid>
       <description>Sketch Plugin Advent Calendar 2016 7日目。Keyboard Resizeを紹介します。</description>
-    </item>
-    
-    <item>
-      <title>Shared Text Styleを書き出し・読み込みできるShared Text Stylesプラグイン - Sketch Plugin Advent Calendar 2016</title>
-      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-06.html</link>
-      <pubDate>2016/12/06 12:00:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-06.html</guid>
-      <description>Sketch Plugin Advent Calendar 2016 6日目。Shared Text Stylesを紹介します。</description>
     </item>
     
   </channel>
