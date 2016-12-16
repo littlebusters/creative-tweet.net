@@ -9,6 +9,15 @@
     <atom:link href="/categories/creative.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>開発に必要な幅やフォントなどの情報を書き込むSketch Measureプラグイン - Sketch Plugin Advent Calendar 2016</title>
+      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-17.html</link>
+      <pubDate>2016/12/17 12:00:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-17.html</guid>
+      <description>Sketch Plugin Advent Calendar 2016 17日目。開発に必要な幅やフォントなどの情報を書き込むSketch Measureプラグインを紹介します。</description>
+    </item>
+    
+    <item>
       <title>アートボードをHTMLとして書き出し、ブラウザ上でスペックを確認できるMarkechプラグイン - Sketch Plugin Advent Calendar 2016</title>
       <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-16.html</link>
       <pubDate>2016/12/16 12:00:00 +09:00</pubDate>
@@ -87,15 +96,6 @@
       
       <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-09.html</guid>
       <description>Sketch Plugin Advent Calendar 2016 9日目。Symbol Organizerを紹介します。</description>
-    </item>
-    
-    <item>
-      <title>簡易の算術コマンドを使ってオブジェクトをリサイズできるResize Commandsプラグイン - Sketch Plugin Advent Calendar 2016</title>
-      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-08.html</link>
-      <pubDate>2016/12/08 12:00:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-08.html</guid>
-      <description>Sketch Plugin Advent Calendar 2016 8日目。Resize Commandsを紹介します。</description>
     </item>
     
   </channel>
