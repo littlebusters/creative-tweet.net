@@ -6,8 +6,17 @@
     <description>Recent content on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2016/12/19 12:00:00 +09:00</lastBuildDate>
+    <lastBuildDate>2016/12/20 12:00:00 +09:00</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>オープンパスを矢印にするArrowfyプラグイン - Sketch Plugin Advent Calendar 2016</title>
+      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-20.html</link>
+      <pubDate>2016/12/20 12:00:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-20.html</guid>
+      <description>Sketch Plugin Advent Calendar 2016 20日目。オープンパスを矢印にするArrowfyプラグインを紹介します。</description>
+    </item>
     
     <item>
       <title>選択しているアートボードをキャンバスの中央に表示するArtboard Zoomプラグイン - Sketch Plugin Advent Calendar 2016</title>
@@ -88,15 +97,6 @@
       
       <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-12.html</guid>
       <description>Sketch Plugin Advent Calendar 2016 12日目。User Flowsを紹介します。</description>
-    </item>
-    
-    <item>
-      <title>レイヤー名を変更するRename ItとRegexp Renameプラグイン - Sketch Plugin Advent Calendar 2016</title>
-      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-11.html</link>
-      <pubDate>2016/12/11 12:00:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-11.html</guid>
-      <description>Sketch Plugin Advent Calendar 2016 11日目。Rename ItとRegexp Renameを紹介します。</description>
     </item>
     
   </channel>
