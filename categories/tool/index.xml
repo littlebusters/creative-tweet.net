@@ -9,6 +9,15 @@
     <atom:link href="/categories/tool.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Border Colorを直接ピックアップできるColor Picker Plusプラグイン - Sketch Plugin Advent Calendar 2016</title>
+      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-21.html</link>
+      <pubDate>2016/12/21 12:00:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-21.html</guid>
+      <description>Sketch Plugin Advent Calendar 2016 21日目。Border Colorを直接ピックアップできるColor Picker Plusプラグインを紹介します。</description>
+    </item>
+    
+    <item>
       <title>オープンパスを矢印にするArrowfyプラグイン - Sketch Plugin Advent Calendar 2016</title>
       <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-20.html</link>
       <pubDate>2016/12/20 12:00:00 +09:00</pubDate>
@@ -87,15 +96,6 @@
       
       <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-13.html</guid>
       <description>Sketch Plugin Advent Calendar 2016 13日目。SVGO Compressorを紹介します。</description>
-    </item>
-    
-    <item>
-      <title>アートボードから画面遷移図を生成するUser Flowsプラグイン - Sketch Plugin Advent Calendar 2016</title>
-      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-12.html</link>
-      <pubDate>2016/12/12 12:00:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-12.html</guid>
-      <description>Sketch Plugin Advent Calendar 2016 12日目。User Flowsを紹介します。</description>
     </item>
     
   </channel>
