@@ -9,6 +9,15 @@
     <atom:link href="/categories/tool.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Auto Layoutを実現するFluidプラグイン - Sketch Plugin Advent Calendar 2016</title>
+      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-24.html</link>
+      <pubDate>2016/12/24 12:00:01 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-24.html</guid>
+      <description>Sketch Plugin Advent Calendar 2016 24日目。Auto Layoutを実現するFluidプラグインを紹介します。</description>
+    </item>
+    
+    <item>
       <title>キーオブジェクトを選択して揃えるAlign Toプラグイン - Sketch Plugin Advent Calendar 2016</title>
       <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-23.html</link>
       <pubDate>2016/12/23 12:00:00 +09:00</pubDate>
@@ -87,15 +96,6 @@
       
       <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-16.html</guid>
       <description>Sketch Plugin Advent Calendar 2016 16日目。アートボードをHTMLとして書き出し、ブラウザ上でスペックを確認できるMarkechを紹介します。</description>
-    </item>
-    
-    <item>
-      <title>コントラスト値を計測してくれるColor Contrast Analyserプラグイン - Sketch Plugin Advent Calendar 2016</title>
-      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-15.html</link>
-      <pubDate>2016/12/15 12:00:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-15.html</guid>
-      <description>Sketch Plugin Advent Calendar 2016 15日目。Color Contrast Analyserを紹介します。</description>
     </item>
     
   </channel>

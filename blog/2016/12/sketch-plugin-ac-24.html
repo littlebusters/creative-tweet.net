@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<title>Auto Layoutを実現するFluidプラグイン - Sketch Plugin Advent Calendar 2016 | creative tweet.</title>
+<script async src="/assets/js/auie.js"></script>
+
+
+
+
+
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Auto Layoutを実現するFluidプラグイン - Sketch Plugin Advent Calendar 2016" />
+<meta property="og:url" content="http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-24.html" />
+<meta property="og:description" content="Sketch Plugin Advent Calendar 2016 24日目。Auto Layoutを実現するFluidプラグインを紹介します。" />
+<meta property="og:image" content="http://creative-tweet.net/assets/img/2016/spac2016-24/spac2016-24-ogp.png" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="Auto Layoutを実現するFluidプラグイン - Sketch Plugin Advent Calendar 2016">
+<meta name="twitter:url" content="http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-24.html">
+<meta name="twitter:description" content="Sketch Plugin Advent Calendar 2016 24日目。Auto Layoutを実現するFluidプラグインを紹介します。">
+<meta name="twitter:image" content="http://creative-tweet.net/assets/img/2016/spac2016-24/spac2016-24-ogp.png">
+</head>
+<body>
+<header class="siteHeader" role="banner">
+<h1 id="siteSign">
+<a href="/">
+<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<section class="article-header-section">
+				<time class="publishedDatetime" datetime="2016-12-24T12:00:01&#43;09:00">2016/12/24</time>
+				<h1 class="article-title">Auto Layoutを実現するFluidプラグイン - Sketch Plugin Advent Calendar 2016</h1>
+				
+			</section>
+		</header>
+		
+		<div class="content-main">
+			<p>Sketchプラグインを適当に選んで紹介していく、<a href="http://www.adventar.org/calendars/2013">Sketch Plugin Advent Calendar 2016</a> 24日目は、Auto Layoutを実現する「Fluidプラグイン」です。</p>
+
+<dl class="links">
+    <dt>GitHub</dt>
+    <dd><a href="https://github.com/matt-curtis/fluid-for-sketch">https://github.com/matt-curtis/fluid-for-sketch</a></dd>
+</dl>
+
+<p>2015年11月登場のプラグインですので、ちょくちょく名前を目にされた方もいらっしゃるのではないかと思います。</p>
+
+<p>Sketch 39でシンボルやグループのリサイズ方法を指定できるようになったものの、アートボードをリサイズした時はやはり任意でオブジェクトのサイズ変更が必要です。Fluidでは、Update Layoutボタンを押すだけで、キャンバスに合わせてリサイズしてくれます。</p>
+
+<p>プラグインメニューからももちろん使えますが、「<strong>Show/Hide Toolbar</strong>」でウィンドウ下にツールバーを表示することもできます。
+ツールバーを表示するショートカットは<kbd>Control</kbd> ＋ <kbd>Shift</kbd> ＋ <kbd>T</kbd>です。</p>
+
+<p class="media">
+    <img src="/assets/img/2016/spac2016-24/toolbar.png" alt="">
+</p>
+
+<h2 id="edit-constraintsパネル">Edit Constraintsパネル</h2>
+
+<p>AutoLayoutの設定は、Edit Constraintsパネルで行います。ツールバーから表示でき、ショートカットは<kbd>Control</kbd> ＋ <kbd>Shift</kbd> ＋ <kbd>C</kbd>に設定されています。</p>
+
+<p class="media">
+    <img src="/assets/img/2016/spac2016-24/panel.png" alt="">
+</p>
+
+<p>パネルで<strong>Align</strong>（揃え）・<strong>Fixed Size</strong>（サイズ調整）・<strong>Pinning</strong>（固定位置）の3つが設定可能です。</p>
+
+<p>各ラベル右にある下三角は、それぞれの基準とする親を選択します。<strong>Canvas</strong>はアートボード、<strong>Group</strong>はそのままグループ、<strong>Previous Sibling</strong>は直前の兄弟レイヤー（レイヤーリストですぐ下にあるレイヤー）が基準になります。グループ内の一番下にあるレイヤーに<strong>Previous Sibling</strong>を設定する場合、グループの境界が基準となるため、Update Layerを繰り返し適用するとレイヤーが移動します。</p>
+
+<p>Align / Fixed Size / Pinning3つすべてを設定することはできますが、あまり細かく設定すると動作がわからなくなるため、ほどほどにしておきましょう。</p>
+
+<h3 id="align">Align</h3>
+
+<p><strong>Center Horizontally</strong>で左右のセンター、<strong>Center Vertically</strong>で上下のセンターへ来るように設定されます。</p>
+
+<p class="media">
+    <img src="/assets/img/2016/spac2016-24/align.png" alt="">
+</p>
+
+<h3 id="fixed-size">Fixed Size</h3>
+
+<p>幅および高さの設定を行います。数値は実寸とパーセンテージによる指定が可能で、パーセンテージにした場合、基準とする親に対するサイズに設定されます。また比率ロックが入っていると、それに応じてスケールされます。</p>
+
+<p class="media">
+    <img src="/assets/img/2016/spac2016-24/fixed-size.png" alt="">
+</p>
+
+<h3 id="pinning">Pinning</h3>
+
+<p>していた方向の境界を、基準とする親の境界からどの位置に配置するかの設定を行います。こちらもFixed Sizeと同様に、実寸とパーセンテージによる指定が可能です。</p>
+
+<p class="media">
+    <img src="/assets/img/2016/spac2016-24/pinning.png" alt="">
+</p>
+
+<h3 id="そのほかの機能">そのほかの機能</h3>
+
+<p><strong>Disable Constaints</strong>へチェックを入れると、Update Layoutを無視します。</p>
+
+<p>Copy・Paste・Clearは、押したボタンのラベル通りの動作を実行します。</p>
+
+<p>ピンマークを有効にすると、オブジェクトの選択をはずしてもパネルを表示したままにします。基本的にはピンマークは有効にしておいた方がよいでしょう。</p>
+
+<h2 id="設定した状態をアップデート">設定した状態をアップデート</h2>
+
+<p>ツールバーのUpdate Layoutクリックすれば、設定した状態を確認することが可能です。ショートカットは<kbd>Control</kbd> ＋ <kbd>Shift</kbd> ＋ <kbd>L</kbd>です。</p>
+
+<h2 id="アートボードサイズを変更する">アートボードサイズを変更する</h2>
+
+<p>Toggle Sizeでアートボードサイズを変更でき、変更と同時にUpdateされます。</p>
+
+<p class="media">
+    <img src="/assets/img/2016/spac2016-24/toggle-size.gif" alt="">
+</p>
+
+<p>ただ残念ながら、追加したアートボードサイズは一覧に表示されないため、ウェブデザインには不向きだったりします……GitHubのIssueには上がっているので、将来的に実装されるかもしれません。</p>
+
+<h2 id="プレビューする">プレビューする</h2>
+
+<p>PreviewはFluid用の別ウィンドウが開き、アートボードサイズの変更・アートボードのコピー・書き出しができます。アートボードサイズの変更はプレビューウィンドウでのみ適用されるため、オリジナルアートボードのサイズはそのままです。</p>
+
+<h2 id="そのほかの設定">そのほかの設定</h2>
+
+<p>Settingsでは、FluidのUIにフォーカスがない場合、半透明にするかどうかの設定ができます。</p>
+
+<hr>
+
+<p>アートボードの変更でカスタムサイズを選択できないのがネックですが、工夫次第でとても使いがいのあるプラグインになっています。慣れるまでちょっと面倒なところもありますが、ぜひ使ってみてくださいね。</p>
+
+<p>それでは、楽しいSketchライフを。</p>
+		</div>
+
+		<section class="article-taxonomy">
+			<h2 class="article-taxonomy-headding">tags</h2>
+			<ul class="tags">
+				
+				<li class="tagsItem"><a href="/tags/sketch.html">Sketch</a> </li>
+				
+				<li class="tagsItem"><a href="/tags/sketch-3.html">Sketch 3</a> </li>
+				
+				<li class="tagsItem"><a href="/tags/sketch-plugin.html">Sketch Plugin</a> </li>
+				
+			</ul>
+		</section>
+
+<div class="socialButtons">
+<div class="socialButtons_twitter">
+	<a href="https://twitter.com/intent/tweet?text=Auto%20Layout%e3%82%92%e5%ae%9f%e7%8f%be%e3%81%99%e3%82%8bFluid%e3%83%97%e3%83%a9%e3%82%b0%e3%82%a4%e3%83%b3%20-%20Sketch%20Plugin%20Advent%20Calendar%202016&amp;url=http%3a%2f%2fcreative-tweet.net%2fblog%2f2016%2f12%2fsketch-plugin-ac-24.html&amp;via=littlebusters" class="twitter-share-button"
+		data-lang="en"
+		data-url="http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-24.html"
+		data-text="Auto Layoutを実現するFluidプラグイン - Sketch Plugin Advent Calendar 2016"
+		data-via="littlebusters" 
+		data-count="vertical"
+	>Tweet</a>
+</div>
+<div class="socialButtons_facebook">
+	<div 
+		class="fb-like"
+		data-href="http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-24.html"
+		data-layout="box_count"
+		data-send="false"
+		data-width="100"
+		data-show-faces="false"
+	></div>
+</div>
+<div class="socialButtons_hatebu">
+	<a href="http://b.hatena.ne.jp/entry/creative-tweet.net/blog/2016/12/sketch-plugin-ac-24.html" class="hatena-bookmark-button"
+		data-hatena-bookmark-layout="vertical"
+		data-hatena-bookmark-title="Auto Layoutを実現するFluidプラグイン - Sketch Plugin Advent Calendar 2016"
+		data-hatena-bookmark-url="http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-24.html">
+		<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		style="border: none">
+	</a>
+</div>
+<div class="socialButtons_googlep">
+	<div class="g-plusone" data-size="tall" data-href="http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-24.html"></div>
+</div>
+</div>
+
+		<ul class="pager">
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-23.html" class="pager_prevItem">
+				<span class="pager_label-older">older: </span>
+				キーオブジェクトを選択して揃えるAlign Toプラグイン - Sketch Plugin Advent Calendar 2016
+				</a>
+			</li>
+			
+		</ul>
+
+	</main>
+</div>
+
+
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>
