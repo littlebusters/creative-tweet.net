@@ -9,6 +9,15 @@
     <atom:link href="/tags/sketch-3.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>SketchからドキュメントをHTMLとして書き出せるDesign Docプラグイン - Sketch Plugin Advent Calendar 2016</title>
+      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-25.html</link>
+      <pubDate>2016/12/25 12:00:01 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-25.html</guid>
+      <description>Sketch Plugin Advent Calendar 2016 25日目。SketchからドキュメントをHTMLとして書き出せるDesign Docプラグインを紹介します。</description>
+    </item>
+    
+    <item>
       <title>Auto Layoutを実現するFluidプラグイン - Sketch Plugin Advent Calendar 2016</title>
       <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-24.html</link>
       <pubDate>2016/12/24 12:00:01 +09:00</pubDate>
@@ -87,15 +96,6 @@
       
       <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-17.html</guid>
       <description>Sketch Plugin Advent Calendar 2016 17日目。開発に必要な幅やフォントなどの情報を書き込むSketch Measureプラグインを紹介します。</description>
-    </item>
-    
-    <item>
-      <title>アートボードをHTMLとして書き出し、ブラウザ上でスペックを確認できるMarkechプラグイン - Sketch Plugin Advent Calendar 2016</title>
-      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-16.html</link>
-      <pubDate>2016/12/16 12:00:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-16.html</guid>
-      <description>Sketch Plugin Advent Calendar 2016 16日目。アートボードをHTMLとして書き出し、ブラウザ上でスペックを確認できるMarkechを紹介します。</description>
     </item>
     
   </channel>
