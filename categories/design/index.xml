@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>creative tweet.</title>
-    <link>http://creative-tweet.net/categories/design.xml</link>
-    <description>Recent content on creative tweet.</description>
+    <title>Design on creative tweet.</title>
+    <link>http://creative-tweet.net/categories/design.xml.html</link>
+    <description>Recent content in Design on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <atom:link href="/categories/design.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/design.xml.html" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Sketch 3のテキストボックスで、数字キーを使わず小数点以下を入力する方法を紹介しますよ。 Sketch 3 Advent Calendar 2014</title>

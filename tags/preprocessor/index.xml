@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>creative tweet.</title>
-    <link>http://creative-tweet.net/tags/preprocessor.xml</link>
-    <description>Recent content on creative tweet.</description>
+    <title>Preprocessor on creative tweet.</title>
+    <link>http://creative-tweet.net/tags/preprocessor.xml.html</link>
+    <description>Recent content in Preprocessor on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <atom:link href="/tags/preprocessor.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/preprocessor.xml.html" rel="self" type="application/rss+xml" />
     
     <item>
       <title>黒い画面とCSS Preprocessorハンズオン &#43; HTML5KARUTAを開催しましたよ。</title>
