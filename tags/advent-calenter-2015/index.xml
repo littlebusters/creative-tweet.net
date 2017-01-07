@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Advent Calenter 2015 on creative tweet.</title>
-    <link>http://creative-tweet.net/tags/advent-calenter-2015.xml.html</link>
+    <link>http://creative-tweet.net/tags/advent-calenter-2015.xml</link>
     <description>Recent content in Advent Calenter 2015 on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <atom:link href="/tags/advent-calenter-2015.xml.html" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/advent-calenter-2015.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Sketch 3でこれできないの？にお答えします。［その10 アルファなしPNG編］ - Sketch 3 Advent Calendar 2015</title>

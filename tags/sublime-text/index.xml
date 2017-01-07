@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sublime Text on creative tweet.</title>
-    <link>http://creative-tweet.net/tags/sublime-text.xml.html</link>
+    <link>http://creative-tweet.net/tags/sublime-text.xml</link>
     <description>Recent content in Sublime Text on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <atom:link href="/tags/sublime-text.xml.html" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/sublime-text.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>たまによく使うSublimeTextのパッケージGistとTakanaを紹介しますよ。 Sublime Text Advent Calendar 2014</title>

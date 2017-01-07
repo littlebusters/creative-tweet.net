@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Font on creative tweet.</title>
-    <link>http://creative-tweet.net/tags/font.xml.html</link>
+    <link>http://creative-tweet.net/tags/font.xml</link>
     <description>Recent content in Font on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <atom:link href="/tags/font.xml.html" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/font.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>往年の名フォント「Chicago」 #LOVEFONT</title>

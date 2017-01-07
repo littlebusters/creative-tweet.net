@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jsf on creative tweet.</title>
-    <link>http://creative-tweet.net/tags/jsf.xml.html</link>
+    <link>http://creative-tweet.net/tags/jsf.xml</link>
     <description>Recent content in Jsf on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <atom:link href="/tags/jsf.xml.html" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/jsf.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Fireworksのコマンドを作ってみよう。 – Fireworks Lover Advent Calendar 2013</title>

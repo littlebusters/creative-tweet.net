@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Static Site Generator on creative tweet.</title>
-    <link>http://creative-tweet.net/tags/static-site-generator.xml.html</link>
+    <link>http://creative-tweet.net/tags/static-site-generator.xml</link>
     <description>Recent content in Static Site Generator on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <atom:link href="/tags/static-site-generator.xml.html" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/static-site-generator.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>黒い画面が苦手でも大丈夫！GUIビルドツール MIXTUREを使ってみたよ。</title>

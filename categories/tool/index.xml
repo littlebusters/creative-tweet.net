@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tool on creative tweet.</title>
-    <link>http://creative-tweet.net/categories/tool.xml.html</link>
+    <link>http://creative-tweet.net/categories/tool.xml</link>
     <description>Recent content in Tool on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <atom:link href="/categories/tool.xml.html" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/tool.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>SketchからドキュメントをHTMLとして書き出せるDesign Docプラグイン - Sketch Plugin Advent Calendar 2016</title>

@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fwug on creative tweet.</title>
-    <link>http://creative-tweet.net/tags/fwug.xml.html</link>
+    <link>http://creative-tweet.net/tags/fwug.xml</link>
     <description>Recent content in Fwug on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <atom:link href="/tags/fwug.xml.html" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/fwug.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>FWUGLTでしゃべってきましたよ。</title>
