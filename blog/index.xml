@@ -6,8 +6,17 @@
     <description>Recent content in Blogs on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2016/12/25 12:00:01 +09:00</lastBuildDate>
+    <lastBuildDate>2017/01/10 12:00:00 +09:00</lastBuildDate>
     <atom:link href="/blog.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Sketchで文字詰めを簡単に適用できるプラグインを作りました。</title>
+      <link>http://creative-tweet.net/blog/2017/01/switch-text-spacing-plugin.html</link>
+      <pubDate>2017/01/10 12:00:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2017/01/switch-text-spacing-plugin.html</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>SketchからドキュメントをHTMLとして書き出せるDesign Docプラグイン - Sketch Plugin Advent Calendar 2016</title>
@@ -88,15 +97,6 @@
       
       <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-18.html</guid>
       <description>Sketch Plugin Advent Calendar 2016 18日目。シンボルをその場で複製して入れ替えるDuplicate Symbolプラグインを紹介します。</description>
-    </item>
-    
-    <item>
-      <title>開発に必要な幅やフォントなどの情報を書き込むSketch Measureプラグイン - Sketch Plugin Advent Calendar 2016</title>
-      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-17.html</link>
-      <pubDate>2016/12/17 12:00:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-17.html</guid>
-      <description>Sketch Plugin Advent Calendar 2016 17日目。開発に必要な幅やフォントなどの情報を書き込むSketch Measureプラグインを紹介します。</description>
     </item>
     
   </channel>

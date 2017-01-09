@@ -9,6 +9,15 @@
     <atom:link href="/categories/tools.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>OpenTypeの字間に関する機能を簡単に切り替えできるSketchプラグイン</title>
+      <link>http://creative-tweet.net/tools/sketch_switch_text_spacing/detail.html</link>
+      <pubDate>2017/01/10 12:00:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/tools/sketch_switch_text_spacing/detail.html</guid>
+      <description>SketchでOpenTypeの字間に関する機能（プロポーショナルメトリクスや半角など）を、Typographyパネルを開くことなく直接切り替えできるプラグインです。</description>
+    </item>
+    
+    <item>
       <title>Sketch 3が3.4へアップデート！その内容をざっくりまとめました。</title>
       <link>http://creative-tweet.net/blog/2015/10/sketch-has-been-updated-to-3.4.html</link>
       <pubDate>2015/10/27 01:00:00 +09:00</pubDate>

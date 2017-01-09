@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<title>Sketchで文字詰めを簡単に適用できるプラグインを作りました。 | creative tweet.</title>
+<script async src="/assets/js/auie.js"></script>
+
+
+
+
+
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Sketchで文字詰めを簡単に適用できるプラグインを作りました。" />
+<meta property="og:url" content="http://creative-tweet.net/blog/2017/01/switch-text-spacing-plugin.html" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="http://creative-tweet.net/assets/img/2017/switch-text-spacing-plugin/switch-text-spacing-plugin-ogp.png" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="Sketchで文字詰めを簡単に適用できるプラグインを作りました。">
+<meta name="twitter:url" content="http://creative-tweet.net/blog/2017/01/switch-text-spacing-plugin.html">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="http://creative-tweet.net/assets/img/2017/switch-text-spacing-plugin/switch-text-spacing-plugin-ogp.png">
+</head>
+<body>
+<header class="siteHeader" role="banner">
+<h1 id="siteSign">
+<a href="/">
+<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<section class="article-header-section">
+				<time class="publishedDatetime" datetime="2017-01-10T12:00:00&#43;09:00">2017/1/10</time>
+				<h1 class="article-title">Sketchで文字詰めを簡単に適用できるプラグインを作りました。</h1>
+				
+				<img src="/assets/img/2017/switch-text-spacing-plugin/article-hero.png" class="hero" alt="">
+				
+			</section>
+		</header>
+		
+		<div class="content-main">
+			<p>以前、Sketchで文字詰めをする方法を<a href="../../2014/10/apply-proportional-metrics-on-sketch.html">記事</a>にしました。確かに文字詰めはできるのですが、パネルを表示したりテキストを選択したりと、やや手順が面倒です。これがスクリプトで変更できることがわかったため、プラグインを作ってみました。</p>
+
+<dl class="links">
+    <dt>プラグインページ</dt>
+    <dd><a href="http://localhost:1313/tools/sketch_switch_text_spacing/detail.html">OpenTypeの字間に関する機能を簡単に切り替えできるSketchプラグイン</a></dd>
+</dl>
+
+<h2 id="インストール">インストール</h2>
+
+<ul class="links">
+<li><a href="https://github.com/littlebusters/Switch-Text-Spacing/archive/master.zip">プラグインのダウンロード</a></li>
+<li><a href="https://github.com/littlebusters/Switch-Text-Spacing/">Switch Text Spacingのリポジトリ</a></li>
+</ul>
+
+<p>ZIPをダウンロード・伸張し、フォルダにある<code>.sketchplugin</code>ファイルをダブルクリックすればインストールできます（Plugins Directoryへの登録は現在準備中です）。</p>
+
+<h2 id="使い方">使い方</h2>
+
+<p>テキストレイヤーを選択し、プラグインを実行します。プラグインのウィンドウが表示されたら項目を選び、OKボタンで適用できます。</p>
+
+<p class="media">
+    <img src="/assets/img/2017/switch-text-spacing-plugin/plugin-panel.png" alt="">
+    <span class="mediaCaption">ちなみにOSの言語設定が日本語以外だと、英語で表示されます。もちろん表示が異なるだけで、機能は同じです。</span>
+</p>
+
+<p>日本語であれば、「<strong>5: 代替プロポーショナル幅</strong>」もしくは「<strong>8: カーニングなし</strong>」のいずれかを使用しましょう。</p>
+
+<p>TypographyパネルのText Spacingの項目と同等です（ただしフォントが持っていない機能も表示されます）。項目名の前にある数字は、キーボードの数字キーに対応しています。</p>
+
+<p class="media">
+    <img src="/assets/img/2017/switch-text-spacing-plugin/os-typography-panel.png" alt="">
+</p>
+
+<p>フルキーボードアクセスを「すべてのコントロール」にしている場合は、上下の矢印キーで切り替えも可能です。</p>
+
+<p class="media">
+    <img src="/assets/img/2017/switch-text-spacing-plugin/pref-keyboard-settings.png" alt="">
+</p>
+
+<h2 id="注意点">注意点</h2>
+
+<p>OpenTypeフォントの機能を使っているため、そもそもOpenTypeフォント以外では使えません（プラグイン自体は実行できます）。</p>
+
+<p>また、OpenTypeフォントでも必要な字形や設定が含まれている必要があるため、フォントによって設定が反映されない場合があります。<br />
+例えば、macOS標準のヒラギノ角ゴシックとヒラギノ明朝でみてみると、「半角」は両方とも適用できますが、「代替プロポーショナル幅」は角ゴシックのみに適用できます。</p>
+
+<p>適用できるかどうかを正確に知るには、Typographyパネルを表示して、Text Spacingの項目を表示してみてください。</p>
+
+<ol>
+<li>「View → Show Fonts」でFontsパネルを表示する</li>
+<li>Fontsパネルの歯車アイコンから「Typography&hellip;（タイポグラフィ&hellip;）」を選択する</li>
+<li>「Text Spacing（文字間隔）」を展開する</li>
+<li>テキストレイヤーの内容を選択すると適用できる内容が表示される</li>
+</ol>
+
+<p class="media">
+    <img src="/assets/img/2017/switch-text-spacing-plugin/text-spacing-features.png" alt="">
+    <span class="mediaCaption">OSにバンドルされている、ヒラギノ角ゴシックProNとヒラギノ明朝ProNの比較。ヒラギノ角ゴシックProNは使える項目が多い。ちなみに項目が最後まで表示されず切れているのですが、私だけですかね、コレ。</span>
+</p>
+
+<h2 id="蛇足">蛇足</h2>
+
+<p>「Sketchではカーニングが効かない」と言われていますが、これは間違いです。日本語でもフォントにペアカーニング情報が含まれていれば、きちんとカーニングされます。</p>
+
+<p class="media">
+    <img src="/assets/img/2017/switch-text-spacing-plugin/apply-kerning.png" alt="">
+    <span class="mediaCaption">Noto Sans CJK JP Mediumを使った例。上がカーニングを無効、下がカーニングを有効にした状態。差は小さいものの、カーニングの有無で幅が変わっている。</span>
+</p>
+
+<p>憶測ではありますが、この誤解が広まった原因は、モリサワフォントがペアカーニング情報を持っていなかったためでしょう。ちなみに、新しく配信されるフォントには情報が含まれています。</p>
+
+<ul class="links">
+    <li><a href="http://www.morisawa.co.jp/culture/dictionary/1988">ペアカーニング | フォント用語集 | 文字の手帖 | 株式会社モリサワ</a></li>
+</ul>
+
+<p>このプラグインで利用を推奨した「5: 代替プロポーショナル幅」を適用した場合、フォントに設定されているプロポーショナル情報を基に、文字前後のスペースを詰めるもので、ただ単に「カーニング」しているのではありません。そしてプロポーショナル幅を有効にすると、<a href="http://www.microsoft.com/typography/otspec/features_pt.htm#palt">OpenType Feature tagsの仕様</a>により自動的にペアカーニングも有効になります。</p>
+
+<p>また、「1: プロポーショナル幅」も「プロポーショナル幅」となっていますが、こちらは文字自体をプロポーショナルなものに切り替えます。簡単にいうと、Illustrator等で使える異体字があると思いますが、プロポーショナルの異体字を使っている状態です。</p>
+
+<p>ほかの全角・半角など「代替」と付かないものも異体字を使っており、例えば全角の文字列に「半角」を適用して見た目を半角のテキストにしていても、テキスト自体をエディタへコピー &amp; ペーストすると、半角ではなく元の文字列がペーストされると思います。（厳密にいうと違うところもあるので、鵜呑みにはしないでください）</p>
+
+<p>そして「文字は全て詰めろ！」という方は、ぜひ次の記事をご覧になってください。「Illustrator」とありますが、実はそれほど関係なく、文字を扱う上での基礎知識が詰まっている記事です。</p>
+
+<ul class="links">
+    <li><a href="http://suikoudesign.com/suikolog/design/1864" title="超初心者のためのIllustrator文字ツメ入門（追記あり） #moji_for_webya | Suikolog">超初心者のためのIllustrator文字ツメ入門（追記あり） #moji_for_webya | Suikolog</a></li>
+</ul>
+
+<p>また、前述の勉強会で講師をされていた<a href="https://twitter.com/works014">大石さん</a>のブログでも、文字の扱いについてたくさんの知見が詰まっているので、こちらも参考にしてみてください。</p>
+
+<ul class="links">
+    <li><a href="http://d.hatena.ne.jp/works014/20110827" title="メトリクスには「プロポーショナルメトリクス」の併用が必須_再 - なんでやねんDTP">メトリクスには「プロポーショナルメトリクス」の併用が必須_再 - なんでやねんDTP</a></li>
+</ul>
+
+<p>ご指摘等ありましたら、@<a href="https://twitter.com/littlebusters/">littlebusters</a>または<a href="https://www.facebook.com/creative.tweet/">Facebookページ</a>までお知らせください。</p>
+		</div>
+
+		<section class="article-taxonomy">
+			<h2 class="article-taxonomy-headding">tags</h2>
+			<ul class="tags">
+				
+				<li class="tagsItem"><a href="/tags/sketch.html">Sketch</a> </li>
+				
+				<li class="tagsItem"><a href="/tags/sketch-3.html">Sketch 3</a> </li>
+				
+				<li class="tagsItem"><a href="/tags/sketch-plugin.html">Sketch Plugin</a> </li>
+				
+			</ul>
+		</section>
+
+<div class="socialButtons">
+<div class="socialButtons_twitter">
+	<a href="https://twitter.com/intent/tweet?text=Sketch%e3%81%a7%e6%96%87%e5%ad%97%e8%a9%b0%e3%82%81%e3%82%92%e7%b0%a1%e5%8d%98%e3%81%ab%e9%81%a9%e7%94%a8%e3%81%a7%e3%81%8d%e3%82%8b%e3%83%97%e3%83%a9%e3%82%b0%e3%82%a4%e3%83%b3%e3%82%92%e4%bd%9c%e3%82%8a%e3%81%be%e3%81%97%e3%81%9f%e3%80%82&amp;url=http%3a%2f%2fcreative-tweet.net%2fblog%2f2017%2f01%2fswitch-text-spacing-plugin.html&amp;via=littlebusters" class="twitter-share-button"
+		data-lang="en"
+		data-url="http://creative-tweet.net/blog/2017/01/switch-text-spacing-plugin.html"
+		data-text="Sketchで文字詰めを簡単に適用できるプラグインを作りました。"
+		data-via="littlebusters" 
+		data-count="vertical"
+	>Tweet</a>
+</div>
+<div class="socialButtons_facebook">
+	<div 
+		class="fb-like"
+		data-href="http://creative-tweet.net/blog/2017/01/switch-text-spacing-plugin.html"
+		data-layout="box_count"
+		data-send="false"
+		data-width="100"
+		data-show-faces="false"
+	></div>
+</div>
+<div class="socialButtons_hatebu">
+	<a href="http://b.hatena.ne.jp/entry/creative-tweet.net/blog/2017/01/switch-text-spacing-plugin.html" class="hatena-bookmark-button"
+		data-hatena-bookmark-layout="vertical"
+		data-hatena-bookmark-title="Sketchで文字詰めを簡単に適用できるプラグインを作りました。"
+		data-hatena-bookmark-url="http://creative-tweet.net/blog/2017/01/switch-text-spacing-plugin.html">
+		<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		style="border: none">
+	</a>
+</div>
+<div class="socialButtons_googlep">
+	<div class="g-plusone" data-size="tall" data-href="http://creative-tweet.net/blog/2017/01/switch-text-spacing-plugin.html"></div>
+</div>
+</div>
+
+		<ul class="pager">
+			
+			<li>
+				<a href="http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-25.html" class="pager_prevItem">
+				<span class="pager_label-older">older: </span>
+				SketchからドキュメントをHTMLとして書き出せるDesign Docプラグイン - Sketch Plugin Advent Calendar 2016
+				</a>
+			</li>
+			
+		</ul>
+
+	</main>
+</div>
+
+
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>
