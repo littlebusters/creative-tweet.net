@@ -18,14 +18,14 @@
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Sketchで文字詰めを簡単に適用できるプラグインを作りました。" />
 <meta property="og:url" content="http://creative-tweet.net/blog/2017/01/switch-text-spacing-plugin.html" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="OpenTypeの字間に関する機能を、ショートカットを使って簡単に切り替えできるSketchプラグインを作りました。" />
 <meta property="og:image" content="http://creative-tweet.net/assets/img/2017/switch-text-spacing-plugin/switch-text-spacing-plugin-ogp.png" />
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@littlebusters">
 <meta name="twitter:title" content="Sketchで文字詰めを簡単に適用できるプラグインを作りました。">
 <meta name="twitter:url" content="http://creative-tweet.net/blog/2017/01/switch-text-spacing-plugin.html">
-<meta name="twitter:description" content="">
+<meta name="twitter:description" content="OpenTypeの字間に関する機能を、ショートカットを使って簡単に切り替えできるSketchプラグインを作りました。">
 <meta name="twitter:image" content="http://creative-tweet.net/assets/img/2017/switch-text-spacing-plugin/switch-text-spacing-plugin-ogp.png">
 </head>
 <body>
@@ -126,7 +126,8 @@
     <li><a href="http://www.morisawa.co.jp/culture/dictionary/1988">ペアカーニング | フォント用語集 | 文字の手帖 | 株式会社モリサワ</a></li>
 </ul>
 
-<p>このプラグインで利用を推奨した「5: 代替プロポーショナル幅」を適用した場合、フォントに設定されているプロポーショナル情報を基に、文字前後のスペースを詰めるもので、ただ単に「カーニング」しているのではありません。そしてプロポーショナル幅を有効にすると、<a href="http://www.microsoft.com/typography/otspec/features_pt.htm#palt">OpenType Feature tagsの仕様</a>により自動的にペアカーニングも有効になります。</p>
+<p>このプラグインで利用を推奨した「5: 代替プロポーショナル幅」を適用した場合、フォントに設定されているプロポーショナル情報を基に、文字前後のスペースを詰めるもので、ただ単に「カーニング」しているのではありません。<del>そしてプロポーショナル幅を有効にすると、<a href="http://www.microsoft.com/typography/otspec/features_pt.htm#palt">OpenType Feature tagsの仕様</a>により自動的にペアカーニングも有効になります。</del><br />
+<ins>［2017/1/10 23:45追記］「代替プロポーショナル幅（palt）」を有効にした場合は、「カーニング（kern）」は必須ではない（自動的に有効にならない）とご指摘いただきましたので、訂正します（ご指摘ありがとうございました）。仕様をきちんと読めてなかったのと、「kernを有効にしたらpaltは必須」というのをなぜか逆に捉えてしまっておりました、申し訳ありません。［追記おわり］<ins></p>
 
 <p>また、「1: プロポーショナル幅」も「プロポーショナル幅」となっていますが、こちらは文字自体をプロポーショナルなものに切り替えます。簡単にいうと、Illustrator等で使える異体字があると思いますが、プロポーショナルの異体字を使っている状態です。</p>
 
