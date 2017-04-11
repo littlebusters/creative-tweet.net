@@ -247,7 +247,7 @@
   </url>
   
   <url>
-    <loc>http://creative-tweet.net/sketch-3-basics.html</loc>
+    <loc>http://creative-tweet.net/sketch-3-basics/</loc>
     <lastmod>2015-04-29T09:30:00+09:00</lastmod>
   </url>
   
@@ -697,6 +697,7 @@
   
   <url>
     <loc>http://creative-tweet.net/categories.html</loc>
+    <lastmod>2014-12-22T09:30:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1002,6 +1003,7 @@
   
   <url>
     <loc>http://creative-tweet.net/tags.html</loc>
+    <lastmod>2012-12-10T09:30:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   

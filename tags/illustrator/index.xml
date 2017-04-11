@@ -2,11 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Illustrator on creative tweet.</title>
-    <link>http://creative-tweet.net/tags/illustrator.xml</link>
+    <link>http://creative-tweet.net/tags/illustrator.html</link>
     <description>Recent content in Illustrator on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <atom:link href="/tags/illustrator.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>2013/06/26 09:30:00 +09:00</lastBuildDate>
+    <atom:link href="/tags/illustrator.html" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Ps / Ai / Fw / Sketch ガチンコバトル勉強会 in 岡山を開催しましたよ。 #gcbtl</title>

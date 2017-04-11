@@ -2,11 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sketch 2 on creative tweet.</title>
-    <link>http://creative-tweet.net/tags/sketch-2.xml</link>
+    <link>http://creative-tweet.net/tags/sketch-2.html</link>
     <description>Recent content in Sketch 2 on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <atom:link href="/tags/sketch-2.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>2013/12/25 09:30:00 +09:00</lastBuildDate>
+    <atom:link href="/tags/sketch-2.html" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Sketch.appのリソースと購入方法を紹介するよ。 – Sketch.app Advent Calendar 2013</title>

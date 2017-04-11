@@ -2,11 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Osx on creative tweet.</title>
-    <link>http://creative-tweet.net/tags/osx.xml</link>
+    <link>http://creative-tweet.net/tags/osx.html</link>
     <description>Recent content in Osx on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <atom:link href="/tags/osx.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>2015/09/24 11:50:00 +09:00</lastBuildDate>
+    <atom:link href="/tags/osx.html" rel="self" type="application/rss+xml" />
     
     <item>
       <title>非Retinaディスプレイで、HiDPIのスクリーンショットを撮る方法とツールたちを紹介しますよ。</title>

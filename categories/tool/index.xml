@@ -2,11 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tool on creative tweet.</title>
-    <link>http://creative-tweet.net/categories/tool.xml</link>
+    <link>http://creative-tweet.net/categories/tool.html</link>
     <description>Recent content in Tool on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <atom:link href="/categories/tool.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>2017/01/10 12:00:00 +09:00</lastBuildDate>
+    <atom:link href="/categories/tool.html" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Sketchで文字詰めを簡単に適用できるプラグインを作りました。</title>

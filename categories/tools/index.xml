@@ -2,11 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tools on creative tweet.</title>
-    <link>http://creative-tweet.net/categories/tools.xml</link>
+    <link>http://creative-tweet.net/categories/tools.html</link>
     <description>Recent content in Tools on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <atom:link href="/categories/tools.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>2017/01/10 12:00:00 +09:00</lastBuildDate>
+    <atom:link href="/categories/tools.html" rel="self" type="application/rss+xml" />
     
     <item>
       <title>OpenTypeの字間に関する機能を簡単に切り替えできるSketchプラグイン</title>
