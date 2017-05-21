@@ -6,8 +6,17 @@
     <description>Recent content in Sketch 3 on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2017/01/10 12:00:00 +09:00</lastBuildDate>
+    <lastBuildDate>2017/05/21 12:00:00 +09:00</lastBuildDate>
     <atom:link href="/tags/sketch-3.html" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>「UIデザイナーのためのSketch入門＆実践ガイド」を読んで</title>
+      <link>http://creative-tweet.net/blog/2017/05/introductory-guide-to-sketch-for-ui-designers.html</link>
+      <pubDate>2017/05/21 12:00:00 +09:00</pubDate>
+      
+      <guid>http://creative-tweet.net/blog/2017/05/introductory-guide-to-sketch-for-ui-designers.html</guid>
+      <description>「UIデザイナーのためのSketch入門＆実践ガイド」を読んで</description>
+    </item>
     
     <item>
       <title>OpenTypeの字間に関する機能を簡単に切り替えできるSketchプラグイン</title>
@@ -88,15 +97,6 @@
       
       <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-20.html</guid>
       <description>Sketch Plugin Advent Calendar 2016 20日目。オープンパスを矢印にするArrowfyプラグインを紹介します。</description>
-    </item>
-    
-    <item>
-      <title>選択しているアートボードをキャンバスの中央に表示するArtboard Zoomプラグイン - Sketch Plugin Advent Calendar 2016</title>
-      <link>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-19.html</link>
-      <pubDate>2016/12/19 12:00:00 +09:00</pubDate>
-      
-      <guid>http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-19.html</guid>
-      <description>Sketch Plugin Advent Calendar 2016 19日目。選択しているアートボードをキャンバスの中央に表示するArtboard Zoomプラグインを紹介します。</description>
     </item>
     
   </channel>
