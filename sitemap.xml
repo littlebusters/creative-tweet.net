@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>http://creative-tweet.net/blog/2017/05/introductory-guide-to-sketch-for-ui-designers.html</loc>
@@ -1025,13 +1026,13 @@
   </url>
   
   <url>
-    <loc>http://creative-tweet.net/categories/tools.html</loc>
+    <loc>http://creative-tweet.net/tools.html</loc>
     <lastmod>2017-01-10T00:00:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://creative-tweet.net/tools.html</loc>
+    <loc>http://creative-tweet.net/categories/tools.html</loc>
     <lastmod>2017-01-10T00:00:00+09:00</lastmod>
     <priority>0</priority>
   </url>
