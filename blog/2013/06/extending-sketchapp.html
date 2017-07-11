@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/assets/css/main.css">
-<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="alternate" href="../../../index.xml" type="application/rss+xml" title="creative tweet.">
 <title>Sketch.app のかゆいところに手が届く!? プラグインを入れて使ってみよう。 | creative tweet.</title>
-<script async src="/assets/js/auie.js"></script>
+<script async src="../../../assets/js/auie.js"></script>
 
 
 
@@ -19,20 +19,20 @@
 <meta property="og:title" content="Sketch.app のかゆいところに手が届く!? プラグインを入れて使ってみよう。" />
 <meta property="og:url" content="http://creative-tweet.net/blog/2013/06/extending-sketchapp.html" />
 <meta property="og:description" content="Sketch.appへ移植された、Fireworksのコマンド集Orange Commandsを紹介します。" />
-<meta property="og:image" content="http://creative-tweet.net/assets/img/site-ogp.png" />
+<meta property="og:image" content="https://creative-tweet.net/assets/img/site-ogp.png" />
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@littlebusters">
 <meta name="twitter:title" content="Sketch.app のかゆいところに手が届く!? プラグインを入れて使ってみよう。">
 <meta name="twitter:url" content="http://creative-tweet.net/blog/2013/06/extending-sketchapp.html">
 <meta name="twitter:description" content="Sketch.appへ移植された、Fireworksのコマンド集Orange Commandsを紹介します。">
-<meta name="twitter:image" content="http://creative-tweet.net/assets/img/site-ogp.png">
+<meta name="twitter:image" content="https://creative-tweet.net/assets/img/site-ogp.png">
 </head>
 <body>
 <header class="siteHeader" role="banner">
 <h1 id="siteSign">
-<a href="/">
-<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+<a href="../../../">
+<img alt="creative tweet." src="../../../assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
 </a>
 </h1>
 
@@ -71,25 +71,25 @@ Sketch 2.2.4で動作を確認しているため、バージョンによって�
 <p>続いて、Sketchの環境設定でプラグインの有効化が必要ですので、［Sketch］メニューから、［Preferences］を選択します。</p>
 
 <p class="media">
-  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig1.png" alt="" />
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig1.png" alt="" />
 </p>
 
 <p>［Preferences］の［General］タブにある「Enable Scripting」をクリックして有効にすると、メニューに［Plugins］が表示されます。</p>
 
 <p class="media">
-  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig2.png" alt="" />
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig2.png" alt="" />
 </p>
 
 <p>続けて、［Plugins］メニューから［Custom Script&hellip;］を選択します。</p>
 
 <p class="media">
-  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig3.png" alt="" />
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig3.png" alt="" />
 </p>
 
 <p>JSTalkを記述するウィンドウが出てくるので、下にある歯車マークをクリックし、「Open Plugins Folder」を選択します。</p>
 
 <p class="media">
-  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig4.png" alt="" />
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig4.png" alt="" />
 </p>
 
 <p>FinderでPluginsフォルダが開きますので、その中に解凍してできたフォルダを入れると準備完了です。Gitが使える方は、このフォルダへcloneしてもOKです。</p>
@@ -102,14 +102,14 @@ Sketch 2.2.4で動作を確認しているため、バージョンによって�
 選択しているオブジェクト中で一番下にあるレイヤーを基準に、オブジェクトを入力した数値分の間隔を空けて水平方向に再配置します。オブジェクトを回転している場合は、回転していない状態と見なして再配置されます（角度を0に戻すと入力した値分の間隔が空いている）。垂直方向は変化しません。</p>
 
 <p class="media">
-  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig5.png" alt="" />
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig5.png" alt="" />
 </p>
 
 <p><strong>Space Vertical</strong><br />
 選択しているオブジェクト中で一番下にあるレイヤーを基準に、オブジェクトを入力した数値分の間隔を空けて垂直方向に再配置します。オブジェクトを回転している場合は、回転していない状態と見なして再配置されます（角度を0に戻すと入力した値分の間隔が空いている）。水平方向は変化しません。</p>
 
 <p class="media">
-  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig6.png" alt="" />
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig6.png" alt="" />
 </p>
 
 <h2 id="alpha-グループ">Alpha グループ</h2>
@@ -123,21 +123,21 @@ Sketch 2.2.4で動作を確認しているため、バージョンによって�
 入力した値分、幅と高さをオフセットしたオブジェクトを複製します（角丸の大きさや線幅は変更されません）。マイナスの値も入力できますが、オフセットした結果、幅や高さが0以下になる場合、同じ大きさのオブジェクトが複製されます。</p>
 
 <p class="media">
-  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig7.png" alt="" />
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig7.png" alt="" />
 </p>
 
 <p><strong>Repeat Horizontal</strong><br />
 選択しているオブジェクトを、入力した値の数だけ水平方向に複製します。オブジェクト同士の間隔は10pxになるようです。</p>
 
 <p class="media">
-  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig8.png" alt="" />
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig8.png" alt="" />
 </p>
 
 <p><strong>Repeat Vertical</strong><br />
 選択しているオブジェクトを、入力した値の数だけ垂直方向に複製します。オブジェクト同士の間隔は10pxになるようです。</p>
 
 <p class="media">
-  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig9.png" alt="" />
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig9.png" alt="" />
 </p>
 
 <h2 id="export-グループ">Export グループ</h2>
@@ -179,14 +179,14 @@ Sketch 2.2.4で動作を確認しているため、バージョンによって�
 任意の座標にガイドラインを作成します。値は、X, Y で入力し、垂直方向だけ作成する場合は、X 座標のみ（e.g. 10）、水平方向だけ作成する場合は、カンマ + Y 座標（e.g. ,10）と入力します。</p>
 
 <p class="media">
-  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig10.png" alt="" />
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig10.png" alt="" />
 </p>
 
 <p><strong>Around Selection</strong><br />
 選択しているオブジェクトを囲うように、ガイドラインを作成します。</p>
 
 <p class="media">
-  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig11.png" alt="" />
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig11.png" alt="" />
 </p>
 
 <p><strong>Clear All Guides in Current Artboard</strong><br />
@@ -205,14 +205,14 @@ Sketch 2.2.4で動作を確認しているため、バージョンによって�
 水平ガイドラインをリピートして作成します。値は、開始位置（X座標）, 間隔, リピート回数の順番で入力します。</p>
 
 <p class="media">
-  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig12.png" alt="" />
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig12.png" alt="" />
 </p>
 
 <p><strong>Repeat Guides vertically on Artboard</strong><br />
 垂直ガイドラインをリピートして作成します。値は、開始位置（Y座標）, 間隔, リピート回数の順番で入力します。</p>
 
 <p class="media">
-  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig13.png" alt="" />
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig13.png" alt="" />
 </p>
 
 <h2 id="pages-グループ">Pages グループ</h2>
@@ -237,7 +237,7 @@ Sketch 2.2.4で動作を確認しているため、バージョンによって�
 Positionの小数点以下の数値を四捨五入します。サイズも四捨五入されますが、すべてのアンカーポイントではなく、サイズ算出に使う外周のアンカーポイントのみが四捨五入されます。</p>
 
 <p class="media">
-  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig14.png" alt="" />
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig14.png" alt="" />
 </p>
 
 <p><strong>Set Position</strong><br />
@@ -247,7 +247,7 @@ Positionの小数点以下の数値を四捨五入します。サイズも四捨
 オブジェクトが2つ選択されている場合、各オブジェクトの左上座標を起点にオブジェクトを入れ替えます。</p>
 
 <p class="media">
-  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig15.png" alt="" />
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig15.png" alt="" />
 </p>
 
 <h2 id="properties-グループ">Properties グループ</h2>
@@ -256,14 +256,14 @@ Positionの小数点以下の数値を四捨五入します。サイズも四捨
 選択しているオブジェクトから、角丸が100%の矩形を作成します。</p>
 
 <p class="media">
-  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig16.png" alt="" />
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig16.png" alt="" />
 </p>
 
 <p><strong>Rotation&#8230;</strong><br />
 選択しているオブジェクトを、入力した値で回転します。複数選択している場合は、個別に回転します。グループ化されている場合、グループの角度が入力した値に設定されます。</p>
 
 <p class="media">
-  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig17.png" alt="" />
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig17.png" alt="" />
 </p>
 
 <p><strong>Set Radius&#8230;</strong><br />
@@ -275,14 +275,14 @@ Positionの小数点以下の数値を四捨五入します。サイズも四捨
 選択しているオブジェクトの高さを、最も値の大きいオブジェクトに揃えます。高さが変更されるオブジェクトは、下方向に延長されます。</p>
 
 <p class="media">
-  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig18.png" alt="" />
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig18.png" alt="" />
 </p>
 
 <p><strong>Equalize Width</strong><br />
 選択しているオブジェクトの幅を、最も値の大きいオブジェクトに揃えます。幅が変更されるオブジェクトは、右方向に延長されます。</p>
 
 <p class="media">
-  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig19.png" alt="" />
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig19.png" alt="" />
 </p>
 
 <p><strong>Height</strong><br />
@@ -292,14 +292,14 @@ Positionの小数点以下の数値を四捨五入します。サイズも四捨
 幅を基準に、4 : 3の大きさにスケーリングします。</p>
 
 <p class="media">
-  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig20.png" alt="" />
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig20.png" alt="" />
 </p>
 
 <p><strong>Scale to 16-9</strong><br />
 幅を基準に、16 : 9の大きさにスケーリングします。</p>
 
 <p class="media">
-  <img src="/assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig21.png" alt="" />
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig21.png" alt="" />
 </p>
 
 <p><strong>Set Size</strong><br />
@@ -319,11 +319,11 @@ Positionの小数点以下の数値を四捨五入します。サイズも四捨
 			<h2 class="article-taxonomy-headding">tags</h2>
 			<ul class="tags">
 				
-				<li class="tagsItem"><a href="/tags/sketch.html">Sketch</a> </li>
+				<li class="tagsItem"><a href="../../../tags/sketch.html">Sketch</a> </li>
 				
-				<li class="tagsItem"><a href="/tags/sketch-2.html">Sketch 2</a> </li>
+				<li class="tagsItem"><a href="../../../tags/sketch-2.html">Sketch 2</a> </li>
 				
-				<li class="tagsItem"><a href="/tags/plugin.html">Plugin</a> </li>
+				<li class="tagsItem"><a href="../../../tags/plugin.html">Plugin</a> </li>
 				
 			</ul>
 		</section>
@@ -349,11 +349,11 @@ Positionの小数点以下の数値を四捨五入します。サイズも四捨
 	></div>
 </div>
 <div class="socialButtons_hatebu">
-	<a href="http://b.hatena.ne.jp/entry/creative-tweet.net/blog/2013/06/extending-sketchapp.html" class="hatena-bookmark-button"
+	<a href="https://b.hatena.ne.jp/entry/creative-tweet.net/blog/2013/06/extending-sketchapp.html" class="hatena-bookmark-button"
 		data-hatena-bookmark-layout="vertical"
 		data-hatena-bookmark-title="Sketch.app のかゆいところに手が届く!? プラグインを入れて使ってみよう。"
 		data-hatena-bookmark-url="http://creative-tweet.net/blog/2013/06/extending-sketchapp.html">
-		<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		<img src="https://b.st-hatena.com/images/entry-button/button-only.gif"
 		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
 		style="border: none">
 	</a>
@@ -366,14 +366,14 @@ Positionの小数点以下の数値を四捨五入します。サイズも四捨
 		<ul class="pager">
 			
 			<li>
-				<a href="http://creative-tweet.net/blog/2013/06/battled-of-design-tool.html" class="pager_nextItem">
+				<a href="../../../blog/2013/06/battled-of-design-tool.html" class="pager_nextItem">
 				<span class="pager_label-newer">newer: </span>
 				Ps / Ai / Fw / Sketch ガチンコバトル勉強会 in 岡山を開催しましたよ。 #gcbtl
 				</a>
 			</li>
 			
 			<li>
-				<a href="http://creative-tweet.net/blog/2013/05/battle-of-design-tools.html" class="pager_prevItem">
+				<a href="../../../blog/2013/05/battle-of-design-tools.html" class="pager_prevItem">
 				<span class="pager_label-older">older: </span>
 				Ps / Ai / Fw / Sketch ガチンコバトル勉強会 in 岡山を6/22に開催しますよ。 #gcbtl
 				</a>
@@ -394,7 +394,7 @@ Positionの小数点以下の数値を四捨五入します。サイズも四捨
 <section class="authers-inform">
 <div class="site-auther">
 <h2 class="footer-heading" id="site-auther">auther</h2>
-<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+<img src="../../../assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
 </div>
 </section>
 
@@ -403,10 +403,10 @@ Positionの小数点以下の数値を四捨五入します。サイズも四捨
 <section class="site-contact">
 <h2 class="footer-heading" id="site-contact">contact</h2>
 <ul class="contact-list">
-<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
-<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
-<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
-<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+<li><a href="https://twitter.com/littlebusters"><img src="../../../assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="https://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="../../../assets/img/social-facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="../../../assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="../../../assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
 </ul>
 </section>
 

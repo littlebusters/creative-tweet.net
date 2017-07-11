@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/assets/css/main.css">
-<link rel="alternate" href="/index.xml" type="application/rss+xml" title="creative tweet.">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="alternate" href="../../../index.xml" type="application/rss+xml" title="creative tweet.">
 <title>Hugoをセットアップしてデプロイするまで［後編］CIサービスでビルドからデプロイを自動化するまで | creative tweet.</title>
-<script async src="/assets/js/auie.js"></script>
+<script async src="../../../assets/js/auie.js"></script>
 
 
 
@@ -19,20 +19,20 @@
 <meta property="og:title" content="Hugoをセットアップしてデプロイするまで［後編］CIサービスでビルドからデプロイを自動化するまで" />
 <meta property="og:url" content="http://creative-tweet.net/blog/2015/10/usage-hugo-2.html" />
 <meta property="og:description" content="CIサービスを利用して、Hugoのビルドからデプロイまでを自動化する手順を解説しています。" />
-<meta property="og:image" content="http://creative-tweet.net/assets/img/2015/usage-hugo-2/usage-hugo-2-ogp.png" />
+<meta property="og:image" content="https://creative-tweet.net/assets/img/2015/usage-hugo-2/usage-hugo-2-ogp.png" />
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@littlebusters">
 <meta name="twitter:title" content="Hugoをセットアップしてデプロイするまで［後編］CIサービスでビルドからデプロイを自動化するまで">
 <meta name="twitter:url" content="http://creative-tweet.net/blog/2015/10/usage-hugo-2.html">
 <meta name="twitter:description" content="CIサービスを利用して、Hugoのビルドからデプロイまでを自動化する手順を解説しています。">
-<meta name="twitter:image" content="http://creative-tweet.net/assets/img/2015/usage-hugo-2/usage-hugo-2-ogp.png">
+<meta name="twitter:image" content="https://creative-tweet.net/assets/img/2015/usage-hugo-2/usage-hugo-2-ogp.png">
 </head>
 <body>
 <header class="siteHeader" role="banner">
 <h1 id="siteSign">
-<a href="/">
-<img alt="creative tweet." src="/assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+<a href="../../../">
+<img alt="creative tweet." src="../../../assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
 </a>
 </h1>
 
@@ -45,19 +45,19 @@
 				<time class="publishedDatetime" datetime="2015-10-15T09:31:00&#43;09:00">2015/10/15</time>
 				<h1 class="article-title">Hugoをセットアップしてデプロイするまで［後編］CIサービスでビルドからデプロイを自動化するまで</h1>
 				
-				<img src="/assets/img/2015/usage-hugo-2/usage-hugo-2-hero.png" class="hero" alt="">
+				<img src="../../../assets/img/2015/usage-hugo-2/usage-hugo-2-hero.png" class="hero" alt="">
 				
 			</section>
 		</header>
 		
 		<div class="content-main">
-			<p>前編の「<a href="/blog/2015/10/usage-hugo-1.html">Hugoのセットアップからビルドするまで</a>」の続きです。後編は、CIサービスを使ってデプロイを自動化するまでの内容でお届けします。</p>
+			<p>前編の「<a href="../../../blog/2015/10/usage-hugo-1.html">Hugoのセットアップからビルドするまで</a>」の続きです。後編は、CIサービスを使ってデプロイを自動化するまでの内容でお届けします。</p>
 
 <p>掲載しているスクリーンショットは、すでに設定済みのものを削除したり再設定したりしています。従って、はじめて設定する場合とは異なる場合がありますので、その辺りはよしなに補正をお願いします。</p>
 
 <h2 id="ビルドとデプロイ">ビルドとデプロイ</h2>
 
-<p>「<a href="/blog/2015/10/good-bye-wordpress.html">WordPressからHugoへ移行して、ビルドとデプロイを自動化した話</a>」の通り、次のプロセスを経て公開するようにしています。</p>
+<p>「<a href="../../../blog/2015/10/good-bye-wordpress.html">WordPressからHugoへ移行して、ビルドとデプロイを自動化した話</a>」の通り、次のプロセスを経て公開するようにしています。</p>
 
 <ol>
 <li>ローカルで記事の作成やレイアウトなどの開発→適当にコミット</li>
@@ -76,49 +76,49 @@
 <p>ヘッダーの「＋Create」から「Application」を選択して進めます。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/wercker-step01.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step01.png" alt="">
 </p>
 
 <p>画面が切り替わり、<b>Choose a Git provider</b>で、Bitbucketを選択します。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/wercker-step02.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step02.png" alt="">
 </p>
 
 <p>Bitbucketの認証画面が出てくると思いますので、内容を確認して［アクセスを許可する］ボタンをクリックします。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/wercker-step03.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step03.png" alt="">
 </p>
 
 <p>続いて<b>Select a repository</b>に切り替わり、リポジトリの一覧が表示されます。使用するリポジトリを選択し、［Use selected repo］ボタンをクリックします。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/wercker-step04.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step04.png" alt="">
 </p>
 
 <p><b>Select owner</b>のセクションでは、オーナーを選択します。おそらく自分のアカウントしか表示されていないと思いますので、そのまま［Use selected owner］ボタンをクリックします。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/wercker-step05.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step05.png" alt="">
 </p>
 
 <p><b>Configure access</b>の項目ではデプロイキーの設定の仕方を選択します。おそらくややこしいことはしていないと思いますので、素直にrecommendedされている「Add the deploy key to the selected repository for me」を選択して、［Next step］ボタンを押します。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/wercker-step06.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step06.png" alt="">
 </p>
 
 <p><b>Setup your wercker.yml</b>では、ここまでの内容を元にwerckerでの処理ステップを記述した<code>wercker.yml</code>ファイルの内容が生成されます。ただ、この内容は今回使いませんので、「Docker enabled. See our stacks documentation for more details.」にチェックを入れた状態で［Next step］ボタンをクリックします。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/wercker-step07.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step07.png" alt="">
 </p>
 
 <p><b>Awesome! you are all done!</b>では、「Make my app public」のチェックを外した状態で［Finish］ボタンをクリックします。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/wercker-step08.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step08.png" alt="">
 </p>
 
 <h3 id="デプロイキーを生成する">デプロイキーを生成する</h3>
@@ -128,25 +128,25 @@
 <p>設定が終わると、作成したアプリケーションのダッシュボードが表示されますので、右上の歯車アイコンをクリックし、設定画面へアクセスします。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/wercker-step09.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step09.png" alt="">
 </p>
 
 <p>左メニューの<b>SSH Keys</b>を選択し、［Generate new key pair］ボタンをクリックします。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/wercker-step10.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step10.png" alt="">
 </p>
 
 <p>［Name］へキーの名前を入力します。のちの設定で使うので、わかりやすい名前にしておきましょう。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/wercker-step11.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step11.png" alt="">
 </p>
 
 <p>［Generate］ボタンをクリックするとキーが生成されます。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/wercker-step12.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step12.png" alt="">
 </p>
 
 <h3 id="デプロイする対象を設定する">デプロイする対象を設定する</h3>
@@ -154,13 +154,13 @@
 <p>続けて、左メニューの<b>targets</b>へアクセスしデプロイする対象を設定していきます。［Add deploy target］のプルダウンメニューから「custom deploy」を選択します。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/wercker-step13.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step13.png" alt="">
 </p>
 
 <p><b>Deploy target name</b>は、ターゲットの名前ですので、任意に設定します。<b>Auto deploy</b>は、ビルドが成功すれば自動的にプッシュするオプションです。今回は、ウェブサイトのデプロイですし自動化をすることが主たる目的ですのでチェックを入れます。その下のテキストエリアには、ブランチ名を入力します。基本的にmasterブランチへプシュするので「master」と入力し［Save］ボタンをクリックします。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/wercker-step14.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step14.png" alt="">
 </p>
 
 <p>Saveできると<b>Deploy pipeline</b>という項目が表示されますので、［Add new variable］ボタンをクリックして変数を追加します。</p>
@@ -170,13 +170,13 @@
 <p>ラジオボタンは<b>SSH Key pair</b>を選択し、プルダウンメニューから先ほど生成したSSH Keyを選択します。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/wercker-step15.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step15.png" alt="">
 </p>
 
 <p>項目を入力したら［OK］ボタンで確定し、さらに［Save］ボタンもクリックしておきます。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/wercker-step16.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step16.png" alt="">
 </p>
 
 <h3 id="githubのリポジトリへデプロイキーを設定する">GitHubのリポジトリへデプロイキーを設定する</h3>
@@ -184,7 +184,7 @@
 <p>GitHubへアクセスし、該当のリポジトリへアクセスします。右にある<b>Settings</b>メニューへアクセスします。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/wercker-step17.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step17.png" alt="">
 </p>
 
 <p>続いて左にある<b>Deploy Key</b>へアクセスします。</p>
@@ -192,7 +192,7 @@
 <p>［Add deploy key］ボタンをクリックし、Titleへ適当な名前を、Keyへ先ほどコピーした内容をペーストし、書き込めるように「Allow write access」にチェックを入れて［Add key］ボタンをクリックします。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/wercker-step18.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step18.png" alt="">
 </p>
 
 <p>おそらくパスワードを聞かれるので、パスワードを入力すると追加されます。</p>
@@ -229,7 +229,7 @@ deploy:
 <p class="annotation">ちなみに、どういった動作をするのかを確認するには、パッケージ詳細ページの右上の「repo」リンクから、GitHubへジャンプし、shファイルやymlファイルを確認してください。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/wercker-step19.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step19.png" alt="">
 </p>
 
 <p><b>build</b>では文字通りビルドの手順を記述していきます。Hugoのインストールからビルドまでを実行する<a href="https://app.wercker.com/#applications/54a7744c6b3ba8733de4dcde/tab/details">arjen/hugo-build</a>を使っています。これはHugoのGitHubページへデプロイするまでを解説している、<a href="https://gohugo.io/tutorials/automated-deployments/">チュートリアル</a>でも使われているステップです。</p>
@@ -257,19 +257,19 @@ deploy:
 <p><b>Dashboard</b>へアクセスし、ハイライトされている「<b>Connetct a repository</b>」クリックします。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/deploybot-step01.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/deploybot-step01.png" alt="">
 </p>
 
 <p>GitHubを選択し［Connect new account］ボタンをクリックします。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/deploybot-step02.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/deploybot-step02.png" alt="">
 </p>
 
 <p>GitHubの<b>Authorize application</b>というタイトルで、DeployBotのアクセスを許可するかどうか認証が入りますので、内容を確認して認証してください。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/deploybot-step03.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/deploybot-step03.png" alt="">
 </p>
 
 <p>認証すると元の画面に戻りますので、プルダウンメニューからプル対象のリポジトリを選択します。下の<b>Title:</b>へリポジトリ名が入力されるので、必要に応じて修正してください。</p>
@@ -279,13 +279,13 @@ deploy:
 <p>［Connect］ボタンをクリックし、Dashboardへ戻ります。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/deploybot-step04.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/deploybot-step04.png" alt="">
 </p>
 
 <p>続いて「<b>Create an environment</b>」をクリックします。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/deploybot-step05.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/deploybot-step05.png" alt="">
 </p>
 
 <p><b>General settings</b>の<b>Name</b>はデプロイ名ですので、どこにデプロイするとか動作がわかるようにしておくと良いでしょう。今回は「Push to Public」という名前にしました。</p>
@@ -295,7 +295,7 @@ deploy:
 <p>解説していない項目はデフォルトのままでOKです。設定し終えたら［Save］ボタンをクリックします。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/deploybot-step06.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/deploybot-step06.png" alt="">
 </p>
 
 <p>続いての「<b>Add a new server</b>」で何をするかを選択します。</p>
@@ -303,7 +303,7 @@ deploy:
 <p>今回はFTPSを用いてレンタルサーバーアップロードしますので、<b>Files</b>の「FTP」を選択します。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/deploybot-step07.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/deploybot-step07.png" alt="">
 </p>
 
 <p>画面が切り替わったら、サーバーアドレスやアカウント情報を入力します。</p>
@@ -321,7 +321,7 @@ deploy:
 <p>設定ができたら［Save］ボタンをクリックします。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/deploybot-step08.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/deploybot-step08.png" alt="">
 </p>
 
 <p>画面が切り替わると、今回設定した内容の一覧が表示されます。この中にFTPSの接続テスト結果があり、「Connection established」となっていれば接続が成功しています。</p>
@@ -329,31 +329,31 @@ deploy:
 <p>一通り眺めたら、左上のDashboardへ移動します。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/deploybot-step09.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/deploybot-step09.png" alt="">
 </p>
 
 <p>「<b>Ready to be deployed</b>」のタイトルとともに［Deploy］ボタンが表示されていると思いますので、ボタンをクリックします。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/deploybot-step10.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/deploybot-step10.png" alt="">
 </p>
 
 <p>続いて、デプロイのメモをつけたりやプレビューできたりといった画面に切り替わります。下の［Start deployment］ボタンをクリックすればデプロイ（アップロード）が始まります。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/deploybot-step11.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/deploybot-step11.png" alt="">
 </p>
 
 <p>デプロイ中…</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/deploybot-step12.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/deploybot-step12.png" alt="">
 </p>
 
 <p>成功すればダッシュボードへログが残ります。</p>
 
 <p class="media">
-    <img src="/assets/img/2015/usage-hugo-2/deploybot-step13.png" alt="">
+    <img src="../../../assets/img/2015/usage-hugo-2/deploybot-step13.png" alt="">
 </p>
 
 <p>設定は以上です。</p>
@@ -371,7 +371,7 @@ deploy:
 			<h2 class="article-taxonomy-headding">tags</h2>
 			<ul class="tags">
 				
-				<li class="tagsItem"><a href="/tags/hugo.html">Hugo</a> </li>
+				<li class="tagsItem"><a href="../../../tags/hugo.html">Hugo</a> </li>
 				
 			</ul>
 		</section>
@@ -397,11 +397,11 @@ deploy:
 	></div>
 </div>
 <div class="socialButtons_hatebu">
-	<a href="http://b.hatena.ne.jp/entry/creative-tweet.net/blog/2015/10/usage-hugo-2.html" class="hatena-bookmark-button"
+	<a href="https://b.hatena.ne.jp/entry/creative-tweet.net/blog/2015/10/usage-hugo-2.html" class="hatena-bookmark-button"
 		data-hatena-bookmark-layout="vertical"
 		data-hatena-bookmark-title="Hugoをセットアップしてデプロイするまで［後編］CIサービスでビルドからデプロイを自動化するまで"
 		data-hatena-bookmark-url="http://creative-tweet.net/blog/2015/10/usage-hugo-2.html">
-		<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		<img src="https://b.st-hatena.com/images/entry-button/button-only.gif"
 		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
 		style="border: none">
 	</a>
@@ -414,14 +414,14 @@ deploy:
 		<ul class="pager">
 			
 			<li>
-				<a href="http://creative-tweet.net/blog/2015/10/sketch-has-been-updated-to-3.4.html" class="pager_nextItem">
+				<a href="../../../blog/2015/10/sketch-has-been-updated-to-3.4.html" class="pager_nextItem">
 				<span class="pager_label-newer">newer: </span>
 				Sketch 3が3.4へアップデート！その内容をざっくりまとめました。
 				</a>
 			</li>
 			
 			<li>
-				<a href="http://creative-tweet.net/blog/2015/10/usage-hugo-1.html" class="pager_prevItem">
+				<a href="../../../blog/2015/10/usage-hugo-1.html" class="pager_prevItem">
 				<span class="pager_label-older">older: </span>
 				Hugoをセットアップしてデプロイするまで［前編］Hugoのセットアップからビルドするまで
 				</a>
@@ -442,7 +442,7 @@ deploy:
 <section class="authers-inform">
 <div class="site-auther">
 <h2 class="footer-heading" id="site-auther">auther</h2>
-<img src="/assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+<img src="../../../assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
 </div>
 </section>
 
@@ -451,10 +451,10 @@ deploy:
 <section class="site-contact">
 <h2 class="footer-heading" id="site-contact">contact</h2>
 <ul class="contact-list">
-<li><a href="https://twitter.com/littlebusters"><img src="/assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
-<li><a href="http://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="/assets/img/social-facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
-<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="/assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
-<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="/assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+<li><a href="https://twitter.com/littlebusters"><img src="../../../assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="https://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="../../../assets/img/social-facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="../../../assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="../../../assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
 </ul>
 </section>
 
