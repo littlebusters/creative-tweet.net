@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Screen Shot on creative tweet.</title>
-    <link>http://creative-tweet.net/tags/screen-shot.html</link>
+    <link>https://creative-tweet.net/tags/screen-shot.html</link>
     <description>Recent content in Screen Shot on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
@@ -11,10 +11,10 @@
     
     <item>
       <title>非Retinaディスプレイで、HiDPIのスクリーンショットを撮る方法とツールたちを紹介しますよ。</title>
-      <link>http://creative-tweet.net/blog/2015/09/screenshot-by-hidpi-on-osx.html</link>
+      <link>https://creative-tweet.net/blog/2015/09/screenshot-by-hidpi-on-osx.html</link>
       <pubDate>2015/09/24 11:50:00 +09:00</pubDate>
       
-      <guid>http://creative-tweet.net/blog/2015/09/screenshot-by-hidpi-on-osx.html</guid>
+      <guid>https://creative-tweet.net/blog/2015/09/screenshot-by-hidpi-on-osx.html</guid>
       <description>非Retinaディスプレイで、HiDPIのスクリーンショットを撮る方法とツールたちを紹介しますよ。</description>
     </item>
     

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gadget on creative tweet.</title>
-    <link>http://creative-tweet.net/categories/gadget.html</link>
+    <link>https://creative-tweet.net/categories/gadget.html</link>
     <description>Recent content in Gadget on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
@@ -11,10 +11,10 @@
     
     <item>
       <title>@niftyでWorld WiMAXが使いにくい件</title>
-      <link>http://creative-tweet.net/blog/2012/06/nifty-de-wimax.html</link>
+      <link>https://creative-tweet.net/blog/2012/06/nifty-de-wimax.html</link>
       <pubDate>2012/06/28 09:30:00 +09:00</pubDate>
       
-      <guid>http://creative-tweet.net/blog/2012/06/nifty-de-wimax.html</guid>
+      <guid>https://creative-tweet.net/blog/2012/06/nifty-de-wimax.html</guid>
       <description>@niftyとの契約で、World WiMAXを使おうとすると、オプションサービスがUQ WiMAXと異なるため、うまく使えるかどうか@niftyに問い合わせてみました。</description>
     </item>
     
