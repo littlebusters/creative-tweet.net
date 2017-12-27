@@ -6,8 +6,17 @@
     <description>Recent content in Creative on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2017/01/10 12:00:00 +09:00</lastBuildDate>
+    <lastBuildDate>2017/12/28 12:47:00 +09:00</lastBuildDate>
     <atom:link href="/categories/creative.html" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>もしかしたら役に立つかもしれない、Sketchの5つのTips</title>
+      <link>https://creative-tweet.net/blog/2017/12/5-sketch-tips.html</link>
+      <pubDate>2017/12/28 12:47:00 +09:00</pubDate>
+      
+      <guid>https://creative-tweet.net/blog/2017/12/5-sketch-tips.html</guid>
+      <description>知っておくともしかするとどこかで役に立つかもしれない、そんなSketchのTipsを5つほど取り上げました。</description>
+    </item>
     
     <item>
       <title>Sketchで文字詰めを簡単に適用できるプラグインを作りました。</title>
@@ -88,15 +97,6 @@
       
       <guid>https://creative-tweet.net/blog/2016/12/sketch-plugin-ac-19.html</guid>
       <description>Sketch Plugin Advent Calendar 2016 19日目。選択しているアートボードをキャンバスの中央に表示するArtboard Zoomプラグインを紹介します。</description>
-    </item>
-    
-    <item>
-      <title>シンボルをその場で複製して入れ替えるDuplicate Symbolプラグイン - Sketch Plugin Advent Calendar 2016</title>
-      <link>https://creative-tweet.net/blog/2016/12/sketch-plugin-ac-18.html</link>
-      <pubDate>2016/12/18 12:00:00 +09:00</pubDate>
-      
-      <guid>https://creative-tweet.net/blog/2016/12/sketch-plugin-ac-18.html</guid>
-      <description>Sketch Plugin Advent Calendar 2016 18日目。シンボルをその場で複製して入れ替えるDuplicate Symbolプラグインを紹介します。</description>
     </item>
     
   </channel>
