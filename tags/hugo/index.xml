@@ -6,34 +6,38 @@
     <description>Recent content in Hugo on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2015/10/15 09:31:00 +09:00</lastBuildDate>
-    <atom:link href="/tags/hugo.html" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Oct 2015 09:31:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://creative-tweet.net/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Hugoをセットアップしてデプロイするまで［後編］CIサービスでビルドからデプロイを自動化するまで</title>
       <link>https://creative-tweet.net/blog/2015/10/usage-hugo-2.html</link>
-      <pubDate>2015/10/15 09:31:00 +09:00</pubDate>
+      <pubDate>Thu, 15 Oct 2015 09:31:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2015/10/usage-hugo-2.html</guid>
-      <description>CIサービスを利用して、Hugoのビルドからデプロイまでを自動化する手順を解説しています。</description>
+      <description>&lt;p&gt;前編の「&lt;a href=&#34;../../blog/2015/10/usage-hugo-1.html&#34;&gt;Hugoのセットアップからビルドするまで&lt;/a&gt;」の続きです。後編は、CIサービスを使ってデプロイを自動化するまでの内容でお届けします。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Hugoをセットアップしてデプロイするまで［前編］Hugoのセットアップからビルドするまで</title>
       <link>https://creative-tweet.net/blog/2015/10/usage-hugo-1.html</link>
-      <pubDate>2015/10/15 09:30:00 +09:00</pubDate>
+      <pubDate>Thu, 15 Oct 2015 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2015/10/usage-hugo-1.html</guid>
-      <description>WordPressからHugoへの移行手順と、Hugoのセットアップやテンプレートの作成からビルドするまでを解説しています。</description>
+      <description>&lt;p&gt;今回はWordPressからHugoへの乗り換えの一部始終を記載していきます。&lt;/p&gt;
+
+&lt;p&gt;ちょっと長くなったため、前編と後編に分割しています。前編はHugoでサイトを生成するまで、後編はデプロイを自動化するまで、の内容でお届けします。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>WordPressからHugoへ移行して、ビルドとデプロイを自動化した話</title>
       <link>https://creative-tweet.net/blog/2015/10/good-bye-wordpress.html</link>
-      <pubDate>2015/10/01 09:30:50 +09:00</pubDate>
+      <pubDate>Thu, 01 Oct 2015 09:30:50 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2015/10/good-bye-wordpress.html</guid>
-      <description>ブログで使っていたWordPressから、サイト全体をStatic Site GeneratorのHugoへ移行し、ビルドとデプロイまでを自動化したその概要です。</description>
+      <description>&lt;p&gt;サイトをリニューアルついでに、WordPressからHugoへ乗り換えました。&lt;/p&gt;</description>
     </item>
     
   </channel>

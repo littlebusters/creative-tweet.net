@@ -6,25 +6,29 @@
     <description>Recent content in Osx on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2015/09/24 11:50:00 +09:00</lastBuildDate>
-    <atom:link href="/tags/osx.html" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Sep 2015 23:50:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://creative-tweet.net/tags/osx/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>非Retinaディスプレイで、HiDPIのスクリーンショットを撮る方法とツールたちを紹介しますよ。</title>
       <link>https://creative-tweet.net/blog/2015/09/screenshot-by-hidpi-on-osx.html</link>
-      <pubDate>2015/09/24 11:50:00 +09:00</pubDate>
+      <pubDate>Thu, 24 Sep 2015 23:50:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2015/09/screenshot-by-hidpi-on-osx.html</guid>
-      <description>非Retinaディスプレイで、HiDPIのスクリーンショットを撮る方法とツールたちを紹介しますよ。</description>
+      <description>&lt;p&gt;今更な感じもしますが、非Retinaモデルで高解像度（HiDPI）のスクリーンショットを撮る方法と、ディスプレイ解像度の切り替え時に便利なアプリケーションを紹介したいと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Retina画像の書き出しを補助する［Fireworks拡張機能］</title>
       <link>https://creative-tweet.net/tools/retina_image_exporter/detail.html</link>
-      <pubDate>2013/02/02 09:30:00 +09:00</pubDate>
+      <pubDate>Sat, 02 Feb 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/tools/retina_image_exporter/detail.html</guid>
-      <description>特定の接尾語がついているスライスを拡大し、Retina用画像として書き出しと、通常の画像も書き出すFireworksの拡張機能です。</description>
+      <description>これは何？ Fireworksでオブジェクトを拡大し、高解像度デバイス向けの画像の書き出しを行う拡張機能です。@1x画像の解像度を2倍にした上</description>
     </item>
     
   </channel>

@@ -6,43 +6,45 @@
     <description>Recent content in Fireworks Extension on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2016/06/20 12:00:00 +09:00</lastBuildDate>
-    <atom:link href="/tags/fireworks-extension.html" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Jun 2016 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://creative-tweet.net/tags/fireworks-extension/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Fireworksのファイル構成をJSONとして書き出すFw to JSON［Fireworks拡張機能］</title>
       <link>https://creative-tweet.net/tools/fw_to_json/detail.html</link>
-      <pubDate>2016/06/20 12:00:00 +09:00</pubDate>
+      <pubDate>Mon, 20 Jun 2016 00:00:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/tools/fw_to_json/detail.html</guid>
-      <description>FireworksのDocumentDOMを、JSONとして書き出す拡張機能です。書き出したJSONは、Sketch Pluginを使ってSketchへ取り込むこともできます。</description>
+      <description>これは何？ FireworksのDocumentDOMを、JSONとして書き出す拡張機能です。 動作環境とライセンス OS X版 Fireworks CS6（Window</description>
     </item>
     
     <item>
       <title>Photoshopライブエフェクトが拡大縮小できるPsLE Scaler［Fireworks拡張機能］</title>
       <link>https://creative-tweet.net/tools/psle_scaler/detail.html</link>
-      <pubDate>2013/04/16 09:30:00 +09:00</pubDate>
+      <pubDate>Tue, 16 Apr 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/tools/psle_scaler/detail.html</guid>
-      <description>Photoshopライブエフェクトを拡大縮小できるFireworksのコマンド「PsLE Scaler」を配布しています。</description>
+      <description>これは何？ オブジェクトの拡大縮小に合わせて、Photoshopライブエフェクトを拡大縮小できる拡張機能です。 動作環境とライセンス Fireworks CS3以上</description>
     </item>
     
     <item>
       <title>イラレからテキストボックスをペーストの際、サイズのずれを修正する イラレからペースト［Fireworks拡張機能］</title>
       <link>https://creative-tweet.net/tools/paste_from_ai/detail.html</link>
-      <pubDate>2013/04/16 09:30:00 +09:00</pubDate>
+      <pubDate>Tue, 16 Apr 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/tools/paste_from_ai/detail.html</guid>
-      <description>IllustratorからFireworksへテキストボックスをコピー &amp;amp; ペーストした場合に、幅が大きくなってしまう現象を回避できる拡張機能です。複数オブジェクトのペーストにも対応。</description>
+      <description>これは何？ IllustratorからFireworksへテキストボックスをコピー &amp;amp; ペーストした場合に、幅が大きくなってしまう現象を回避できる</description>
     </item>
     
     <item>
       <title>Fireworksで混植ができるFont Mixer［Fireworks拡張機能］</title>
       <link>https://creative-tweet.net/tools/font_mixer/detail.html</link>
-      <pubDate>2012/01/24 09:30:00 +09:00</pubDate>
+      <pubDate>Tue, 24 Jan 2012 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/tools/font_mixer/detail.html</guid>
-      <description>Fireworksで、和文×和布や和文×欧文をはじめ、ひらがなやカタカナなどの文字種を選んで混植ができる拡張機能です。混植時のフォンとサイズとベースラインの調整もできます。</description>
+      <description>これは何？ Fireworksで混植ができる拡張機能です。和文×和文はもちろん、和文×欧文やひらがな・カタカナなどの文字種を選択しての混植も可</description>
     </item>
     
   </channel>

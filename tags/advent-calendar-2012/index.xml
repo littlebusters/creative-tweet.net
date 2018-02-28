@@ -6,25 +6,29 @@
     <description>Recent content in Advent Calendar 2012 on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2012/12/10 09:30:00 +09:00</lastBuildDate>
-    <atom:link href="/tags/advent-calendar-2012.html" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Dec 2012 09:30:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://creative-tweet.net/tags/advent-calendar-2012/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>往年の名フォント「Chicago」 #LOVEFONT</title>
       <link>https://creative-tweet.net/blog/2012/12/lovefont-chicago.html</link>
-      <pubDate>2012/12/10 09:30:00 +09:00</pubDate>
+      <pubDate>Mon, 10 Dec 2012 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2012/12/lovefont-chicago.html</guid>
-      <description>大都会岡山 Advent Calendar 2012で、#LOVEFONT。Chicagoについて軽く。</description>
+      <description>&lt;p&gt;あ…ありのまま 今起こった事を話すぜ！「大都会岡山 Advent Calendarを見ていたら、11日目に登録されていた」な…何を言っているのかわからねーと思うが　おれも　何をされたのかわからなかった…&lt;/p&gt;
+
+&lt;p&gt;ということで、内容は不問らしい &lt;a href=&#34;http://www.adventar.org/calendars/39&#34;&gt;大都会岡山 Advent Calendar 2012&lt;/a&gt; 11日目で、#LOVEFONTをぶち込みます！&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>画像をRetina対応で書き出しする、Fireworksの拡張機能作ったよ。</title>
       <link>https://creative-tweet.net/blog/2012/12/retina-image-exporter.html</link>
-      <pubDate>2012/12/06 09:30:00 +09:00</pubDate>
+      <pubDate>Thu, 06 Dec 2012 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2012/12/retina-image-exporter.html</guid>
-      <description>Fireworks Lover Advent Calendar 2012 7日目の記事です。Retina対応画像を書き出す、Fireworksの拡張機能を作りました！</description>
+      <description>&lt;p&gt;&lt;a title=&#34;Fireworks Lover Advent Calendar 2012&#34; href=&#34;http://www.adventar.org/calendars/14&#34; target=&#34;_blank&#34;&gt;Fireworks Lover Advent Calendar 2012&lt;/a&gt;の7日目の記事です。&lt;/p&gt;</description>
     </item>
     
   </channel>

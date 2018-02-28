@@ -6,25 +6,37 @@
     <description>Recent content in Sublime Text on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2014/12/13 09:30:00 +09:00</lastBuildDate>
-    <atom:link href="/tags/sublime-text.html" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Dec 2014 09:30:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://creative-tweet.net/tags/sublime-text/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>たまによく使うSublimeTextのパッケージGistとTakanaを紹介しますよ。 Sublime Text Advent Calendar 2014</title>
       <link>https://creative-tweet.net/blog/2014/12/sublime-text-advent-calendar-2014-13.html</link>
-      <pubDate>2014/12/13 09:30:00 +09:00</pubDate>
+      <pubDate>Sat, 13 Dec 2014 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2014/12/sublime-text-advent-calendar-2014-13.html</guid>
-      <description>Sublime Text Advent Calendar 2013 の13日目の記事です。Sublime TextからGistがゴニョゴニョできるパッケージと、SCSSのライブプレビューができるTakanaを紹介します。</description>
+      <description>&lt;p&gt;この記事は&lt;a href=&#34;http://www.adventar.org/calendars/407&#34;&gt;Sublime Text Advent Calendar 2014 &amp;#8211; Adventar&lt;/a&gt;の13日目の記事です。&lt;/p&gt;
+
+&lt;p&gt;私がたまによく使う、Sublime Textのパッケージ、GistとTakanaを紹介します。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Web制作者のためのSublime Textの教科書を読みましたよ。</title>
       <link>https://creative-tweet.net/blog/2014/03/read-a-sublime-text-book.html</link>
-      <pubDate>2014/03/24 09:30:00 +09:00</pubDate>
+      <pubDate>Mon, 24 Mar 2014 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2014/03/read-a-sublime-text-book.html</guid>
-      <description>「Web制作者のためのSublime Textの教科書」の所感と、「あなたのSublime Textを見せてください」企画のスクリーンショットと設定をここで晒します。</description>
+      <description>&lt;p class=&#34;media&#34;&gt;
+  &lt;img src=&#34;../../assets/img/2014/2014-03-24-read-a-sublime-text-book/sublimetext2book-h.jpg&#34; alt=&#34;「Web制作者のためのSublime Textの教科書」の表紙&#34;&gt;
+&lt;/p&gt;
+
+&lt;p&gt;先日（2014/3/20）発売された 「&lt;a href=&#34;http://www.amazon.co.jp/gp/product/4844335677/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=4844335677&amp;amp;linkCode=as2&amp;amp;tag=littlebuste04-22&#34;&gt;Web制作者のためのSublime Textの教科書&lt;/a&gt;」を頂戴いたしました！買おうと思っていたところのまさかのアレで、一人小躍りしてしまいました。関係者の皆さま、ありがとうございます！！&lt;/p&gt;
+
+&lt;p&gt;一通り読み終えましたが、設定やショートカットの基礎から業務で使う上でのポイントなどを押さえており、「教科書」の名の通りの内容となっていました。簡単ではありますが、読んだ所感などをここに記しておきます。&lt;/p&gt;</description>
     </item>
     
   </channel>

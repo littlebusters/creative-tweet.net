@@ -6,25 +6,33 @@
     <description>Recent content in Javascript on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2014/12/23 09:30:00 +09:00</lastBuildDate>
-    <atom:link href="/tags/javascript.html" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Dec 2014 09:30:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://creative-tweet.net/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>大都会岡山で開催されるフロント寄りの勉強会を紹介しますよ。大都会岡山 Advent Calendar 2014</title>
       <link>https://creative-tweet.net/blog/2014/12/daitokai-advent-calendar-2014-23.html</link>
-      <pubDate>2014/12/23 09:30:00 +09:00</pubDate>
+      <pubDate>Tue, 23 Dec 2014 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2014/12/daitokai-advent-calendar-2014-23.html</guid>
-      <description>大都会岡山 Advent Calendar 2014 23日目です。今回は、大都会岡山で開催されているフロント寄りの勉強会を、過去に開催された雰囲気とともにお伝えします。</description>
+      <description>&lt;p&gt;アタック25の様相を見せる「&lt;a href=&#34;http://www.adventar.org/calendars/661&#34;&gt;大都会岡山Advent Calendar&lt;/a&gt;」23日目です。前日は@littlebustersさんの「&lt;a href=&#34;http://creative-tweet.net/blog/2014/12/daitokai-advent-calendar-2014-22.html&#34;&gt;大都会からの刺客として「プロとして恥ずかしくない 新・WEBデザインの大原則」の執筆に参加しました。 大都会岡山 Advent Calendar 2014&lt;/a&gt;」でした（長い）。 明日は@littlebustersさんです、はい3日目がんばります。&lt;/p&gt;
+
+&lt;p&gt;「勉強会が多い（要出典）」と言われている大都会ですが、その中でフロント（どこまで？）系のセミナーや勉強会を、開催された様子とともに少し紹介したいと思います。これがない！というのがあれば、まさかり投げてください。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>「FLAutoKerning.js」のインターフェイスを作ってみましたよ。</title>
       <link>https://creative-tweet.net/blog/2012/05/ui-for-flautokerning.html</link>
-      <pubDate>2012/05/01 09:30:00 +09:00</pubDate>
+      <pubDate>Tue, 01 May 2012 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2012/05/ui-for-flautokerning.html</guid>
-      <description>@fladdictさん作の「FLAutoKerning.js」で使用するカーニングペア情報を、ブラウザで設定できるインターフェイスを作りました。ペアでしかカーニングできないという低機能ですが、キーボード操作だけでカーニングできます。</description>
+      <description>&lt;p&gt;@&lt;a href=&#34;https://twitter.com/fladdict&#34;&gt;fladdict&lt;/a&gt;さん作の「&lt;a href=&#34;http://fladdict.net/blog/2011/02/auto-kerning.html&#34;&gt;FLAutoKerning.js&lt;/a&gt;」で使用するカーニングペア情報を、ブラウザで設定できるインターフェイスをつくってみました。&lt;/p&gt;
+
+&lt;p&gt;ペアでしかカーニングできないという低機能ですが、キーボード操作だけでカーニングできます。ただし、モリサワの&lt;a href=&#34;http://typesquare.com/&#34;&gt;TypeSquare&lt;/a&gt;向けに作成していますので、他のWebフォントで使えるかどうかは未検証です。実際にご利用の際は、ご自身のサーバに設置してお使いください。（ライセンス的なアレで）&lt;/p&gt;</description>
     </item>
     
   </channel>

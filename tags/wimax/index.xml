@@ -6,16 +6,20 @@
     <description>Recent content in Wimax on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2012/06/28 09:30:00 +09:00</lastBuildDate>
-    <atom:link href="/tags/wimax.html" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Jun 2012 09:30:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://creative-tweet.net/tags/wimax/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>@niftyでWorld WiMAXが使いにくい件</title>
       <link>https://creative-tweet.net/blog/2012/06/nifty-de-wimax.html</link>
-      <pubDate>2012/06/28 09:30:00 +09:00</pubDate>
+      <pubDate>Thu, 28 Jun 2012 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2012/06/nifty-de-wimax.html</guid>
-      <description>@niftyとの契約で、World WiMAXを使おうとすると、オプションサービスがUQ WiMAXと異なるため、うまく使えるかどうか@niftyに問い合わせてみました。</description>
+      <description>&lt;p&gt;所用でアメリカへ行くことになりまして（主に仕事で）、渡米前にどうやってインターネットの接続を維持しようかと思案していたところ、アメリカではWiMAXが無料で使えるという情報を得まして、詳しく調べてみました。&lt;/p&gt;
+
+&lt;p&gt;既に@niftyでWiMAXを契約しているので面倒な手続きもなく、PCはもちろんスマートフォンも接続できるウマーな状況が得られると期待しておりましたが…&lt;/p&gt;</description>
     </item>
     
   </channel>

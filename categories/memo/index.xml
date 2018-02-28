@@ -6,16 +6,18 @@
     <description>Recent content in Memo on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2013/02/02 09:30:00 +09:00</lastBuildDate>
-    <atom:link href="/categories/memo.html" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Feb 2013 09:30:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://creative-tweet.net/categories/memo/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Retina画像の書き出しを補助する［Fireworks拡張機能］</title>
       <link>https://creative-tweet.net/tools/retina_image_exporter/detail.html</link>
-      <pubDate>2013/02/02 09:30:00 +09:00</pubDate>
+      <pubDate>Sat, 02 Feb 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/tools/retina_image_exporter/detail.html</guid>
-      <description>特定の接尾語がついているスライスを拡大し、Retina用画像として書き出しと、通常の画像も書き出すFireworksの拡張機能です。</description>
+      <description>これは何？ Fireworksでオブジェクトを拡大し、高解像度デバイス向けの画像の書き出しを行う拡張機能です。@1x画像の解像度を2倍にした上</description>
     </item>
     
   </channel>

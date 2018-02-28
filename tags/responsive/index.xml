@@ -6,16 +6,18 @@
     <description>Recent content in Responsive on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2014/06/23 09:30:00 +09:00</lastBuildDate>
-    <atom:link href="/tags/responsive.html" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Jun 2014 09:30:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://creative-tweet.net/tags/responsive/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>「レスポンシブWebデザイン入門—モバイルファーストの考え方からのアプローチ」を読みましたよ。</title>
       <link>https://creative-tweet.net/blog/2014/06/read-a-primer-on-rwd.html</link>
-      <pubDate>2014/06/23 09:30:00 +09:00</pubDate>
+      <pubDate>Mon, 23 Jun 2014 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2014/06/read-a-primer-on-rwd.html</guid>
-      <description>前川昌幸さんの著書「レスポンシブWebデザイン入門—モバイルファーストの考え方からのアプローチ」を読みましたので、その所感を少々。</description>
+      <description>&lt;p&gt;本を頂いてからずいぶんと経ってしまいましたが、やっと読了できましたので所感をポストしておきます。&lt;/p&gt;</description>
     </item>
     
   </channel>

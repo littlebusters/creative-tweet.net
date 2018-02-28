@@ -6,16 +6,20 @@
     <description>Recent content in Guard on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2013/02/06 09:30:00 +09:00</lastBuildDate>
-    <atom:link href="/tags/guard.html" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Feb 2013 09:30:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://creative-tweet.net/tags/guard/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>LiveReload Windows版が落ちまくるので、guard-livereloadでなんとかしてみた話。</title>
       <link>https://creative-tweet.net/blog/2013/02/guard-livereload-installation.html</link>
-      <pubDate>2013/02/06 09:30:00 +09:00</pubDate>
+      <pubDate>Wed, 06 Feb 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2013/02/guard-livereload-installation.html</guid>
-      <description>落ちまくるLiveReload Windows Alpha版の代わりに、guard-livereloadをインストールして、Firefoxで無事LIveReloadを使えるようにする作業記録です。</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://livereload.com/&#34;&gt;LiveReload&lt;/a&gt; Windows版を使っていたのですが、ある日を境に起動後30秒もしない間に落ちてしまうという現象に陥りました。alpha版なので致し方ないかなとも思いましたが、代わりにguard-livereloadをインストールし、無事動作に至ったその作業記録です。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

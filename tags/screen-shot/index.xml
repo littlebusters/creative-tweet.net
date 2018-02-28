@@ -6,16 +6,20 @@
     <description>Recent content in Screen Shot on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2015/09/24 11:50:00 +09:00</lastBuildDate>
-    <atom:link href="/tags/screen-shot.html" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Sep 2015 23:50:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://creative-tweet.net/tags/screen-shot/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>非Retinaディスプレイで、HiDPIのスクリーンショットを撮る方法とツールたちを紹介しますよ。</title>
       <link>https://creative-tweet.net/blog/2015/09/screenshot-by-hidpi-on-osx.html</link>
-      <pubDate>2015/09/24 11:50:00 +09:00</pubDate>
+      <pubDate>Thu, 24 Sep 2015 23:50:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2015/09/screenshot-by-hidpi-on-osx.html</guid>
-      <description>非Retinaディスプレイで、HiDPIのスクリーンショットを撮る方法とツールたちを紹介しますよ。</description>
+      <description>&lt;p&gt;今更な感じもしますが、非Retinaモデルで高解像度（HiDPI）のスクリーンショットを撮る方法と、ディスプレイ解像度の切り替え時に便利なアプリケーションを紹介したいと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

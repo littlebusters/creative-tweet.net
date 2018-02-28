@@ -6,25 +6,31 @@
     <description>Recent content in Jsf on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2013/12/24 09:30:00 +09:00</lastBuildDate>
-    <atom:link href="/tags/jsf.html" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 Dec 2013 09:30:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://creative-tweet.net/tags/jsf/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Fireworksのコマンドを作ってみよう。 – Fireworks Lover Advent Calendar 2013</title>
       <link>https://creative-tweet.net/blog/2013/12/fireworks-advent-calendar-2013-1215.html</link>
-      <pubDate>2013/12/24 09:30:00 +09:00</pubDate>
+      <pubDate>Tue, 24 Dec 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2013/12/fireworks-advent-calendar-2013-1215.html</guid>
-      <description>Fireworksのコマンドの作り方です。コマンドをつくる上で、便利な拡張機能も紹介しています。</description>
+      <description>&lt;p&gt;この記事は&lt;a href=&#34;http://www.adventar.org/calendars/136&#34;&gt;Fireworks Lover Advent Calendar 2013&lt;/a&gt; の空いていた15日目の記事です。あと若干のリクエストがあったので書いております。&lt;/p&gt;
+
+&lt;p&gt;さまざまな方が解説されている中、あえて今一度Fireworksのコマンドの作り方を書いてみます。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Fireworks拡張機能「Font Mixer」制作メモ</title>
       <link>https://creative-tweet.net/blog/2012/02/font-mixer-memo.html</link>
-      <pubDate>2012/02/05 11:30:00 +09:00</pubDate>
+      <pubDate>Sun, 05 Feb 2012 23:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2012/02/font-mixer-memo.html</guid>
-      <description></description>
+      <description>&lt;p&gt;先日公開した、&lt;a href=&#34;../01/font-mixer-100.html&#34; title=&#34;Fireworksの混植拡張機能、Font Mixerを作成しました。&#34;&gt;Fireworks拡張機能「Font Mixer」&lt;/a&gt;を制作するにあたっての自分用のメモですが、何かのヒントなれば、と公開します。&lt;/p&gt;
+
+&lt;p&gt;拡張機能といっても、ライブラリだったりスタイルだったりしますが、今回はコマンドおよびコマンドパネルについてです。&lt;/p&gt;</description>
     </item>
     
   </channel>

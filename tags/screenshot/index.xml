@@ -6,16 +6,20 @@
     <description>Recent content in Screenshot on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2013/10/28 09:30:00 +09:00</lastBuildDate>
-    <atom:link href="/tags/screenshot.html" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Oct 2013 09:30:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://creative-tweet.net/tags/screenshot/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>iOSのブラウザスクリーンショットは、mixtureとRollPaperを組み合わせるとラクだった件</title>
       <link>https://creative-tweet.net/blog/2013/10/easy-to-take-screenshot.html</link>
-      <pubDate>2013/10/28 09:30:00 +09:00</pubDate>
+      <pubDate>Mon, 28 Oct 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2013/10/easy-to-take-screenshot.html</guid>
-      <description>MIXTUERとRollpaperを使うと、スマートデバイスでページ全体のスクリーンショットを撮るのが楽になりますよ、というお話です。</description>
+      <description>&lt;p&gt;最近はmixture を使って組み上げることが多いのですが、使っている理由の一つにライブリロードがあります。&lt;/p&gt;
+
+&lt;p&gt;正直ライブリロードだけなら珍しいことはないのですが、ブラウザに拡張機能などを入れることなく1つのブラウザを操作するだけで、mixtureのビルドインサーバーに接続しているすべてのブラウザ（デバイスを問わず）のページ移動を同期するため、快適な確認作業とスクリーンショット撮りができるのです。（逆に、各ブラウザで別々のページを確認できないのですが）&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -6,16 +6,18 @@
     <description>Recent content in Image Processing on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2012/10/20 09:30:00 +09:00</lastBuildDate>
-    <atom:link href="/tags/image-processing.html" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Oct 2012 09:30:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://creative-tweet.net/tags/image-processing/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>TinyPNGは無劣化じゃないよ！！というお話。</title>
       <link>https://creative-tweet.net/blog/2012/10/tinypng-isnot-lossless-compression.html</link>
-      <pubDate>2012/10/20 09:30:00 +09:00</pubDate>
+      <pubDate>Sat, 20 Oct 2012 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2012/10/tinypng-isnot-lossless-compression.html</guid>
-      <description>一部でTinyPNGが可逆っぽく出回っていたので、不幸な方が増えないために記事を書きました。</description>
+      <description>&lt;p&gt;サイトにも思いっきり“lossy compression（不可逆圧縮）”と書いてあるんですが、TinyPNGは無劣化じゃありません。色の変化が少ないように8bitカラーに落として容量を軽くしています。一部で無劣化っぽく出回っていたので、不幸な人が増えないことを祈ってポストします。&lt;/p&gt;</description>
     </item>
     
   </channel>

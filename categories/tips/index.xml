@@ -6,61 +6,85 @@
     <description>Recent content in Tips on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2015/09/24 11:50:00 +09:00</lastBuildDate>
-    <atom:link href="/categories/tips.html" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Sep 2015 23:50:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://creative-tweet.net/categories/tips/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>非Retinaディスプレイで、HiDPIのスクリーンショットを撮る方法とツールたちを紹介しますよ。</title>
       <link>https://creative-tweet.net/blog/2015/09/screenshot-by-hidpi-on-osx.html</link>
-      <pubDate>2015/09/24 11:50:00 +09:00</pubDate>
+      <pubDate>Thu, 24 Sep 2015 23:50:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2015/09/screenshot-by-hidpi-on-osx.html</guid>
-      <description>非Retinaディスプレイで、HiDPIのスクリーンショットを撮る方法とツールたちを紹介しますよ。</description>
+      <description>&lt;p&gt;今更な感じもしますが、非Retinaモデルで高解像度（HiDPI）のスクリーンショットを撮る方法と、ディスプレイ解像度の切り替え時に便利なアプリケーションを紹介したいと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Sketch 3でスライドづくりに役立つプラグインやTipsなど紹介しますよ。 Sketch 3 Advent Calendar 2014</title>
       <link>https://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-25.html</link>
-      <pubDate>2014/12/25 09:30:00 +09:00</pubDate>
+      <pubDate>Thu, 25 Dec 2014 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-25.html</guid>
-      <description>Sketch 3 でプレゼンテーションスライドを作成するためのTipやプラグインを紹介しています。</description>
+      <description>&lt;p&gt;「&lt;a href=&#34;http://www.adventar.org/calendars/347&#34;&gt;Sketch 3 Advent Calendar 2014&lt;/a&gt;」25日目、最後の記事となりました。Sketch 3 Advent Calendar 2014にご参加いただいたみなさま、お疲れさまでした！！&lt;/p&gt;
+
+&lt;p&gt;今回は、インターフェイスデザインに特化しているSketchで、プレゼンテーションスライドをつくってみよう！というお話です。スライドを作る上での設定や、便利なプラグインやTipsを紹介したいと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>大都会関係ない、裏Sketch 3 Advent CalendarでTipsを4つほど。大都会岡山 Advent Calendar 2014</title>
       <link>https://creative-tweet.net/blog/2014/12/daitokai-advent-calendar-2014-24.html</link>
-      <pubDate>2014/12/24 12:00:00 +09:00</pubDate>
+      <pubDate>Wed, 24 Dec 2014 00:00:00 +0000</pubDate>
       
       <guid>https://creative-tweet.net/blog/2014/12/daitokai-advent-calendar-2014-24.html</guid>
-      <description>ブログテーマに沿った大都会ネタがないので、Sketch 3 Advent Calendarの空いているところを埋めるべく、裏Sketch 3 Advent CalendarでTipsを4つ紹介します。</description>
+      <description>&lt;p&gt;アタック25の様相を見せる「&lt;a href=&#34;http://www.adventar.org/calendars/661&#34;&gt;大都会岡山Advent Calendar&lt;/a&gt;」24日目です。前日は@littlebustersさんの「&lt;a href=&#34;http://creative-tweet.net/blog/2014/12/daitokai-advent-calendar-2014-23.html&#34;&gt;大都会岡山で開催されるフロント寄りの勉強会を紹介しますよ。大都会岡山 Advent Calendar 2014 | creative tweet.&lt;/a&gt;」でした。&lt;/p&gt;
+
+&lt;p&gt;ラストは、@&lt;a href=&#34;https://twitter.com/ryosms&#34;&gt;ryosms&lt;/a&gt;さんです。どんなすごいエントリーになるのでしょうか、期待しましょう！&lt;/p&gt;
+
+&lt;p&gt;ブログのテーマに沿った大都会ネタがないので、&lt;a href=&#34;http://www.adventar.org/calendars/347&#34;&gt;Sketch 3 Advent Calendar 2014&lt;/a&gt;の空いてるところを埋める裏Sketch 3 Advent Calendarをします。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Sketch 3でレイヤーがどこにあろうと、確実にドラッグできるキーコンビネーションを紹介しますよ。 Sketch 3 Advent Calendar 2014</title>
       <link>https://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-23.html</link>
-      <pubDate>2014/12/23 09:30:00 +09:00</pubDate>
+      <pubDate>Tue, 23 Dec 2014 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-23.html</guid>
-      <description>Sketch 3 で背面レイヤーを簡単にドラッグするためのキーコンビネーションを紹介します。</description>
+      <description>&lt;p&gt;「&lt;a href=&#34;http://www.adventar.org/calendars/347&#34;&gt;Sketch 3 Advent Calendar 2014&lt;/a&gt;」23日目の記事です。&lt;/p&gt;
+
+&lt;p&gt;多分「Sketch 3の基本。」に書き忘れている（この記事公開時点で）、軽めのキーコンビネーションネタでお届けします。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Sketch（や他のアプリ）で、文字詰めをする方法を解説するよ。</title>
       <link>https://creative-tweet.net/blog/2014/10/apply-proportional-metrics-on-sketch.html</link>
-      <pubDate>2014/10/24 09:30:00 +09:00</pubDate>
+      <pubDate>Fri, 24 Oct 2014 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2014/10/apply-proportional-metrics-on-sketch.html</guid>
-      <description>PhotoshopやIllustratorなどのAdobeプロダクト以外のOSXアプリケーションで、文字詰めをする方法を解説しています。</description>
+      <description>&lt;p&gt;文字詰めができるアプリケーションというと、やはりAdobeのプロダクトがその筆頭でしょう。裏を返せば、それ以外のアプリケーションでは、まともに文字詰めができるものがない、という状況です。Sketchが大々的にフィーチャーされる最中、やはり文字詰めができないことを気になさっている方が大勢いらっしゃいました。&lt;/p&gt;
+
+&lt;p&gt;しかし、OpenTypeの機能を使うことで、実は文字詰めができることはご存知でしょうか？&lt;/p&gt;
+
+&lt;p&gt;今回は、Sketchをはじめとした、Adobeアプリケーション以外で文字詰めをする方法をご紹介します。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>知っておくとちょっと幸せになれるIllustratorの小技10コ</title>
       <link>https://creative-tweet.net/blog/2012/10/10-illustrator-tips-201210.html</link>
-      <pubDate>2012/10/23 09:30:00 +09:00</pubDate>
+      <pubDate>Tue, 23 Oct 2012 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2012/10/10-illustrator-tips-201210.html</guid>
-      <description>Illustratorで知っておくとちょっと幸せになれる10個の小技をまとめました。</description>
+      <description>&lt;p&gt;久しぶりにIllustratorをガッツリと使う機会があったので、知っておくとちょっと幸せになれる小技をまとめてみました。使用しているのは、Illustrator CS6（Windowsパッケージ版）ですので、他のバージョンだと動作の異なる場合があるかもしれませんが、ご了承ください。&lt;/p&gt;</description>
     </item>
     
   </channel>

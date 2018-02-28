@@ -6,25 +6,27 @@
     <description>Recent content in Translation on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2014/04/26 09:30:00 +09:00</lastBuildDate>
-    <atom:link href="/tags/translation.html" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 26 Apr 2014 09:30:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://creative-tweet.net/tags/translation/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
-      <title>Sketch（Sketch 3）のメニューと環境設定を日本語へ意訳をしましたよ。</title>
+      <title>Sketchのメニューと環境設定を日本語へ意訳をしましたよ。</title>
       <link>https://creative-tweet.net/blog/2014/04/japanese-translation-for-sketch3.html</link>
-      <pubDate>2014/04/26 09:30:00 +09:00</pubDate>
+      <pubDate>Sat, 26 Apr 2014 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2014/04/japanese-translation-for-sketch3.html</guid>
-      <description>Sketch（Sketch 3）のメニューと環境設定の日本語への意訳をしてみました。SketchファイルおよびPDFファイルをダウンロードできます。</description>
+      <description>&lt;p&gt;Sketchのメニューを日本語へ意訳をしてみました。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Sketch.appのメニューを日本語に翻訳（意訳）してみましたよ。</title>
       <link>https://creative-tweet.net/blog/2013/05/translate-sketchapp.html</link>
-      <pubDate>2013/05/12 09:30:00 +09:00</pubDate>
+      <pubDate>Sun, 12 May 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2013/05/translate-sketchapp.html</guid>
-      <description>Sketch.appのメニューを日本語に翻訳（意訳）して、SketchファイルとPDFにしてみました。</description>
+      <description>&lt;p&gt;タイトルの通りです。べ、別にSketchバブルにあやかって、翻訳したわけじゃないんだからね！&lt;/p&gt;</description>
     </item>
     
   </channel>

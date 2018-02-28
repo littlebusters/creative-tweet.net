@@ -6,43 +6,47 @@
     <description>Recent content in Tools on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2017/01/10 12:00:00 +09:00</lastBuildDate>
-    <atom:link href="/categories/tools.html" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Jan 2017 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://creative-tweet.net/categories/tools/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>OpenTypeの字間に関する機能を簡単に切り替えできるSketchプラグイン</title>
       <link>https://creative-tweet.net/tools/sketch_switch_text_spacing/detail.html</link>
-      <pubDate>2017/01/10 12:00:00 +09:00</pubDate>
+      <pubDate>Tue, 10 Jan 2017 00:00:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/tools/sketch_switch_text_spacing/detail.html</guid>
-      <description>SketchでOpenTypeの字間に関する機能（プロポーショナルメトリクスや半角など）を、Typographyパネルを開くことなく直接切り替えできるプラグインです。</description>
+      <description>これは何？ OpenTypeの字間に関する機能を、Typographyパネルを使わずに切り替えることができるSketchプラグインです。 動作環</description>
     </item>
     
     <item>
       <title>Sketch 3が3.4へアップデート！その内容をざっくりまとめました。</title>
       <link>https://creative-tweet.net/blog/2015/10/sketch-has-been-updated-to-3.4.html</link>
-      <pubDate>2015/10/27 01:00:00 +09:00</pubDate>
+      <pubDate>Tue, 27 Oct 2015 01:00:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2015/10/sketch-has-been-updated-to-3.4.html</guid>
-      <description>Sketch 3が3.4へアップデートしました。この記事ではその内容を簡単にまとめています。</description>
+      <description>&lt;p&gt;Sketch 3.4がリリースされましたので、アップデート内容を簡単にまとめてみました。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>非Retinaディスプレイで、HiDPIのスクリーンショットを撮る方法とツールたちを紹介しますよ。</title>
       <link>https://creative-tweet.net/blog/2015/09/screenshot-by-hidpi-on-osx.html</link>
-      <pubDate>2015/09/24 11:50:00 +09:00</pubDate>
+      <pubDate>Thu, 24 Sep 2015 23:50:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2015/09/screenshot-by-hidpi-on-osx.html</guid>
-      <description>非Retinaディスプレイで、HiDPIのスクリーンショットを撮る方法とツールたちを紹介しますよ。</description>
+      <description>&lt;p&gt;今更な感じもしますが、非Retinaモデルで高解像度（HiDPI）のスクリーンショットを撮る方法と、ディスプレイ解像度の切り替え時に便利なアプリケーションを紹介したいと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Sketchでレイヤー名を正規表現でリネームするSketchプラグイン</title>
       <link>https://creative-tweet.net/tools/sketch_regexp_rename/detail.html</link>
-      <pubDate>2015/01/23 12:00:00 +09:00</pubDate>
+      <pubDate>Fri, 23 Jan 2015 00:00:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/tools/sketch_regexp_rename/detail.html</guid>
-      <description>正規表現でレイヤー名をリネームするSketchプラグインです。</description>
+      <description>これは何？ 選択したレイヤーを正規表現でリネームできるSketchプラグインです。 動作環境 Sketch 3.2以降 ライセンス MITライセンス 使い方 対象とす</description>
     </item>
     
   </channel>
