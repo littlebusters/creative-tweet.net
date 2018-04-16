@@ -44,13 +44,15 @@
 			<section class="article-header-section">
 				<time class="publishedDatetime" datetime="2015-10-15T09:31:00&#43;09:00">2015/10/15</time>
 				<h1 class="article-title">Hugoをセットアップしてデプロイするまで［後編］CIサービスでビルドからデプロイを自動化するまで</h1>
-				
-				<img src="../../../assets/img/2015/usage-hugo-2/usage-hugo-2-hero.png" class="hero" alt="">
-				
 			</section>
 		</header>
 		
 		<div class="content-main">
+			<figure>
+				
+				<img src="../../../assets/img/2015/usage-hugo-2/usage-hugo-2-hero.png" class="hero" alt="">
+				
+			</figure>
 			<p>前編の「<a href="../../../blog/2015/10/usage-hugo-1.html">Hugoのセットアップからビルドするまで</a>」の続きです。後編は、CIサービスを使ってデプロイを自動化するまでの内容でお届けします。</p>
 
 <p>掲載しているスクリーンショットは、すでに設定済みのものを削除したり再設定したりしています。従って、はじめて設定する場合とは異なる場合がありますので、その辺りはよしなに補正をお願いします。</p>
@@ -206,24 +208,21 @@
 <p>動作を1つ1つ記述することも可能ですが、動作をまとめたパッケージとしてwercker自身や他のユーザーが作成・公開したものを<a href="https://app.wercker.com/#explore">Registry</a>で探すことができます。</p>
 
 <p>その中から必要なものを組み合わせて作成した<code>wercker.yml</code>はこんな感じです。</p>
-
-<pre><code class="language-wercker.yml">box: golang
-build:
-    steps:
-        - arjen/hugo-build
-deploy:
-    steps:
-        - leipert/add-ssh-key-gh-bb:
-            keyname: GITHUB_DEPLOY_KEY
-        - add-to-known_hosts:
-            hostname: github.com
-        - leipert/git-push:
-            host: github.com
-            repo: littlebusters/creative-tweet.net
-            basedir: public
-            clean_removed_files: true
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-wercker.yml" data-lang="wercker.yml">box<span class="p">:</span><span class="w"> </span>golang<span class="w">
+</span><span class="w"></span>build<span class="p">:</span><span class="w">
+</span><span class="w">    </span>steps<span class="p">:</span><span class="w">
+</span><span class="w">        </span>-<span class="w"> </span>arjen/hugo-build<span class="w">
+</span><span class="w"></span>deploy<span class="p">:</span><span class="w">
+</span><span class="w">    </span>steps<span class="p">:</span><span class="w">
+</span><span class="w">        </span>-<span class="w"> </span>leipert/add-ssh-key-gh-bb<span class="p">:</span><span class="w">
+</span><span class="w">            </span>keyname<span class="p">:</span><span class="w"> </span>GITHUB_DEPLOY_KEY<span class="w">
+</span><span class="w">        </span>-<span class="w"> </span>add-to-known_hosts<span class="p">:</span><span class="w">
+</span><span class="w">            </span>hostname<span class="p">:</span><span class="w"> </span>github.com<span class="w">
+</span><span class="w">        </span>-<span class="w"> </span>leipert/git-push<span class="p">:</span><span class="w">
+</span><span class="w">            </span>host<span class="p">:</span><span class="w"> </span>github.com<span class="w">
+</span><span class="w">            </span>repo<span class="p">:</span><span class="w"> </span>littlebusters/creative-tweet.net<span class="w">
+</span><span class="w">            </span>basedir<span class="p">:</span><span class="w"> </span>public<span class="w">
+</span><span class="w">            </span>clean_removed_files<span class="p">:</span><span class="w"> </span><span class="kc">true</span></code></pre></div>
 <p><b>box</b>は使用する仮想環境を指定します。今回は準備されている<a href="https://app.wercker.com/#applications/51ad0329c67e056078000876/tab/details">golangのbox</a>を使用しました（参考：<a href="https://app.wercker.com/#explore/boxes/search/main">boxの一覧</a>）。</p>
 
 <p class="annotation">ちなみに、どういった動作をするのかを確認するには、パッケージ詳細ページの右上の「repo」リンクから、GitHubへジャンプし、shファイルやymlファイルを確認してください。</p>
