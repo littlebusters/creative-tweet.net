@@ -6,10 +6,19 @@
     <description>Recent content in Javascript on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Tue, 23 Dec 2014 09:30:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 16 Apr 2018 23:09:00 +0900</lastBuildDate>
     
 	<atom:link href="https://creative-tweet.net/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vue.js初学者によるVue.jsのコトハジメ</title>
+      <link>https://creative-tweet.net/blog/2018/04/beginning-vuejs.html</link>
+      <pubDate>Mon, 16 Apr 2018 23:09:00 +0900</pubDate>
+      
+      <guid>https://creative-tweet.net/blog/2018/04/beginning-vuejs.html</guid>
+      <description>&lt;p&gt;Vue.jsを始めるにあたっての基礎知識的なこと（公式ドキュメントの「はじめに」に相当）を丁寧な感じにまとめてみました。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>大都会岡山で開催されるフロント寄りの勉強会を紹介しますよ。大都会岡山 Advent Calendar 2014</title>
