@@ -57,7 +57,7 @@
 
 <p>簡単なVue.jsのコードであれば、書いてることがなんとなく理解できるようになれる想定です。</p>
 
-<p>前提としては、</p>
+<p>筆者についてですが、</p>
 
 <ul>
 <li>Vue.jsを使って「とあるゲーム」用のツールをつくってみた上での所業。</li>
@@ -72,7 +72,7 @@
 
 <h2 id="vue-jsのインストール">Vue.jsのインストール</h2>
 
-<p>Vue.jsのインストールについては、「<a href="https://jp.vuejs.org/v2/guide/installation.html">インストール — Vue.js</a>」に書かれていますが、WebpackとかCLIとか準備しているとそこで挫折してしまうため、<a href="https://jsfiddle.net/">JSFiddle</a>や<a href="https://codepen.io">CodePen</a>などのオンラインコードプレイグラウンドを使いましょう。（JavaScriptの設定で、Vue.jsをの読み込みを忘れずに！）今回のサンプルはCodePenへリンクをしています。</p>
+<p>Vue.jsのインストールについては、「<a href="https://jp.vuejs.org/v2/guide/installation.html">インストール — Vue.js</a>」に書かれていますが、WebpackとかCLIとか準備しているとそこで挫折してしまうため、<a href="https://jsfiddle.net/">JSFiddle</a>や<a href="https://codepen.io">CodePen</a>などのオンラインコードプレイグラウンドを使いましょう。（JavaScriptの設定で、Vue.jsの読み込みを忘れずに！）今回のサンプルはCodePenへリンクをしています。</p>
 
 <p>手慣れたエディタを使いたい場合は、script要素にCDNのアドレスを指定して利用しましょう。面倒ですが、エディタで書いてコピペするという手もあります。</p>
 
@@ -89,7 +89,7 @@
 <span class="p">});</span></code></pre></div>
 <p><a href="https://codepen.io/littlebusters/pen/eMYzmg">サンプルコード</a></p>
 
-<p class="note">ちなみにサンプルコードには、適当なCSSを書いていますが、直接関係するもの以外は解説していません。</p>
+<p class="note">サンプルコードには、適当なCSSを書いていますが、直接関係するもの以外は解説していません。</p>
 
 <h3 id="htmlの設定">HTMLの設定</h3>
 
@@ -240,7 +240,7 @@
 
 <p><code>v-if</code>は、その名の通り「条件分岐」です。条件にマッチした場合、<code>v-if</code>を設定している要素をレンダリングします。マッチしなかった場合は、要素そのものが存在しなくなります。</p>
 
-<p>その<code>v-if</code>を使って、ボタンを押すと表示されるポップアップを作成してみます。（ちなみにスタイルをまったく当ててないため、ポップアップっぽく見えませんが…）</p>
+<p>その<code>v-if</code>を使って、ボタンを押すと表示されるポップアップを作成してみます。</p>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;app&#34;</span><span class="p"></span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-on:click</span><span class="o">=</span><span class="s">&#34;showPopup()&#34;</span><span class="p"></span><span class="p">&gt;</span>ポップアップを表示<span class="p">&lt;</span><span class="p">/</span><span class="nt">button</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&#34;popupState&#34;</span><span class="p"></span><span class="p">&gt;</span>
@@ -326,7 +326,7 @@
 
 <p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec5-v-show-result.png" alt=""></p>
 
-<p>同じようなことができる<code>v-if</code>と<code>v-show</code>ですが、<code>v-if</code>は要素の生成が行われるため、高いコストがかかり、<code>v-show</code>はCSSの切り替えのみのため高い描画コストがかかります。状態があまり変化しない場合は<code>v-if</code>を、頻繁に切り替える必要があれば<code>v-show</code>を使いましょう、と<a href="https://jp.vuejs.org/v2/guide/conditional.html#v-if-vs-v-show">公式ドキュメント</a>に書かれています。</p>
+<p>同じようなことができる<code>v-if</code>と<code>v-show</code>ですが、<code>v-if</code>は要素の生成が行われるため、高いコストがかかり、<code>v-show</code>はCSSの切り替えのみのため高い「描画」コストがかかります。状態があまり変化しない場合は<code>v-if</code>を、頻繁に切り替える必要があれば<code>v-show</code>を使いましょう、と<a href="https://jp.vuejs.org/v2/guide/conditional.html#v-if-vs-v-show">公式ドキュメント</a>に書かれています。</p>
 
 <p>また今回は解説していませんが、<code>v-if</code>では条件にマッチしなかった場合の処理として、<code>v-else</code>と<code>v-else-if</code>のディレクティブが使えます（<a href="https://jp.vuejs.org/v2/guide/conditional.html#v-else">公式ドキュメント</a>）。</p>
 
@@ -526,7 +526,7 @@
 
 <p>以上です。ここまで読んでくださりありがとうございました。</p>
 
-<p>Vue.jsのコードが多少読めるかな？ ぐらいも解説でした。今回は本当に基本的な部分のみの解説だったため、もっと詳しく知りたい方は、日本語へ翻訳されている公式ドキュメントをご覧になってください。</p>
+<p>Vue.jsのコードが多少読めるかな？ ぐらいの解説でしたがいかがだったでしょうか。今回は本当に基本的な部分のみの解説だったため、もっと詳しく知りたい方は、日本語へ翻訳されている公式ドキュメントをご覧になってください。</p>
 
 <p><a href="https://jp.vuejs.org/v2/guide/">はじめに — Vue.js</a></p>
 
