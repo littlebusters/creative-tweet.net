@@ -508,17 +508,17 @@
 
 <p>Consoleで次のスクリプトを実行すると、ToDo1のチェックボックがオンになります。</p>
 
-<pre><code>vm.todoList[0].checked = true;
+<pre><code>vm.todoData[0].checked = true;
 </code></pre>
 
 <p><code>v-bind</code>と同じく、JavaScript側のデータが変更されると、それに応じてUI側も変わります。</p>
 
 <p>続けて、次のスクリプトを実行し、JavaScript側のデータも<code>true</code>であることを念のため確認します。</p>
 
-<pre><code>vm.todoList[0].checked
+<pre><code>vm.todoData[0].checked
 </code></pre>
 
-<p><code>true</code>と表示されたら、ToDo1のチェックボックスをオフにしてから、もう一度<code>vm.todoList[0].checked</code>を実行してみましょう。次は<code>false</code>と表示されるはずです。</p>
+<p><code>true</code>と表示されたら、ToDo1のチェックボックスをオフにしてから、もう一度<code>vm.todoData[0].checked</code>を実行してみましょう。次は<code>false</code>と表示されるはずです。</p>
 
 <p>このように双方向バインディングは、お互いに監視して値を同期します。</p>
 
@@ -526,7 +526,7 @@
 
 <p>以上です。ここまで読んでくださりありがとうございました。</p>
 
-<p>Vue.jsのコードが多少読めるかな？ ぐらいの解説でしたがいかがだったでしょうか。今回は本当に基本的な部分のみの解説だったため、もっと詳しく知りたい方は、日本語へ翻訳されている公式ドキュメントをご覧になってください。</p>
+<p>Vue.jsのコードが多少でも読めるようになれば幸いです。今回は本当に基本的な部分のみの解説だったため、もっと詳しく知りたい方は、日本語へ翻訳されている公式ドキュメントをご覧になってください。</p>
 
 <p><a href="https://jp.vuejs.org/v2/guide/">はじめに — Vue.js</a></p>
 
