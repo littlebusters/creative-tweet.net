@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="alternate" href="../../../index.xml" type="application/rss+xml" title="creative tweet.">
+<title>SketchプラグインのUIをWebViewでつくった話 | creative tweet.</title>
+<script async src="../../../assets/js/auie.js"></script>
+
+
+
+
+
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="SketchプラグインのUIをWebViewでつくった話" />
+<meta property="og:url" content="https://creative-tweet.net//blog/2018/06/making-sketch-plugin-ui-with-webview.html" />
+<meta property="og:description" content="SketchプラグインのUIをWebViewで作成したので、その手順と注意点をまとめました。" />
+<meta property="og:image" content="https://creative-tweet.net/assets/img/2018/making-sketch-plugin-ui-with-webview/making-sketch-plugin-ui-with-webview-ogp.png" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="SketchプラグインのUIをWebViewでつくった話">
+<meta name="twitter:url" content="https://creative-tweet.net//blog/2018/06/making-sketch-plugin-ui-with-webview.html">
+<meta name="twitter:description" content="SketchプラグインのUIをWebViewで作成したので、その手順と注意点をまとめました。">
+<meta name="twitter:image" content="https://creative-tweet.net/assets/img/2018/making-sketch-plugin-ui-with-webview/making-sketch-plugin-ui-with-webview-ogp.png">
+</head>
+<body>
+<header class="siteHeader" role="banner">
+<h1 id="siteSign">
+<a href="../../../">
+<img alt="creative tweet." src="../../../assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<section class="article-header-section">
+				<time class="publishedDatetime" datetime="2018-06-15T01:59:00&#43;09:00">2018/6/15</time>
+				<h1 class="article-title">SketchプラグインのUIをWebViewでつくった話</h1>
+			</section>
+		</header>
+		
+		<div class="content-main">
+			<figure>
+				
+				<img src="../../../assets/img/2018/making-sketch-plugin-ui-with-webview/article-hero.png" class="hero" alt="">
+				
+			</figure>
+			<p>Font Mixerという、ひらがなやカタカナといった文字種を指定して、フォントファミリーやサイズなどを変更できるSketchプラグインをつくりました。</p>
+
+<p>そのUIをWebViewで作成したので、その手順と注意点をまとめました。</p>
+
+<p>現在、モダンなプラグイン開発環境として提供されているのが、<a href="https://skpm.io/">skpm</a>というプラグインマネージャです。Node.jsのエコシステムを利用しており、Babelで書いたものをWebpackでビルド、Sketchにて実行できるES5相当のJavaScriptにPolyfillしてくれます。</p>
+
+<p>また、Sketch用のNodeモジュールがあり、今回は<a href="https://github.com/skpm/sketch-module-web-view">sketch-module-web-view</a>というUIをWebView（HTML + CSS + JavaScript）で構築するためのモジュールを使って進めました。</p>
+
+<h2 id="開発環境の準備">開発環境の準備</h2>
+
+<h3 id="skpmとリソースのインストール">skpmとリソースのインストール</h3>
+
+<p>当然ながらNode.jsが必要ですので、インストールしましょう。すでにインストールされている場合でも、V6以上が必要です。</p>
+
+<p>続けてskpmをインストールします。</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">$ npm install -g skpm</code></pre></div>
+<p>skpmがインストールできたら、テンプレートを指定してWebViewモジュール込みでスケルトンを生成します。</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">$ skpm create my-plugin --template<span class="o">=</span>skpm/with-webview</code></pre></div>
+<p>次のメッセージが表示されれば、インストール終了です。これでSketchを立ち上げて「my-plugin」を実行すれば、WebViewのウィンドウが立ち上がるようになります。</p>
+
+<p class="media"><img src="../../../assets/img/2018/making-sketch-plugin-ui-with-webview/my-plugin-running.png" alt=""></p>
+
+<p><small>ちなみにSketchプラグインフォルダには、ビルドされたプラグインのエイリアスが作成されていますので、開発環境からコピーする必要はありません。</small></p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">✔ Done!
+
+
+To get started, <span class="nb">cd</span> into the new directory:
+  <span class="nb">cd</span> my-plugin
+
+To start a development live-reload build:
+  npm run start
+
+To build the plugin:
+  npm run build
+
+To publish the plugin:
+  skpm publish</code></pre></div>
+<h3 id="userdefaultsの変更">UserDefaultsの変更</h3>
+
+<p>Sketchは起動時しかプラグインを読み込みません。したがって、プラグインの内部が変更になっても再読み込みしないため、変更を反映するために再起動が必要です。さすがにそれでは面倒なので、UserDefaultsの設定を変更し、常時再読み込みするようにしておきます（元の設定に戻すには、最後の<code>YES</code>を<code>NO</code>にして実行します）。</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">defaults write ~/Library/Preferences/com.bohemiancoding.sketch3.plist AlwaysReloadScript -bool YES</code></pre></div>
+<h3 id="watchとログ">watchとログ</h3>
+
+<p>開発を進めるにあたって、ファイルを更新したら勝手にビルドされるよう、次のコマンドを実行してwatchしておきましょう。<small>ちなみに<code>npm run start</code>をすると、ファイル更新時にプラグインも実行してくれますが、WebViewが絡んでいるとSketchが落ちます……</small></p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">$ <span class="nb">cd</span> my-plugin // ディレクトリへ移動
+$ npm run watch</code></pre></div>
+<p>また、次のコマンドを実行しておくと、自動的にログを取得してくれます（コンソール.appの代替）。</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">$ skpm log -f</code></pre></div>
+<h2 id="sketchからwebviewへ値を渡す">SketchからWebViewへ値を渡す</h2>
+
+<p>先にもカッコ書きしましたが、WebViewという名前の通り、見慣れたHTML + CSS + JavaScriptでUIを作成できます（要はSafari）。</p>
+
+<p>では、SketchとWebViewとの値のやりとりはどうするかというと、JavaScriptを通じて行います。</p>
+
+<p>SketchからWebViewへ値を渡すときは、<code>executeJavaScript</code>というメソッドを使い、次のように指定します。</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">executeJavaScript</span><span class="p">(</span><span class="sb">`JavaScript側のメソッド名(&#39;引数&#39;)`</span><span class="p">)</span>
+</code></pre></div>
+<p>プラグインを実行し、WebViewが表示されるときに<code>executeJavaScript</code>を実行するには次のようにします（テンプレートの記述を簡素化）。</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="k">import</span> <span class="nx">BrowserWindow</span> <span class="nx">from</span> <span class="s1">&#39;sketch-module-web-view&#39;</span>
+<span class="k">const</span> <span class="nx">UI</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;sketch/ui&#39;</span><span class="p">)</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span><span class="p">(</span><span class="nx">context</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">browserWindow</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BrowserWindow</span><span class="p">()</span>
+  <span class="k">const</span> <span class="nx">webContents</span> <span class="o">=</span> <span class="nx">browserWindow</span><span class="p">.</span><span class="nx">webContents</span>
+  <span class="nx">browserWindow</span><span class="p">.</span><span class="nx">once</span><span class="p">(</span><span class="s1">&#39;ready-to-show&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// 引数決め打ち
+</span><span class="c1"></span>    <span class="nx">webContents</span><span class="p">.</span><span class="nx">executeJavaScript</span><span class="p">(</span><span class="sb">`webViewFnc(&#39;args&#39;)`</span><span class="p">)</span>
+    <span class="c1">// 引数に変数を使う
+</span><span class="c1"></span>    <span class="nx">webContents</span><span class="p">.</span><span class="nx">executeJavaScript</span><span class="p">(</span><span class="sb">`webViewFnc(</span><span class="si">${</span><span class="nx">hoge</span><span class="si">}</span><span class="sb">)`</span><span class="p">)</span>
+    <span class="c1">// 複数の引数
+</span><span class="c1"></span>    <span class="nx">webContents</span><span class="p">.</span><span class="nx">executeJavaScript</span><span class="p">(</span><span class="sb">`webViewFnc(&#39;args&#39;, </span><span class="si">${</span><span class="nx">hoge</span><span class="si">}</span><span class="sb">)`</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>WebView側で受け取るには、<code>executeJavaScript</code>で指定したメソッドをWindowオブジェクトに追加します。渡された値に応じて、要素を生成したり属性を変更したりする処理を記述します。</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nb">window</span><span class="p">.</span><span class="nx">webViewFnc</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// 処理を記述
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div>
+<p>試してませんが、おそらくjQueryやVue.jsなんかも使えるんじゃないかと思います。</p>
+
+<h2 id="webviewからsketchへ値を渡す">WebViewからSketchへ値を渡す</h2>
+
+<p>WebViewからSketchへ値を渡すには、WebViewのJavaScriptで<code>pluginCall()</code>を使い、1つめの引数にSketch側でキャッチするイベント名、2つめの引数に渡す値を設定します（多分引数は複数指定できるはず）。</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">pluginCall</span><span class="p">(</span><span class="s1">&#39;イベント名&#39;</span><span class="p">,</span> <span class="s1">&#39;引数&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p>Sketch側では<code>on</code>を使い、イベントとしてWebViewから値を受け取り処理を行います。</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">webContents</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;WebView側で設定したイベント名&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">args</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="c1">// 処理を記述
+</span><span class="c1"></span><span class="p">})</span>
+</code></pre></div>
+<p>例えばWebView側のログもコンソールで表示したい場合は、次のように設定します。</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// WebView側
+</span><span class="c1"></span><span class="nx">pluginCall</span><span class="p">(</span><span class="s1">&#39;nativeLog&#39;</span><span class="p">,</span> <span class="nx">message</span><span class="p">)</span>
+
+<span class="c1">// Sketch側（上のサンプルの続き）
+</span><span class="c1"></span><span class="nx">webContents</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;nativeLog&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">msg</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">log</span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre></div>
+<h2 id="webviewのデバッグ">WebViewのデバッグ</h2>
+
+<p>Safariの「開発」を有効にしておくと、「開発 → 自分のマシン名 → WebViewのHTMLで設定しているタイトル」を選択することで、いつものインスペクタでデバッグが可能です。</p>
+
+<p class="media"><img src="../../../assets/img/2018/making-sketch-plugin-ui-with-webview/inspecter-with-safari.png" alt=""></p>
+
+<p>ただ、WebViewのウィンドウはSketchに属している関係でアクティブにならないため、ちょっと使いづらいです。</p>
+
+<h2 id="webviewを使うときの注意点">WebViewを使うときの注意点</h2>
+
+<h3 id="sketchからwebviewへなぜか値が渡らない問題">SketchからWebViewへなぜか値が渡らない問題</h3>
+
+<p>Sketch側でJavaScriptのオブジェクトだけを扱っている場合はいいのですが、ちょっと凝ったことを実装しようとすると、どうしてもCocoaのオブジェクトが混じります（例えばマシンで使えるフォント一覧を取得するなど）。</p>
+
+<p>そしてCocoaオブジェクトを引数として使うと、なぜかWebView側にうまく値が渡らず、WebViewのスクリプトの実行が止まってしまいます。</p>
+
+<p>そんなときは、引数の型を調べてみましょう。</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// JavaScript
+</span><span class="c1"></span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">hoge</span><span class="p">)</span>
+
+<span class="c1">// Cocoa
+</span><span class="c1"></span><span class="nx">log</span><span class="p">(</span><span class="nx">hoge</span><span class="p">.</span><span class="k">class</span><span class="p">())</span>
+</code></pre></div>
+<p>JavaScriptオブジェクトだと、<code>.class()</code>でエラーが出ます。この場合は、値が本当にうまく渡ってないので、Typoとかがないかスクリプトをよく見直してください。</p>
+
+<p>Cocoaオブジェクトの場合、<code>typeof</code>では<code>object</code>と表示され、<code>.class()</code>ではクラス名に<code>NS</code>という文字（例えば<code>__NSCFString</code>）が含まれます。</p>
+
+<p>正しい解決方法がどうかはわかりませんが、とりあえず次のように配列に突っ込んでからJSONへ変換し、さらにNSStringにしたものを引数として使うとうまくいきました（どなたか正解を教えて欲しい）。</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// ↓これが`__NSCFString`になる
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">font_name</span> <span class="o">=</span> <span class="nx">sel</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">fontPostscriptName</span><span class="p">()</span>
+
+<span class="c1">// ので、とりあえず配列に突っ込んでJSONに変換
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">array</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">font_name</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">NSJSONSerialization</span><span class="p">.</span><span class="nx">dataWithJSONObject_options_error_</span><span class="p">(</span><span class="nx">array</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">nil</span><span class="p">);</span>
+
+<span class="c1">// ↓このJSONを引数として渡す
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">json</span> <span class="o">=</span> <span class="nx">NSString</span><span class="p">.</span><span class="nx">alloc</span><span class="p">().</span><span class="nx">initWithData_encoding_</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
+</code></pre></div>
+<p><code>toString()</code>を使おうが何をしようがだめだったので、素直にJSONで渡したほうがよいです（ちなみにこのJSONも<code>__NSCFString</code>なんですよね……なぜ）。</p>
+
+<h3 id="webviewの再読込はsketchの再起動が必要">WebViewの再読込はSketchの再起動が必要</h3>
+
+<p>これが超面倒なんですが、WebViewのHTML・CSS・JavaScriptを修正した場合、Sketchの再起動が必要です。</p>
+
+<p>「あれ、UserDefaults変更したやん？」とお思いのことでしょう。実は再読み込みをするのはSketch側のスクリプトのみで、WebViewのリソースは再読み込みをしてくれません。</p>
+
+<p>したがってWebViewはSafariで開発し、Sketchで微調整を行うほうがよいでしょう。</p>
+
+<hr />
+
+<p>というわけで、WebViewでプラグインUIを開発してみての記録でした。</p>
+		</div>
+
+		<section class="article-taxonomy">
+			<h2 class="article-taxonomy-headding">tags</h2>
+			<ul class="tags">
+				
+				<li class="tagsItem"><a href="../../../tags/sketch.html">Sketch</a> </li>
+				
+				<li class="tagsItem"><a href="../../../tags/sketch-plugin.html">Sketch Plugin</a> </li>
+				
+			</ul>
+		</section>
+
+<div class="socialButtons">
+<div class="socialButtons_twitter">
+	<a href="https://twitter.com/intent/tweet?text=Sketch%e3%83%97%e3%83%a9%e3%82%b0%e3%82%a4%e3%83%b3%e3%81%aeUI%e3%82%92WebView%e3%81%a7%e3%81%a4%e3%81%8f%e3%81%a3%e3%81%9f%e8%a9%b1&amp;url=https%3a%2f%2fcreative-tweet.net%2fblog%2f2018%2f06%2fmaking-sketch-plugin-ui-with-webview.html&amp;via=littlebusters" class="twitter-share-button"
+		data-lang="en"
+		data-url="https://creative-tweet.net/blog/2018/06/making-sketch-plugin-ui-with-webview.html"
+		data-text="SketchプラグインのUIをWebViewでつくった話"
+		data-via="littlebusters" 
+		data-count="vertical"
+	>Tweet</a>
+</div>
+<div class="socialButtons_facebook">
+	<div 
+		class="fb-like"
+		data-href="https://creative-tweet.net/blog/2018/06/making-sketch-plugin-ui-with-webview.html"
+		data-layout="box_count"
+		data-send="false"
+		data-width="100"
+		data-show-faces="false"
+	></div>
+</div>
+<div class="socialButtons_hatebu">
+	<a href="https://b.hatena.ne.jp/entry/creative-tweet.net/blog/2018/06/making-sketch-plugin-ui-with-webview.html" class="hatena-bookmark-button"
+		data-hatena-bookmark-layout="vertical"
+		data-hatena-bookmark-title="SketchプラグインのUIをWebViewでつくった話"
+		data-hatena-bookmark-url="https://creative-tweet.net/blog/2018/06/making-sketch-plugin-ui-with-webview.html">
+		<img src="https://b.st-hatena.com/images/entry-button/button-only.gif"
+		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		style="border: none">
+	</a>
+</div>
+<div class="socialButtons_googlep">
+	<div class="g-plusone" data-size="tall" data-href="https://creative-tweet.net/blog/2018/06/making-sketch-plugin-ui-with-webview.html"></div>
+</div>
+</div>
+
+		<ul class="pager">
+			
+			<li>
+				<a href="../../../blog/2018/04/beginning-vuejs.html" class="pager_prevItem">
+				<span class="pager_label-older">older: </span>
+				Vue.js初学者によるVue.jsのコトハジメ
+				</a>
+			</li>
+			
+		</ul>
+
+	</main>
+</div>
+
+
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="../../../assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="../../../assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="https://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="../../../assets/img/social-facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="../../../assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="../../../assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>

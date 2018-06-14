@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://creative-tweet.net/blog/2018/06/making-sketch-plugin-ui-with-webview.html</loc>
+    <lastmod>2018-06-15T01:59:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://creative-tweet.net/blog/2018/04/beginning-vuejs.html</loc>
     <lastmod>2018-04-16T23:09:00+09:00</lastmod>
   </url>
@@ -706,7 +711,7 @@
   
   <url>
     <loc>https://creative-tweet.net/blog.html</loc>
-    <lastmod>2018-04-16T23:09:00+09:00</lastmod>
+    <lastmod>2018-06-15T01:59:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -724,7 +729,7 @@
   
   <url>
     <loc>https://creative-tweet.net/categories/creative.html</loc>
-    <lastmod>2018-04-16T23:09:00+09:00</lastmod>
+    <lastmod>2018-06-15T01:59:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -976,7 +981,7 @@
   
   <url>
     <loc>https://creative-tweet.net/tags/sketch.html</loc>
-    <lastmod>2017-12-28T00:47:00+09:00</lastmod>
+    <lastmod>2018-06-15T01:59:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1000,7 +1005,7 @@
   
   <url>
     <loc>https://creative-tweet.net/tags/sketch-plugin.html</loc>
-    <lastmod>2017-01-10T00:00:00+09:00</lastmod>
+    <lastmod>2018-06-15T01:59:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1030,7 +1035,7 @@
   
   <url>
     <loc>https://creative-tweet.net/categories/tool.html</loc>
-    <lastmod>2018-04-16T23:09:00+09:00</lastmod>
+    <lastmod>2018-06-15T01:59:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1072,7 +1077,7 @@
   
   <url>
     <loc>https://creative-tweet.net/</loc>
-    <lastmod>2018-04-16T23:09:00+09:00</lastmod>
+    <lastmod>2018-06-15T01:59:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   

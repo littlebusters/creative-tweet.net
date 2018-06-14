@@ -6,8 +6,17 @@
     <description>Recent content in creative tweet. on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>2018/04/16 11:09:00 +09:00</lastBuildDate>
+    <lastBuildDate>2018/06/15 01:59:00 +09:00</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>SketchプラグインのUIをWebViewでつくった話</title>
+      <link>https://creative-tweet.net/blog/2018/06/making-sketch-plugin-ui-with-webview.html</link>
+      <pubDate>2018/06/15 01:59:00 +09:00</pubDate>
+      
+      <guid>https://creative-tweet.net/blog/2018/06/making-sketch-plugin-ui-with-webview.html</guid>
+      <description>SketchプラグインのUIをWebViewで作成したので、その手順と注意点をまとめました。</description>
+    </item>
     
     <item>
       <title>Vue.js初学者によるVue.jsのコトハジメ</title>
@@ -88,15 +97,6 @@
       
       <guid>https://creative-tweet.net/blog/2016/12/sketch-ac-22.html</guid>
       <description>Sketch Advent Calendar 2016 22日目。AppleScriptを使って、SketchのショートカットをIllustratorライクに設定してみる</description>
-    </item>
-    
-    <item>
-      <title>アイコンフォントをキーワード検索して挿入できるIcon Fontプラグイン - Sketch Plugin Advent Calendar 2016</title>
-      <link>https://creative-tweet.net/blog/2016/12/sketch-plugin-ac-22.html</link>
-      <pubDate>2016/12/22 12:00:00 +09:00</pubDate>
-      
-      <guid>https://creative-tweet.net/blog/2016/12/sketch-plugin-ac-22.html</guid>
-      <description>Sketch Plugin Advent Calendar 2016 22日目。アイコンフォントをキーワード検索して挿入できるIcon Fontプラグインを紹介します。</description>
     </item>
     
   </channel>

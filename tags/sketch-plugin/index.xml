@@ -6,10 +6,21 @@
     <description>Recent content in Sketch Plugin on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Tue, 10 Jan 2017 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 15 Jun 2018 01:59:00 +0900</lastBuildDate>
     
 	<atom:link href="https://creative-tweet.net/tags/sketch-plugin/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SketchプラグインのUIをWebViewでつくった話</title>
+      <link>https://creative-tweet.net/blog/2018/06/making-sketch-plugin-ui-with-webview.html</link>
+      <pubDate>Fri, 15 Jun 2018 01:59:00 +0900</pubDate>
+      
+      <guid>https://creative-tweet.net/blog/2018/06/making-sketch-plugin-ui-with-webview.html</guid>
+      <description>&lt;p&gt;Font Mixerという、ひらがなやカタカナといった文字種を指定して、フォントファミリーやサイズなどを変更できるSketchプラグインをつくりました。&lt;/p&gt;
+
+&lt;p&gt;そのUIをWebViewで作成したので、その手順と注意点をまとめました。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Sketchで文字詰めを簡単に適用できるプラグインを作りました。</title>
