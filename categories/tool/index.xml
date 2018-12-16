@@ -6,10 +6,19 @@
     <description>Recent content in Tool on creative tweet.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Fri, 15 Jun 2018 01:59:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 15 Dec 2018 14:20:00 +0900</lastBuildDate>
     
 	<atom:link href="https://creative-tweet.net/categories/tool/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>XDファイルの正体をキミは知っているか</title>
+      <link>https://creative-tweet.net/blog/2018/12/contents-of-xd-file.html</link>
+      <pubDate>Sat, 15 Dec 2018 14:20:00 +0900</pubDate>
+      
+      <guid>https://creative-tweet.net/blog/2018/12/contents-of-xd-file.html</guid>
+      <description>大都会要素が0.2%（文字数換算）ぐらいの大都会岡山Advent Calendar 15日目です。前日は@arisonjpさんの『ギガフロート玉野「ああ、すば</description>
+    </item>
     
     <item>
       <title>SketchプラグインのUIをWebViewでつくった話</title>

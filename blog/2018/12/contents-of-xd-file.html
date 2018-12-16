@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="alternate" href="../../../index.xml" type="application/rss+xml" title="creative tweet.">
+<title>XDファイルの正体をキミは知っているか | creative tweet.</title>
+<script async src="../../../assets/js/auie.js"></script>
+
+
+
+
+
+
+<meta property="fb:app_id" content="250299701647029" />
+<meta property="og:site_name" content="creative tweet." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="XDファイルの正体をキミは知っているか" />
+<meta property="og:url" content="https://creative-tweet.net//blog/2018/12/contents-of-xd-file.html" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="https://creative-tweet.net/assets/img/2018/contents-of-xd-file/contents-of-xd-file-ogp.png" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@littlebusters">
+<meta name="twitter:title" content="XDファイルの正体をキミは知っているか">
+<meta name="twitter:url" content="https://creative-tweet.net//blog/2018/12/contents-of-xd-file.html">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://creative-tweet.net/assets/img/2018/contents-of-xd-file/contents-of-xd-file-ogp.png">
+</head>
+<body>
+<header class="siteHeader" role="banner">
+<h1 id="siteSign">
+<a href="../../../">
+<img alt="creative tweet." src="../../../assets/img/creative-tweet.svg" class="siteSign-media" id="siteSign-media" />
+</a>
+</h1>
+
+</header>
+
+<div class="container">
+	<main role="main">
+		<header class="article-header">
+			<section class="article-header-section">
+				<time class="publishedDatetime" datetime="2018-12-15T02:20:00&#43;09:00">2018/12/15</time>
+				<h1 class="article-title">XDファイルの正体をキミは知っているか</h1>
+			</section>
+		</header>
+		
+		<div class="content-main">
+			
+			<p>
+				<img src="../../../assets/img/2018/contents-of-xd-file/article-hero.png" class="hero" alt="">
+			</p>
+			
+			
+
+<p>大都会要素が0.2%（文字数換算）ぐらいの<a href="https://adventar.org/calendars/2981">大都会岡山Advent Calendar</a> 15日目です。前日は@<a href="https://twitter.com/arisonjp">arisonjp</a>さんの『<a href="https://arison.jp/blog/2018/12/15/gigafloat_tamano_miyama_park/">ギガフロート玉野「ああ、すばらしき深山公園」</a>』でした。し…しんざんこう…えん？（みやまこうえんです）</p>
+
+<p>明日は<a href="https://pixe.la/">Pixela</a>を開発され、<a href="https://ma2018.we-are-ma.jp/">Mashup Awards 2018</a>で「プロが選ぶ APIヒーロー賞」を受賞された@<a href="https://twitter.com/a_know">a_know</a>さんです！</p>
+
+<h2 id="xdファイルの正体とは">XDファイルの正体とは？</h2>
+
+<p>早速ですが、XDファイルをZIPとして展開できるのはご存知でしょうか？ 拡張子をZIPに変更してダブルクリックするか、ターミナルなどを使って<code>unzip</code>すれば簡単に展開できます。</p>
+
+<p>中身はオブジェクトの情報が保存されている「<code>.agc</code>ファイル」と取り込んだ画像やプレビュー用の画像などが収められています。</p>
+
+<p class="media"><img src="../../../assets/img/2018/contents-of-xd-file/extended-xd-file.png" alt=""></p>
+
+<p>見慣れない拡張子の<code>.agc</code>ファイルですが、実態はJSONですので、お使いのエディタや<a href="https://stedolan.github.io/jq/">jq</a>などのツールを使って一括で整形・プロパティのソートしてみましょう。</p>
+
+<p>macOSでjqを使う場合、次のコマンドで<code>.agc</code>と<code>manifest</code>をまとめて整形・ソートできます。</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">$ find <span class="s2">&#34;フォルダのパス&#34;</span> <span class="se">\(</span> -name <span class="s2">&#34;manifest&#34;</span> -o -name <span class="s2">&#34;*.agc&#34;</span> <span class="se">\)</span> -exec sh -c <span class="s1">&#39;cat {} | /usr/local/bin/jq -rS . &gt; {}.1 &amp;&amp; mv {}.1 {}&#39;</span> <span class="se">\;</span></code></pre></div>
+<h2 id="jsonならgitで差分が取れる">JSONならGitで差分が取れる</h2>
+
+<p>GitではXDファイルそのものの差分は取れませんが、JSONであれば差分が取れます。<a href="https://github.com/littlebusters/disassemble-adobe-xd-file">XDファイルへオブジェクトを1つ追加してはコミットしたリポジトリ</a>を用意して見ました。</p>
+
+<p>例えば<a href="https://github.com/littlebusters/disassemble-adobe-xd-file/commit/1c75cc14c5851b6a51c2122ca1d940ccdc44033d">「Artboard2」を追加したときのコミット</a>では、</p>
+
+<ul>
+<li><code>artwork</code>フォルダ内にアートボード関連の情報を格納する<code>graphicContent.agc</code>を作成</li>
+<li><code>manifest</code>へアートボードの基本的な情報を追記</li>
+<li><code>resources/graphics/graphicContent.agc</code>にもアートボードの情報を追記</li>
+</ul>
+
+<p>といった変更が加えられていることがわかります。</p>
+
+<p>他にも<a href="https://github.com/littlebusters/disassemble-adobe-xd-file/commit/cb3b47429ca426514f5087dd49941c379b6909a3">テキストを「大都会岡山Advent Calendar」へ変更したときのコミット</a>では、アートボード関連の情報を格納するファイルで、</p>
+
+<ul>
+<li>テキストが格納されている<code>graphicContent.agc</code>のプロパティ<code>name</code>（レイヤー名）の変更</li>
+<li>同じく<code>rawText</code>（テキストそのものの内容）の変更</li>
+</ul>
+
+<p>などが行われていることがわかりますね。</p>
+
+<p>元々は「XDファイルの仕様ってどうなってるんだろ」と調べていたら、「<a href="https://adobexd.uservoice.com/forums/353007-adobe-xd-feature-requests/suggestions/17810356-publish-xd-file-format-spec">Publish .xd file format spec</a>」に出会って、実態がZIPファイルということを知りました。</p>
+
+<h2 id="オープンなデータフォーマットの世界">オープンなデータフォーマットの世界</h2>
+
+<p>唐突な話になりますが、アプリの開発が終了してしまった場合、そのアプリでつくられたファイルはどうなるでしょうか？</p>
+
+<p>例えばFirewowks。<br />
+フォーマット自体はPNGのため、ファイルそのものを開くことはできます。しかし、ページの設定から配置しているオブジェクトなど、Fireworks独自の要素はPNGのチャンクと呼ばれる領域に書き込まれているため、それを読み出すことは困難です。</p>
+
+<p>つまりアプリが終わると、そのデータは徐々に寿命を迎え、やがて価値が失われてしまいます。アプリが使えなくなるまでにファイルを変換することもできますが、これまでに蓄積してきたすべての資産を変換するのは現実的ではないでしょう。</p>
+
+<p>SketchやXDでは簡単にファイルを展開でき、かつ汎用的なデータフォーマット（JSON）が使われています。そのデータを他のアプリで利用する場合、「加工」自体は必要ですが、例えばSketchでプラグインを開発すれば、XDファイルの内容を可能な限りで再現することだってできます。</p>
+
+<iframe width="640" height="424" src="https://player.vimeo.com/video/306618919" frameborder="0" allowFullScreen mozallowfullscreen webkitAllowFullScreen></iframe>
+
+<p>Sketchがたくさんのサードパーティサービスと連携できているのは、この「オープンなデータフォーマット」のおかげといっても過言ではないでしょう。そしてXDが同じように「オープンなデータフォーマット」を採用してくれたことで、クリエイティブツール界隈がよりいっそう開かれたと思っています。</p>
+
+<p>「オープンなデータフォーマット」によって、ファイルの寿命が長くなることはもちろんのこと、他のアプリへの乗り換えもしやすくなります。先のようにGitでバージョン管理をしたり、独自のアプリをつくってファイルを解析してみたりと、他の用途で使いやすくなるのでいろんな可能性が広がると思いませんか？</p>
+
+<p>今までにもこうしたファイル形式の採用がなかったわけではありません（例えば<code>.docx</code>や<code>.xlsx</code>とか）。これから大きなシェアを獲得していくであろうクリエイティブツールで採用された点が、とても有意義だと思うわけです。<br />
+ホント、いい時代になりましたね。</p>
+
+<hr />
+
+<p>ちなみに、独自フォーマットを否定するわけではありませんので、そこはよしなに。</p>
+
+<p>最後に残念ポイントをひとつ。展開したXDファイル群は再度ZIPとして圧縮して（拡張子を.xdに変更して）も、XDで開くことができません。バイナリエディタとかで見てみましたが、「ちょっと調べるてみるか」のレベルでは原因を特定できず……。ですので、中身をGitでバージョン管理してるからといって、XDファイルを削除してしまうと大変なことになりますので、ご注意を。</p>
+
+		</div>
+
+		<section class="article-taxonomy">
+			<h2 class="article-taxonomy-headding">tags</h2>
+			<ul class="tags">
+				
+				<li class="tagsItem"><a href="../../../tags/advent-calendar-2018.html">Advent Calendar 2018</a> </li>
+				
+			</ul>
+		</section>
+
+<div class="socialButtons">
+<div class="socialButtons_twitter">
+	<a href="https://twitter.com/intent/tweet?text=XD%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%81%ae%e6%ad%a3%e4%bd%93%e3%82%92%e3%82%ad%e3%83%9f%e3%81%af%e7%9f%a5%e3%81%a3%e3%81%a6%e3%81%84%e3%82%8b%e3%81%8b&amp;url=https%3a%2f%2fcreative-tweet.net%2fblog%2f2018%2f12%2fcontents-of-xd-file.html&amp;via=littlebusters" class="twitter-share-button"
+		data-lang="en"
+		data-url="https://creative-tweet.net/blog/2018/12/contents-of-xd-file.html"
+		data-text="XDファイルの正体をキミは知っているか"
+		data-via="littlebusters" 
+		data-count="vertical"
+	>Tweet</a>
+</div>
+<div class="socialButtons_facebook">
+	<div 
+		class="fb-like"
+		data-href="https://creative-tweet.net/blog/2018/12/contents-of-xd-file.html"
+		data-layout="box_count"
+		data-send="false"
+		data-width="100"
+		data-show-faces="false"
+	></div>
+</div>
+<div class="socialButtons_hatebu">
+	<a href="https://b.hatena.ne.jp/entry/creative-tweet.net/blog/2018/12/contents-of-xd-file.html" class="hatena-bookmark-button"
+		data-hatena-bookmark-layout="vertical"
+		data-hatena-bookmark-title="XDファイルの正体をキミは知っているか"
+		data-hatena-bookmark-url="https://creative-tweet.net/blog/2018/12/contents-of-xd-file.html">
+		<img src="https://b.st-hatena.com/images/entry-button/button-only.gif"
+		alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		style="border: none">
+	</a>
+</div>
+<div class="socialButtons_googlep">
+	<div class="g-plusone" data-size="tall" data-href="https://creative-tweet.net/blog/2018/12/contents-of-xd-file.html"></div>
+</div>
+</div>
+
+		<ul class="pager">
+			
+			<li>
+				<a href="../../../blog/2018/06/making-sketch-plugin-ui-with-webview.html" class="pager_prevItem">
+				<span class="pager_label-older">older: </span>
+				SketchプラグインのUIをWebViewでつくった話
+				</a>
+			</li>
+			
+		</ul>
+
+	</main>
+</div>
+
+
+
+
+<hr>
+
+<footer class="siteFooter" role="contentinfo">
+
+<section class="authers-inform">
+<div class="site-auther">
+<h2 class="footer-heading" id="site-auther">auther</h2>
+<img src="../../../assets/img/avatar-c060@2x.png" class="site-auther-avatar" alt=""> <span class="site-auther-name">@littlebusters</span>
+</div>
+</section>
+
+
+
+<section class="site-contact">
+<h2 class="footer-heading" id="site-contact">contact</h2>
+<ul class="contact-list">
+<li><a href="https://twitter.com/littlebusters"><img src="../../../assets/img/social-twitter-bird.svg" height="44" width="44" alt="twitter"></a></li>
+<li><a href="https://www.facebook.com/creative.tweet" title="creative tweet. Facebook Page."><img src="../../../assets/img/social-facebook.svg" height="44" width="44" alt="Go to Facebook Page"></a></li>
+<li><a href="https://plus.google.com/b/110381136031204198900/" title="Google+"><img src="../../../assets/img/social-google-plus.svg" height="44" width="44" alt="Google+"></a></li>
+<li><a href="https://github.com/littlebusters" title="GitHub/littlebusters"><img src="../../../assets/img/social-github.svg" height="44" width="44" alt="GitHub"></a></li>
+</ul>
+</section>
+
+
+<p id="copyright">&copy;creative tweet.</p>
+
+</footer>
+
+</body>
+</html>
