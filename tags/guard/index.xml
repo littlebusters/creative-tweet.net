@@ -17,9 +17,7 @@
       <pubDate>Wed, 06 Feb 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2013/02/guard-livereload-installation.html</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://livereload.com/&#34;&gt;LiveReload&lt;/a&gt; Windows版を使っていたのですが、ある日を境に起動後30秒もしない間に落ちてしまうという現象に陥りました。alpha版なので致し方ないかなとも思いましたが、代わりにguard-livereloadをインストールし、無事動作に至ったその作業記録です。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://livereload.com/&#34;&gt;LiveReload&lt;/a&gt; Windows版を使っていたのですが、ある日を境に起動後30秒もしない間に落ちてしまうという現象に陥りました。alpha版なので致し方ないかなとも思いましたが、代わりにguard-livereloadをインストールし、無事動作に至ったその作業記録です。&lt;/p&gt;</description>
     </item>
     
   </channel>

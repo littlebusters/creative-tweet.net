@@ -23,10 +23,7 @@
 
 &lt;p&gt;以前の記事（&lt;a href=&#34;http://creative-tweet.net/blog/2013/05/introduction-of-thesketch.html&#34;&gt;ちょっと別の世界も見てみませんか？ベクターベースのグラフィックツール Sketchを紹介してみるよ。&lt;/a&gt;）で、Sketch.appはスクリプトによる拡張ができると書きました。しかしながらJSTalkという、新しく作るには若干学習コストのかかる言語で書く必要があり、なかなか手を出しにくい機能なのも事実です。&lt;/p&gt;
 
-&lt;p&gt;そんな中、Fireworksのコマンド集&lt;a href=&#34;https://github.com/bomberstudios/fireworks&#34;&gt;Orange Commands&lt;/a&gt;の中の人が、その一部をSketch.appプラグインに移植されています（しかも結構前から）。今回はこのプラグイン集を紹介してみたいと思います。
-&lt;p class=&#34;notics&#34;&gt;
-  &lt;b&gt;Sketchの基本。&lt;/b&gt;というSketch（Sketch 3）の基本操作にフォーカスした電子書籍をリリースしました。詳しくはこちらの「&lt;a href=&#34;http://creative-tweet.net/sketch-3-basics/&#34;&gt;Sketchの基本。&lt;/a&gt;」のページをご覧ください。
-&lt;/p&gt;</description>
+&lt;p&gt;そんな中、Fireworksのコマンド集&lt;a href=&#34;https://github.com/bomberstudios/fireworks&#34;&gt;Orange Commands&lt;/a&gt;の中の人が、その一部をSketch.appプラグインに移植されています（しかも結構前から）。今回はこのプラグイン集を紹介してみたいと思います。&lt;/p&gt;</description>
     </item>
     
   </channel>
