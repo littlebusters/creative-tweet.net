@@ -9,93 +9,39 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>XDファイルの正体をキミは知っているか</title>
-      <link>https://creative-tweet.net/blog/2018/12/contents-of-xd-file.html</link>
+      <title>Blogs</title>
+      <link>https://creative-tweet.net/blog.html</link>
       <pubDate>2018/12/15 02:20:00 +09:00</pubDate>
       
-      <guid>https://creative-tweet.net/blog/2018/12/contents-of-xd-file.html</guid>
-      <description>XDファイルの実態がJSONや画像を圧縮したZIPファイルという事実と、その恩恵について書きました。（大都会岡山 Advent Calendar 2018の15日目）</description>
+      <guid>https://creative-tweet.net/blog.html</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>SketchプラグインのUIをWebViewでつくった話</title>
-      <link>https://creative-tweet.net/blog/2018/06/making-sketch-plugin-ui-with-webview.html</link>
-      <pubDate>2018/06/15 01:59:00 +09:00</pubDate>
-      
-      <guid>https://creative-tweet.net/blog/2018/06/making-sketch-plugin-ui-with-webview.html</guid>
-      <description>SketchプラグインのUIをWebViewで作成したので、その手順と注意点をまとめました。</description>
-    </item>
-    
-    <item>
-      <title>Vue.js初学者によるVue.jsのコトハジメ</title>
-      <link>https://creative-tweet.net/blog/2018/04/beginning-vuejs.html</link>
-      <pubDate>2018/04/16 11:09:00 +09:00</pubDate>
-      
-      <guid>https://creative-tweet.net/blog/2018/04/beginning-vuejs.html</guid>
-      <description>Vue.js初心者が、Vue.jsを始めるにあたっての基礎知識的なことをまとめてみました。</description>
-    </item>
-    
-    <item>
-      <title>もしかしたら役に立つかもしれない、Sketchの5つのTips</title>
-      <link>https://creative-tweet.net/blog/2017/12/5-sketch-tips.html</link>
-      <pubDate>2017/12/28 12:47:00 +09:00</pubDate>
-      
-      <guid>https://creative-tweet.net/blog/2017/12/5-sketch-tips.html</guid>
-      <description>知っておくともしかするとどこかで役に立つかもしれない、そんなSketchのTipsを5つほど取り上げました。</description>
-    </item>
-    
-    <item>
-      <title>「UIデザイナーのためのSketch入門＆実践ガイド」を読んで</title>
-      <link>https://creative-tweet.net/blog/2017/05/introductory-guide-to-sketch-for-ui-designers.html</link>
-      <pubDate>2017/05/21 12:00:00 +09:00</pubDate>
-      
-      <guid>https://creative-tweet.net/blog/2017/05/introductory-guide-to-sketch-for-ui-designers.html</guid>
-      <description>「UIデザイナーのためのSketch入門＆実践ガイド」を読んで</description>
-    </item>
-    
-    <item>
-      <title>OpenTypeの字間に関する機能を簡単に切り替えできるSketchプラグイン</title>
-      <link>https://creative-tweet.net/tools/sketch_switch_text_spacing/detail.html</link>
+      <title>Tools</title>
+      <link>https://creative-tweet.net/tools.html</link>
       <pubDate>2017/01/10 12:00:00 +09:00</pubDate>
       
-      <guid>https://creative-tweet.net/tools/sketch_switch_text_spacing/detail.html</guid>
-      <description>SketchでOpenTypeの字間に関する機能（プロポーショナルメトリクスや半角など）を、Typographyパネルを開くことなく直接切り替えできるプラグインです。</description>
+      <guid>https://creative-tweet.net/tools.html</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>Sketchで文字詰めを簡単に適用できるプラグインを作りました。</title>
-      <link>https://creative-tweet.net/blog/2017/01/switch-text-spacing-plugin.html</link>
-      <pubDate>2017/01/10 12:00:00 +09:00</pubDate>
+      <title>Sketchの基本的な使い方を日本語で解説した電子書籍「Sketchの基本。」</title>
+      <link>https://creative-tweet.net/sketch-3-basics.html</link>
+      <pubDate>2015/04/29 09:30:00 +09:00</pubDate>
       
-      <guid>https://creative-tweet.net/blog/2017/01/switch-text-spacing-plugin.html</guid>
-      <description>OpenTypeの字間に関する機能を、ショートカットを使って簡単に切り替えできるSketchプラグインを作りました。</description>
+      <guid>https://creative-tweet.net/sketch-3-basics.html</guid>
+      <description>「Sketchの基本。」は、新しいクリエイティブツールとして注目を集める、Sketchの基本的な使い方にフォーカスした電子書籍です。常に最新版にアップデートしています。</description>
     </item>
     
     <item>
-      <title>SketchからドキュメントをHTMLとして書き出せるDesign Docプラグイン - Sketch Plugin Advent Calendar 2016</title>
-      <link>https://creative-tweet.net/blog/2016/12/sketch-plugin-ac-25.html</link>
-      <pubDate>2016/12/25 12:00:01 +09:00</pubDate>
+      <title>Sketchの基本的な使い方を日本語で解説した電子書籍「Sketchの基本。」</title>
+      <link>https://creative-tweet.net/sketch-basics.html</link>
+      <pubDate>2015/04/29 09:30:00 +09:00</pubDate>
       
-      <guid>https://creative-tweet.net/blog/2016/12/sketch-plugin-ac-25.html</guid>
-      <description>Sketch Plugin Advent Calendar 2016 25日目。SketchからドキュメントをHTMLとして書き出せるDesign Docプラグインを紹介します。</description>
-    </item>
-    
-    <item>
-      <title>Auto Layoutを実現するFluidプラグイン - Sketch Plugin Advent Calendar 2016</title>
-      <link>https://creative-tweet.net/blog/2016/12/sketch-plugin-ac-24.html</link>
-      <pubDate>2016/12/24 12:00:01 +09:00</pubDate>
-      
-      <guid>https://creative-tweet.net/blog/2016/12/sketch-plugin-ac-24.html</guid>
-      <description>Sketch Plugin Advent Calendar 2016 24日目。Auto Layoutを実現するFluidプラグインを紹介します。</description>
-    </item>
-    
-    <item>
-      <title>キーオブジェクトを選択して揃えるAlign Toプラグイン - Sketch Plugin Advent Calendar 2016</title>
-      <link>https://creative-tweet.net/blog/2016/12/sketch-plugin-ac-23.html</link>
-      <pubDate>2016/12/23 12:00:00 +09:00</pubDate>
-      
-      <guid>https://creative-tweet.net/blog/2016/12/sketch-plugin-ac-23.html</guid>
-      <description>Sketch Plugin Advent Calendar 2016 23日目。キーオブジェクトを選択して揃えるAlign Toプラグインを紹介します。</description>
+      <guid>https://creative-tweet.net/sketch-basics.html</guid>
+      <description>「Sketchの基本。」は、新しいクリエイティブツールとして注目を集める、Sketchの基本的な使い方にフォーカスした電子書籍です。常に最新版にアップデートしています。</description>
     </item>
     
   </channel>
