@@ -54,99 +54,43 @@
 			</p>
 			
 			<p>以前、Sketchで文字詰めをする方法を<a href="../../2014/10/apply-proportional-metrics-on-sketch.html">記事</a>にしました。確かに文字詰めはできるのですが、パネルを表示したりテキストを選択したりと、やや手順が面倒です。これがスクリプトで変更できることがわかったため、プラグインを作ってみました。</p>
-
-<dl class="links">
-    <dt>プラグインページ</dt>
-    <dd><a href="../../../tools/sketch_switch_text_spacing/detail.html">OpenTypeの字間に関する機能を簡単に切り替えできるSketchプラグイン</a></dd>
-</dl>
-
+<!-- raw HTML omitted -->
 <h2 id="インストール">インストール</h2>
-
-<ul class="links">
-<li><a href="https://github.com/littlebusters/Switch-Text-Spacing/archive/master.zip">プラグインのダウンロード</a></li>
-<li><a href="https://github.com/littlebusters/Switch-Text-Spacing/">Switch Text Spacingのリポジトリ</a></li>
-</ul>
-
+<!-- raw HTML omitted -->
 <p>Sketch ToolBoxを使ってインストールするか、ZIPをダウンロード・伸張し、フォルダにある<code>.sketchplugin</code>ファイルをダブルクリックしてインストールします。</p>
-
 <h2 id="使い方">使い方</h2>
-
 <p>テキストレイヤーを選択し、プラグインを実行します。プラグインのウィンドウが表示されたら項目を選び、OKボタンで適用できます。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2017/switch-text-spacing-plugin/plugin-panel.png" alt="">
-    <span class="mediaCaption">ちなみにOSの言語設定が日本語以外だと、英語で表示されます。もちろん表示が異なるだけで、機能は同じです。</span>
-</p>
-
+<!-- raw HTML omitted -->
 <p>日本語であれば、「<strong>5: 代替プロポーショナル幅</strong>」もしくは「<strong>8: カーニングなし</strong>」のいずれかを使用しましょう。</p>
-
 <p>TypographyパネルのText Spacingの項目と同等です（ただしフォントが持っていない機能も表示されます）。項目名の前にある数字は、キーボードの数字キーに対応しています。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2017/switch-text-spacing-plugin/os-typography-panel.png" alt="">
-</p>
-
+<!-- raw HTML omitted -->
 <p>フルキーボードアクセスを「すべてのコントロール」にしている場合は、上下の矢印キーで切り替えも可能です。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2017/switch-text-spacing-plugin/pref-keyboard-settings.png" alt="">
-</p>
-
+<!-- raw HTML omitted -->
 <h2 id="注意点">注意点</h2>
-
 <p>OpenTypeフォントの機能を使っているため、そもそもOpenTypeフォント以外では使えません（プラグイン自体は実行できます）。</p>
-
-<p>また、OpenTypeフォントでも必要な字形や設定が含まれている必要があるため、フォントによって設定が反映されない場合があります。<br />
+<p>また、OpenTypeフォントでも必要な字形や設定が含まれている必要があるため、フォントによって設定が反映されない場合があります。<br>
 例えば、macOS標準のヒラギノ角ゴシックとヒラギノ明朝でみてみると、「半角」は両方とも適用できますが、「代替プロポーショナル幅」は角ゴシックのみに適用できます。</p>
-
 <p>適用できるかどうかを正確に知るには、Typographyパネルを表示して、Text Spacingの項目を表示してみてください。</p>
-
 <ol>
 <li>「View → Show Fonts」でFontsパネルを表示する</li>
 <li>Fontsパネルの歯車アイコンから「Typography&hellip;（タイポグラフィ&hellip;）」を選択する</li>
 <li>「Text Spacing（文字間隔）」を展開する</li>
 <li>テキストレイヤーの内容を選択すると適用できる内容が表示される</li>
 </ol>
-
-<p class="media">
-    <img src="../../../assets/img/2017/switch-text-spacing-plugin/text-spacing-features.png" alt="">
-    <span class="mediaCaption">OSにバンドルされている、ヒラギノ角ゴシックProNとヒラギノ明朝ProNの比較。ヒラギノ角ゴシックProNは使える項目が多い。ちなみに項目が最後まで表示されず切れているのですが、私だけですかね、コレ。</span>
-</p>
-
+<!-- raw HTML omitted -->
 <h2 id="蛇足">蛇足</h2>
-
 <p>「Sketchではカーニングが効かない」と言われていますが、これは間違いです。日本語でもフォントにペアカーニング情報が含まれていれば、きちんとカーニングされます。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2017/switch-text-spacing-plugin/apply-kerning.png" alt="">
-    <span class="mediaCaption">Noto Sans CJK JP Mediumを使った例。上がカーニングを無効、下がカーニングを有効にした状態。差は小さいものの、カーニングの有無で幅が変わっている。</span>
-</p>
-
+<!-- raw HTML omitted -->
 <p>憶測ではありますが、この誤解が広まった原因は、モリサワフォントがペアカーニング情報を持っていなかったためでしょう。ちなみに、新しく配信されるフォントには情報が含まれています。</p>
-
-<ul class="links">
-    <li><a href="http://www.morisawa.co.jp/culture/dictionary/1988">ペアカーニング | フォント用語集 | 文字の手帖 | 株式会社モリサワ</a></li>
-</ul>
-
-<p>このプラグインで利用を推奨した「5: 代替プロポーショナル幅」を適用した場合、フォントに設定されているプロポーショナル情報を基に、文字前後のスペースを詰めるもので、ただ単に「カーニング」しているのではありません。<del>そしてプロポーショナル幅を有効にすると、<a href="http://www.microsoft.com/typography/otspec/features_pt.htm#palt">OpenType Feature tagsの仕様</a>により自動的にペアカーニングも有効になります。</del><br />
-<ins>［2017/1/10 23:45追記］「代替プロポーショナル幅（palt）」を有効にした場合は、「カーニング（kern）」は必須ではない（自動的に有効にならない）とご指摘いただきましたので、訂正します（ご指摘ありがとうございました）。仕様をきちんと読めてなかったのと、「kernを有効にしたらpaltは必須」というのをなぜか逆に捉えてしまっておりました、申し訳ありません。［追記おわり］<ins></p>
-
+<!-- raw HTML omitted -->
+<p>このプラグインで利用を推奨した「5: 代替プロポーショナル幅」を適用した場合、フォントに設定されているプロポーショナル情報を基に、文字前後のスペースを詰めるもので、ただ単に「カーニング」しているのではありません。<del>そしてプロポーショナル幅を有効にすると、<a href="http://www.microsoft.com/typography/otspec/features_pt.htm#palt">OpenType Feature tagsの仕様</a>により自動的にペアカーニングも有効になります。</del><br>
+<!-- raw HTML omitted -->［2017/1/10 23:45追記］「代替プロポーショナル幅（palt）」を有効にした場合は、「カーニング（kern）」は必須ではない（自動的に有効にならない）とご指摘いただきましたので、訂正します（ご指摘ありがとうございました）。仕様をきちんと読めてなかったのと、「kernを有効にしたらpaltは必須」というのをなぜか逆に捉えてしまっておりました、申し訳ありません。［追記おわり］<!-- raw HTML omitted --></p>
 <p>また、「1: プロポーショナル幅」も「プロポーショナル幅」となっていますが、こちらは文字自体をプロポーショナルなものに切り替えます。簡単にいうと、Illustrator等で使える異体字があると思いますが、プロポーショナルの異体字を使っている状態です。</p>
-
 <p>ほかの全角・半角など「代替」と付かないものも異体字を使っており、例えば全角の文字列に「半角」を適用して見た目を半角のテキストにしていても、テキスト自体をエディタへコピー &amp; ペーストすると、半角ではなく元の文字列がペーストされると思います。（厳密にいうと違うところもあるので、鵜呑みにはしないでください）</p>
-
 <p>そして「文字は全て詰めろ！」という方は、ぜひ次の記事をご覧になってください。「Illustrator」とありますが、実はそれほど関係なく、文字を扱う上での基礎知識が詰まっている記事です。</p>
-
-<ul class="links">
-    <li><a href="http://suikoudesign.com/suikolog/design/1864" title="超初心者のためのIllustrator文字ツメ入門（追記あり） #moji_for_webya | Suikolog">超初心者のためのIllustrator文字ツメ入門（追記あり） #moji_for_webya | Suikolog</a></li>
-</ul>
-
+<!-- raw HTML omitted -->
 <p>また、前述の勉強会で講師をされていた<a href="https://twitter.com/works014">大石さん</a>のブログでも、文字の扱いについてたくさんの知見が詰まっているので、こちらも参考にしてみてください。</p>
-
-<ul class="links">
-    <li><a href="http://d.hatena.ne.jp/works014/20110827" title="メトリクスには「プロポーショナルメトリクス」の併用が必須_再 - なんでやねんDTP">メトリクスには「プロポーショナルメトリクス」の併用が必須_再 - なんでやねんDTP</a></li>
-</ul>
-
+<!-- raw HTML omitted -->
 <p>ご指摘等ありましたら、@<a href="https://twitter.com/littlebusters/">littlebusters</a>または<a href="https://www.facebook.com/creative.tweet/">Facebookページ</a>までお知らせください。</p>
 		</div>
 

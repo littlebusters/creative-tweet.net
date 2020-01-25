@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Plugin on creative tweet.</title>
@@ -17,12 +17,8 @@
       <pubDate>Mon, 03 Jun 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2013/06/extending-sketchapp.html</guid>
-      <description>&lt;p class=&#34;notics-alert&#34;&gt;
-この記事はSketchの古いバージョンを元に書いた内容です。最新バージョンでは、動作が異なる場合があります。
-&lt;/p&gt;
-
+      <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;以前の記事（&lt;a href=&#34;http://creative-tweet.net/blog/2013/05/introduction-of-thesketch.html&#34;&gt;ちょっと別の世界も見てみませんか？ベクターベースのグラフィックツール Sketchを紹介してみるよ。&lt;/a&gt;）で、Sketch.appはスクリプトによる拡張ができると書きました。しかしながらJSTalkという、新しく作るには若干学習コストのかかる言語で書く必要があり、なかなか手を出しにくい機能なのも事実です。&lt;/p&gt;
-
 &lt;p&gt;そんな中、Fireworksのコマンド集&lt;a href=&#34;https://github.com/bomberstudios/fireworks&#34;&gt;Orange Commands&lt;/a&gt;の中の人が、その一部をSketch.appプラグインに移植されています（しかも結構前から）。今回はこのプラグイン集を紹介してみたいと思います。&lt;/p&gt;</description>
     </item>
     

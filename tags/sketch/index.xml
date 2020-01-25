@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sketch on creative tweet.</title>
@@ -18,7 +18,6 @@
       
       <guid>https://creative-tweet.net/blog/2018/06/making-sketch-plugin-ui-with-webview.html</guid>
       <description>&lt;p&gt;Font Mixerという、ひらがなやカタカナといった文字種を指定して、フォントファミリーやサイズなどを変更できるSketchプラグインをつくりました。&lt;/p&gt;
-
 &lt;p&gt;そのUIをWebViewで作成したので、その手順と注意点をまとめてみました。&lt;/p&gt;</description>
     </item>
     
@@ -92,7 +91,6 @@
       
       <guid>https://creative-tweet.net/blog/2016/12/sketch-ac-22.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.adventar.org/calendars/1486&#34;&gt;Sketch Advent Calendar 2016&lt;/a&gt; 22日目の記事です。21日目の「&lt;a href=&#34;http://tipsbear.com/sketch/?utm_source=dlvr.it&amp;amp;utm_medium=twitter&#34;&gt;初心者向け：これからSketchを使いたい人や既に使っている人のおさらいに！ Sketchの使い方のまとめ | Sketch Advent Calendar 2016 | tipsBear&lt;/a&gt;」は非常にまとまっていて、この丁寧さは私も見習いたいです…（反省）&lt;/p&gt;
-
 &lt;p&gt;で、予定ではプラグインについて書こうかと思っていたのですが、私が書くより&lt;a href=&#34;http://qiita.com/hanamiju/items/a04d0a7f9e9adbb11799&#34;&gt;ためになりそうな記事&lt;/a&gt;が出ていたので、ネタに走りました、ハイ。SketchのショートカットがAdobeと違うので使いづらい！ という声を意外と聞くので、AppleScriptを使ってSketchのショートカットをIllustratorライクに設定してみます。&lt;/p&gt;</description>
     </item>
     
@@ -328,9 +326,7 @@
       
       <guid>https://creative-tweet.net/blog/2016/03/sketch-line-height-fixer-plugin.html</guid>
       <description>&lt;p&gt;Sketch 3.6にアップデートされ、長年の問題であった行間問題がかなり改善されました。&lt;/p&gt;
-
 &lt;p&gt;ただ、Sketch 3.5からOSX 10.10以降の対応となったため、やむを得ない理由でOSX 10.9を使っている場合、この恩恵を受けられません。&lt;/p&gt;
-
 &lt;p&gt;今回は、そんな「やむを得ない理由でSketch 3.4.xを使わざるを得ないマン」向けに、行間問題をごにょごにょして扱いやすくするプラグインを作成しました。&lt;/p&gt;</description>
     </item>
     
@@ -350,7 +346,6 @@
       
       <guid>https://creative-tweet.net/blog/2015/12/sketch-advent-calendar-19.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://qiita.com/advent-calendar/2015/sketch3&#34;&gt;Sketch 3 Advent Calendar 2015&lt;/a&gt;の19日目の記事です（公開日改ざん）。日課で“Sketch 3”や“Sketch3”とリアルタイム検索しているおじさんが、「Sketch 3でこれできないの？」という疑問に勝手に答えていきます。&lt;/p&gt;
-
 &lt;p&gt;Sketch 3でPNG24（アルファチャネルなし）の生成はできないのについてお答えします。&lt;/p&gt;</description>
     </item>
     
@@ -361,7 +356,6 @@
       
       <guid>https://creative-tweet.net/blog/2015/12/sketch-advent-calendar-18.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://qiita.com/advent-calendar/2015/sketch3&#34;&gt;Sketch 3 Advent Calendar 2015&lt;/a&gt;の18日目の記事です（公開日改ざん）。日課で“Sketch 3”や“Sketch3”とリアルタイム検索しているおじさんが、「Sketch 3でこれできないの？」という疑問に勝手に答えていきます。&lt;/p&gt;
-
 &lt;p&gt;レイヤーの整列で意外と知られてないかもしれない、「アートボードに整列」についてお届けします。&lt;/p&gt;</description>
     </item>
     
@@ -372,11 +366,8 @@
       
       <guid>https://creative-tweet.net/blog/2015/12/sketch-advent-calendar-17.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://qiita.com/advent-calendar/2015/sketch3&#34;&gt;Sketch 3 Advent Calendar 2015&lt;/a&gt;の17日目の記事です（公開日改ざん）。日課で“Sketch 3”や“Sketch3”とリアルタイム検索しているおじさんが、「Sketch 3でこれできないの？」という疑問に勝手に答えていきます。&lt;/p&gt;
-
 &lt;p&gt;今回はこちら。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Open Pathだと位置変更できないから、いったんClose PathにしてPosition変更してから再度Open Pathにすれば大丈夫っぽい。もっと効率のいい方法あるんかな &lt;a href=&#34;https://t.co/XpiTBPLGWQ&#34;&gt;pic.twitter.com/XpiTBPLGWQ&lt;/a&gt;&lt;/p&gt;&amp;mdash; 高橋としゆき (@gautt) &lt;a href=&#34;https://twitter.com/gautt/status/678956068341350400&#34;&gt;2015, 12月 21&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;</description>
+&lt;!-- raw HTML omitted --&gt;</description>
     </item>
     
     <item>
@@ -386,7 +377,6 @@
       
       <guid>https://creative-tweet.net/blog/2015/12/sketch-advent-calendar-16.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://qiita.com/advent-calendar/2015/sketch3&#34;&gt;Sketch 3 Advent Calendar 2015&lt;/a&gt;の16日目の記事です（公開日改ざん）。日課で“Sketch 3”や“Sketch3”とリアルタイム検索しているおじさんが、「Sketch 3でこれできないの？」という疑問に勝手に答えていきます。&lt;/p&gt;
-
 &lt;p&gt;今回は、Sketch 3.4からの新機能「Local Sharing」を使って、外部（LAN外）の人と共有するやり方です。ちなみに、Sketch 3はほとんど関係ないです。&lt;/p&gt;</description>
     </item>
     
@@ -397,7 +387,6 @@
       
       <guid>https://creative-tweet.net/blog/2015/12/sketch-advent-calendar-15.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://qiita.com/advent-calendar/2015/sketch3&#34;&gt;Sketch 3 Advent Calendar 2015&lt;/a&gt;の15日目の記事です（公開日改ざん）。日課で“Sketch 3”や“Sketch3”とリアルタイム検索しているおじさんが、「Sketch 3でこれできないの？」という疑問に勝手に答えていきます。&lt;/p&gt;
-
 &lt;p&gt;今回は、シンボルの一歩進んだ使い方をお届けします。&lt;/p&gt;</description>
     </item>
     
@@ -408,7 +397,6 @@
       
       <guid>https://creative-tweet.net/blog/2015/12/sketch-advent-calendar-13.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://qiita.com/advent-calendar/2015/sketch3&#34;&gt;Sketch 3 Advent Calendar 2015&lt;/a&gt;の13日目の記事です（公開日改ざん）。日課で“Sketch 3”や“Sketch3”とリアルタイム検索しているおじさんが、「Sketch 3でこれできないの？」という疑問に勝手に答えていきます。&lt;/p&gt;
-
 &lt;p&gt;Sketch 3の販売が、Mac App Storeから直販に切り替わりました。Mac App Store版は5台まで認証することができましたが、直販版ではどうなっているのかをお届けします。&lt;/p&gt;</description>
     </item>
     
@@ -419,7 +407,6 @@
       
       <guid>https://creative-tweet.net/blog/2015/12/sketch-advent-calendar-12.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://qiita.com/advent-calendar/2015/sketch3&#34;&gt;Sketch 3 Advent Calendar 2015&lt;/a&gt;の12日目の記事です（公開日改ざん）。日課で“Sketch 3”や“Sketch3”とリアルタイム検索しているおじさんが、「Sketch 3でこれできないの？」という疑問に勝手に答えていきます。&lt;/p&gt;
-
 &lt;p&gt;今回は他のプラットフォームで利用する方法について解説してきます。&lt;/p&gt;</description>
     </item>
     
@@ -430,7 +417,6 @@
       
       <guid>https://creative-tweet.net/blog/2015/12/sketch-advent-calendar-10.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://qiita.com/advent-calendar/2015/sketch3&#34;&gt;Sketch 3 Advent Calendar 2015&lt;/a&gt;の10日目の記事です。日課で“Sketch 3”や“Sketch3”とリアルタイム検索しているおじさんが、「Sketch 3でこれできないの？」という疑問に勝手に答えていきます。&lt;/p&gt;
-
 &lt;p&gt;今回は、レイヤーの背面にあるレイヤーを選択する方法です。&lt;/p&gt;</description>
     </item>
     
@@ -441,7 +427,6 @@
       
       <guid>https://creative-tweet.net/blog/2015/12/sketch-advent-calendar-07.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://qiita.com/advent-calendar/2015/sketch3&#34;&gt;Sketch 3 Advent Calendar 2015&lt;/a&gt;の7日目の記事です。日課で“Sketch 3”や“Sketch3”とリアルタイム検索しているおじさんが、「Sketch 3でこれできないの？」という疑問に勝手に答えていきます。&lt;/p&gt;
-
 &lt;p&gt;今回は「これできないの？」とは趣旨が外れるかもしれませんが、こちらの「&lt;a href=&#34;http://parashuto.com/rriver/tools/sketch-leaving-mas&#34;&gt;SketchをMac App Store版からダウンロード版に移行する際の注意点 – Rriver&lt;/a&gt;」のように、プラグインやアートボードのプリセットが消えてしまい、途方に暮れているかた向けです。&lt;/p&gt;</description>
     </item>
     
@@ -452,7 +437,6 @@
       
       <guid>https://creative-tweet.net/blog/2015/12/sketch-advent-calendar-04.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://qiita.com/advent-calendar/2015/sketch3&#34;&gt;Sketch 3 Advent Calendar 2015&lt;/a&gt;の4日目の記事です。日課で“Sketch 3”や“Sketch3”とリアルタイム検索しているおじさんが、「Sketch 3でこれできないの？」という疑問に勝手に答えていきます。&lt;/p&gt;
-
 &lt;p&gt;初回は画像補正についてです。&lt;/p&gt;</description>
     </item>
     
@@ -471,7 +455,7 @@
       <pubDate>Fri, 23 Jan 2015 00:00:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/tools/sketch_regexp_rename/detail.html</guid>
-      <description>これは何？ 選択したレイヤーを正規表現でリネームできるSketchプラグインです。 動作環境 Sketch 3.2以降 ライセンス MITライセンス 使い方 対象とす</description>
+      <description>これは何？ 選択したレイヤーを正規表現でリネームできるSketchプラグインです。 動作環境 ライセンス 使い方 対象とするレイヤーを選択します。 プラ</description>
     </item>
     
     <item>
@@ -481,7 +465,6 @@
       
       <guid>https://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-03.html</guid>
       <description>&lt;p&gt;「&lt;a href=&#34;http://www.adventar.org/calendars/347&#34;&gt;Sketch 3 Advent Calendar 2014&lt;/a&gt;」3日目です。アレ？&lt;/p&gt;
-
 &lt;p&gt;今回は、WidthやHeightといった、テキストボックスでテンキーを使わずに小数点以下を入力する方法を紹介します。&lt;/p&gt;</description>
     </item>
     
@@ -492,7 +475,6 @@
       
       <guid>https://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-25.html</guid>
       <description>&lt;p&gt;「&lt;a href=&#34;http://www.adventar.org/calendars/347&#34;&gt;Sketch 3 Advent Calendar 2014&lt;/a&gt;」25日目、最後の記事となりました。Sketch 3 Advent Calendar 2014にご参加いただいたみなさま、お疲れさまでした！！&lt;/p&gt;
-
 &lt;p&gt;今回は、インターフェイスデザインに特化しているSketchで、プレゼンテーションスライドをつくってみよう！というお話です。スライドを作る上での設定や、便利なプラグインやTipsを紹介したいと思います。&lt;/p&gt;</description>
     </item>
     
@@ -503,9 +485,7 @@
       
       <guid>https://creative-tweet.net/blog/2014/12/daitokai-advent-calendar-2014-24.html</guid>
       <description>&lt;p&gt;アタック25の様相を見せる「&lt;a href=&#34;http://www.adventar.org/calendars/661&#34;&gt;大都会岡山Advent Calendar&lt;/a&gt;」24日目です。前日は@littlebustersさんの「&lt;a href=&#34;http://creative-tweet.net/blog/2014/12/daitokai-advent-calendar-2014-23.html&#34;&gt;大都会岡山で開催されるフロント寄りの勉強会を紹介しますよ。大都会岡山 Advent Calendar 2014 | creative tweet.&lt;/a&gt;」でした。&lt;/p&gt;
-
 &lt;p&gt;ラストは、@&lt;a href=&#34;https://twitter.com/ryosms&#34;&gt;ryosms&lt;/a&gt;さんです。どんなすごいエントリーになるのでしょうか、期待しましょう！&lt;/p&gt;
-
 &lt;p&gt;ブログのテーマに沿った大都会ネタがないので、&lt;a href=&#34;http://www.adventar.org/calendars/347&#34;&gt;Sketch 3 Advent Calendar 2014&lt;/a&gt;の空いてるところを埋める裏Sketch 3 Advent Calendarをします。&lt;/p&gt;</description>
     </item>
     
@@ -516,7 +496,6 @@
       
       <guid>https://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-23.html</guid>
       <description>&lt;p&gt;「&lt;a href=&#34;http://www.adventar.org/calendars/347&#34;&gt;Sketch 3 Advent Calendar 2014&lt;/a&gt;」23日目の記事です。&lt;/p&gt;
-
 &lt;p&gt;多分「Sketch 3の基本。」に書き忘れている（この記事公開時点で）、軽めのキーコンビネーションネタでお届けします。&lt;/p&gt;</description>
     </item>
     
@@ -527,7 +506,6 @@
       
       <guid>https://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-01.html</guid>
       <description>&lt;p&gt;ついに始まってしまいました「&lt;a href=&#34;http://www.adventar.org/calendars/347&#34;&gt;Sketch 3 Advent Calendar 2014&lt;/a&gt;」！2013年は「オレオレ」ということで一人でしたが、割といろんなプレッシャーが辛いので、今回は普通（？）に立てました。ご参加いただいている皆さま、ありがとうございます！&lt;/p&gt;
-
 &lt;p&gt;ということで、第一弾は軽めのショートカットネタでお届けします。&lt;/p&gt;</description>
     </item>
     
@@ -538,9 +516,7 @@
       
       <guid>https://creative-tweet.net/blog/2014/11/sketch-3-basics-was-completed.html</guid>
       <description>&lt;p&gt;ツイートやFacebookページなどでは告知していたのですが、7月に未完成の初版をリリースし、4ヶ月ほどかけてようやく完成しました。&lt;/p&gt;
-
 &lt;p&gt;完成するかどうかも分からないものを、早々にご購入いただいた方をはじめ、ソーシャルでのシェアにご協力いただいた方など、本当にありがとうございます。&lt;/p&gt;
-
 &lt;p&gt;本の内容などは、「&lt;a href=&#34;http://creative-tweet.net/sketch-3-basics/&#34;&gt;Sketch 3の基本操作を解説した電子書籍「Sketch 3の基本。」&lt;/a&gt;」をご覧頂くとして、背景というかその他諸々を書き綴りたいと思います。&lt;/p&gt;</description>
     </item>
     
@@ -551,9 +527,7 @@
       
       <guid>https://creative-tweet.net/blog/2014/10/apply-proportional-metrics-on-sketch.html</guid>
       <description>&lt;p&gt;文字詰めができるアプリケーションというと、やはりAdobeのプロダクトがその筆頭でしょう。裏を返せば、それ以外のアプリケーションでは、まともに文字詰めができるものがない、という状況です。Sketchが大々的にフィーチャーされる最中、やはり文字詰めができないことを気になさっている方が大勢いらっしゃいました。&lt;/p&gt;
-
 &lt;p&gt;しかし、OpenTypeの機能を使うことで、実は文字詰めができることはご存知でしょうか？&lt;/p&gt;
-
 &lt;p&gt;今回は、Sketchをはじめとした、Adobeアプリケーション以外で文字詰めをする方法をご紹介します。&lt;/p&gt;</description>
     </item>
     
@@ -590,7 +564,7 @@
       <pubDate>Sun, 11 May 2014 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/tools/sketch_css_sprite_mixin/detail.html</guid>
-      <description>これは何？ Sketch上のオブジェクトから、CSS PreprocessorのMixinsを生成するプラグインです。 動作環境 Sketch 3.2以降 ライセ</description>
+      <description>これは何？ Sketch上のオブジェクトから、CSS PreprocessorのMixinsを生成するプラグインです。 動作環境 ライセンス 使い方 ア</description>
     </item>
     
     <item>
@@ -608,7 +582,7 @@
       <pubDate>Wed, 16 Apr 2014 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2014/04/sketch-3-is-new-available.html</guid>
-      <description></description>
+      <description>&lt;!-- raw HTML omitted --&gt;</description>
     </item>
     
     <item>
@@ -681,7 +655,6 @@
       
       <guid>https://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-path-combine.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.adventar.org/calendars/99&#34;&gt;Sketch.app Advent Calender 2013&lt;/a&gt; 18日目の記事です。&lt;/p&gt;
-
 &lt;p&gt;Sketch.app Advent Calender 18日目の記事です。今回はパスの結合についてです。Photoshopではシェイプの結合、Illustratorではパスファインダー、Fireworksではパスの結合などとしてお馴染みのアレです。&lt;/p&gt;</description>
     </item>
     
@@ -692,7 +665,6 @@
       
       <guid>https://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-path-advance.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.adventar.org/calendars/99&#34;&gt;Sketch.app Advent Calender 2013&lt;/a&gt; 17日目の記事です。&lt;/p&gt;
-
 &lt;p&gt;Sketch.appのパスの描画について、破線の設定やアウトライン化・分割方法などについてお届けします。&lt;/p&gt;</description>
     </item>
     
@@ -703,7 +675,6 @@
       
       <guid>https://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-path-basic.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.adventar.org/calendars/99&#34;&gt;Sketch.app Advent Calender 2013&lt;/a&gt; 16日目の記事です。&lt;/p&gt;
-
 &lt;p&gt;Sketch.appのパスの描画について、基本的な使い方と設定についてお届けします。&lt;/p&gt;</description>
     </item>
     
@@ -714,7 +685,6 @@
       
       <guid>https://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-slice.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.adventar.org/calendars/99&#34;&gt;Sketch.app Advent Calender 2013&lt;/a&gt; 15日目の記事です。&lt;/p&gt;
-
 &lt;p&gt;今回は、Sketch.appのスライスについて解説していきます。&lt;/p&gt;</description>
     </item>
     
@@ -734,7 +704,6 @@
       
       <guid>https://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-artboard.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.adventar.org/calendars/99&#34;&gt;Sketch.app Advent Calender 2013&lt;/a&gt; 13日目の記事です。&lt;/p&gt;
-
 &lt;p&gt;今回はSketch.appのアートボードに関する内容でお届けします。&lt;/p&gt;</description>
     </item>
     
@@ -745,7 +714,6 @@
       
       <guid>https://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-format.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.adventar.org/calendars/99&#34;&gt;Sketch.app Advent Calender 2013&lt;/a&gt; 12日目の記事です。&lt;/p&gt;
-
 &lt;p&gt;Sketch.appのテキストフォーマットについて、前回のインスペクタ【文字編】の補足も兼ねてお届けします。&lt;/p&gt;</description>
     </item>
     
@@ -756,7 +724,6 @@
       
       <guid>https://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-type.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.adventar.org/calendars/99&#34;&gt;Sketch.app Advent Calender 2013&lt;/a&gt; 11日目の記事です。&lt;/p&gt;
-
 &lt;p&gt;Sketch.appのインスペクタシリーズ第5弾、文字の設定についてお届けします。&lt;/p&gt;</description>
     </item>
     
@@ -767,7 +734,6 @@
       
       <guid>https://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-fill-borders.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.adventar.org/calendars/99&#34;&gt;Sketch.app Advent Calender 2013&lt;/a&gt; 10日目の記事です。&lt;/p&gt;
-
 &lt;p&gt;Sketch.appのインスペクタシリーズ第4弾、塗りと線設定についてお届けします。&lt;/p&gt;</description>
     </item>
     
@@ -778,7 +744,6 @@
       
       <guid>https://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-link.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.adventar.org/calendars/99&#34;&gt;Sketch.app Advent Calender 2013&lt;/a&gt; 9日目の記事です。&lt;/p&gt;
-
 &lt;p&gt;Sketch.appのインスペクタシリーズ第3弾、スタイルリンクについてお届けします。&lt;/p&gt;</description>
     </item>
     
@@ -789,7 +754,6 @@
       
       <guid>https://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-style.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.adventar.org/calendars/99&#34;&gt;Sketch.app Advent Calender 2013&lt;/a&gt; 8日目の記事です。&lt;/p&gt;
-
 &lt;p&gt;Sketch.appのインスペクタシリーズ第2弾、スタイリングについてお届けします。&lt;/p&gt;</description>
     </item>
     
@@ -800,7 +764,6 @@
       
       <guid>https://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-inspector-basic.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.adventar.org/calendars/99&#34;&gt;Sketch.app Advent Calender 2013&lt;/a&gt; 7日目の記事です。&lt;/p&gt;
-
 &lt;p&gt;今回からSketch.appのインスペクタシリーズをお届けします。タイトルの付け方がブレブレですが、とりあえず初回はインスペクタの基本情報部分です。&lt;/p&gt;</description>
     </item>
     
@@ -811,7 +774,6 @@
       
       <guid>https://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-layer-list-detail.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.adventar.org/calendars/99&#34;&gt;Sketch.app Advent Calender 2013&lt;/a&gt; 6日目の記事です。&lt;/p&gt;
-
 &lt;p&gt;今回はSketch.appのレイヤーリストについての解説をお届けします。初回にアプリケーションウィンドウを紹介しましたが、その続きといえばそんな感じです！&lt;/p&gt;</description>
     </item>
     
@@ -822,7 +784,6 @@
       
       <guid>https://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-pref-layers.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.adventar.org/calendars/99&#34;&gt;Sketch.app Advent Calender 2013&lt;/a&gt; 5日目の記事です。&lt;/p&gt;
-
 &lt;p&gt;今回はSketch.appの環境設定シリーズ最終回の「Layers」についてお届けします。&lt;/p&gt;</description>
     </item>
     
@@ -833,7 +794,6 @@
       
       <guid>https://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-pref-canvas.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.adventar.org/calendars/99&#34;&gt;Sketch.app Advent Calender 2013&lt;/a&gt; 4日目の記事です。&lt;/p&gt;
-
 &lt;p&gt;今回はSketch.appの環境設定シリーズ第2弾の「Canvas」についてお届けします。&lt;/p&gt;</description>
     </item>
     
@@ -844,7 +804,6 @@
       
       <guid>https://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-pref-general.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.adventar.org/calendars/99&#34;&gt;Sketch.app Advent Calender 2013&lt;/a&gt; 3日目の記事です。&lt;/p&gt;
-
 &lt;p&gt;今回から3回に分けて、Sketch.appの環境設定についてお届けします。その初回は「General」です。&lt;/p&gt;</description>
     </item>
     
@@ -855,7 +814,6 @@
       
       <guid>https://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-basic-knowledge.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.adventar.org/calendars/99&#34;&gt;Sketch.app Advent Calender 2013&lt;/a&gt; 2日目の記事です。&lt;/p&gt;
-
 &lt;p&gt;今回は、Sketch.appの基本操作やよく使うショートカットについてお届けします（※オレ様視点）。&lt;/p&gt;</description>
     </item>
     
@@ -866,7 +824,6 @@
       
       <guid>https://creative-tweet.net/blog/2013/12/sketch-app-advent-calendar-2013-application-window.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.adventar.org/calendars/99&#34;&gt;Sketch.app Advent Calender 2013&lt;/a&gt; 1日目の記事です。このAdvent CalendarではSkech.appのいろいろを解説していきますので、よろしくお願いします。（&lt;a href=&#34;../../blog/2013/11/sketch-app-advent-calendar-2013.html&#34;&gt;記事の一覧ページ&lt;/a&gt;）&lt;/p&gt;
-
 &lt;p&gt;初回は軽めにアプリケーションウィンドウについて解説します。&lt;/p&gt;</description>
     </item>
     
@@ -876,12 +833,8 @@
       <pubDate>Sat, 30 Nov 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2013/11/sketch-app-advent-calendar-2013.html</guid>
-      <description>&lt;p class=&#34;media&#34;&gt;
-  &lt;img src=&#34;../../assets/img/2013/2013-11-30-sketch-app-advent-calendar-2013/sketchapp_advent_calendar_2013.png&#34; alt=&#34;sketch.app advent calendar 2013&#34; /&gt;
-&lt;/p&gt;
-
+      <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;ということで、タイトルの通りです。酔った勢いで&lt;a href=&#34;http://www.adventar.org/calendars/99&#34;&gt;カレンダー&lt;/a&gt;立てちゃって、後悔するパターンですね。&lt;/p&gt;
-
 &lt;p&gt;12/1まであと数時間というところでの告知ですが、Sketch.appのアプリケーションウィンドウの解説から、ちょっとしたTipsまでいろいろと紹介していきます。&lt;/p&gt;</description>
     </item>
     
@@ -892,7 +845,6 @@
       
       <guid>https://creative-tweet.net/blog/2013/09/sketch-mirror-impression.html</guid>
       <description>&lt;p&gt;いろいろとありまして、2ヶ月ほど全く更新できておりませんでしたが、皆さんお元気でしょうか。&lt;/p&gt;
-
 &lt;p&gt;某イベントの準備で定時ダッシュがマストにもかかわらず、本業のスケジュールがフィーバーしてみたり、そのクソ忙しい中、某ロリポのアレで泣く泣く復旧作業をしたりで、ふぅと一息ついたらSketch Mirrorがリリースされていましたので、少しインプレッションを。&lt;/p&gt;</description>
     </item>
     
@@ -903,7 +855,6 @@
       
       <guid>https://creative-tweet.net/blog/2013/06/battled-of-design-tool.html</guid>
       <description>&lt;p&gt;UST配信を予定しておきながら、WiMAXの電波がほどんど入らないという、まさかのトラブルに見舞われつつ、何とか開催することができました。&lt;/p&gt;
-
 &lt;p&gt;Photoshop / Illustrator と告知しておきながら、 Fireworks / Sketch.app の2つだけという釣りから始まり、全員参加によるフリートークで締めました。&lt;/p&gt;</description>
     </item>
     
@@ -913,12 +864,8 @@
       <pubDate>Mon, 03 Jun 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2013/06/extending-sketchapp.html</guid>
-      <description>&lt;p class=&#34;notics-alert&#34;&gt;
-この記事はSketchの古いバージョンを元に書いた内容です。最新バージョンでは、動作が異なる場合があります。
-&lt;/p&gt;
-
+      <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;以前の記事（&lt;a href=&#34;http://creative-tweet.net/blog/2013/05/introduction-of-thesketch.html&#34;&gt;ちょっと別の世界も見てみませんか？ベクターベースのグラフィックツール Sketchを紹介してみるよ。&lt;/a&gt;）で、Sketch.appはスクリプトによる拡張ができると書きました。しかしながらJSTalkという、新しく作るには若干学習コストのかかる言語で書く必要があり、なかなか手を出しにくい機能なのも事実です。&lt;/p&gt;
-
 &lt;p&gt;そんな中、Fireworksのコマンド集&lt;a href=&#34;https://github.com/bomberstudios/fireworks&#34;&gt;Orange Commands&lt;/a&gt;の中の人が、その一部をSketch.appプラグインに移植されています（しかも結構前から）。今回はこのプラグイン集を紹介してみたいと思います。&lt;/p&gt;</description>
     </item>
     
@@ -928,10 +875,7 @@
       <pubDate>Sun, 26 May 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2013/05/battle-of-design-tools.html</guid>
-      <description>&lt;p&gt;&lt;p class=&#34;notics-alert&#34;&gt;
-このイベントは終了しました。
-&lt;/p&gt;
-Sketchフィーバーからずいぶん時間が経ってしまいましたが、大都会岡山で、「Ps / Ai / Fw / Sketch ガチンコバトル勉強会」を開催することになりました。基本的にはウェブサイトやアプリのユーザーインターフェイス などをつくる、いわゆる「デザイン」ツールの勉強会です。&lt;/p&gt;</description>
+      <description>&lt;!-- raw HTML omitted --&gt;</description>
     </item>
     
     <item>
@@ -949,12 +893,9 @@ Sketchフィーバーからずいぶん時間が経ってしまいましたが�
       <pubDate>Wed, 08 May 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2013/05/introduction-of-thesketch.html</guid>
-      <description>&lt;p class=&#34;notics-alert&#34;&gt;この記事はSketchの古いバージョンを元に書いた内容です。最新バージョンでは、動作が異なる場合があります。&lt;/p&gt;
-
+      <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;SketchはOSX向けのベクターベースのグラフィックツールです。AdobeでいうところのPhotoshopというよりはFireworks（やIllustrator）に近く、ワイヤーフレームのような軽いものから、ユーザーインターフェイスのデザインやイラストレーション・アイコン作成などもこなせるアプリです。&lt;/p&gt;
-
 &lt;p&gt;実は先週あたりからこの記事をポツポツと書いていたら、&lt;a href=&#34;http://blogs.adobe.com/fireworks/2013/05/the-future-of-adobe-fireworks.html&#34;&gt;Fireworksが新規機能開発終了&lt;/a&gt;というビッグニュースが入ってきまして、こんなタイミングでこの記事を出したらｱﾜﾜﾜとか思いながらも、空気を読まずに公開します。&lt;/p&gt;
-
 &lt;p&gt;置き換えしようぜ！という意向ではなく、こんなアプリもあるよというスタンスですので、生暖かく見守ってあげてください。&lt;/p&gt;</description>
     </item>
     

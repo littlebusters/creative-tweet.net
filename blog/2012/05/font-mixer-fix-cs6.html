@@ -50,37 +50,19 @@
 		<div class="content-main">
 			
 			<p>Adobe Fireworks CS6 OSX版でFont Mixerが動作しなかったので、修正しました。</p>
-
-<p class="links">
-<a href="../../../tools/font_mixer/detail.html">Fireworksで混植ができるFont Mixer［Fireworks拡張機能］</a>
-</p>
-
+<!-- raw HTML omitted -->
 <h2 id="原因">原因</h2>
-
 <p>コマンドパネルのボタンを押してもウンともスンともいわなかったため、色々と試してみました。</p>
-
 <p>その結果、コマンドの本体である.jsfファイルをcommandsフォルダに入れ、一度コマンドを直接実行すると、パネルからも実行できることがわかりました。つまり、パネル側から.jsfファイルがうまく読み込みされていない状態になっていたと考えられます。（一度コマンドを実行するとメモリー上に保持するようで、その状態だとパネルからでも実行できる）</p>
-
 <p>で、まさかと思いながらWindowsにFireworks CS6をインストールし、Font Mixerのインストール先の変更をせず試したところ、なぜかこちらは問題なく動作します。あれ？もしかしてOSXだときちんと動いてなかったの？という疑問が……特に不具合の報告はなかったので、まさかダウンロードしていただいた方が、全員がWindowsだったというミラクル？</p>
-
 <p>.jsfファイルの読み込みは、パネルのActionScriptで</p>
-
 <pre><code>fw.runScript( 'path/to/jsf')
-</code></pre>
-
-<p>を実行し、.jsfファイルを予め読み込むようにしています。ここで出てくる<code>path/to/jsf</code>の基準となるフォルダが、Commandsフォルダです。</p>
-
+</code></pre><p>を実行し、.jsfファイルを予め読み込むようにしています。ここで出てくる<code>path/to/jsf</code>の基準となるフォルダが、Commandsフォルダです。</p>
 <p>Font MixerはCommand Panelsフォルダにコマンドの本体である.jsfと、パネルの.swfをインストールしているので、パスは<code>../Command Panels/fontMixer.jsf</code>と指定しています。今回はこれがうまく読み込めていないようです。</p>
-
 <h2 id="修正">修正</h2>
-
 <p>パスの指定に下手な小細工をしないよう、.jsfをCommandsフォルダへ移動することで、無事動作を確認。ただ、単純に移動させるだけだとコマンドメニューに表示されてしまうので、拡張子を.jsfから.fssに変更しています。デフォルトでインストールされているコマンドに.fssの拡張子がついてモノがあったため、マネをしてみました。</p>
-
 <p>なぜか、OSX版ではラベルがずれて表示されていますが、マウスオーバーすると元に戻るので、とりあえず既知のバグということで。</p>
-
-<p class="media">
-<img alt="OSX版でのパネルのラベルずれ" src="../../../assets/img/2012/2012-05-14-font-mixer-fix-cs6/mac_fontmixerpanel.png">
-</p>
+<!-- raw HTML omitted -->
 		</div>
 
 		<section class="article-taxonomy">

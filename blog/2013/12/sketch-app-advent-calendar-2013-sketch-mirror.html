@@ -50,89 +50,35 @@
 		<div class="content-main">
 			
 			<p><a href="http://www.adventar.org/calendars/99">Sketch.app Advent Calender 2013</a> 22日目の記事です。以前もリリースされた時に記事を書きましたが、Sketch.appのアートボードをiOSでプレビューできる「Sketch Mirror」の解説をお届けします。</p>
-
-<p class="notics">
-  <b>Sketchの基本。</b>というSketch（Sketch 3）の基本操作にフォーカスした電子書籍をリリースしました。詳しくはこちらの「<a href="http://creative-tweet.net/sketch-3-basics/">Sketchの基本。</a>」のページをご覧ください。
-</p>
-<p class="notics">
-  この記事はSketch 2を元にした記事です。最新版の動作とは異なる可能性が高いため、参考程度にご覧ください。
-</p>
-<dl class="links">
-  <dt>
-    記事の一覧
-  </dt>
-  <dd>
-    <a href="http://creative-tweet.net/blog/2013/11/sketch-app-advent-calendar-2013.html">オレオレSketch.app Advent Calendar 2013やりますよ。 | creative tweet.</a>
-  </dd>
-</dl>
-
-## Sketch Mirrorとは
-
-Sketch.appのアートボードを（ほぼ）リアルタイムでiOS側に表示するアプリです。特に、iOS向けのU.I.を制作している場合に、実機プレビューとして威力を発揮します。昔からあるPhotoshopと[Skala Preview][2]みたいなものですね。
-
-## Sketch.appとSketch Mirrorを接続
-
-Sketch Mirrorは有料（2015/8/31時点で600円）ですので、[iTunes Storeで購入][3]しておきましょう。
-
-iOS側でSketch Mirrorを先に立ち上げてから、Sketch.appのツールパーにあるConnectアイコンをクリックします。
-
-<p class="media">
-  <img src="../../../assets/img/2013/2013-12-22-sketch-app-advent-calendar-2013-sketch-mirror/mirror-start.png" alt="Sketch.appとSketch Mirrorを接続">
-</p>
-
+<!-- raw HTML omitted -->
+<h2 id="sketch-mirrorとは">Sketch Mirrorとは</h2>
+<p>Sketch.appのアートボードを（ほぼ）リアルタイムでiOS側に表示するアプリです。特に、iOS向けのU.I.を制作している場合に、実機プレビューとして威力を発揮します。昔からあるPhotoshopと<a href="http://bjango.com/mac/skalapreview/">Skala Preview</a>みたいなものですね。</p>
+<h2 id="sketchappとsketch-mirrorを接続">Sketch.appとSketch Mirrorを接続</h2>
+<p>Sketch Mirrorは有料（2015/8/31時点で600円）ですので、<a href="https://itunes.apple.com/jp/app/sketch-mirror/id677296955?mt=8&amp;uo=4&amp;at=10lnMF">iTunes Storeで購入</a>しておきましょう。</p>
+<p>iOS側でSketch Mirrorを先に立ち上げてから、Sketch.appのツールパーにあるConnectアイコンをクリックします。</p>
+<!-- raw HTML omitted -->
 <h2 id="操作方法">操作方法</h2>
-
 <p>Sketch.appにアートボードがないと、プレビューできませんので、アートボードを作成しておきます。</p>
-
 <p>複数のアートボードやページがあれば、左右のスワイプでアートボードの変更、上下のスワイプでページの変更です。タップすればメニューが表示されるので、ページの指定かページ内に含まれるアートボードの指定ができます。</p>
-
-<p class="media">
-  <img src="../../../assets/img/2013/2013-12-22-sketch-app-advent-calendar-2013-sketch-mirror/mirror-control.png" alt="操作方法">
-</p>
-
+<!-- raw HTML omitted -->
 <p>PreferencesのGeneralタブににある、「Show Current Artboard」にチェックを入れておけば、自動的に編集しているアートボードがiOS上で表示されます。</p>
-
 <p>ダブルタップまたはピンチアウトで拡大、ピンチインで縮小です。</p>
-
 <h2 id="アートボードの表示">アートボードの表示</h2>
-
 <p>Sketch Mirror 1.0.1になって、背景に白いオブジェクトを配置しなくても、アートボードが白として認識されるようになりました。</p>
-
 <p>基本的にアートボード縦横のどちらかがデバイスの画面にフィットするよう、表示倍率が調整されます。アートボードサイズがデバイスの画面解像度より小さい場合は、ピクセル等倍となり表示倍率の調整は行われませんが、縦横の数値がデバイスのPortraitポジションの1/2幅（iPhone 5系なら320px）だった場合のみ画面にフィットします。</p>
-
 <p>縦より横が短いアートボードサイズは、デバイスをLandspaceポジションにしても回転しません。その逆、縦より横が長いものをPortraitポジションにしても回転しません。きちんと回転するのは、アートボードを表示した際に、その外側に余白がある場合です。（ちなみに正方形は確実に回転します）</p>
-
 <h2 id="ダブルタップでの拡大">ダブルタップでの拡大</h2>
-
 <p>ダブルタップでの拡大ですが、状況によって微妙に動作が異なります。</p>
-
 <p>アートボードの外側に余白がある場合は、縦横どちらかが画面にフィットするまで拡大します。</p>
-
-<p class="media">
-  <img src="../../../assets/img/2013/2013-12-22-sketch-app-advent-calendar-2013-sketch-mirror/mirror-zoom1.png" alt="ダブルタップによるズームのパターン">
-</p>
-
+<!-- raw HTML omitted -->
 <p>縦横どちらかがすでに画面にフィットしている場合は、フィットしていない方向がフィットまたはデバイス規定の幅（iPhone/iPod touchならPortraitの640pxとか）まで拡大されます。</p>
-
-<p class="media">
-  <img src="../../../assets/img/2013/2013-12-22-sketch-app-advent-calendar-2013-sketch-mirror/mirror-zoom2.png" alt="ダブルタップによるズームのパターン">
-</p>
-
+<!-- raw HTML omitted -->
 <p>これ以降にダブルタップすると、「すごく…大きいです…」になります。</p>
-
 <h2 id="バグっぽいの">バグっぽいの</h2>
-
 <p>微妙なバグは健在でして、PortraitとLandscapeが混在していると、画面を回転させた時に中途半端な位置になります。動かせば直るのでまぁいいんですが…</p>
-
-<p class="media">
-  <img src="../../../assets/img/2013/2013-12-22-sketch-app-advent-calendar-2013-sketch-mirror/mirror-bug2.png" alt="表示のバグ">
-</p>
-
-<p>レイヤーリストからアートボードを選択し、<kbd>Option</kbd>キーを押しながらサイズを変更すると、Sketch Mirror側でうまくサイズが反映されなくなります。直し方が未だに分からないので、アートボードの作り直しになります。</p>
-
-<p class="media">
-  <img src="../../../assets/img/2013/2013-12-22-sketch-app-advent-calendar-2013-sketch-mirror/mirror-bug1.png" alt="アートボードがきちんと認識されないバグ">
-</p>
+<!-- raw HTML omitted -->
+<p>レイヤーリストからアートボードを選択し、<!-- raw HTML omitted -->Option<!-- raw HTML omitted -->キーを押しながらサイズを変更すると、Sketch Mirror側でうまくサイズが反映されなくなります。直し方が未だに分からないので、アートボードの作り直しになります。</p>
+<!-- raw HTML omitted -->
 		</div>
 
 		<section class="article-taxonomy">

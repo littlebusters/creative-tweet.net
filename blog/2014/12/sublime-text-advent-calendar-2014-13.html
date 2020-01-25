@@ -53,80 +53,35 @@
 				<img src="../../../assets/img/2014/2014-12-13-sublime-text-advent-calendar-2014-13/sublime-text-advent-calendar-2014-01-leadimage.png" class="hero" alt="">
 			</p>
 			
-			<p>この記事は<a href="http://www.adventar.org/calendars/407">Sublime Text Advent Calendar 2014 &#8211; Adventar</a>の13日目の記事です。</p>
-
+			<p>この記事は<a href="http://www.adventar.org/calendars/407">Sublime Text Advent Calendar 2014 – Adventar</a>の13日目の記事です。</p>
 <p>私がたまによく使う、Sublime Textのパッケージ、GistとTakanaを紹介します。</p>
-
 <h2 id="gist">Gist</h2>
-
 <p>まずは<a href="http://gist.github.com/">Gist</a>です。</p>
-
 <p>メモでファイルを作ったけど、どこかに保存しておく程でもないな…という時って、意外にありませんか？</p>
-
 <p>EvernoteやOneNoteに保存する方もいらっしゃると思いますが、Sublime TextからGistを扱えるパッケージを入れておくと、アプリの移動もなくGistを開いたり、保存したり、ドキュメントに挿入できたりします。</p>
-
 <h3 id="インストールと設定">インストールと設定</h3>
-
 <p><a href="https://github.com/">Github</a>のアカウントが必要になりますので、まだお持ちでない方は取得しておきましょう。</p>
-
-<p>「<strong>Tools → Command Palette&#8230;</strong>」（ショートカット：<kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>p</kbd>）を開き、「Package Control: Install Package」を選択します。</p>
-
-<p class="media">
-  <img src="../../../assets/img/2014/2014-12-13-sublime-text-advent-calendar-2014-13/command-palette.png" alt="command-palette">
-</p>
-
+<p>「<strong>Tools → Command Palette…</strong>」（ショートカット：<!-- raw HTML omitted -->Command<!-- raw HTML omitted --> + <!-- raw HTML omitted -->Shift<!-- raw HTML omitted --> + <!-- raw HTML omitted -->p<!-- raw HTML omitted -->）を開き、「Package Control: Install Package」を選択します。</p>
+<!-- raw HTML omitted -->
 <p>「gist」と入力して表示される「Gist」をインストールします。</p>
-
-<p class="media">
-  <img src="../../../assets/img/2014/2014-12-13-sublime-text-advent-calendar-2014-13/type-gist.png" alt="type-gist">
-</p>
-
-<p>インストールができたら、メニューバーから「<strong>Sublime Text → Prefercences → Package Settings → Gist → Settings &#8211; Default</strong>」を開いて内容をコピーします。つづけて、同じ階層にある「<strong>Settings &#8211; User</strong>」を開いてペーストします。</p>
-
+<!-- raw HTML omitted -->
+<p>インストールができたら、メニューバーから「<strong>Sublime Text → Prefercences → Package Settings → Gist → Settings – Default</strong>」を開いて内容をコピーします。つづけて、同じ階層にある「<strong>Settings – User</strong>」を開いてペーストします。</p>
 <p><a href="https://github.com/">Github</a>へログインし、右上の「歯車アイコン」からSettingsのページを開きます。</p>
-
-<p class="media">
-  <img src="../../../assets/img/2014/2014-12-13-sublime-text-advent-calendar-2014-13/github-settings.png" alt="github-settings">
-</p>
-
+<!-- raw HTML omitted -->
 <p>左のナビゲーションにある「Applications」をクリックします。</p>
-
-<p class="media">
-  <img src="../../../assets/img/2014/2014-12-13-sublime-text-advent-calendar-2014-13/github-applications.png" alt="github-applications">
-</p>
-
+<!-- raw HTML omitted -->
 <p>「Personal access tokens」という項目にある、「Generate new token」をクリックします。</p>
-
-<p class="media">
-  <img src="../../../assets/img/2014/2014-12-13-sublime-text-advent-calendar-2014-13/github-generate-new-token.png" alt="github-generate-new-token">
-</p>
-
+<!-- raw HTML omitted -->
 <p><strong>Token description</strong>は適当な名前を付け、<strong>gist</strong>のみチェックを入れて、「Generate token」ボタンをクリックします。</p>
-
-<p class="media">
-  <img src="../../../assets/img/2014/2014-12-13-sublime-text-advent-calendar-2014-13/github-token.png" alt="github-token">
-</p>
-
+<!-- raw HTML omitted -->
 <p>Settingsのページに戻ると文字列が表示されているので、これをコピーします。ちなみにこの文字列は生成した時しか表示されず、あとから参照することができないので気をつけましょう。分からなくなったら、再度生成してください。それから、ぼかしていることから分かる通り、他の人に知られないようにしてくださいね。</p>
-
-<p class="media">
-  <img src="../../../assets/img/2014/2014-12-13-sublime-text-advent-calendar-2014-13/github-copy-token.png" alt="github-copy-token">
-</p>
-
-<p>Sublime Textに戻って、Settings &#8211; Userの「Token」へ、先ほどコピーした文字列をペーストして保存します。</p>
-
+<!-- raw HTML omitted -->
+<p>Sublime Textに戻って、Settings – Userの「Token」へ、先ほどコピーした文字列をペーストして保存します。</p>
 <p>これでひとまず準備はOKです。</p>
-
 <h3 id="gistを使う">Gistを使う</h3>
-
 <p>Command Paletteを開き、「gist」と入力すれば、6つのメニューが表示されると思います。</p>
-
-<p class="media">
-  <img src="../../../assets/img/2014/2014-12-13-sublime-text-advent-calendar-2014-13/gist-command.png" alt="gist-command">
-</p>
-
+<!-- raw HTML omitted -->
 <p>それぞれの機能は下記の通りです。</p>
-
 <dl>
 <dt><strong>Insert Gist</strong></dt>
 <dd>実行後、Gistの一覧が表示され、選択したGistの内容を、現在のキャレットへ挿入します。</dd>
@@ -141,70 +96,34 @@
 <dt><strong>Add File to Gist</strong></dt>
 <dd>実行後、Gistの一覧が表示され、選択したGistへ現在のドキュメントを追加します。</dd>
 </dl>
-
 <p>一覧が表示されている時は、インクリメントサーチでファイルを検索できます。</p>
-
 <p>気をつける点とすれば、Privateモードで作成していたとしても、URLが分かればアクセスはできるので、機密情報は間違っても保存しないようにしましょう。</p>
-
 <p>ちなみにGistの管理そのものは、<a href="https://app.gistboxapp.com/">GistBox</a>が便利です。</p>
-
 <h2 id="takana">Takana</h2>
-
 <p>続けて「<a href="http://usetakana.com/">Takana</a>」の登場です。sayコマンドだと「てぃかな」なんですが、どうみても高菜です。</p>
-
 <p>これはNode.jsを使って、CSSとSCSSの変更をライブプレビューできるツールです。OSXとLinuxのSublime Textに対応しています。</p>
-
 <p>ライブプレビューという点では<a href="http://livestyle.emmet.io/about/">Emmet LiveStyle</a>と似ていますが、ブラウザとエディタの双方向で編集が反映されるLiveStyleに対し、Takanaでは、Sublime Textでの編集に限られます。</p>
-
 <h3 id="インストール">インストール</h3>
-
 <p>当然ながらNode.jsが必要ですので、インストールしておきましょう。公式サイトのインストーラーではなく、<a href="http://brew.sh/index_ja.html">homebrew</a>とか<a href="https://github.com/hokaccha/nodebrew">nodebrew</a>を使った方が何かと便利です。ちなみに私はnodebrewを使っています。</p>
-
 <p>まずはSublime Textへ、パッケージをインストールします。Command Paletteを開いて、「Package Control: Install Package」を選択します。</p>
-
 <p>「takana」と入力して、表示されるパッケージをインストールしましょう。</p>
-
-<p class="media">
-  <img src="../../../assets/img/2014/2014-12-13-sublime-text-advent-calendar-2014-13/type-takana.png" alt="type-takana">
-</p>
-
+<!-- raw HTML omitted -->
 <p>続けてターミナルを使って、Node.jsのモジュールをインストールしていきます。「黒い画面怖い」とか言わない。</p>
-
 <pre><code>$ npm install -g takana@0.2.1
-</code></pre>
-
-<p>執筆時点での最新版は0.3.2ですが、うまく動作しないため、以前のバージョンを指定してインストールしています。</p>
-
-<p>エラーが出た場合は、行頭に<code class="inline">sudo</code>が必要だったり、Xcodeの利用規約への同意がまだだったりだと思うので、確認してみてください。</p>
-
+</code></pre><p>執筆時点での最新版は0.3.2ですが、うまく動作しないため、以前のバージョンを指定してインストールしています。</p>
+<p>エラーが出た場合は、行頭に<!-- raw HTML omitted -->sudo<!-- raw HTML omitted -->が必要だったり、Xcodeの利用規約への同意がまだだったりだと思うので、確認してみてください。</p>
 <h3 id="takanaを使う">Takanaを使う</h3>
-
 <p>ターミナルで、次のコマンドを実行します。</p>
-
 <pre><code>$ takana /path/to/project_folder
-</code></pre>
-
-<p>フォルダまでのパスは、<code class="inline">takana </code>（最後に半角スペース）と入力して、フォルダをドラッグ＆ドロップするのが一番簡単かと思います。</p>
-
+</code></pre><p>フォルダまでのパスは、<!-- raw HTML omitted -->takana <!-- raw HTML omitted -->（最後に半角スペース）と入力して、フォルダをドラッグ＆ドロップするのが一番簡単かと思います。</p>
 <p>正常に起動できれば、メッセージとコードが表示されますので、そのコードをHTMLのhead要素内にコピペしましょう。</p>
-
-<p class="media">
-<img src="../../../assets/img/2014/2014-12-13-sublime-text-advent-calendar-2014-13/takana-script.png" alt="takana-script">
-</p>
-
+<!-- raw HTML omitted -->
 <p>あとはCSSやSCSSを編集すれば、保存をしなくても即座に変更が反映されるようになります。下の参考動画ではmixtureを使っていますが、Takanaさえ起動していれば、fileプロトコルでもライブプレビューをすることができます。</p>
-
-<p><iframe src="https://player.vimeo.com/video/114139784" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<a href="http://vimeo.com/114139784">takana w/mixture</a> from <a href="http://vimeo.com/littlebusters">littlebusters</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-
+<!-- raw HTML omitted -->
 <p>縮小していない<a href="https://v.usetapes.com/NihcJIRRNB">フルサイズの動画</a></p>
-
 <p>ちなみに、動画の中でBootstrap SASSを読み込んでるツールは、mixtureというJulleiylライクなジェネレータです。</p>
-
 <p>拡張しまくった結果、カオスになった過去のCSSを編集するときは便利なのですが、BrowerSync使い始めてからかなり出番が減ってしまい、ちょっとした修正でしか使ってなかったり、というのが正直なところだったりします、えぇ。</p>
-
-<hr class="postscript" />
-
+<!-- raw HTML omitted -->
 <p>明日は<a href="http://www.adventar.org/users/4620">Ryuji</a>さんです！</p>
 		</div>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programing on creative tweet.</title>
@@ -18,7 +18,6 @@
       
       <guid>https://creative-tweet.net/blog/2013/12/fireworks-advent-calendar-2013-1215.html</guid>
       <description>&lt;p&gt;この記事は&lt;a href=&#34;http://www.adventar.org/calendars/136&#34;&gt;Fireworks Lover Advent Calendar 2013&lt;/a&gt; の空いていた15日目の記事です。あと若干のリクエストがあったので書いております。&lt;/p&gt;
-
 &lt;p&gt;さまざまな方が解説されている中、あえて今一度Fireworksのコマンドの作り方を書いてみます。&lt;/p&gt;</description>
     </item>
     
@@ -29,7 +28,6 @@
       
       <guid>https://creative-tweet.net/blog/2012/05/ui-for-flautokerning.html</guid>
       <description>&lt;p&gt;@&lt;a href=&#34;https://twitter.com/fladdict&#34;&gt;fladdict&lt;/a&gt;さん作の「&lt;a href=&#34;http://fladdict.net/blog/2011/02/auto-kerning.html&#34;&gt;FLAutoKerning.js&lt;/a&gt;」で使用するカーニングペア情報を、ブラウザで設定できるインターフェイスをつくってみました。&lt;/p&gt;
-
 &lt;p&gt;ペアでしかカーニングできないという低機能ですが、キーボード操作だけでカーニングできます。ただし、モリサワの&lt;a href=&#34;http://typesquare.com/&#34;&gt;TypeSquare&lt;/a&gt;向けに作成していますので、他のWebフォントで使えるかどうかは未検証です。実際にご利用の際は、ご自身のサーバに設置してお使いください。（ライセンス的なアレで）&lt;/p&gt;</description>
     </item>
     
@@ -40,7 +38,6 @@
       
       <guid>https://creative-tweet.net/blog/2012/02/font-mixer-memo.html</guid>
       <description>&lt;p&gt;先日公開した、&lt;a href=&#34;../01/font-mixer-100.html&#34; title=&#34;Fireworksの混植拡張機能、Font Mixerを作成しました。&#34;&gt;Fireworks拡張機能「Font Mixer」&lt;/a&gt;を制作するにあたっての自分用のメモですが、何かのヒントなれば、と公開します。&lt;/p&gt;
-
 &lt;p&gt;拡張機能といっても、ライブラリだったりスタイルだったりしますが、今回はコマンドおよびコマンドパネルについてです。&lt;/p&gt;</description>
     </item>
     

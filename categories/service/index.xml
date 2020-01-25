@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Service on creative tweet.</title>
@@ -27,7 +27,6 @@
       
       <guid>https://creative-tweet.net/blog/2015/10/usage-hugo-1.html</guid>
       <description>&lt;p&gt;今回はWordPressからHugoへの乗り換えの一部始終を記載していきます。&lt;/p&gt;
-
 &lt;p&gt;ちょっと長くなったため、前編と後編に分割しています。前編はHugoでサイトを生成するまで、後編はデプロイを自動化するまで、の内容でお届けします。&lt;/p&gt;</description>
     </item>
     

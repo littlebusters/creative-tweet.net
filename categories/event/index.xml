@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Event on creative tweet.</title>
@@ -18,7 +18,6 @@
       
       <guid>https://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-03.html</guid>
       <description>&lt;p&gt;「&lt;a href=&#34;http://www.adventar.org/calendars/347&#34;&gt;Sketch 3 Advent Calendar 2014&lt;/a&gt;」3日目です。アレ？&lt;/p&gt;
-
 &lt;p&gt;今回は、WidthやHeightといった、テキストボックスでテンキーを使わずに小数点以下を入力する方法を紹介します。&lt;/p&gt;</description>
     </item>
     
@@ -29,9 +28,7 @@
       
       <guid>https://creative-tweet.net/blog/2014/12/daitokai-advent-calendar-2014-24.html</guid>
       <description>&lt;p&gt;アタック25の様相を見せる「&lt;a href=&#34;http://www.adventar.org/calendars/661&#34;&gt;大都会岡山Advent Calendar&lt;/a&gt;」24日目です。前日は@littlebustersさんの「&lt;a href=&#34;http://creative-tweet.net/blog/2014/12/daitokai-advent-calendar-2014-23.html&#34;&gt;大都会岡山で開催されるフロント寄りの勉強会を紹介しますよ。大都会岡山 Advent Calendar 2014 | creative tweet.&lt;/a&gt;」でした。&lt;/p&gt;
-
 &lt;p&gt;ラストは、@&lt;a href=&#34;https://twitter.com/ryosms&#34;&gt;ryosms&lt;/a&gt;さんです。どんなすごいエントリーになるのでしょうか、期待しましょう！&lt;/p&gt;
-
 &lt;p&gt;ブログのテーマに沿った大都会ネタがないので、&lt;a href=&#34;http://www.adventar.org/calendars/347&#34;&gt;Sketch 3 Advent Calendar 2014&lt;/a&gt;の空いてるところを埋める裏Sketch 3 Advent Calendarをします。&lt;/p&gt;</description>
     </item>
     
@@ -42,7 +39,6 @@
       
       <guid>https://creative-tweet.net/blog/2014/12/daitokai-advent-calendar-2014-23.html</guid>
       <description>&lt;p&gt;アタック25の様相を見せる「&lt;a href=&#34;http://www.adventar.org/calendars/661&#34;&gt;大都会岡山Advent Calendar&lt;/a&gt;」23日目です。前日は@littlebustersさんの「&lt;a href=&#34;http://creative-tweet.net/blog/2014/12/daitokai-advent-calendar-2014-22.html&#34;&gt;大都会からの刺客として「プロとして恥ずかしくない 新・WEBデザインの大原則」の執筆に参加しました。 大都会岡山 Advent Calendar 2014&lt;/a&gt;」でした（長い）。 明日は@littlebustersさんです、はい3日目がんばります。&lt;/p&gt;
-
 &lt;p&gt;「勉強会が多い（要出典）」と言われている大都会ですが、その中でフロント（どこまで？）系のセミナーや勉強会を、開催された様子とともに少し紹介したいと思います。これがない！というのがあれば、まさかり投げてください。&lt;/p&gt;</description>
     </item>
     
@@ -71,7 +67,6 @@
       
       <guid>https://creative-tweet.net/blog/2013/10/css-reprocessor-hands-on-131019.html</guid>
       <description>&lt;p&gt;某イベントで投げっぱなしジャーマンをかましたので、一応責任を取るカタチで開催しました（何）。&lt;/p&gt;
-
 &lt;p&gt;前日まで、参加人数とメンバー的に開催する意味あんの？と思わなくもない状況でしたが、いろいろと声をかけていただきまして、黒い画面にも関わらず女子率が高い勉強会になりました。&lt;/p&gt;</description>
     </item>
     
@@ -82,7 +77,6 @@
       
       <guid>https://creative-tweet.net/blog/2013/06/battled-of-design-tool.html</guid>
       <description>&lt;p&gt;UST配信を予定しておきながら、WiMAXの電波がほどんど入らないという、まさかのトラブルに見舞われつつ、何とか開催することができました。&lt;/p&gt;
-
 &lt;p&gt;Photoshop / Illustrator と告知しておきながら、 Fireworks / Sketch.app の2つだけという釣りから始まり、全員参加によるフリートークで締めました。&lt;/p&gt;</description>
     </item>
     
@@ -92,10 +86,7 @@
       <pubDate>Sun, 26 May 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2013/05/battle-of-design-tools.html</guid>
-      <description>&lt;p&gt;&lt;p class=&#34;notics-alert&#34;&gt;
-このイベントは終了しました。
-&lt;/p&gt;
-Sketchフィーバーからずいぶん時間が経ってしまいましたが、大都会岡山で、「Ps / Ai / Fw / Sketch ガチンコバトル勉強会」を開催することになりました。基本的にはウェブサイトやアプリのユーザーインターフェイス などをつくる、いわゆる「デザイン」ツールの勉強会です。&lt;/p&gt;</description>
+      <description>&lt;!-- raw HTML omitted --&gt;</description>
     </item>
     
     <item>
@@ -104,7 +95,7 @@ Sketchフィーバーからずいぶん時間が経ってしまいましたが�
       <pubDate>Fri, 22 Mar 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2013/03/fwuglt_in_co-edo.html</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://cssnite.jp/ginza/vol68/&#34;&gt;CSS Nite in Ginza, Vol.68「HiDPI時代のFireworks」&lt;/a&gt;の懇親会として企画された、&lt;a title=&#34;Fireworks User Group LightningTalk開催のお知らせ | Fireworks Users Group&#34; href=&#34;http://fwug.net/?q=node/27213&#34; target=&#34;_blank&#34;&gt;Fireworks User Group LightningTalk&lt;/a&gt;で、「敢えて@1xでRetina対応をしてみる」というお題でしゃべってきました。&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://cssnite.jp/ginza/vol68/&#34;&gt;CSS Nite in Ginza, Vol.68「HiDPI時代のFireworks」&lt;/a&gt;の懇親会として企画された、&lt;!-- raw HTML omitted --&gt;Fireworks User Group LightningTalk&lt;!-- raw HTML omitted --&gt;で、「敢えて@1xでRetina対応をしてみる」というお題でしゃべってきました。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -114,7 +105,6 @@ Sketchフィーバーからずいぶん時間が経ってしまいましたが�
       
       <guid>https://creative-tweet.net/blog/2012/12/lovefont-chicago.html</guid>
       <description>&lt;p&gt;あ…ありのまま 今起こった事を話すぜ！「大都会岡山 Advent Calendarを見ていたら、11日目に登録されていた」な…何を言っているのかわからねーと思うが　おれも　何をされたのかわからなかった…&lt;/p&gt;
-
 &lt;p&gt;ということで、内容は不問らしい &lt;a href=&#34;http://www.adventar.org/calendars/39&#34;&gt;大都会岡山 Advent Calendar 2012&lt;/a&gt; 11日目で、#LOVEFONTをぶち込みます！&lt;/p&gt;</description>
     </item>
     
@@ -124,7 +114,7 @@ Sketchフィーバーからずいぶん時間が経ってしまいましたが�
       <pubDate>Thu, 06 Dec 2012 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2012/12/retina-image-exporter.html</guid>
-      <description>&lt;p&gt;&lt;a title=&#34;Fireworks Lover Advent Calendar 2012&#34; href=&#34;http://www.adventar.org/calendars/14&#34; target=&#34;_blank&#34;&gt;Fireworks Lover Advent Calendar 2012&lt;/a&gt;の7日目の記事です。&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;!-- raw HTML omitted --&gt;Fireworks Lover Advent Calendar 2012&lt;!-- raw HTML omitted --&gt;の7日目の記事です。&lt;/p&gt;</description>
     </item>
     
   </channel>

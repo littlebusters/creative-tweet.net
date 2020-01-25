@@ -54,493 +54,318 @@
 			</p>
 			
 			<p>Vue.jsを始めるにあたっての基礎知識的なこと（公式ドキュメントの「はじめに」に相当）を丁寧な感じにまとめてみました。</p>
-
 <p>簡単なVue.jsのコードであれば、書いてることがなんとなく理解できるようになれる想定です。</p>
-
 <p>筆者についてですが、</p>
-
 <ul>
 <li>Vue.jsを使って「とあるゲーム」用のツールをつくってみた上での所業。</li>
 <li>JavaScriptを雰囲気で書いている（あまりゴリゴリなのは書けない）。</li>
 <li>ReactやAngularなどの他のフレームワークは使ったことがない（強いていうと、Riot.jsをちょっとお触りした）。</li>
 <li>ES6？　なにそれおいしいの？</li>
 </ul>
-
 <p>という感じなので、「Vue.js、ﾁｮｯﾄﾃﾞｷﾙ」という方は優しくまさかり投げてくださると……</p>
-
 <p>また、この記事を開いたということは、Vue.jsに興味をお持ちだと思うので、Vue.jsについての説明は省きます。</p>
-
-<h2 id="vue-jsのインストール">Vue.jsのインストール</h2>
-
+<h2 id="vuejsのインストール">Vue.jsのインストール</h2>
 <p>Vue.jsのインストールについては、「<a href="https://jp.vuejs.org/v2/guide/installation.html">インストール — Vue.js</a>」に書かれていますが、WebpackとかCLIとか準備しているとそこで挫折してしまうため、<a href="https://jsfiddle.net/">JSFiddle</a>や<a href="https://codepen.io">CodePen</a>などのオンラインコードプレイグラウンドを使いましょう。（JavaScriptの設定で、Vue.jsの読み込みを忘れずに！）今回のサンプルはCodePenへリンクをしています。</p>
-
 <p>手慣れたエディタを使いたい場合は、script要素にCDNのアドレスを指定して利用しましょう。面倒ですが、エディタで書いてコピペするという手もあります。</p>
-
 <h2 id="バインディング">バインディング</h2>
-
 <p>では早速、文字を表示するところから始めてみます。（ちなみに、コードは公式ドキュメントとほぼ同じです…）</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;app&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ message }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;app&#34;</span><span class="p"></span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p"></span><span class="p">&gt;</span>{{ message }}<span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
   <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#app&#39;</span><span class="p">,</span>
   <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
     <span class="nx">message</span><span class="o">:</span> <span class="s1">&#39;Hello Vue.js!&#39;</span><span class="p">,</span>
-  <span class="p">},</span>
-<span class="p">});</span>
-</code></pre></div>
-<p><a href="https://codepen.io/littlebusters/pen/eMYzmg">サンプルコード</a></p>
-
-<p class="note">サンプルコードには、適当なCSSを書いていますが、直接関係するもの以外は解説していません。</p>
-
+  <span class="p">}</span><span class="p">,</span>
+<span class="p">}</span><span class="p">)</span><span class="p">;</span>
+</code></pre></div><p><a href="https://codepen.io/littlebusters/pen/eMYzmg">サンプルコード</a></p>
+<!-- raw HTML omitted -->
 <h3 id="htmlの設定">HTMLの設定</h3>
-
 <p>div要素のid属性は、Vue.jsを実行する要素を指定するために必要で、今回は<code>app</code>としました。要素はdiv以外でも構いません。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec1-add-id-attribute-for-vuejs.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>p要素にある<code>{{ message }}</code>は、JavaScript側のデータを流し込むための「枠」を設定しています。<code>{{}}</code>は最も基本的なテンプレート構文で、JavaScript側で設定された値を<code>{{}}</code>部分へ展開します。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec1-set-massage-by-html.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <h3 id="javascriptの設定">JavaScriptの設定</h3>
-
 <p>続いてJavaScriptです。1行目の<code>new Vue()</code>は、Vueインスタンスを作成する命令です。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec1-vuejs-instance-method.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>これは、HTMLやJavaScriptで記述した設定を元に、Vue.jsが実際に動くアプリケーションに処理して起動する「合図のようなもの」と考えてください。この処理を「インスタンス化」といい、処理して作成されたものを「Vueインスタンス」といいます。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec1-vue-instance.png" alt=""></p>
-
-<p class="note">ちなみに<code>var vm =</code>の部分は、インスタンスをVue.jsの外から操作するために定義しているだけですので、なくても動きます。</p>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p><code>el</code>は、HTML側でVue.jsを展開する場所（id）を指定します。idを表す<code>#</code>を忘れずに。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec1-vuejs-instance.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p><code>data</code>は、文字通りVue.js内で使うさまざまなデータをする場所です。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec1-vue-properties-data.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>今回は、<code>message</code>という名前の変数へ、値<code>Hello Vue.js!</code>を設定しています。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec1-data-message.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>実行するとHTMLの<code>{{ message }}</code>の部分へ、JavaScript側にある<code>message</code>の値<code>Hello Vue.js!</code>が展開されます。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec1-rendering-to-massage.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>ここまで解説した<code>el</code>や<code>data</code>は、Vue.jsのAPIと呼ばれるもので、Vue.jsを扱う上での規格のようなものです。用意されているAPIを使って、さまざまな処理を記述します。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec1-vue-apis.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p><code>new Vue({})</code>の直下にあるものはAPIと思ってだいたい間違いないです。</p>
-
 <h3 id="バインディングを試す">バインディングを試す</h3>
-
 <p>ここまでの解説では、単純にJavaScriptで設定した文字をテンプレートに入れ、ブラウザでレンダリングしただけにみえます。</p>
-
 <p>CodePenのウィンドウ左下にある［Console］ボタンから、CodePenのConsoleを開いてください（ブラウザのDevToolのほうが使いやすければそちらでもOKです）。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec1-display-codepen-console.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p><code>&gt;</code>の表示に続き<code>vm.message = 'Hi! Vue.js!'</code>←をコピペしEnterキーで実行してみましょう（Hi! Vue.js!は適当に変えOKです）。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec1-input-text-to-console.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>「Hello Vue.js!」が「Hi! Vue.js!」に変わったでしょうか？</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec1-react-text.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>コンソールで実行したコードは、<code>data</code>にある<code>message</code>の値の書き換えを行うものでした。Vue.jsでは、このようにJavaScriptの値が書き変わると関連するHTMLの表示の書き換えを行います。</p>
-
 <p>仕組みとしては、Vueがインスタンス化するときに、JavaScript側の変数とHTML側の<code>{{}}</code>を関連付け（バインディング）します。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec1-vue-instance-binding-and-extend.png" alt=""></p>
-参照している値が変わると、それに追従して関連する要素の内容を書き換えてくれます。これを「バインディング」と呼び、HTMLに`{{}}`と参照する変数を書いておくだけで、Vue.jsが適切に書き換えの処理を行います。
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec1-vue-react-update.png" alt=""></p>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>ここでは単に文字を書き換えただけですが、計算した結果を表示をしたり要素の表示を切り替えたりと、用途に応じてさまざまなことが実現できます。</p>
-
 <h2 id="methods">Methods</h2>
-
 <p>続いて、methodsというAPIの解説をします。簡単にいうとVue.js内の関数で、<code>data</code>内の値を変更したり計算や文字列の連結をしたりと、さまざまな処理を記述する部分です。</p>
-
 <p>ボタンを押すとclass属性の値を書き換える、という処理で解説します。</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;app&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">v-bind:class</span><span class="o">=</span><span class="s">&#34;messageStyle&#34;</span><span class="p">&gt;</span>Hello Vue.js!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-on:click</span><span class="o">=</span><span class="s">&#34;changeClass()&#34;</span><span class="p">&gt;</span>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;app&#34;</span><span class="p"></span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">v-bind:class</span><span class="o">=</span><span class="s">&#34;messageStyle&#34;</span><span class="p"></span><span class="p">&gt;</span>Hello Vue.js!<span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-on:click</span><span class="o">=</span><span class="s">&#34;changeClass()&#34;</span><span class="p"></span><span class="p">&gt;</span>
     class属性を変更する
-  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+  <span class="p">&lt;</span><span class="p">/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
   <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#app&#39;</span><span class="p">,</span>
   <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
     <span class="nx">messageStyle</span><span class="o">:</span> <span class="s1">&#39;before&#39;</span><span class="p">,</span>
-  <span class="p">},</span>
+  <span class="p">}</span><span class="p">,</span>
   <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">changeClass</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">changeClass</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
       <span class="k">this</span><span class="p">.</span><span class="nx">messageStyle</span> <span class="o">=</span> <span class="s1">&#39;after&#39;</span><span class="p">;</span>
     <span class="p">}</span>
-  <span class="p">},</span>
-<span class="p">});</span>
+  <span class="p">}</span><span class="p">,</span>
+<span class="p">}</span><span class="p">)</span><span class="p">;</span>
 </code></pre></div><div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">before</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="mh">#4DC295</span><span class="p">;</span> <span class="p">}</span>
-<span class="p">.</span><span class="nc">after</span>  <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="mh">#445C71</span><span class="p">;</span> <span class="p">}</span></code></pre></div>
-<p><a href="https://codepen.io/littlebusters/pen/QmXjPw">サンプルコード</a></p>
-
+<span class="p">.</span><span class="nc">after</span>  <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="mh">#445C71</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div><p><a href="https://codepen.io/littlebusters/pen/QmXjPw">サンプルコード</a></p>
 <h3 id="htmlの設定-1">HTMLの設定</h3>
-
 <p>p要素には、<code>v-bind:class=&quot;messageStyle&quot;</code>という属性が設定されています。これをよく見ると、class属性にv-bindがくっついていることがわかります。</p>
-
 <p>このv-bindは、1つ前に説明した<code>{{}}</code>と同じで、class属性の値を<code>messageStyle</code>でバインディングする処理です。前の解説からすると<code>class=&quot;{{ messageStyle }}&quot;</code>と書きたいところですが、実は<code>{{}}</code>で書けるのはHTMLの要素内に限られるため、属性値をバインディングしたい場合は<code>v-bind</code>を使います。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec2-binding-attributes.png" alt=""></p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec2-binding.png" alt=""></p>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>button要素には、見慣れない属性の<code>v-on:click=&quot;changeClass()&quot;</code>が設定されています。</p>
-
 <p>これは、ボタンを押した時のアクションを設定しています。p要素の<code>v-bind:class</code>と同じように、こちらも<code>v-on</code>と<code>click</code>で構成されています。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec2-v-on-attribute.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p><code>v-on</code>は、ユーザの操作（イベント）を検知するもので、今回は<code>click</code>と組み合わせているので、クリックイベントを監視します。設定した要素にクリックイベントが発生したら、値として設定している<code>changeClass()</code>が実行されます。</p>
-
 <p>ここで<code>v-</code>がついた属性を2つ紹介しましたが、この<code>v-</code>がつく属性を「ディレクティブ」と呼びます。Vue.jsがインスタンス化する際に、HTMLへ処理を追加する目印のようなものです。</p>
-
 <p>最初の<code>v-</code>でVue.jsに「何をさせるか」、<code>:</code>に続いてその対象とする属性、そして属性値として関数や変数などを指定します。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec2-vuejs-directive.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <h3 id="javascriptの設定-1">JavaScriptの設定</h3>
-
 <p>JavaScriptでは、メッセージ部分のclass属性に使う<code>messageStyle</code>を<code>data</code>へ追加し、デフォルトとして<code>before</code>が設定されるようにしています。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec2-set-data-for-massagestyle.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>続いては<code>methods</code>です。HTMLで説明した、クリックイベントが発生した時に実行する関数<code>changeClass</code>を設定しています。</p>
-
 <p><code>function()</code>に続く<code>{}</code>で括られている部分が具体的な処理内容です。今回は<code>after</code>クラスを適用するため、<code>this.messageStyle = 'after';</code>としています。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec2-set-methods-changeclass.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p><code>messageStyle</code>に<code>this</code>が付いていますが、methods中でVueインスタンスの関数や変数を使うときは、<code>this</code>をつける必要があります。この<code>this</code>はVueインスタンス自身を指しており、つまりは自分の中の関数や変数を使いますよ、ということを明示しているような感じです。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec2-vue-this.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <h3 id="cssの設定">CSSの設定</h3>
-
 <p>CSSはクラスがきちんと入れ替わっているかの確認用で、それぞれで文字の色を変えています。</p>
-
-<hr />
-
+<hr>
 <p>以上を実行し、［class属性を変更する］ボタンを押してみましょう。文字の色が変わったでしょうか？　ブラウザのDevToolでも、class属性が変わっていることが確認できます。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec2-exec.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <h2 id="v-if">v-if</h2>
-
 <p><code>v-if</code>は、その名の通り「条件分岐」です。条件にマッチした場合、<code>v-if</code>を設定している要素をレンダリングします。マッチしなかった場合は、要素そのものが存在しなくなります。</p>
-
 <p>その<code>v-if</code>を使って、ボタンを押すと表示されるポップアップを作成してみます。</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;app&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-on:click</span><span class="o">=</span><span class="s">&#34;showPopup()&#34;</span><span class="p">&gt;</span>ポップアップを表示<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&#34;popupState&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ message }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-on:click</span><span class="o">=</span><span class="s">&#34;closePopup()&#34;</span><span class="p">&gt;</span>閉じる<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;app&#34;</span><span class="p"></span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-on:click</span><span class="o">=</span><span class="s">&#34;showPopup()&#34;</span><span class="p"></span><span class="p">&gt;</span>ポップアップを表示<span class="p">&lt;</span><span class="p">/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&#34;popupState&#34;</span><span class="p"></span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p"></span><span class="p">&gt;</span>{{ message }}<span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-on:click</span><span class="o">=</span><span class="s">&#34;closePopup()&#34;</span><span class="p"></span><span class="p">&gt;</span>閉じる<span class="p">&lt;</span><span class="p">/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
   <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#app&#39;</span><span class="p">,</span>
   <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
     <span class="nx">message</span><span class="o">:</span> <span class="s1">&#39;Popup&#39;</span><span class="p">,</span>
     <span class="nx">popupState</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-  <span class="p">},</span>
+  <span class="p">}</span><span class="p">,</span>
   <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">showPopup</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">showPopup</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
       <span class="k">this</span><span class="p">.</span><span class="nx">popupState</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-    <span class="p">},</span>
-    <span class="nx">closePopup</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="p">}</span><span class="p">,</span>
+    <span class="nx">closePopup</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
       <span class="k">this</span><span class="p">.</span><span class="nx">popupState</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="p">}</span>
-<span class="p">});</span>
-</code></pre></div>
-<p><a href="https://codepen.io/littlebusters/pen/eMwpag">サンプルコード</a></p>
-
+<span class="p">}</span><span class="p">)</span><span class="p">;</span>
+</code></pre></div><p><a href="https://codepen.io/littlebusters/pen/eMwpag">サンプルコード</a></p>
 <h3 id="htmlの設定-2">HTMLの設定</h3>
-
 <p>HTMLでは、ポップアップを表示するためのボタンと、そのポップアップの要素にメッセージとポップアップを閉じるボタンを配置しています。</p>
-
 <p>［ボップアップを表示］ボタンでは、クリックしてポップアップを表示するため、<code>v-on:click</code>に<code>showPopup()</code>を設定しています。</p>
-
 <p>ポップアップのdiv要素には<code>v-if</code>を設定しています。この<code>v-if</code>は<code>popupState</code>の値を確認し、<code>true</code>であればこのdiv要素を描画、<code>false</code>であれば描画そのものがされません。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec3-v-if.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>ポップアップ内では、メッセージを変更できるように<code>message</code>をバインディングしました。［閉じる］ボタンでは、<code>v-on:click</code>で<code>closePopup()</code>を実行し、クリックしてポップアップを閉じます。</p>
-
 <h3 id="javascriptの設定-2">JavaScriptの設定</h3>
-
 <p>JavaScriptでは、<code>data</code>へ<code>message</code>と<code>popupState</code>を設定しました。</p>
-
 <p><code>message</code>は、ポップアップで表示するメッセージです。</p>
-
 <p><code>popupState</code>は、ポップアップを表示するかどうかのステータスを設定します。真偽値<code>true</code>または<code>false</code>が入り、初期値を「<code>false</code>＝表示しない」に設定しています。</p>
-
 <p><code>methods</code>では、<code>showPopup()</code>と<code>closePopup()</code>の2つを設定しています。メソッドの名前は違いますが、実行している内容はほぼ同じで、<code>popupState</code>の値を「<code>true</code>＝表示する」にするか「<code>false</code>＝表示しない」にしないかの差です。</p>
-
-<hr />
-
+<hr>
 <p>このコードを実行しブラウザのDevToolで見ると、<code>v-if</code>を設定した要素がないことが確認できます。「ポップアップを表示」ボタンを押すと要素が生成され、さらに「閉じる」ボタンを押すと要素が削除されます。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec3-v-if-result.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <h2 id="v-show">v-show</h2>
-
 <p>条件にマッチした場合、要素を表示するディレクティブです。<code>v-if</code>と似ていますが、こちらは要素のstyle属性で<code>display: none;</code>の付加および除去を行います。ブラウザ上での表示結果は同じですが、非表示時にHTML上へ要素が存在するか否かが異なります。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec5-v-show.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p><code>v-if</code>で使ったコードをそのまま流用し、<code>v-if</code>を<code>v-show</code>に変更します。</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;app&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-on:click</span><span class="o">=</span><span class="s">&#34;showPopup()&#34;</span><span class="p">&gt;</span>ポップアップを表示<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-show</span><span class="o">=</span><span class="s">&#34;popupState&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ message }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-on:click</span><span class="o">=</span><span class="s">&#34;closePopup()&#34;</span><span class="p">&gt;</span>閉じる<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;app&#34;</span><span class="p"></span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-on:click</span><span class="o">=</span><span class="s">&#34;showPopup()&#34;</span><span class="p"></span><span class="p">&gt;</span>ポップアップを表示<span class="p">&lt;</span><span class="p">/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-show</span><span class="o">=</span><span class="s">&#34;popupState&#34;</span><span class="p"></span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p"></span><span class="p">&gt;</span>{{ message }}<span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-on:click</span><span class="o">=</span><span class="s">&#34;closePopup()&#34;</span><span class="p"></span><span class="p">&gt;</span>閉じる<span class="p">&lt;</span><span class="p">/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
   <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#app&#39;</span><span class="p">,</span>
   <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
     <span class="nx">message</span><span class="o">:</span> <span class="s1">&#39;Popup&#39;</span><span class="p">,</span>
     <span class="nx">popupState</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-  <span class="p">},</span>
+  <span class="p">}</span><span class="p">,</span>
   <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">showPopup</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">showPopup</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
       <span class="k">this</span><span class="p">.</span><span class="nx">popupState</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-    <span class="p">},</span>
-    <span class="nx">closePopup</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="p">}</span><span class="p">,</span>
+    <span class="nx">closePopup</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
       <span class="k">this</span><span class="p">.</span><span class="nx">popupState</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="p">}</span>
-<span class="p">});</span>
-</code></pre></div>
-<p><a href="https://codepen.io/littlebusters/pen/WzqOrY">サンプルコード</a></p>
-
+<span class="p">}</span><span class="p">)</span><span class="p">;</span>
+</code></pre></div><p><a href="https://codepen.io/littlebusters/pen/WzqOrY">サンプルコード</a></p>
 <p>これを実行し開発者ツールでみると、<code>v-show</code>を設定したdiv要素に<code>style=&quot;display: none;&quot;</code>が付加されていることがわかります。「ポップアップを表示」ボタンを押すと、<code>display: none;</code>が取り除かれ、ポップアップが表示されます。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec5-v-show-result.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>同じようなことができる<code>v-if</code>と<code>v-show</code>ですが、<code>v-if</code>は要素の生成が行われるため、高いコストがかかり、<code>v-show</code>はCSSの切り替えのみのため高い「描画」コストがかかります。状態があまり変化しない場合は<code>v-if</code>を、頻繁に切り替える必要があれば<code>v-show</code>を使いましょう、と<a href="https://jp.vuejs.org/v2/guide/conditional.html#v-if-vs-v-show">公式ドキュメント</a>に書かれています。</p>
-
 <p>また今回は解説していませんが、<code>v-if</code>では条件にマッチしなかった場合の処理として、<code>v-else</code>と<code>v-else-if</code>のディレクティブが使えます（<a href="https://jp.vuejs.org/v2/guide/conditional.html#v-else">公式ドキュメント</a>）。</p>
-
 <h2 id="v-for">v-for</h2>
-
 <p><code>v-for</code>は繰り返しの処理で、同じ構成の要素を連続して作成するといった場合に使用します。</p>
-
 <p>例えば、日付とタイトルで構成されたニュース記事のリストや、アプリのタイトルやアイコン・レビューといった複雑な構成のカードUIの一覧など、同じ要素が繰り返し使われているパターンは多くあります。</p>
-
 <p>ここでは、簡単にニュース記事のリストを作成してみます。</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;newsList&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&#34;news in newsContents&#34;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">datatime</span><span class="p">&gt;</span>{{ news.date }}<span class="p">&lt;/</span><span class="nt">datetime</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;news.url&#34;</span><span class="p">&gt;</span>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;newsList&#34;</span><span class="p"></span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">ul</span><span class="p"></span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&#34;news in newsContents&#34;</span><span class="p"></span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">datatime</span><span class="p"></span><span class="p">&gt;</span>{{ news.date }}<span class="p">&lt;</span><span class="p">/</span><span class="nt">datetime</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;news.url&#34;</span><span class="p"></span><span class="p">&gt;</span>
         {{ news.title }}
-      <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+      <span class="p">&lt;</span><span class="p">/</span><span class="nt">a</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="p">/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="p">/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
   <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#newsList&#39;</span><span class="p">,</span>
   <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
     <span class="nx">newsContents</span><span class="o">:</span> <span class="p">[</span>
-      <span class="p">{</span><span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;1988.9.30&#39;</span><span class="p">,</span> <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://example.com/news/1&#39;</span><span class="p">,</span> <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;News Title1&#39;</span><span class="p">,},</span>
-      <span class="p">{</span><span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;1989.9.16&#39;</span><span class="p">,</span> <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://example.com/news/2&#39;</span><span class="p">,</span> <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;News Title2&#39;</span><span class="p">,},</span>
-      <span class="p">{</span><span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;2005.9.21&#39;</span><span class="p">,</span> <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://example.com/news/3&#39;</span><span class="p">,</span> <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;News Title3&#39;</span><span class="p">,},</span>
+      <span class="p">{</span><span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;1988.9.30&#39;</span><span class="p">,</span> <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://example.com/news/1&#39;</span><span class="p">,</span> <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;News Title1&#39;</span><span class="p">,</span><span class="p">}</span><span class="p">,</span>
+      <span class="p">{</span><span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;1989.9.16&#39;</span><span class="p">,</span> <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://example.com/news/2&#39;</span><span class="p">,</span> <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;News Title2&#39;</span><span class="p">,</span><span class="p">}</span><span class="p">,</span>
+      <span class="p">{</span><span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;2005.9.21&#39;</span><span class="p">,</span> <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://example.com/news/3&#39;</span><span class="p">,</span> <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;News Title3&#39;</span><span class="p">,</span><span class="p">}</span><span class="p">,</span>
     <span class="p">]</span>
   <span class="p">}</span>
-<span class="p">});</span>
-</code></pre></div>
-<p><a href="https://codepen.io/littlebusters/pen/MVMQBZ">サンプルコード</a></p>
-
+<span class="p">}</span><span class="p">)</span><span class="p">;</span>
+</code></pre></div><p><a href="https://codepen.io/littlebusters/pen/MVMQBZ">サンプルコード</a></p>
 <h3 id="htmlの設定-3">HTMLの設定</h3>
-
 <p>今回の例では、<code>v-for</code>が設定されているli要素が繰り返し生成されます。datetime要素で日付を、a要素にタイトルとそのリンク先が設定されます。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec4-v-for.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p><code>v-for</code>は、その属性で『「v-for内で使う変数名」<code>in</code>「配列データ」』という形で繰り返しを指定します。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec4-v-for-array.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p><code>v-for</code>の処理が始まると、1回の処理後ごとに<code>news</code>の中へ<code>newsContents</code>のデータが1行ずつ（今回の場合<code>{}</code>の単位）入ります。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec4-v-for-col.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>入ったデータの構成がObject（<code>key: velue</code>という形式）の場合、<code>news.key</code>という形式で、ドット区切りで中のデータにアクセスできます。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec4-object-access.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>この辺り？？の方は「JavaScript 配列 オブジェクト」ぐらいで、Google先生に聞いてみてください。</p>
-
 <h3 id="javascriptの設定-3">JavaScriptの設定</h3>
-
 <p>JavaScriptでは、<code>data</code>内に<code>v-for</code>で使う<code>newsContents</code>という配列を作成しています。</p>
-
-<hr />
-
+<hr>
 <p>以上を実行すると、ul要素でマークアップされたリストが表示されます。</p>
-
 <p>単にテンプレートに流し込んだだけのように見えますが、実はデータがきちんとバインディングされており、<code>newsContents</code>の配列数に合わせて要素も増減します。Consoleで<code>vm.newsContents.push({date: '2005.9.21', url: 'https://example.com/news/4', title: 'News Title4',})</code>で配列を追加すると、ul要素へli要素が追加されることがわかります。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec4-v-for-result.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>一般的なウェブサイトで使うことは稀だと思いますが、単に要素を繰り返して生成するだけではないということは頭の片隅に置いておくといいかもしれません。</p>
-
 <h2 id="component">Component</h2>
-
 <p>Componentは、特定の機能をまとめた部品です。アプリやウェブページはさまざまな部品を組み合わせてできていますが、その部品をComponent化することで、再利用性やメンテナンス性が向上します。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec6-component.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>例えば、「リスト項目がチェックボックスと項目名で構成されたToDoリスト」であれば、リスト項目をComponent化することで、リストがネストできるようになったとしても、子要素でも再利用ができるようになります。SketchやXDのシンボルを想像してもらうと理解しやすいでしょう。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec6-component-example.png" alt=""></p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/x-template&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;tmpl-list-item&#34;</span><span class="p">&gt;</span>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/x-template&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;tmpl-list-item&#34;</span><span class="p"></span><span class="p">&gt;</span>
   <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span>
     <span class="o">&lt;</span><span class="nx">label</span><span class="o">&gt;</span>
       <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&#34;checkbox&#34;</span> <span class="nx">v</span><span class="o">-</span><span class="nx">model</span><span class="o">=</span><span class="s2">&#34;itemdata.checked&#34;</span><span class="o">&gt;</span>
-      <span class="p">{{</span> <span class="nx">itemdata</span><span class="p">.</span><span class="nx">label</span> <span class="p">}}</span>
-    <span class="o">&lt;</span><span class="err">/label&gt;</span>
-  <span class="o">&lt;</span><span class="err">/li&gt;</span>
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+      <span class="p">{</span><span class="p">{</span> <span class="nx">itemdata</span><span class="p">.</span><span class="nx">label</span> <span class="p">}</span><span class="p">}</span>
+    <span class="o">&lt;</span><span class="err">/</span><span class="err">l</span><span class="err">a</span><span class="err">b</span><span class="err">e</span><span class="err">l</span><span class="err">&gt;</span>
+  <span class="o">&lt;</span><span class="err">/</span><span class="err">l</span><span class="err">i</span><span class="err">&gt;</span>
+<span class="p">&lt;</span><span class="p">/</span><span class="nt">script</span><span class="p">&gt;</span>
 
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;app&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">list-item</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&#34;item in todoData&#34;</span> <span class="na">v-bind:itemdata</span><span class="o">=</span><span class="s">&#34;item&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">list-item</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">Vue</span><span class="p">.</span><span class="nx">component</span> <span class="p">(</span><span class="s1">&#39;list-item&#39;</span><span class="p">,</span> <span class="p">{</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;app&#34;</span><span class="p"></span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">ul</span><span class="p"></span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">list-item</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&#34;item in todoData&#34;</span> <span class="na">v-bind:itemdata</span><span class="o">=</span><span class="s">&#34;item&#34;</span><span class="p"></span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">list-item</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="p">/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">Vue</span><span class="p">.</span><span class="nx">component</span> <span class="p">(</span><span class="s1">&#39;list-item&#39;</span><span class="p">,</span> <span class="p">{</span>
   <span class="nx">template</span><span class="o">:</span> <span class="s1">&#39;#tmpl-list-item&#39;</span><span class="p">,</span>
   <span class="nx">props</span><span class="o">:</span> <span class="p">[</span>
     <span class="s1">&#39;itemdata&#39;</span><span class="p">,</span>
-  <span class="p">],</span>
-<span class="p">});</span>
-<span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+  <span class="p">]</span><span class="p">,</span>
+<span class="p">}</span><span class="p">)</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
   <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#app&#39;</span><span class="p">,</span>
   <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
     <span class="nx">todoData</span><span class="o">:</span> <span class="p">[</span>
-     <span class="p">{</span><span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;ToDo1&#39;</span><span class="p">,</span> <span class="nx">checked</span><span class="o">:</span> <span class="kc">false</span><span class="p">},</span>
-     <span class="p">{</span><span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;ToDo2&#39;</span><span class="p">,</span> <span class="nx">checked</span><span class="o">:</span> <span class="kc">true</span><span class="p">},</span>
+     <span class="p">{</span><span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;ToDo1&#39;</span><span class="p">,</span> <span class="nx">checked</span><span class="o">:</span> <span class="kc">false</span><span class="p">}</span><span class="p">,</span>
+     <span class="p">{</span><span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;ToDo2&#39;</span><span class="p">,</span> <span class="nx">checked</span><span class="o">:</span> <span class="kc">true</span><span class="p">}</span><span class="p">,</span>
     <span class="p">]</span>
-  <span class="p">},</span>
-<span class="p">});</span>
-</code></pre></div>
-<p><a href="https://codepen.io/littlebusters/pen/VXJXZP">サンプルコード</a></p>
-
+  <span class="p">}</span><span class="p">,</span>
+<span class="p">}</span><span class="p">)</span><span class="p">;</span>
+</code></pre></div><p><a href="https://codepen.io/littlebusters/pen/VXJXZP">サンプルコード</a></p>
 <h3 id="htmlの設定-4">HTMLの設定</h3>
-
 <p>HTMLでは、いきなりscript要素が出てきました。これはComponentの表示部分（テンプレート）を作成する方法の一つで、script要素内の記述をComponentのテンプレートとして使うことができます。script要素といってもJavaScriptを記述する必要はなく、script要素内へこれまでと同じようにHTMLを記述すればOKです。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec6-create-component-with-script-el.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>ただし、type属性にはVue.jsのテンプレートを表す<code>text/x-template</code>の指定と、JavaScript側からテンプレートを指定するために使うid属性を設定します。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec6-require-attri-in-script-el.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>テンプレートの中にあるinput要素に、新しく<code>v-model</code>というディレクティブが使われています。これは「双方向バインディング」のためのディレクティブで、主にinput要素とtextarea要素で使います。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec6-v-model.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>「双方向」の名の通り、データと要素間で値を同期します。ユーザーがチェックボックスのオン・オフを切り替えた場合も<code>data</code>内の値を変更し、<code>data</code>内の値を変更した場合でも、チェックボックスのオン・オフが切り替わります。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec6-v-model-intaractive-binding.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>JavaScript側の値が変更された場合に、UI側の値も変わるのは<code>v-bind</code>と同じです。しかし、<code>v-bind</code>ではUI側の変更を検知できないため、UIのオン・オフを切り替えても、その変更はJavaScript側へ反映されません。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec6-v-bind.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>続いてインスタンスが展開する<code>div#app</code>の内部をみると、「list-item」という見慣れない要素があります。このカスタム要素部分に、先ほどのscript要素で定義したテンプレートのHTMLが展開されます。list-itemという要素名や細かい動作は、JavaScript側で設定します（後述）。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec6-extend-custum-element.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>list-item要素では、繰り返し処理を行う<code>v-for</code>ディレクティブの指定と、itemdata属性がバインディングされています。itemdata属性は、指定された値（ここでは<code>item</code>）をテンプレート側へ渡すための属性です（後述）。</p>
-
 <h3 id="javascriptの設定-4">JavaScriptの設定</h3>
-
 <p>JavaScriptでは、初めにVue.jsへComponentの登録を行うための<code>Vue.component(tagName, options)</code>を記述しています。<code>component()</code>の中で、Componentの振る舞いを設定します。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec6-add-to-vuejs-component.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>また、<code>Vue.component()</code>は<code>new Vue()</code>より前に置いておく必要があります。</p>
-
 <p><code>Vue.componet</code>では、まずHTMLで使うためのカスタム要素の名前を指定します。HTML側でも出てきましたが、<code>list-item</code>という名前にしています。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec6-custom-element-name.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>続けてオプションの指定ですが、<code>template</code>ではテンプレートとして参照するscript要素のidを指定します。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec6-set-template-id.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>次の<code>props</code>は、親のComponentからデータを受け取るためのAPIです。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec6-add-to-vuejs-props.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>Componentはその単体で自己完結しており、データを外から自由に受け取ることができません。そこで<code>props</code>を使いComponentに「穴」を開けることで、親からのデータを受け取ることができるようになります。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec6-self-sufficiency.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>Componentの親子関係は、カスタム要素をどのComponentで使ったかで決まります。今回の場合、<code>list-item</code>要素はVueインスタンスが展開する場所に直接使っているため、Vueインスタンス＝Root Componentが親になります。カスタム要素をテンプレート内で使えば、そのテンプレートを使ったComponentが親です。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec6-component-relation.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>作成したカスタム要素で、<code>props</code>に指定した名前と同じ名前の属性を<code>v-bind</code>すると、Component内へデータを渡すことができます。言い換えれば、事前に<code>prpps</code>へ変数を指定しておかないとComponent内へ持ち込むことはできません。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec6-props-settings.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>今回の例では、<code>todoData</code>の値を渡す必要がありますが、<code>todoData</code>はv-forで処理されるため、1行ずつのデータが<code>v-for</code>ないの変数<code>item</code>へ値が入り、<code>itemdata</code>としてカスタム要素の中へ送られます。</p>
-
-<p class="media"><img src="../../../assets/img/2018/vuejs-basics/sec6-props-binding.png" alt=""></p>
-
+<!-- raw HTML omitted -->
 <p>次のようにv-bindを複数使い、2つ以上のデータを渡すこともできます。</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- 細部は省略 --&gt;</span>
-<span class="p">&lt;</span><span class="nt">list-item</span> <span class="na">v-bind:props1</span><span class="o">=</span><span class="s">&#34;hoge&#34;</span> <span class="na">v-bind:props2</span><span class="o">=</span><span class="s">&#34;fuga&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">list-item</span><span class="p">&gt;</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 細部は省略
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!--</span><span class="c"> 細部は省略 </span><span class="c">--&gt;</span>
+<span class="p">&lt;</span><span class="nt">list-item</span> <span class="na">v-bind:props1</span><span class="o">=</span><span class="s">&#34;hoge&#34;</span> <span class="na">v-bind:props2</span><span class="o">=</span><span class="s">&#34;fuga&#34;</span><span class="p"></span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">list-item</span><span class="p">&gt;</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 細部は省略
 </span><span class="c1"></span><span class="nx">props</span><span class="o">:</span> <span class="p">[</span>
   <span class="s1">&#39;props1&#39;</span><span class="p">,</span>
   <span class="s1">&#39;props2&#39;</span>
-<span class="p">],</span>
-</code></pre></div>
-<p><code>new Vue()</code>以降の部分はこれまでと同様です。</p>
-
+<span class="p">]</span><span class="p">,</span>
+</code></pre></div><p><code>new Vue()</code>以降の部分はこれまでと同様です。</p>
 <h3 id="v-modelで値が相互に変更されているかを確認してみる">v-modelで値が相互に変更されているかを確認してみる</h3>
-
 <p>Consoleで次のスクリプトを実行すると、ToDo1のチェックボックがオンになります。</p>
-
 <pre><code>vm.todoData[0].checked = true;
-</code></pre>
-
-<p><code>v-bind</code>と同じく、JavaScript側のデータが変更されると、それに応じてUI側も変わります。</p>
-
+</code></pre><p><code>v-bind</code>と同じく、JavaScript側のデータが変更されると、それに応じてUI側も変わります。</p>
 <p>続けて、次のスクリプトを実行し、JavaScript側のデータも<code>true</code>であることを念のため確認します。</p>
-
 <pre><code>vm.todoData[0].checked
-</code></pre>
-
-<p><code>true</code>と表示されたら、ToDo1のチェックボックスをオフにしてから、もう一度<code>vm.todoData[0].checked</code>を実行してみましょう。次は<code>false</code>と表示されるはずです。</p>
-
+</code></pre><p><code>true</code>と表示されたら、ToDo1のチェックボックスをオフにしてから、もう一度<code>vm.todoData[0].checked</code>を実行してみましょう。次は<code>false</code>と表示されるはずです。</p>
 <p>このように双方向バインディングは、お互いに監視して値を同期します。</p>
-
-<hr />
-
+<hr>
 <p>以上です。ここまで読んでくださりありがとうございました。</p>
-
 <p>Vue.jsのコードが多少でも読めるようになれば幸いです。今回は本当に基本的な部分のみの解説だったため、もっと詳しく知りたい方は、日本語へ翻訳されている公式ドキュメントをご覧になってください。</p>
-
 <p><a href="https://jp.vuejs.org/v2/guide/">はじめに — Vue.js</a></p>
-
 <p>ちなみに「とあるゲーム」とは、時間泥棒こと<a href="https://www.factorio.com/">Factorio</a>です。今更ハマって、その計算ツールを作りました（現状では未公開）。みんな、買おう。</p>
-
-<p><blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Vue.js 使ってみようかなということで、誰の役にも立たないアプリっぽいものがとりあえずできた。 <a href="https://t.co/zhn7ZR1FXK">pic.twitter.com/zhn7ZR1FXK</a></p>&mdash; くっきーさん💎 (@littlebusters) <a href="https://twitter.com/littlebusters/status/968503692587540480?ref_src=twsrc%5Etfw">2018年2月27日</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<!-- raw HTML omitted -->
 		</div>
 
 		<section class="article-taxonomy">

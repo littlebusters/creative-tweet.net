@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sketch Plugin on creative tweet.</title>
@@ -18,7 +18,6 @@
       
       <guid>https://creative-tweet.net/blog/2018/06/making-sketch-plugin-ui-with-webview.html</guid>
       <description>&lt;p&gt;Font Mixerという、ひらがなやカタカナといった文字種を指定して、フォントファミリーやサイズなどを変更できるSketchプラグインをつくりました。&lt;/p&gt;
-
 &lt;p&gt;そのUIをWebViewで作成したので、その手順と注意点をまとめてみました。&lt;/p&gt;</description>
     </item>
     

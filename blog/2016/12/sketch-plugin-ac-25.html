@@ -50,90 +50,40 @@
 		<div class="content-main">
 			
 			<p>Sketchプラグインを適当に選んで紹介していく、<a href="http://www.adventar.org/calendars/2013">Sketch Plugin Advent Calendar 2016</a> ラストの25日目は、SketchからドキュメントをHTMLとして書き出せる「Design Doc」です。</p>
-
-<dl class="links">
-    <dt>GitHub</dt>
-    <dd><a href="https://github.com/mamuso/sketch-designdoc">https://github.com/mamuso/sketch-designdoc</a></dd>
-</dl>
-
+<!-- raw HTML omitted -->
 <p>デザインガイドラインをはじめとしたドキュメントを、SketchからHTMLとして書き出してしまおうというプラグインです。そうしたプラグインは色々とあるのですが、Sketch内にテキストを置いておけばそのままテキストとして書き出しされるため、きちんと説明をつけることも可能です。</p>
-
 <h2 id="ページとドキュメント構成">ページとドキュメント構成</h2>
-
 <p>ページとアートボードを使って階層を作ります。</p>
-
 <h3 id="ページ">ページ</h3>
-
 <p>ページ単位でHTMLとして書き出され、ページ名がHTMLファイル名に対応します。書き出したくないページは、ページ名に「_（アンダーバー)」の接頭辞をつけると対象外になります。またSymbolsページも書き出しの対象外です。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2016/spac2016-25/page-settings.png" alt="">
-</p>
-
+<!-- raw HTML omitted -->
 <h3 id="ドキュメント">ドキュメント</h3>
-
 <p>ページのタイトルには、Sketchのページ名が設定されます。ページタイトルの下には、<code>_Preface.md</code>と名付けたテキストレイヤーの内容が書き出されます。<code>.md</code>の名が示す通り、この説明はマークダウンで記述ができます。またテキストレイヤーはキャンバスへ直接配置すればOKです。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2016/spac2016-25/page-header.png" alt="">
-</p>
-
+<!-- raw HTML omitted -->
 <p>アートボードへオブジェクトを作成することで、図として書き出されます。書き出しサイズは@2xです。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2016/spac2016-25/artboard-image.png" alt="">
-</p>
-
+<!-- raw HTML omitted -->
 <p>またアートボードをセクションとして扱います。名前に接頭辞をつけることで、セクションのレベルを設定します。接頭辞なしが最上位レベル（HTML的にh2）、「_」はレイヤーリストで上にあるアートボードに続くドキュメントとして定義されます（セクション自体は生成されます）。「/（スラッシュ）」が接頭辞なしの中にセクション（HTML的にh3）を作ります。書き出された左側のナビゲーションにも反映されます。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2016/spac2016-25/artboard-settings.png" alt="">
-</p>
-
+<!-- raw HTML omitted -->
 <p>レイヤーリスト上のアートボードの並びは、そのままナビゲーションとドキュメントの並びに対応しますので、整理しておきましょう。</p>
-
 <p>ドキュメントのテキストは、アートボード名と同じテキストレイヤー名＋.mdとすると、そのテキストが説明としてドキュメントへ書き出されます。こちらもマークダウンで書くことができます。レイヤー名で関連付けられるため、キャンバスへ直接配置しレイヤーリスト上の並びも無視して問題ありません。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2016/spac2016-25/artboard-desc.png" alt="">
-</p>
-
+<!-- raw HTML omitted -->
 <h2 id="設定">設定</h2>
-
 <p><code>_Settings</code>ページを作成し次のオブジェクトを作成すると、ドキュメント内の設定が可能です。</p>
-
 <p><code>_logo</code>アートボードを作成し、オブジェクトを入れておくと、ナビゲーションの上に配置するロゴとして使われます。</p>
-
 <p><code>_primary</code>レイヤーに設定されている塗りは、ナビゲーションの背景色として使われます。<code>_secondary</code>レイヤーを作成すれば、ドキュメント内のリンク色として使われます。どちらのレイヤーもキャンバスへ直に配置しておけばOKです。ただし、明度の高い色はリンクが見えなくなるため、オススメしません。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2016/spac2016-25/settings.png" alt="">
-</p>
-
+<!-- raw HTML omitted -->
 <h2 id="書き出し">書き出し</h2>
-
 <p>Pluginsメニューから、「🐻 Export Design Doc」を実行し、保存するフォルダを選択すれば「designdoc」フォルダが書き出されます（プラグイン名に絵文字使うのやめてほしい……）。</p>
-
 <p>HTMLは固定レイアウトなので、大きいイメージがあるとウィンドウ幅によっては横スクロールが表示されてしまいます。気になる場合は、CSSを編集すれば良いかもしれません。</p>
-
-<hr class="postscript">
-
+<!-- raw HTML omitted -->
 <p>スタイルガイドをはじめとしたドキュメントを生成するツールは色々とありますが、このプラグインはSketchだけで完結しますので、簡易のドキュメントや図が多いマニュアルなどをつくる場合に活用してみてはいかがでしょうか？</p>
-
-<hr>
-
+<!-- raw HTML omitted -->
 <p>最後まで読んでくださり、ありがとうございました。</p>
-
 <p>今回はクリスマスプレゼントとして、<a href="https://www.invisionapp.com/craft#prototype">InVision Craft Prototype</a>が使えるライセンスキーを1名さまへ差し上げたいと思います（お持ちの方はごめんなさい）。</p>
-
 <p>この記事をはじめとした、<a href="http://www.adventar.org/calendars/2013">Sketch Advent Calendar 2016</a>で「これがいいな」と思った記事のURLへ、<strong>「ライセンス欲しい」と付け加えてツイート</strong>してください（なければこの記事のURLで）。文字数的に入らない場合は「欲しい」だけでもOK、ツイートボタンでは私のアカウント名（@littlebusters）が入っているので、それも削除でOKです。</p>
-
-<p>できればきちんと使ってくださる方へ差し上げたいので、その意思確認として<strong>「ライセンス欲しい（または欲しい）」の文字がないと無効</strong>とします。また、確認する術がないため、いわゆる鍵アカでのツイートやほかのSNSでの共有も無効です。</p>
-
+<p>できればきちんと使ってくださる方へ差し上げたいので、その意思確認として**「ライセンス欲しい（または欲しい）」の文字がないと無効**とします。また、確認する術がないため、いわゆる鍵アカでのツイートやほかのSNSでの共有も無効です。</p>
 <p>30日ぐらいで締め切りをツイートし、抽選後 ご本人へ通知します。</p>
-
-<hr>
-
+<!-- raw HTML omitted -->
 <p>それでは、楽しいSketchライフを。Happy Holidays!! 🎉</p>
 		</div>
 

@@ -50,31 +50,22 @@
 		<div class="content-main">
 			
 			<p>@<a href="https://twitter.com/fladdict">fladdict</a>さん作の「<a href="http://fladdict.net/blog/2011/02/auto-kerning.html">FLAutoKerning.js</a>」で使用するカーニングペア情報を、ブラウザで設定できるインターフェイスをつくってみました。</p>
-
 <p>ペアでしかカーニングできないという低機能ですが、キーボード操作だけでカーニングできます。ただし、モリサワの<a href="http://typesquare.com/">TypeSquare</a>向けに作成していますので、他のWebフォントで使えるかどうかは未検証です。実際にご利用の際は、ご自身のサーバに設置してお使いください。（ライセンス的なアレで）</p>
-
 <ul>
 <li><a href="http://creative-tweet.net/apps/kerning-tuner/">Kerning Tuner デモページ</a>（デモはWebフォントを読み込んでいません。）
-
 <ul>
 <li><a href="https://github.com/littlebusters/KerningTuner">ソース（github）</a></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h2 id="設置方法">設置方法</h2>
-
 <ol>
 <li>ソースをダウンロードし、index.htmlにご自身のTypeSquareで取得できるscript要素をコピペしてください。また、予め使用するフォントが決まっているなら、input#font_familyのvalue属性を、fontfamily.cssにあるclass名にしておくと良いと思います！</li>
 <li>「<a href="http://fladdict.net/blog/2011/02/auto-kerning.html">FLAutoKerning.js</a>」をダウンロードし、特にソースを変更していないならindex.htmlと同じ階層へ入れます。</li>
 <li>ローカルなりリモートなりへ設置してアクセス。</li>
 </ol>
-
 <h2 id="画面の説明と使い方">画面の説明と使い方</h2>
-
-<p class="media">
-<img src="../../../assets/img/2012/2012-05-01-ui-for-flautokerning/kerningtuner-ui.png" alt="" />
-</p>
-
+<!-- raw HTML omitted -->
 <ol>
 <li>Aは、カーニングする文字を設定します。文字を入力し、enterとかtabで確定です。確定した場合は、入力した文字にWebフォントを適用するため、画面を一旦リロードします。</li>
 <li>Bは、Aで入力した文字を表示し、実際の詰め具合を確認できます。</li>
@@ -84,21 +75,13 @@
 <li>Fは、現在適用しているWebフォントです。デフォルトでリュウミンLが設定されているので、お好みで変更してください。</li>
 <li>Gは、今まで設定したカーニングペア情報を表示します。「x」をクリックすることで、そのペア情報のみ削除できます。文字ペアが同じ場合は、上書きされます。</li>
 </ol>
-
 <p>順番としては、まずはFのフォントを変更し、Dを調整しつつA→Cの繰り返しになるかと思います。程よくペアの編集ができたらEからソースをコピーしてください。</p>
-
 <h2 id="ライセンスなど">ライセンスなど</h2>
-
 <p>とりあえずMITとして公開しておきます。</p>
-
 <h2 id="その他">その他</h2>
-
 <p>日本語のWebフォントもずいぶんと出揃って来ておりまして、思い思いのフォントを使える環境も整ってきました。しかし、フォントが詰め情報を持っていないようなので、二の足を踏んでる場合もあるんじゃないでしょうか。</p>
-
 <p>で、きれいな文字組を少しでも手軽にできたらいいなぁと思いから、FLAutoKerning.jsのカーニングペア情報を生成できるアプリ的なものを作成してみました。</p>
-
 <p>また、先の通り<a href="https://github.com/littlebusters/KerningTuner">Githubで公開</a>しておりますので、ご自由にいじってやってください。正直JavaScriptを覗かれると恥ずかしい限りですが、ご興味のある方はいろいろとご指摘いただけると幸いです。</p>
-
 <p>カーニングペア情報を公開すると、みんな幸せになれるかも！</p>
 		</div>
 

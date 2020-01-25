@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fireworks on creative tweet.</title>
@@ -36,7 +36,6 @@
       
       <guid>https://creative-tweet.net/blog/2013/12/fireworks-advent-calendar-2013-1215.html</guid>
       <description>&lt;p&gt;この記事は&lt;a href=&#34;http://www.adventar.org/calendars/136&#34;&gt;Fireworks Lover Advent Calendar 2013&lt;/a&gt; の空いていた15日目の記事です。あと若干のリクエストがあったので書いております。&lt;/p&gt;
-
 &lt;p&gt;さまざまな方が解説されている中、あえて今一度Fireworksのコマンドの作り方を書いてみます。&lt;/p&gt;</description>
     </item>
     
@@ -47,7 +46,6 @@
       
       <guid>https://creative-tweet.net/blog/2013/12/fireworks-advent-calendar-2013-1216.html</guid>
       <description>&lt;p&gt;この記事は&lt;a href=&#34;http://www.adventar.org/calendars/136&#34;&gt;Fireworks Lover Advent Calendar 2013&lt;/a&gt; 16日目の記事です。&lt;/p&gt;
-
 &lt;p&gt;車輪の再開発っぽいですが、スライス名を変更するコマンドを作成しました。&lt;/p&gt;</description>
     </item>
     
@@ -58,7 +56,6 @@
       
       <guid>https://creative-tweet.net/blog/2013/06/battled-of-design-tool.html</guid>
       <description>&lt;p&gt;UST配信を予定しておきながら、WiMAXの電波がほどんど入らないという、まさかのトラブルに見舞われつつ、何とか開催することができました。&lt;/p&gt;
-
 &lt;p&gt;Photoshop / Illustrator と告知しておきながら、 Fireworks / Sketch.app の2つだけという釣りから始まり、全員参加によるフリートークで締めました。&lt;/p&gt;</description>
     </item>
     
@@ -68,10 +65,7 @@
       <pubDate>Sun, 26 May 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2013/05/battle-of-design-tools.html</guid>
-      <description>&lt;p&gt;&lt;p class=&#34;notics-alert&#34;&gt;
-このイベントは終了しました。
-&lt;/p&gt;
-Sketchフィーバーからずいぶん時間が経ってしまいましたが、大都会岡山で、「Ps / Ai / Fw / Sketch ガチンコバトル勉強会」を開催することになりました。基本的にはウェブサイトやアプリのユーザーインターフェイス などをつくる、いわゆる「デザイン」ツールの勉強会です。&lt;/p&gt;</description>
+      <description>&lt;!-- raw HTML omitted --&gt;</description>
     </item>
     
     <item>
@@ -90,7 +84,6 @@ Sketchフィーバーからずいぶん時間が経ってしまいましたが�
       
       <guid>https://creative-tweet.net/blog/2013/04/psle_scaler-100.html</guid>
       <description>&lt;p&gt;FireworksでPhotoshopライブエフェクトを使われている方は多いと思いますが、Fireworksのフィルタと異なり、オブジェクトを拡大縮小してもPhotoshopライブエフェクトも同じように拡大縮小できないという弱点がありました。&lt;/p&gt;
-
 &lt;p&gt;今回はオブジェクトの拡大縮小率に合わせて、Photoshopライブエフェクトも一緒に拡大縮小できる拡張機能「PsLE Scaler」を作成したので公開します。&lt;/p&gt;</description>
     </item>
     
@@ -118,7 +111,7 @@ Sketchフィーバーからずいぶん時間が経ってしまいましたが�
       <pubDate>Fri, 22 Mar 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2013/03/fwuglt_in_co-edo.html</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://cssnite.jp/ginza/vol68/&#34;&gt;CSS Nite in Ginza, Vol.68「HiDPI時代のFireworks」&lt;/a&gt;の懇親会として企画された、&lt;a title=&#34;Fireworks User Group LightningTalk開催のお知らせ | Fireworks Users Group&#34; href=&#34;http://fwug.net/?q=node/27213&#34; target=&#34;_blank&#34;&gt;Fireworks User Group LightningTalk&lt;/a&gt;で、「敢えて@1xでRetina対応をしてみる」というお題でしゃべってきました。&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://cssnite.jp/ginza/vol68/&#34;&gt;CSS Nite in Ginza, Vol.68「HiDPI時代のFireworks」&lt;/a&gt;の懇親会として企画された、&lt;!-- raw HTML omitted --&gt;Fireworks User Group LightningTalk&lt;!-- raw HTML omitted --&gt;で、「敢えて@1xでRetina対応をしてみる」というお題でしゃべってきました。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -127,7 +120,7 @@ Sketchフィーバーからずいぶん時間が経ってしまいましたが�
       <pubDate>Thu, 06 Dec 2012 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2012/12/retina-image-exporter.html</guid>
-      <description>&lt;p&gt;&lt;a title=&#34;Fireworks Lover Advent Calendar 2012&#34; href=&#34;http://www.adventar.org/calendars/14&#34; target=&#34;_blank&#34;&gt;Fireworks Lover Advent Calendar 2012&lt;/a&gt;の7日目の記事です。&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;!-- raw HTML omitted --&gt;Fireworks Lover Advent Calendar 2012&lt;!-- raw HTML omitted --&gt;の7日目の記事です。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -136,7 +129,7 @@ Sketchフィーバーからずいぶん時間が経ってしまいましたが�
       <pubDate>Thu, 25 Oct 2012 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2012/10/fw-ex-paste-from-ai.html</guid>
-      <description>&lt;p&gt;しばっちさんがポストされていた「&lt;a title=&#34;IllustatorからFireworksに狙い通りの幅でペーストする&#34; href=&#34;http://blog.1dz.jp/?eid=786&#34;&gt;IllustratorからFireworksに狙い通りの幅でペーストする | Webデザインのタネ&lt;/a&gt;」をもとにコマンドを作成しました。&lt;/p&gt;</description>
+      <description>&lt;p&gt;しばっちさんがポストされていた「&lt;!-- raw HTML omitted --&gt;IllustratorからFireworksに狙い通りの幅でペーストする | Webデザインのタネ&lt;!-- raw HTML omitted --&gt;」をもとにコマンドを作成しました。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -145,12 +138,8 @@ Sketchフィーバーからずいぶん時間が経ってしまいましたが�
       <pubDate>Sun, 16 Sep 2012 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2012/09/fireworks-std-design.html</guid>
-      <description>&lt;p class=&#34;media&#34;&gt;
-&lt;img src=&#34;../../assets/img/2012/2012-09-16-fireworks-std-design/fw_std_design_book_mini.jpg&#34; alt=&#34;Fireworks 標準デザイン講座&#34;&gt;
-&lt;/p&gt;
-
+      <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;あ…ありのまま 今起こった事を話すぜ！「Fireworks 標準デザイン講座のおすすめ拡張機能カタログにFont Mixerが紹介された」な…何を言っているのかわからねーと思うが　おれも　何をされたのかわからなかった…&lt;/p&gt;
-
 &lt;p&gt;事前に掲載許可の連絡を頂戴していたので、「何をされたのかわからなかった…」は語弊がありますが、面積は小さいながらも書籍で紹介されました！&lt;/p&gt;</description>
     </item>
     
@@ -170,7 +159,6 @@ Sketchフィーバーからずいぶん時間が経ってしまいましたが�
       
       <guid>https://creative-tweet.net/blog/2012/02/font-mixer-150.html</guid>
       <description>&lt;p&gt;Font Mixerを1.5.0にバージョンアップしました。&lt;/p&gt;
-
 &lt;p&gt;&lt;a href=&#34;../01/font-mixer-100.html&#34; title=&#34;Fireworksの混植拡張機能、Font Mixerを作成しました。&#34;&gt;先の記事&lt;/a&gt;で「面合わせが…」と書いた通り、フォントサイズとベースラインの調整ができるようにしました。&lt;/p&gt;</description>
     </item>
     
@@ -181,7 +169,6 @@ Sketchフィーバーからずいぶん時間が経ってしまいましたが�
       
       <guid>https://creative-tweet.net/blog/2012/02/font-mixer-memo.html</guid>
       <description>&lt;p&gt;先日公開した、&lt;a href=&#34;../01/font-mixer-100.html&#34; title=&#34;Fireworksの混植拡張機能、Font Mixerを作成しました。&#34;&gt;Fireworks拡張機能「Font Mixer」&lt;/a&gt;を制作するにあたっての自分用のメモですが、何かのヒントなれば、と公開します。&lt;/p&gt;
-
 &lt;p&gt;拡張機能といっても、ライブラリだったりスタイルだったりしますが、今回はコマンドおよびコマンドパネルについてです。&lt;/p&gt;</description>
     </item>
     
@@ -200,12 +187,8 @@ Sketchフィーバーからずいぶん時間が経ってしまいましたが�
       <pubDate>Tue, 24 Jan 2012 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2012/01/font-mixer-100.html</guid>
-      <description>&lt;p class=&#34;notics-alert&#34;&gt;
-この記事は、Font Mixer 1.0.0を公開した時のものです。
-&lt;/p&gt;
-
+      <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Fireworksの混植拡張機能「Font Mixer」を作成しました。&lt;/p&gt;
-
 &lt;p&gt;Fireworksで和文フォント×和文フォントの混植をする場合、フォントを変更したいテキストを選択しフォントを変更という作業を繰り返す必要があり、非常に手間がかかってしまいます。この手間を大幅に軽減する、Fireworks拡張機能を作成しました。&lt;/p&gt;</description>
     </item>
     

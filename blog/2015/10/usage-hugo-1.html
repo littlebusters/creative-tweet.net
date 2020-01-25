@@ -54,166 +54,81 @@
 			</p>
 			
 			<p>今回はWordPressからHugoへの乗り換えの一部始終を記載していきます。</p>
-
 <p>ちょっと長くなったため、前編と後編に分割しています。前編はHugoでサイトを生成するまで、後編はデプロイを自動化するまで、の内容でお届けします。</p>
-
 <p>またHugoのドキュメントを元に、動作した結果を記述しています。筆者はGo言語のお作法をよく理解していませんので、その辺りで間違いがありましたら優しくご指摘ただけると幸いです。</p>
-
 <h2 id="hugoの準備">Hugoの準備</h2>
-
 <p>これは前回も記述していますが、サイトからプラットフォームに合わせたインストーラーをダウンロードし、ローカルで実行してください。</p>
-
-<ul class="links">
-    <li><a href="https://gohugo.io/">Hugo - https://gohugo.io/</a></li>
-</ul>
-
+<!-- raw HTML omitted -->
 <p>OSXをお使いでHomebrewがインストールされていれば、次のコマンドでもインストール可能です。</p>
-
 <pre><code>$ brew install hugo
-</code></pre>
-
-<p>私自身はHomebrewでインストールしたため、それを前提で進めます。</p>
-
+</code></pre><p>私自身はHomebrewでインストールしたため、それを前提で進めます。</p>
 <h3 id="homebrewについて">Homebrewについて</h3>
-
 <p>今回の内容とは直接関係ないのですが、「Homebrew便利だよ！」と言われるがままインストースしたのち、きちんと<code>brew update</code>や<code>brew doctor</code>してますか？</p>
-
 <p><code>brew update</code>はHomebrew本体やインストールしているパッケージをアップデートするのではなく、パッケージリストの更新を行います（パッケージのバージョンアップは<code>brew upgrade [PACKAGENAME]</code>です）。アップデートしないままインストールした場合、古いものがインストールされたりするので、定期的なアップデートが必要なのです。リストは頻繁にアップデートされているため、前回の実行から24時間経っていると、メッセージが表示されます。</p>
-
 <p><code>brew doctor</code>は自己チェックを行い、問題があればその解決方法を提示してくれます。メッセージは英語で表示されますが、簡単な英語で例えば「次のコマンドを実行せよ」という感じで書かれていますので、落ち着いて読んでその通りに実行していけば、大概解決します。</p>
-
 <p>このあたりを説明しだすときりがないので、詳しく知りたい方はこもりまさあきさんの電子書籍「<a href="https://leanpub.com/defwd">Development Environments for Web Designers</a>」をお勧めします。未完のまま随分アップデートされていませんが、このあたりの基礎は学べると思います。</p>
-
 <h2 id="wordpressのコンテンツをhugo向けに書き出し">WordPressのコンテンツをHugo向けに書き出し</h2>
-
 <p>プラグインを使ってWordPressから投稿やページを書き出します。</p>
-
 <p>今回使ったプラグインは「<a href="https://github.com/SchumacherFM/wordpress-to-hugo-exporter">WordPress to Hugo Exporter</a>」です。プラグインディレクトリへ登録されていないため、自分でアップロードしてインストールしてください。</p>
-
 <p>プラグインをインストールすると、「ツール」メニューの中に「Export to Hugo」という項目が表示されます。これをクリックすればすぐに処理が開始され、変換が終わるとZIPのダウンロードが始まります。プログレスバーなど粋なU.I.はありませんので、ご注意ください。</p>
-
 <p>ダウンロードしたZIPを解凍すると、投稿は<code>_post</code>というディレクリへまとめられています。固定ページは個別に設定しているパーマリンク名のディレクトリへ格納されます。</p>
-
 <p>画像類は<code>wp-content/uploads</code>が丸ごとダウンロードされるようになっています。これ以外の領域にアップロードしている場合は、個別にダウンロードが必要です。</p>
-
 <p><code>_config.yml</code>は、Hugoで使うサイトの設定ファイルです。ただ、記述されている内容が古い項目を採用しているため、これを使う場合は書き換えが必要です。</p>
-
 <p>またテーマファイルに付随しているCSSやJavaScriptも含まれていませんので、必要であれば別途ダウンロードしておきましょう。</p>
-
 <h2 id="hugoを使う">Hugoを使う</h2>
-
 <p>ここからHugoを使ってサイトを制作していきます。</p>
-
-<p class="annotation">
-    Hugoのサイトも当然ながらHugoで作成されています。<a href="https://github.com/spf13/hugo/tree/master/docs">サイトのソースも公開されている</a>ので、ドキュメントを見ていて気になるところがあればチェックしてみましょう。
-</p>
-
+<!-- raw HTML omitted -->
 <h3 id="hugoで新規サイトを生成する">Hugoで新規サイトを生成する</h3>
-
-<ul class="links">
-    <li>
-        <a href="https://gohugo.io/overview/quickstart/">ドキュメント：Quickstart</a>
-    </li>
-</ul>
-
+<!-- raw HTML omitted -->
 <p>次のコマンドを実行すると、指定したフォルダを初期化し、雛形となるフォルダとファイルが生成されます。</p>
-
 <pre><code>hugo new site path/to/directory
-</code></pre>
-
-<p>例えば、ホームディレクトリにある「hugo」ディレクトリ作成する場合は次のようになります。</p>
-
+</code></pre><p>例えば、ホームディレクトリにある「hugo」ディレクトリ作成する場合は次のようになります。</p>
 <pre><code>$ hugo new site ~/hugo
-</code></pre>
-
-<p>必要なディレクトリと、サイト全体の設定ファイルである<code>config.toml</code>が生成されます。ディレクトリは、次の役割を担います。</p>
-
-<p><strong>archetypes</strong><br />
+</code></pre><p>必要なディレクトリと、サイト全体の設定ファイルである<code>config.toml</code>が生成されます。ディレクトリは、次の役割を担います。</p>
+<p><strong>archetypes</strong><br>
 ターミナルからコマンドを用いて新しいドキュメントを作成するときに、テンプレートとするファイルを格納しておくディレクトリです。</p>
-
-<p><strong>content</strong><br />
+<p><strong>content</strong><br>
 実際のコンテンツを格納するディレクトリです。</p>
-
-<p><strong>data</strong><br />
+<p><strong>data</strong><br>
 TOML / YAML / JSON形式のファイルをデータストアして使うためのディレクトリです。今回は使っていないため、ドキュメントを参照してください。</p>
-
-<ul class="links">
-    <li>
-        <a href="https://gohugo.io/extras/datafiles/">ドキュメント：Data Files</a>
-    </li>
-</ul>
-
-<p><strong>layouts</strong><br />
+<!-- raw HTML omitted -->
+<p><strong>layouts</strong><br>
 コンテンツを挿入する、テンプレートファイルを格納するディレクトリです。</p>
-
-<p><strong>static</strong><br />
+<p><strong>static</strong><br>
 CSSやJavaScriptなど、HTMLで使うリソースデータを格納するディレクトリです。内包しているデータの構成は、プレビューで生成される次の「public」ディレクトリへそのままコピーされます。</p>
-
-<p><strong>public</strong><br />
+<p><strong>public</strong><br>
 初期化時には生成されませんが、プレビューやビルドをすると公開に必要なリソースが格納されるディレクトリです。ビルドした場合、基本的にこの中身をサーバの公開ディレクトリへアップロードすればOKです。</p>
-
-<p><strong>config.toml</strong><br />
+<p><strong>config.toml</strong><br>
 サイトの設定ファイルです。次項で説明します。</p>
-
-<h3 id="config-toml">config.toml</h3>
-
-<ul class="links">
-    <li>
-        <a href="https://gohugo.io/overview/configuration/">ドキュメント：Configuring Hugo</a>
-    </li>
-</ul>
-
+<h3 id="configtoml">config.toml</h3>
+<!-- raw HTML omitted -->
 <p>サイト名やベースURLなどの基本情報から、サイト全体で使うパラメータを設定するファイルです。雛形はTOML形式ですが、WordPress to Hugo Exporterで生成される通り、YAML形式でも記述できます。記述のフォーマットは「<a href="https://gohugo.io/overview/configuration/">ドキュメント</a>」ページの最下部にありますので、参照してください。</p>
-
-<h3 id="流用するデータを格納して-記述を修正する">流用するデータを格納して、記述を修正する</h3>
-
+<h3 id="流用するデータを格納して記述を修正する">流用するデータを格納して、記述を修正する</h3>
 <p>ダウンロードしたMarkdownファイルは「content」ディレクトリへ、画像やCSS・JavaScriptは「static」ディレクトリへ入れてください。基本的にディレクトリ構造はそのままURLに使われます。</p>
-
 <p>「static」へ入れたリソースも「public」へそのままコピーされますので、構成を変更したい場合は、「static」ディレクトリ内で変更しておきます。</p>
-
 <p>リソース（特に画像）へのパスが絶対パスになっていますので、エディタの検索置換機能などで変更しておきましょう。
 私の場合は、記事ごとに画像ディレクトリを作成することにしたため、次のようになりました。</p>
-
 <pre><code>元のパス
 http://creative-tweet.net/blog/wp-content/uploads/2014/12/hoge.png
 
 変更後のパス
 /assets/img/2014/post-title/hoge.png
-</code></pre>
-
-<p>ちなみに検索置換だけでは変更しきれなかったため、記事の内容をリファインついでにパスを追記していきました。</p>
-
+</code></pre><p>ちなみに検索置換だけでは変更しきれなかったため、記事の内容をリファインついでにパスを追記していきました。</p>
 <h2 id="記事の作成">記事の作成</h2>
-
 <p>Hugoの記事はMarkdown形式で記述し、「content」ディレクトリへ保存します。WordPressから書き出したファイルは、もちろんMarddown形式になっているのでHugoでそのまま使うことができます。</p>
-
-<p class="notics">
-    reStructuredText形式でも記述できるようです。
-</p>
-
+<!-- raw HTML omitted -->
 <h3 id="メタデータ">メタデータ</h3>
-
-<ul class="links">
-    <li>
-        <a href="https://gohugo.io/content/front-matter/">ドキュメント：Front Matter</a>
-    </li>
-</ul>
-
+<!-- raw HTML omitted -->
 <p>タイトルや概要などを、ファイルの先頭へメタデータとして記述します。記述の形式は3つあり、私はYAML形式を使用しています。</p>
-
 <p>必須の項目は次の通りです。</p>
-
 <ul>
 <li>title</li>
 <li>description</li>
 <li>date</li>
 <li>taxonomies（categoriesまたはtagsもしくは両方）</li>
 </ul>
-
 <p>書き出したMarkdownファイルを見ると、WordPressで投稿やページへ設定していたカテゴリーやタグなどもメタデータへ記載されていることがわかります。</p>
-
 <p>以前に書いた<a href="http://creative-tweet.net/blog.html2014/12/sketch-3-advent-calendar-2014-25.html">こちらのページ</a>のメタデータは、次のように変換されていました。</p>
-
 <pre><code>---
 title: Sketch 3でスライドづくりに役立つプラグインやTipsなど紹介しますよ。 Sketch 3 Advent Calendar 2014
 author: littlebusters
@@ -230,172 +145,72 @@ tags:
   - Advent Calenter 2014
   - Sketch
 ---
-</code></pre>
-
-<p><code>author</code>や<code>excerpt</code>などドキュメントにない項目も記述されていますが、独自メタデータとして設定することができるため、修正などせずこのまま使うことは可能です（独自メタデータについては、<a href="#metadata">個別ページのテンプレート作成</a>でもう少し詳しく解説します）。</p>
-
+</code></pre><p><code>author</code>や<code>excerpt</code>などドキュメントにない項目も記述されていますが、独自メタデータとして設定することができるため、修正などせずこのまま使うことは可能です（独自メタデータについては、<!-- raw HTML omitted -->個別ページのテンプレート作成<!-- raw HTML omitted -->でもう少し詳しく解説します）。</p>
 <p>ただ、必須の<code>description</code>がないため、<code>excerpt</code>を変更こちらに変更しました。</p>
-
 <p><code>date</code>はこのままでもよいのですが、時間とタイムゾーンを追加して次のような形式にしています。</p>
-
 <pre><code>2014-12-25T09:30:00+09:00
-</code></pre>
-
-<p><code>layout</code>と<code>url</code>は制作の都合で、<code>leadimage</code>は不要なため削除しました。</p>
-
+</code></pre><p><code>layout</code>と<code>url</code>は制作の都合で、<code>leadimage</code>は不要なため削除しました。</p>
 <h3 id="ショートコード">ショートコード</h3>
-
-<ul class="links">
-    <li>
-        <a href="https://gohugo.io/extras/shortcodes/">ドキュメント：Shortcodes</a>
-    </li>
-</ul>
-
+<!-- raw HTML omitted -->
 <p>ショートコードはコードを外部ファイル化し、記事内で使い回す仕組みです。引数を与え、ショートコード内で使うこともできるようです（今回は使っていませんが）。</p>
-
 <p>例えば次のパラグラフはショートコードにしているものです。</p>
-
-<p class="notics">
-  <b>Sketch 3の基本。</b>というSketch 3の基本操作にフォーカスした電子書籍をリリースしました。詳しくはこちらの「<a href="http://creative-tweet.net/sketch-3-basics/">Sketch 3の基本。</a>」のページをご覧ください。
-</p>
-
+<!-- raw HTML omitted -->
 <p>この内容をHTMLファイルとして<code>layouts/shortcodes</code>へ保存し、使う場合は次のように記述します。</p>
-
 <pre><code>{{％ sketch3basics %}}
-</code></pre>
-
-<p>例では「%」が2バイト文字になっていますが、実際には1バイトを使ってください。</p>
-
+</code></pre><p>例では「%」が2バイト文字になっていますが、実際には1バイトを使ってください。</p>
 <h3 id="コンテンツの構造">コンテンツの構造</h3>
-
-<ul class="links">
-    <li>
-        <a href="https://gohugo.io/content/organization/">Content Organization</a>
-    </li>
-</ul>
-
+<!-- raw HTML omitted -->
 <p>Hugoでは、「content」ディレクトリ配下の構成そのままが「public」ディレクトリへ反映されます。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-1/usage-hugo-routing.png" alt="">
-</p>
-
+<!-- raw HTML omitted -->
 <p>例えば前回の記事は、次のパスへ保存しています。</p>
-
 <pre><code>/content/blog/2015/10/good-bye-wordpress.md
-</code></pre>
-
-<p>これを公開すると、次のアドレスになります。</p>
-
+</code></pre><p>これを公開すると、次のアドレスになります。</p>
 <pre><code>/blog/2015/10/good-bye-wordpress/
-</code></pre>
-
-<p>しかし、WordPressで運用していたものは<code>.html</code>付きのURLにしていたため、このままではURLが変更になってしまいます。そこで拡張子付きのアドレスになるよう、<code>config.toml</code>へ<code>uglyURLs = true</code>という設定を追加し、次のようなアドレスで公開するようにしています。</p>
-
+</code></pre><p>しかし、WordPressで運用していたものは<code>.html</code>付きのURLにしていたため、このままではURLが変更になってしまいます。そこで拡張子付きのアドレスになるよう、<code>config.toml</code>へ<code>uglyURLs = true</code>という設定を追加し、次のようなアドレスで公開するようにしています。</p>
 <pre><code>/blog/2015/10/good-bye-wordpress.html
-</code></pre>
-
-<h4 id="セクション">セクション</h4>
-
+</code></pre><h4 id="セクション">セクション</h4>
 <p>「content」ディレクトリ直下のディレクトリがセクションにあたり、上記の例では「blog」がそれに該当します。</p>
-
-<ul class="links">
-    <li>
-        <a href="https://gohugo.io/content/sections/">ドキュメント：Sections</a>
-    </li>
-</ul>
-
+<!-- raw HTML omitted -->
 <p>基本的にセクションを含むURLになりますが、記事のメタデータへ次のいずれかを設定すると公開アドレスを変更できます。</p>
-
 <ul>
 <li>slug</li>
 <li>url</li>
 </ul>
-
 <p><code>slug</code>を設定した場合は、ファイル名を上書きします。</p>
-
 <pre><code>slug: /slug/string
 -&gt; /blog/2015/10/slug/string.html
 （uglyURLs = falseであれば、/blog/2015/10/slug/string/となります）
-</code></pre>
-
-<p><code>url</code>は完全にURLを変更します。<code>slug</code>を設定していても、こちらが優先されます。</p>
-
+</code></pre><p><code>url</code>は完全にURLを変更します。<code>slug</code>を設定していても、こちらが優先されます。</p>
 <pre><code>url: /url/string.html
 -&gt; /url/string.html
-</code></pre>
-
-<h2 id="開発環境の生成">開発環境の生成</h2>
-
+</code></pre><h2 id="開発環境の生成">開発環境の生成</h2>
 <p>Hugoとは関係ありませんが、今回はサイトの見た目を変更するため、gulpで処理するためのディレクトリを作成しました。ルートになっているディレクトリへ「_dev」ディレクトリを作成し、gulpで処理するファイルを入れています。</p>
-
 <p>SCSSやJavaScriptをはじめ、画像関連もMinifyをかけるために一度こちらへ格納するようにしています。</p>
-
 <p>gulpで処理したファイルは、<code>static</code>ディレクトリへ出力するようにしています。</p>
-
 <h2 id="テンプレートの作成">テンプレートの作成</h2>
-
-<ul class="links">
-    <li>
-        <a href="https://gohugo.io/templates/overview/">ドキュメント：Hugo Templates</a>
-    </li>
-</ul>
-
+<!-- raw HTML omitted -->
 <p>コンテンツを元に、最終的なHTMLを生成するためのテンプレート、いわゆるテーマを作成します。</p>
-
 <p>ファイルは、「layouts」ディレクトリへ格納します。最低限必要なファイルは、セクションやタクソノミーのページ一覧を作成するための<code>list.html</code>と、単一ページを生成するための<code>single.html</code>です。これらのファイルは<code>layouts/_default</code>へ格納します。</p>
-
 <p>今回はHTMLを使って記述しましたが、Go言語のHTMLテンプレートエンジンである<a href="https://github.com/yosssi/ace">Ace</a>や<a href="https://github.com/eknkc/amber">Amber</a>を使って、JadeやSlimのように記述することもできるようです。</p>
-
 <h3 id="ビルドインサーバの立ち上げ">ビルドインサーバの立ち上げ</h3>
-
 <p>まずはビルドインサーバを立ち上げ、ブラウザで確認しながら作成できるようにします。ターミナルで次のコマンドを実行しましょう。</p>
-
 <pre><code>$ hugo server --watch --buildDrafts=true -v
-</code></pre>
-
-<p>サーバーを立ち上げるだけであれば、<code>hugo server</code>だけでOKです。ただ、保存時に自動的にリロードさせたいので<code>--watch</code>オプションをつけました。</p>
-
+</code></pre><p>サーバーを立ち上げるだけであれば、<code>hugo server</code>だけでOKです。ただ、保存時に自動的にリロードさせたいので<code>--watch</code>オプションをつけました。</p>
 <p>また<code>--buildDrafts=true</code>は、下書き状態の記事も一緒にレンダリングするオプションです。記事のメタデータに<code>draft: true</code>とある記事もレンダリングされるため、新しく作成する場合など確認しながら作成できます。デフォルトでは<code>false</code>になっているため、万が一そのままデプロイしても公開されることはありません。</p>
-
 <p>最後の<code>-v</code>オプションをつけておくと、ターミナルへデバッグ情報を書き出してくれるため、エラーの特定がしやすくなります。</p>
-
 <h3 id="既存のテーマを使う">既存のテーマを使う</h3>
-
 <p>ひとまずHugoを試してみたい場合は、テーマファイルを使うと良いかもしれません。</p>
-
-<ul class="links">
-    <li>
-        <a href="http://gohugo.io/themes/overview/">ドキュメント：Themes Overview</a>
-    </li>
-</ul>
-
+<!-- raw HTML omitted -->
 <p><a href="https://themes.gohugo.io/">公開されているテーマ</a>からお好きなもの、または<a href="https://github.com/spf13/hugoThemes">テーマ一式</a>を<code>git clone</code>なりダウンロードし、テーマ一式を「themes」ディレクトリへ格納します（ファイルダウンロードした場合、解凍後のフォルダ名を変更する必要があります）。例えば「steam」というテーマを使う場合は、<code>config.toml</code>へ次のように設定します。</p>
-
 <pre><code>theme: steam
-</code></pre>
-
-<h3 id="トップページ-ホームページ-の作成">トップページ（ホームページ）の作成</h3>
-
-<ul class="links">
-    <li>
-        <a href="https://gohugo.io/templates/homepage/">ドキュメント：Homepage</a>
-    </li>
-</ul>
-
+</code></pre><h3 id="トップページホームページの作成">トップページ（ホームページ）の作成</h3>
+<!-- raw HTML omitted -->
 <p>「layouts」ディレクトリ直下にある<code>index.html</code>がホームのテンプレートとして使われます。</p>
-
 <p><code>index.html</code>が存在しなかった場合は、<code>layouts/_default/list.html</code>が、さらに<code>list.html</code>も存在しなかった場合は、<code>layouts/_default/single.html</code>がテンプレートとして適用されます。</p>
-
 <p>ここからは、私が作成したコードを見ていきます（コードは整形済み、<a href="https://gist.github.com/littlebusters/ab0ee0b2dd9d35530daa#file-index-html">実際のソース</a>）。</p>
-
-<p>ヘッダーとフッターは、<a href="#partials">後述のパーシャルテンプレート</a>を使い、共通化したものを読み込んでいます。</p>
-
+<p>ヘッダーとフッターは、<!-- raw HTML omitted -->後述のパーシャルテンプレート<!-- raw HTML omitted -->を使い、共通化したものを読み込んでいます。</p>
 <pre><code>{{ partial &quot;head.html&quot; . }}
-</code></pre>
-
-<p>続いて本文にあたる箇所ですが、今回作成したトップページでは、blogセクションから最新の3記事を取得するようにしています。セクション部分は次のコードになっています。</p>
-
+</code></pre><p>続いて本文にあたる箇所ですが、今回作成したトップページでは、blogセクションから最新の3記事を取得するようにしています。セクション部分は次のコードになっています。</p>
 <pre><code>&lt;section&gt;
   &lt;h2&gt;blog&lt;/h2&gt;
   {{ range first 3 ( where .Data.Pages &quot;Section&quot; &quot;blog&quot; ) }}
@@ -412,47 +227,22 @@ tags:
     &lt;a href=&quot;/blog.html&quot;&gt;more blog →&lt;/a&gt;
   &lt;/p&gt;
 &lt;/section&gt;
-</code></pre>
-
-<p>3行目でセクションが「blog」に属する記事を最新から3件取得し、<code>{{ end }}</code>までの内容が繰り返されます。</p>
-
+</code></pre><p>3行目でセクションが「blog」に属する記事を最新から3件取得し、<code>{{ end }}</code>までの内容が繰り返されます。</p>
 <p><code>{{ range }}</code>内では記事のメタデータ（変数）を使うことができます。</p>
-
-<ul class="links">
-    <li>
-        <a href="https://gohugo.io/templates/variables/">ドキュメント：Template Valiables</a>
-    </li>
-</ul>
-
+<!-- raw HTML omitted -->
 <p>まずtime要素のdatetime属性へ、記事の作成日をW3Cの仕様に則ったフォーマットで挿入しています。<code>{{ .Date }}</code>だけでも挿入できますが、<code>.Date</code>に続けて<code>.Format</code>とその形式を記述することで、メタデータの日付を指定した形式で挿入することができます。</p>
-
 <p>それを利用し、time要素のテキストノードで同じメタデータを使い、フォーマットを変えて挿入するようにしました。</p>
-
 <p>h3要素の子a要素では、パーマネントリンク<code>{{ .Permalink }}</code>を挿入し、そのテキストノードへ記事のタイトル<code>{{ .Title }}</code>を挿入しています。</p>
-
 <p>この辺りは記述方法が違えど、CMSだろうとStatic Site Generatorだろうと同じような感じですね。</p>
-
 <p>ちなみにセクションを限定して取得しているため、<code>{{ range }}</code>の部分がいきなり難しいことになっていますが、セクションに関わらず最新の10件を取得するには、次のように記述すればOKです。</p>
-
 <pre><code>{{ range first 10 .Data.Pages }}
   // code here
 {{ end }}
-</code></pre>
-
-<p>toolsセクションはblogセクションとほぼ同じため、解説は省略します。また、writtingセクションは変更することがほとんどないためベタ書きです。</p>
-
+</code></pre><p>toolsセクションはblogセクションとほぼ同じため、解説は省略します。また、writtingセクションは変更することがほとんどないためベタ書きです。</p>
 <h3 id="セクション-1">セクション</h3>
-
-<ul class="links">
-    <li>
-        <a href="https://gohugo.io/templates/list/">ドキュメント：Content List Template</a>
-    </li>
-</ul>
-
+<!-- raw HTML omitted -->
 <p>セクションごとにテンプレートを変更することができます。「layouts」ディレクトリへ「section」ディレクトリを作成し、その中へセクション名のHTMLファイルを作成します。「blog」セクションであれば、<code>layouts/section/blog.html</code>です。</p>
-
 <p>セクションのテンプレートは、次の優先順位で適用されます。テーマのほうが後に適用されるため、テーマを使う際に残骸が残っているとうまく適用できないため注意してください。</p>
-
 <ol>
 <li>/layouts/section/SECTION.html</li>
 <li>/layouts/_default/section.html</li>
@@ -461,11 +251,8 @@ tags:
 <li>/themes/THEME/layouts/_default/section.html</li>
 <li>/themes/THEME/layouts/_default/list.html</li>
 </ol>
-
-<p class="notice">タクソノミーもテンプレートを個別に変更することができます。今回は使っていないので<a href="https://gohugo.io/templates/terms/">タクソノミーのドキュメント</a>を参照してください。</p>
-
+<!-- raw HTML omitted -->
 <p>続いてblogセクションで使っているコードの一部です（<a href="https://gist.github.com/littlebusters/ab0ee0b2dd9d35530daa#file-section-html">実際のソース</a>）。</p>
-
 <pre><code>&lt;h1 class=&quot;icon-{{ lower .Title }}&quot;&gt;{{ lower .Title }}&lt;/h1&gt;
 &lt;div&gt;
   &lt;main&gt;
@@ -490,46 +277,19 @@ tags:
   {{ end }}
   &lt;/main&gt;
 &lt;/div&gt;
-</code></pre>
-
-<p>1行目の<code>{{ lower .Title }}</code>は、記事のタイトルではなくセクション名を取得しています。</p>
-
+</code></pre><p>1行目の<code>{{ lower .Title }}</code>は、記事のタイトルではなくセクション名を取得しています。</p>
 <p>変数は大まかにPage / Page Params / Site / Node / Hugoの5つに分類され、自動的に生成されるセクションやタクソノミーなどの一覧ページでは、Nodeの変数が利用できます。といっても、変数名が同じなので、難しいことをしない限りはあまり意識しなくてもよいでしょう。</p>
-
 <p>また<code>lower</code>というのが<code>.Title</code>の前についてますが、これは文字列をスモースキャプスしてくれるものです。</p>
-
-<ul class="links">
-    <li>
-        <a href="https://gohugo.io/templates/functions/#lower:904d9cf85d985550c869e6d9741448cc">ドキュメント：Hugo Template Functions</a>
-    </li>
-</ul>
-
+<!-- raw HTML omitted -->
 <p>main要素下の<code>range</code>では、年を基準にグループ化してページを読み込んでいます。グループ化の基準は他にもありますので、詳しくはドキュメントを参照してください。</p>
-
 <p>h2要素で<code>{{ .key }}</code>を挿入していますが、グループ化の基準に応じて挿入されます。今回は年を基準にしているため、西暦が挿入されています。</p>
-
 <p>グループ化してページを読み込んだ場合、さらに<code>{{ range .Pages }}</code>を使ってページを個別に読み込む必要がありますので、ul要素下で実行しています。内容自体はトップページで作成したものとほぼ同じため、解説は省略します。</p>
-
-<p>ちなみに<code>{{ .Summary }}</code>を使えば、自動で先頭から70文字または記事内の<code>&#60;&#33;&#45;&#45;more&#45;&#45;&#62;</code>より前を出力できます。</p>
-
-<ul class="links">
-    <li>
-        <a href="https://gohugo.io/content/summaries/">ドキュメント：Summaries</a>
-    </li>
-</ul>
-
+<p>ちなみに<code>{{ .Summary }}</code>を使えば、自動で先頭から70文字または記事内の<!-- raw HTML omitted -->&lt;!--more--&gt;<!-- raw HTML omitted -->より前を出力できます。</p>
+<!-- raw HTML omitted -->
 <h3 id="個別ページ">個別ページ</h3>
-
-<ul class="links">
-    <li>
-        <a href="https://gohugo.io/templates/content/">ドキュメント：Single Content Template</a>
-    </li>
-</ul>
-
+<!-- raw HTML omitted -->
 <p>個別ページでは、セクション単位での変更や、個別にテンプレートを指定することもできます。</p>
-
 <p>「layouts」ディレクトリ直下にセクション名のディレクトリを作成し、<code>single.html</code>を格納します。「blog」セクションであれば<code>layouts/blog/single.html</code>です。</p>
-
 <ol>
 <li>/layouts/TYPE-or-SECTION/LAYOUT.html</li>
 <li>/layouts/TYPE-or-SECTION/single.html</li>
@@ -538,20 +298,12 @@ tags:
 <li>/themes/THEME/layouts/TYPE-or-SECTION/single.html</li>
 <li>/themes/THEME/layouts/_default/single.html</li>
 </ol>
-
 <p>1・2で「TYPE-orSECTION」とありますが、任意のディレクトリを「type」としてセクションの代わりに使うことができるようです（今回は使っていません）。</p>
-
 <p>また1の「LAYOUT.html」については、「section「または「type」ディレクトリへ<code>single.html</code>以外の名前で作成したテンプレートを指します。</p>
-
 <p>個別にテンプレートを適用できる仕組みで、例えば「blog」セクションで、一部だけを「pickup.html（<code>layouts/blog/pickup.html</code>）」というテンプレートを適用するには、「blog」セクションに属するコンテンツのメタデータへ次のように記述します。</p>
-
 <pre><code>layout: pickup
-</code></pre>
-
-<p>このサイトでは「blog」「tools」「sketch-3-basics」という3つのセクションがあり、「tools」「sketch-3-basics」へセクションテンプレートを適用、さらに「tools」内でFireworks拡張機能のページは個別にテンプレートを用意しました。</p>
-
+</code></pre><p>このサイトでは「blog」「tools」「sketch-3-basics」という3つのセクションがあり、「tools」「sketch-3-basics」へセクションテンプレートを適用、さらに「tools」内でFireworks拡張機能のページは個別にテンプレートを用意しました。</p>
 <p>続いてblogセクションの個別ページのソースを見ていきましょう。まずはヘッダー部分のソースです（<a href="https://gist.github.com/littlebusters/ab0ee0b2dd9d35530daa#file-section-html">実際のソース</a>）。</p>
-
 <pre><code>&lt;header&gt;
   &lt;section&gt;
     &lt;time datetime=&quot;{{ .Date.Format &quot;2006-01-02T03:04:05+09:00&quot; }}&quot;&gt;
@@ -563,26 +315,14 @@ tags:
     {{ end }}
   &lt;/section&gt;
 &lt;/header&gt;
-</code></pre>
-
-<p>h1要素の下にある<code>{{ if isset .Params &quot;hero&quot; }}</code>は、<code>.Param</code>（独自メタデータ）へ<code>hero</code>が設定されているかどうかを判定しています。設定されていれば、img要素のsrc属性へ<code>{{ .Params.hero }}</code>（画像までのパス）を出力するようにしています。</p>
-
-<p><a name="metadata" id="metadata"></a>独自メタデータについては、記事（Markdownファイル）の先頭へ次のように記述します。</p>
-
+</code></pre><p>h1要素の下にある<code>{{ if isset .Params &quot;hero&quot; }}</code>は、<code>.Param</code>（独自メタデータ）へ<code>hero</code>が設定されているかどうかを判定しています。設定されていれば、img要素のsrc属性へ<code>{{ .Params.hero }}</code>（画像までのパス）を出力するようにしています。</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->独自メタデータについては、記事（Markdownファイル）の先頭へ次のように記述します。</p>
 <pre><code>hero: &quot;/file/to/path/filename.png&quot;
-</code></pre>
-
-<p>独自メタデータは<code>.Param.variablename</code>という形式で、<code>.Params</code>に続けて設定したメタデータを記述します。</p>
-
+</code></pre><p>独自メタデータは<code>.Param.variablename</code>という形式で、<code>.Params</code>に続けて設定したメタデータを記述します。</p>
 <p>またメタデータ名に記号（「-」「_」）は使えませんので、注意してください。</p>
-
 <p>そして、記事の本文を読み込むには次のコードを記述します。</p>
-
 <pre><code>{{ .Content }}
-</code></pre>
-
-<p>続けて記事下の前後記事へのリンク部分です。</p>
-
+</code></pre><p>続けて記事下の前後記事へのリンク部分です。</p>
 <pre><code>&lt;ul&gt;
   {{ if .NextInSection }}
   &lt;li&gt;
@@ -601,45 +341,23 @@ tags:
   &lt;/li&gt;
   {{ end }}
 &lt;/ul&gt;
-</code></pre>
-
-<p><code>{{ if .NextInSection }}</code>や<code>{{ if .PrevInSection }}</code>で前後に記事があるかどうかをチェックし、記事があればリンクを作成するようにしています。</p>
-
+</code></pre><p><code>{{ if .NextInSection }}</code>や<code>{{ if .PrevInSection }}</code>で前後に記事があるかどうかをチェックし、記事があればリンクを作成するようにしています。</p>
 <p><code>{{ .NextInSection.Permalink }}</code>はパーマネントリンクの取得、<code>{{ .NextInSection.LinkTitle }}</code>は記事タイトルの取得です。</p>
-
 <h3 id="partials">パーシャルテンプレート</h3>
-
-<ul class="links">
-    <li>
-        <a href="https://gohugo.io/templates/partials/">ドキュメント：Partial Templates</a>
-    </li>
-</ul>
-
+<!-- raw HTML omitted -->
 <p>ヘッダーやフッターなど、共通パートはパーシャルテンプレートとして分割しておくと使い回しが可能です。</p>
-
 <p>パーシャルテンプレートは<code>layouts/partials</code>ディレクトリへ保存します。パーシャルテンプレート内でも変数を使うことができます。</p>
-
 <p><code>layouts/partials/head.html</code>というパーシャルテンプレートをテーマ本体へ読み込むには、内容を展開したい箇所へ次のコードを記述します。</p>
-
 <pre><code>{{ partial &quot;head.html&quot; . }}
-</code></pre>
-
-<p>最後の「.」はパーシャルテンプレート内で変数を使うために必要です（いわゆる引数みたいなもの？）。</p>
-
+</code></pre><p>最後の「.」はパーシャルテンプレート内で変数を使うために必要です（いわゆる引数みたいなもの？）。</p>
 <p>続いてパーシャルテンプレート化したhead要素のソースの一部を解説します。（<a href="https://gist.github.com/littlebusters/ab0ee0b2dd9d35530daa#file-head-html">実際のソース</a>）。</p>
-
 <pre><code>&lt;title&gt;
 {{ $isHomePage := eq .Title .Site.Title }}
 {{ .Title }}{{ if eq $isHomePage false }} | {{ .Site.Title }}{{ end }}
 &lt;/title&gt;
-</code></pre>
-
-<p>title要素では、現在のページタイトルと<code>config.toml</code>で設定している<code>title</code>を比較、すなわちトップページ（ホームページ）かどうかを判定し、その真偽値を変数<code>$isHomePage</code>へ入れています。</p>
-
+</code></pre><p>title要素では、現在のページタイトルと<code>config.toml</code>で設定している<code>title</code>を比較、すなわちトップページ（ホームページ）かどうかを判定し、その真偽値を変数<code>$isHomePage</code>へ入れています。</p>
 <p>次の行の<code>{{ if eq $isHomePage false }}</code>で、トップページでなければ記事のタイトルに続けて、「 | creative tweet.」と出力するようにしています。</p>
-
 <p>次はOPGの種類を出力する部分です。</p>
-
 <pre><code>{{ $.Scratch.Set &quot;ogpType&quot; &quot;article&quot; }}
 
 {{ if eq .Title &quot;Blogs&quot; }}
@@ -647,29 +365,14 @@ tags:
 {{ end }}
 
 &lt;meta property=&quot;og:type&quot; content=&quot;{{ $.Scratch.Get &quot;ogpType&quot; }}&quot; /&gt;
-</code></pre>
-
-<p><code>{{ $.Scratch.Set &quot;ogpType&quot; &quot;article&quot; }}</code>では、キーバリューストアを用いてテンプレート内での変数を設定しています。</p>
-
+</code></pre><p><code>{{ $.Scratch.Set &quot;ogpType&quot; &quot;article&quot; }}</code>では、キーバリューストアを用いてテンプレート内での変数を設定しています。</p>
 <p>変数を設定するには<code>{{ $.Scratch.Set &quot;キー名称&quot; &quot;値&quot; }}</code>で、値を読み出すには<code>{{ $.Scratch.Get &quot;キー名称&quot; }}</code>とします。</p>
-
-<ul class="links">
-    <li>
-        <a href="http://gohugo.io/extras/scratch/">ドキュメント：Scratch</a>
-    </li>
-</ul>
-
+<!-- raw HTML omitted -->
 <p>続いてのif文で、blogセクションの一覧かどうかを判定し、必要に応じて書き換えを行なっています。そして最終的に<code>$.Scratch.Get</code>で値を読み出しています。</p>
-
-<hr class="postscript">
-
+<!-- raw HTML omitted -->
 <p>ひとまずここまでで、サーバーへ公開できるデータを生成することができます。「public」ディレクトリがあればそれを削除して、次のコマンドを実行します（<code>--baseUrl</code>の中身は適宜書き換えてください）。</p>
-
 <pre><code>$ hugo --baseUrl=&quot;http://creative-tweet.net/&quot;
-</code></pre>
-
-<p>おそらく一瞬で生成されると思います。生成された「public」ディレクトリの中身を公開ディレクトリへアップすれば、ひとまずHugoでのサイト制作は完了です。</p>
-
+</code></pre><p>おそらく一瞬で生成されると思います。生成された「public」ディレクトリの中身を公開ディレクトリへアップすれば、ひとまずHugoでのサイト制作は完了です。</p>
 <p>後編は「<a href="../../../blog/2015/10/usage-hugo-2.html">CIサービスでビルドからデプロイを自動化するまで</a>」です。</p>
 		</div>
 

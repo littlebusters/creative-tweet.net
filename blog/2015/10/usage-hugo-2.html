@@ -54,13 +54,9 @@
 			</p>
 			
 			<p>前編の「<a href="../../../blog/2015/10/usage-hugo-1.html">Hugoのセットアップからビルドするまで</a>」の続きです。後編は、CIサービスを使ってデプロイを自動化するまでの内容でお届けします。</p>
-
 <p>掲載しているスクリーンショットは、すでに設定済みのものを削除したり再設定したりしています。従って、はじめて設定する場合とは異なる場合がありますので、その辺りはよしなに補正をお願いします。</p>
-
 <h2 id="ビルドとデプロイ">ビルドとデプロイ</h2>
-
 <p>「<a href="../../../blog/2015/10/good-bye-wordpress.html">WordPressからHugoへ移行して、ビルドとデプロイを自動化した話</a>」の通り、次のプロセスを経て公開するようにしています。</p>
-
 <ol>
 <li>ローカルで記事の作成やレイアウトなどの開発→適当にコミット</li>
 <li>最終的な確認ができたらBitbucketのプライベートリポジトリへプッシュ</li>
@@ -68,145 +64,57 @@
 <li>ビルドが成功したら、そのデータをGitHubの公開リポジトリへデプロイ（プッシュ）</li>
 <li>GitHubへデプロイされたら、DEPLOYBOTでFTPSを使ってレンタルサーバーへデプロイ</li>
 </ol>
-
 <p>ここからは、3〜5で使っているwerckerとDEPLOYBOTの設定について解説していきます。</p>
-
 <p>進めるにあたり、BitbucketとGitHubへあらかじめリポジトリを作成しておきましょう。</p>
-
 <h3 id="werckerでapplicationを作成する">werckerでApplicationを作成する</h3>
-
 <p>ヘッダーの「＋Create」から「Application」を選択して進めます。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step01.png" alt="">
-</p>
-
-<p>画面が切り替わり、<b>Choose a Git provider</b>で、Bitbucketを選択します。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step02.png" alt="">
-</p>
-
+<!-- raw HTML omitted -->
+<p>画面が切り替わり、<!-- raw HTML omitted -->Choose a Git provider<!-- raw HTML omitted -->で、Bitbucketを選択します。</p>
+<!-- raw HTML omitted -->
 <p>Bitbucketの認証画面が出てくると思いますので、内容を確認して［アクセスを許可する］ボタンをクリックします。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step03.png" alt="">
-</p>
-
-<p>続いて<b>Select a repository</b>に切り替わり、リポジトリの一覧が表示されます。使用するリポジトリを選択し、［Use selected repo］ボタンをクリックします。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step04.png" alt="">
-</p>
-
-<p><b>Select owner</b>のセクションでは、オーナーを選択します。おそらく自分のアカウントしか表示されていないと思いますので、そのまま［Use selected owner］ボタンをクリックします。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step05.png" alt="">
-</p>
-
-<p><b>Configure access</b>の項目ではデプロイキーの設定の仕方を選択します。おそらくややこしいことはしていないと思いますので、素直にrecommendedされている「Add the deploy key to the selected repository for me」を選択して、［Next step］ボタンを押します。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step06.png" alt="">
-</p>
-
-<p><b>Setup your wercker.yml</b>では、ここまでの内容を元にwerckerでの処理ステップを記述した<code>wercker.yml</code>ファイルの内容が生成されます。ただ、この内容は今回使いませんので、「Docker enabled. See our stacks documentation for more details.」にチェックを入れた状態で［Next step］ボタンをクリックします。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step07.png" alt="">
-</p>
-
-<p><b>Awesome! you are all done!</b>では、「Make my app public」のチェックを外した状態で［Finish］ボタンをクリックします。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step08.png" alt="">
-</p>
-
+<!-- raw HTML omitted -->
+<p>続いて<!-- raw HTML omitted -->Select a repository<!-- raw HTML omitted -->に切り替わり、リポジトリの一覧が表示されます。使用するリポジトリを選択し、［Use selected repo］ボタンをクリックします。</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted -->Select owner<!-- raw HTML omitted -->のセクションでは、オーナーを選択します。おそらく自分のアカウントしか表示されていないと思いますので、そのまま［Use selected owner］ボタンをクリックします。</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted -->Configure access<!-- raw HTML omitted -->の項目ではデプロイキーの設定の仕方を選択します。おそらくややこしいことはしていないと思いますので、素直にrecommendedされている「Add the deploy key to the selected repository for me」を選択して、［Next step］ボタンを押します。</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted -->Setup your wercker.yml<!-- raw HTML omitted -->では、ここまでの内容を元にwerckerでの処理ステップを記述した<code>wercker.yml</code>ファイルの内容が生成されます。ただ、この内容は今回使いませんので、「Docker enabled. See our stacks documentation for more details.」にチェックを入れた状態で［Next step］ボタンをクリックします。</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted -->Awesome! you are all done!<!-- raw HTML omitted -->では、「Make my app public」のチェックを外した状態で［Finish］ボタンをクリックします。</p>
+<!-- raw HTML omitted -->
 <h3 id="デプロイキーを生成する">デプロイキーを生成する</h3>
-
 <p>HugoでビルドしたのちにGitHubへデプロイするため、リポジトリへアクセスできるようにSSH Keyを生成・設定します。</p>
-
 <p>設定が終わると、作成したアプリケーションのダッシュボードが表示されますので、右上の歯車アイコンをクリックし、設定画面へアクセスします。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step09.png" alt="">
-</p>
-
-<p>左メニューの<b>SSH Keys</b>を選択し、［Generate new key pair］ボタンをクリックします。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step10.png" alt="">
-</p>
-
+<!-- raw HTML omitted -->
+<p>左メニューの<!-- raw HTML omitted -->SSH Keys<!-- raw HTML omitted -->を選択し、［Generate new key pair］ボタンをクリックします。</p>
+<!-- raw HTML omitted -->
 <p>［Name］へキーの名前を入力します。のちの設定で使うので、わかりやすい名前にしておきましょう。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step11.png" alt="">
-</p>
-
+<!-- raw HTML omitted -->
 <p>［Generate］ボタンをクリックするとキーが生成されます。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step12.png" alt="">
-</p>
-
+<!-- raw HTML omitted -->
 <h3 id="デプロイする対象を設定する">デプロイする対象を設定する</h3>
-
-<p>続けて、左メニューの<b>targets</b>へアクセスしデプロイする対象を設定していきます。［Add deploy target］のプルダウンメニューから「custom deploy」を選択します。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step13.png" alt="">
-</p>
-
-<p><b>Deploy target name</b>は、ターゲットの名前ですので、任意に設定します。<b>Auto deploy</b>は、ビルドが成功すれば自動的にプッシュするオプションです。今回は、ウェブサイトのデプロイですし自動化をすることが主たる目的ですのでチェックを入れます。その下のテキストエリアには、ブランチ名を入力します。基本的にmasterブランチへプシュするので「master」と入力し［Save］ボタンをクリックします。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step14.png" alt="">
-</p>
-
-<p>Saveできると<b>Deploy pipeline</b>という項目が表示されますので、［Add new variable］ボタンをクリックして変数を追加します。</p>
-
-<p><b>Environment variable</b>へは変数名を入力します。今回は「GITHUB_DEPLOY_KEY」としました。</p>
-
-<p>ラジオボタンは<b>SSH Key pair</b>を選択し、プルダウンメニューから先ほど生成したSSH Keyを選択します。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step15.png" alt="">
-</p>
-
+<p>続けて、左メニューの<!-- raw HTML omitted -->targets<!-- raw HTML omitted -->へアクセスしデプロイする対象を設定していきます。［Add deploy target］のプルダウンメニューから「custom deploy」を選択します。</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted -->Deploy target name<!-- raw HTML omitted -->は、ターゲットの名前ですので、任意に設定します。<!-- raw HTML omitted -->Auto deploy<!-- raw HTML omitted -->は、ビルドが成功すれば自動的にプッシュするオプションです。今回は、ウェブサイトのデプロイですし自動化をすることが主たる目的ですのでチェックを入れます。その下のテキストエリアには、ブランチ名を入力します。基本的にmasterブランチへプシュするので「master」と入力し［Save］ボタンをクリックします。</p>
+<!-- raw HTML omitted -->
+<p>Saveできると<!-- raw HTML omitted -->Deploy pipeline<!-- raw HTML omitted -->という項目が表示されますので、［Add new variable］ボタンをクリックして変数を追加します。</p>
+<p><!-- raw HTML omitted -->Environment variable<!-- raw HTML omitted -->へは変数名を入力します。今回は「GITHUB_DEPLOY_KEY」としました。</p>
+<p>ラジオボタンは<!-- raw HTML omitted -->SSH Key pair<!-- raw HTML omitted -->を選択し、プルダウンメニューから先ほど生成したSSH Keyを選択します。</p>
+<!-- raw HTML omitted -->
 <p>項目を入力したら［OK］ボタンで確定し、さらに［Save］ボタンもクリックしておきます。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step16.png" alt="">
-</p>
-
+<!-- raw HTML omitted -->
 <h3 id="githubのリポジトリへデプロイキーを設定する">GitHubのリポジトリへデプロイキーを設定する</h3>
-
-<p>GitHubへアクセスし、該当のリポジトリへアクセスします。右にある<b>Settings</b>メニューへアクセスします。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step17.png" alt="">
-</p>
-
-<p>続いて左にある<b>Deploy Key</b>へアクセスします。</p>
-
+<p>GitHubへアクセスし、該当のリポジトリへアクセスします。右にある<!-- raw HTML omitted -->Settings<!-- raw HTML omitted -->メニューへアクセスします。</p>
+<!-- raw HTML omitted -->
+<p>続いて左にある<!-- raw HTML omitted -->Deploy Key<!-- raw HTML omitted -->へアクセスします。</p>
 <p>［Add deploy key］ボタンをクリックし、Titleへ適当な名前を、Keyへ先ほどコピーした内容をペーストし、書き込めるように「Allow write access」にチェックを入れて［Add key］ボタンをクリックします。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step18.png" alt="">
-</p>
-
+<!-- raw HTML omitted -->
 <p>おそらくパスワードを聞かれるので、パスワードを入力すると追加されます。</p>
-
-<h3 id="wercker-ymlを作成する">wercker.ymlを作成する</h3>
-
+<h3 id="werckerymlを作成する">wercker.ymlを作成する</h3>
 <p>ウェブで設定が完了したら、ローカルの作業へ戻ります。</p>
-
 <p>ルートディレクトリへ<code>wercker.yml</code>を作成し、どのように動作させるのかを記述していきます。</p>
-
 <p>動作を1つ1つ記述することも可能ですが、動作をまとめたパッケージとしてwercker自身や他のユーザーが作成・公開したものを<a href="https://app.wercker.com/#explore">Registry</a>で探すことができます。</p>
-
 <p>その中から必要なものを組み合わせて作成した<code>wercker.yml</code>はこんな感じです。</p>
 <div class="highlight"><pre class="chroma"><code class="language-wercker.yml" data-lang="wercker.yml">box<span class="p">:</span><span class="w"> </span>golang<span class="w">
 </span><span class="w"></span>build<span class="p">:</span><span class="w">
@@ -222,147 +130,65 @@
 </span><span class="w">            </span>host<span class="p">:</span><span class="w"> </span>github.com<span class="w">
 </span><span class="w">            </span>repo<span class="p">:</span><span class="w"> </span>littlebusters/creative-tweet.net<span class="w">
 </span><span class="w">            </span>basedir<span class="p">:</span><span class="w"> </span>public<span class="w">
-</span><span class="w">            </span>clean_removed_files<span class="p">:</span><span class="w"> </span><span class="kc">true</span></code></pre></div>
-<p><b>box</b>は使用する仮想環境を指定します。今回は準備されている<a href="https://app.wercker.com/#applications/51ad0329c67e056078000876/tab/details">golangのbox</a>を使用しました（参考：<a href="https://app.wercker.com/#explore/boxes/search/main">boxの一覧</a>）。</p>
-
-<p class="annotation">ちなみに、どういった動作をするのかを確認するには、パッケージ詳細ページの右上の「repo」リンクから、GitHubへジャンプし、shファイルやymlファイルを確認してください。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/wercker-step19.png" alt="">
-</p>
-
-<p><b>build</b>では文字通りビルドの手順を記述していきます。Hugoのインストールからビルドまでを実行する<a href="https://app.wercker.com/#applications/54a7744c6b3ba8733de4dcde/tab/details">arjen/hugo-build</a>を使っています。これはHugoのGitHubページへデプロイするまでを解説している、<a href="https://gohugo.io/tutorials/automated-deployments/">チュートリアル</a>でも使われているステップです。</p>
-
-<p><b>deploy</b>は、こちらも文字通りデプロイの手順を記述します。次の3つを使用しました。</p>
-
+</span><span class="w">            </span>clean_removed_files<span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></code></pre></div><p><!-- raw HTML omitted -->box<!-- raw HTML omitted -->は使用する仮想環境を指定します。今回は準備されている<a href="https://app.wercker.com/#applications/51ad0329c67e056078000876/tab/details">golangのbox</a>を使用しました（参考：<a href="https://app.wercker.com/#explore/boxes/search/main">boxの一覧</a>）。</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted -->build<!-- raw HTML omitted -->では文字通りビルドの手順を記述していきます。Hugoのインストールからビルドまでを実行する<a href="https://app.wercker.com/#applications/54a7744c6b3ba8733de4dcde/tab/details">arjen/hugo-build</a>を使っています。これはHugoのGitHubページへデプロイするまでを解説している、<a href="https://gohugo.io/tutorials/automated-deployments/">チュートリアル</a>でも使われているステップです。</p>
+<p><!-- raw HTML omitted -->deploy<!-- raw HTML omitted -->は、こちらも文字通りデプロイの手順を記述します。次の3つを使用しました。</p>
 <ol>
 <li><code>leipert/add-ssh-key-gh-bb</code>は、デプロイキーを登録</li>
 <li><code>add-to-known_hosts</code>は、knownhostへgithub.comを登録</li>
 <li><code>leipert/git-push</code>は、<code>git push</code>のための設定と実際のプッシュ</li>
 </ol>
-
 <p>deployステップでは、それぞれにオプションを指定しています。</p>
-
 <p><code>leipert/add-ssh-key-gh-bb</code>では、デプロイキーの名前をオプションで指定します。キー名は、targetsで設定した変数名を指定します。</p>
-
 <p><code>add-to-known_hosts</code>では、SSHでアクセスするGithubのホスト名をオプション指定します。</p>
-
 <p><code>leipert/git-push</code>では、デプロイ（プッシュ）時のオプションを指定しています。basedirでプッシュするディレクトリを指定します。Hugoでビルドしたデータはpublicに格納されるためこれを指定しています。</p>
-
 <p>一通り設定できたら、きちんと動作するかBitbucketへプッシュしてみましょう。プッシュできたら、werckerのApplication一覧からアクセスすれば進捗を確認できます。</p>
-
 <h2 id="deploybotでレンタルサーバーへデプロイ">DEPLOYBOTでレンタルサーバーへデプロイ</h2>
-
-<p><b>Dashboard</b>へアクセスし、ハイライトされている「<b>Connetct a repository</b>」クリックします。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/deploybot-step01.png" alt="">
-</p>
-
+<p><!-- raw HTML omitted -->Dashboard<!-- raw HTML omitted -->へアクセスし、ハイライトされている「<!-- raw HTML omitted -->Connetct a repository<!-- raw HTML omitted -->」クリックします。</p>
+<!-- raw HTML omitted -->
 <p>GitHubを選択し［Connect new account］ボタンをクリックします。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/deploybot-step02.png" alt="">
-</p>
-
-<p>GitHubの<b>Authorize application</b>というタイトルで、DeployBotのアクセスを許可するかどうか認証が入りますので、内容を確認して認証してください。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/deploybot-step03.png" alt="">
-</p>
-
-<p>認証すると元の画面に戻りますので、プルダウンメニューからプル対象のリポジトリを選択します。下の<b>Title:</b>へリポジトリ名が入力されるので、必要に応じて修正してください。</p>
-
-<p><b>Color label</b>は、処理に関係ありませんので、適当に設定しましょう。</p>
-
+<!-- raw HTML omitted -->
+<p>GitHubの<!-- raw HTML omitted -->Authorize application<!-- raw HTML omitted -->というタイトルで、DeployBotのアクセスを許可するかどうか認証が入りますので、内容を確認して認証してください。</p>
+<!-- raw HTML omitted -->
+<p>認証すると元の画面に戻りますので、プルダウンメニューからプル対象のリポジトリを選択します。下の<!-- raw HTML omitted -->Title:<!-- raw HTML omitted -->へリポジトリ名が入力されるので、必要に応じて修正してください。</p>
+<p><!-- raw HTML omitted -->Color label<!-- raw HTML omitted -->は、処理に関係ありませんので、適当に設定しましょう。</p>
 <p>［Connect］ボタンをクリックし、Dashboardへ戻ります。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/deploybot-step04.png" alt="">
-</p>
-
-<p>続いて「<b>Create an environment</b>」をクリックします。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/deploybot-step05.png" alt="">
-</p>
-
-<p><b>General settings</b>の<b>Name</b>はデプロイ名ですので、どこにデプロイするとか動作がわかるようにしておくと良いでしょう。今回は「Push to Public」という名前にしました。</p>
-
-<p><b>Deployment mode</b>は、GitHubへプッシュされたら自動的にデプロイできるように<b>Automatic</b>を選択します。</p>
-
+<!-- raw HTML omitted -->
+<p>続いて「<!-- raw HTML omitted -->Create an environment<!-- raw HTML omitted -->」をクリックします。</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted -->General settings<!-- raw HTML omitted -->の<!-- raw HTML omitted -->Name<!-- raw HTML omitted -->はデプロイ名ですので、どこにデプロイするとか動作がわかるようにしておくと良いでしょう。今回は「Push to Public」という名前にしました。</p>
+<p><!-- raw HTML omitted -->Deployment mode<!-- raw HTML omitted -->は、GitHubへプッシュされたら自動的にデプロイできるように<!-- raw HTML omitted -->Automatic<!-- raw HTML omitted -->を選択します。</p>
 <p>解説していない項目はデフォルトのままでOKです。設定し終えたら［Save］ボタンをクリックします。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/deploybot-step06.png" alt="">
-</p>
-
-<p>続いての「<b>Add a new server</b>」で何をするかを選択します。</p>
-
-<p>今回はFTPSを用いてレンタルサーバーアップロードしますので、<b>Files</b>の「FTP」を選択します。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/deploybot-step07.png" alt="">
-</p>
-
+<!-- raw HTML omitted -->
+<p>続いての「<!-- raw HTML omitted -->Add a new server<!-- raw HTML omitted -->」で何をするかを選択します。</p>
+<p>今回はFTPSを用いてレンタルサーバーアップロードしますので、<!-- raw HTML omitted -->Files<!-- raw HTML omitted -->の「FTP」を選択します。</p>
+<!-- raw HTML omitted -->
 <p>画面が切り替わったら、サーバーアドレスやアカウント情報を入力します。</p>
-
-<p><b>Name</b>はこの設定名です。</p>
-
-<p><b>Host</b>は接続先のホスト名やIPアドレスを入力します。</p>
-
-<p><b>Destination path</b>では、デプロイするディレクトリを指定します。一般的には公開ディレクトリへのパスを指定します。</p>
-
-<p><b>Login</b>はログインアカウント名を入力、<b>Password</b>はそのままパスワードを入力します。</p>
-
+<p><!-- raw HTML omitted -->Name<!-- raw HTML omitted -->はこの設定名です。</p>
+<p><!-- raw HTML omitted -->Host<!-- raw HTML omitted -->は接続先のホスト名やIPアドレスを入力します。</p>
+<p><!-- raw HTML omitted -->Destination path<!-- raw HTML omitted -->では、デプロイするディレクトリを指定します。一般的には公開ディレクトリへのパスを指定します。</p>
+<p><!-- raw HTML omitted -->Login<!-- raw HTML omitted -->はログインアカウント名を入力、<!-- raw HTML omitted -->Password<!-- raw HTML omitted -->はそのままパスワードを入力します。</p>
 <p>他にもオプションを指定できますが、今回は使用しません（例えば「Trigger a webhook after deployment is done」を設定すれば、デプロイが完了したらSlackやGlipなどへポストすることもできます）。</p>
-
 <p>設定ができたら［Save］ボタンをクリックします。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/deploybot-step08.png" alt="">
-</p>
-
+<!-- raw HTML omitted -->
 <p>画面が切り替わると、今回設定した内容の一覧が表示されます。この中にFTPSの接続テスト結果があり、「Connection established」となっていれば接続が成功しています。</p>
-
 <p>一通り眺めたら、左上のDashboardへ移動します。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/deploybot-step09.png" alt="">
-</p>
-
-<p>「<b>Ready to be deployed</b>」のタイトルとともに［Deploy］ボタンが表示されていると思いますので、ボタンをクリックします。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/deploybot-step10.png" alt="">
-</p>
-
+<!-- raw HTML omitted -->
+<p>「<!-- raw HTML omitted -->Ready to be deployed<!-- raw HTML omitted -->」のタイトルとともに［Deploy］ボタンが表示されていると思いますので、ボタンをクリックします。</p>
+<!-- raw HTML omitted -->
 <p>続いて、デプロイのメモをつけたりやプレビューできたりといった画面に切り替わります。下の［Start deployment］ボタンをクリックすればデプロイ（アップロード）が始まります。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/deploybot-step11.png" alt="">
-</p>
-
+<!-- raw HTML omitted -->
 <p>デプロイ中…</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/deploybot-step12.png" alt="">
-</p>
-
+<!-- raw HTML omitted -->
 <p>成功すればダッシュボードへログが残ります。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2015/usage-hugo-2/deploybot-step13.png" alt="">
-</p>
-
+<!-- raw HTML omitted -->
 <p>設定は以上です。</p>
-
 <p>これでローカルからプッシュするだけで、あとはCIサービスがビルドからレンタルサーバーへのデプロイまでをやってくれるようになりました。</p>
-
 <p>前回も書きましたが、ローカルでのバックアップはほぼ不要（元ファイルはGit管理外のため）で、ロールバックも簡単に行えます。</p>
-
 <p>CMS自体のお守りからも解放されるので、余計な心配がかからなくなりました。</p>
-
 <p>もちろん、サービスが落ちていたら使えないわけですから万能なわけではありませんが、そのリスクはどんなサービスを使っていても一緒ですね。</p>
 		</div>
 

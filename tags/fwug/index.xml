@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>FwUG on creative tweet.</title>
@@ -17,7 +17,7 @@
       <pubDate>Fri, 22 Mar 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2013/03/fwuglt_in_co-edo.html</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://cssnite.jp/ginza/vol68/&#34;&gt;CSS Nite in Ginza, Vol.68「HiDPI時代のFireworks」&lt;/a&gt;の懇親会として企画された、&lt;a title=&#34;Fireworks User Group LightningTalk開催のお知らせ | Fireworks Users Group&#34; href=&#34;http://fwug.net/?q=node/27213&#34; target=&#34;_blank&#34;&gt;Fireworks User Group LightningTalk&lt;/a&gt;で、「敢えて@1xでRetina対応をしてみる」というお題でしゃべってきました。&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://cssnite.jp/ginza/vol68/&#34;&gt;CSS Nite in Ginza, Vol.68「HiDPI時代のFireworks」&lt;/a&gt;の懇親会として企画された、&lt;!-- raw HTML omitted --&gt;Fireworks User Group LightningTalk&lt;!-- raw HTML omitted --&gt;で、「敢えて@1xでRetina対応をしてみる」というお題でしゃべってきました。&lt;/p&gt;</description>
     </item>
     
   </channel>

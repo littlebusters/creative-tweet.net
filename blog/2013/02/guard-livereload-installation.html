@@ -50,9 +50,7 @@
 		<div class="content-main">
 			
 			<p><a href="http://livereload.com/">LiveReload</a> Windows版を使っていたのですが、ある日を境に起動後30秒もしない間に落ちてしまうという現象に陥りました。alpha版なので致し方ないかなとも思いましたが、代わりにguard-livereloadをインストールし、無事動作に至ったその作業記録です。</p>
-
 <h2 id="ザックリとした手順">ザックリとした手順</h2>
-
 <ol>
 <li>DevKitのインストール</li>
 <li>gemのアップデート</li>
@@ -63,156 +61,64 @@
 <li>Firefoxにアドオンをインストール</li>
 <li>監視設定と監視開始</li>
 </ol>
-
 <h2 id="インストール">インストール</h2>
-
 <p>Rubyが既にインストールされている前提で話を進めます。まだインストールしていない場合は、Google先生に聞いてみてください。あと定番の文言ですが、以下の手順は自己責任でお願いします。</p>
-
 <h3 id="ドキュメント">ドキュメント</h3>
-
-<ul class="links">
-  <li>
-    <a href="https://github.com/guard/guard-livereload">guard/guard-livereload · GitHub</a>
-  </li>
-  
-  <li>
-    <a href="https://github.com/guard/guard#installation">guard/guard · GitHub</a>
-  </li>
-</ul>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h3 id="rubyのライブラリ関連をインストール">Rubyのライブラリ関連をインストール</h3>
-
 <p>ライブラリと言いながら、まずはあとでライブラリをインストールのに必要なDevKitをインストールしておきます。</p>
-
-<ul class="links">
-  <li>
-    <a href="http://rubyinstaller.org/downloads/">Downloads</a>
-  </li>
-</ul>
-
+<!-- raw HTML omitted -->
 <p>インストールについては、こちらを参考にしました。</p>
-
-<ul class="links">
-  <li>
-    <a href="http://www.rubylife.jp/railsinstall/rails/index4.html">DevKitのインストール - Railsインストール</a>
-  </li>
-</ul>
-
+<!-- raw HTML omitted -->
 <p>左のダウンロードできるファイルの一覧に「Development Kit」という項目がありますので、それをダウンロードします。</p>
-
-<p class="media">
-<img alt="Development Kitをダウンロード" src="../../../assets/img/2013/2013-02-06-guard-livereload-installation/guard-livereload_fig01.png">
-</p>
-
+<!-- raw HTML omitted -->
 <p>ダウンロードができたら、Cドライブ直下に「devkit」というフォルダを作っておき、その中にダウンロードしたファイルを解凍します。</p>
-
 <p>続けてみんな大好き「黒い画面」ことコマンドプロンプトを立ち上げ、ダウンロードファイルを解凍したフォルダ<code>C:\devkit</code>へ移動します。</p>
-
 <pre><code>$ cd C:\devkit  
-</code></pre>
-
-<p>移動後、次のコマンドを実行します。</p>
-
+</code></pre><p>移動後、次のコマンドを実行します。</p>
 <pre><code>$ ruby dk.rb init  
-</code></pre>
-
-<p>実行後、インストールされているRubyの一覧が出てきますので、使っているバージョンを選びましょう。</p>
-
+</code></pre><p>実行後、インストールされているRubyの一覧が出てきますので、使っているバージョンを選びましょう。</p>
 <p>続いて、次のコマンドでインストールします。</p>
-
 <pre><code>$ ruby dk.rb install  
-</code></pre>
-
-<p>DevKitがインストールできたら、ライブラリをインストールする前に、次のコマンドでGemをアップデートしておきます。</p>
-
+</code></pre><p>DevKitがインストールできたら、ライブラリをインストールする前に、次のコマンドでGemをアップデートしておきます。</p>
 <pre><code>$ gem update -system  
-</code></pre>
-
-<p>次のコマンドで、guardをインストールします。</p>
-
+</code></pre><p>次のコマンドで、guardをインストールします。</p>
 <pre><code>$ gem install guard  
-</code></pre>
-
-<p>続いて、Windows Directory Monitorをインストールします。（ちなみに、これのインストールにDevKitが必要です）</p>
-
+</code></pre><p>続いて、Windows Directory Monitorをインストールします。（ちなみに、これのインストールにDevKitが必要です）</p>
 <pre><code>$ gem install wdm  
-</code></pre>
-
-<p>ここでやっとLiveReloadをインストールします。</p>
-
+</code></pre><p>ここでやっとLiveReloadをインストールします。</p>
 <pre><code>$ gem install guard-livereload  
-</code></pre>
-
-<p>最後にオプションとなりますが、アドオンとの通信を最適化するために、JSONのパフォーマンスが上がる（らしい）YAJLもインストールしておきます。</p>
-
+</code></pre><p>最後にオプションとなりますが、アドオンとの通信を最適化するために、JSONのパフォーマンスが上がる（らしい）YAJLもインストールしておきます。</p>
 <pre><code>$ gem install yajl-ruby  
-</code></pre>
-
-<p>これでひとまずライブラリのインストールは終了です。</p>
-
+</code></pre><p>これでひとまずライブラリのインストールは終了です。</p>
 <h2 id="firefoxのセットアップ">Firefoxのセットアップ</h2>
-
 <p>私のメインブラウザがFirefoxなので、それ以外は試してませんが、多分大丈夫だと思います。</p>
-
 <p>Firefoxにアドオンを追加しますが、<a href="http://livereload.com/">LiveReload.com</a>からリンクされている、ver.2.0.8だとうまく動かないため、2.0.9をインストールします。が、おそらく正式にオリジナルの作者がビルドしたものでなく、StackOverFlowなどに投稿されている修正を2.0.8に施してどなたかがビルドされたものです。（詳細は追えてませんが、ザックリと流れを見た感じ）</p>
-
-<ul class="links">
-  <li>
-    <a href="https://github.com/downloads/siasia/livereload-extensions/LiveReload-2.0.9.xpi">2.0.9ダウンロード（直接リンク）</a>
-  </li>
-  
-  <li>
-    <a href="https://github.com/livereload/livereload-extensions/pull/8">ことの顛末はこの辺り</a>
-  </li>
-</ul>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h2 id="監視を開始する">監視を開始する</h2>
-
 <p>ここから「黒い画面」に戻ります。監視したいフォルダに移動し初期化します。ここでは、C直下に<code>www</code>というフォルダを作成し、さらにその中に<code>htdocs</code>というフォルダを作成、<code>htdocs</code>を監視フォルダにしています。</p>
-
 <pre><code>$ cd C:\www\htdocs  
 $ guard init livereload
-</code></pre>
-
-<p>初期化すると、このフォルダに「guardfile」が生成されるので、そのファイルに監視対象のファイルを書き込みます。すでに記述されてるものに追加しても、それを削除して追記してもOKです。追記する場合は、watchの部分だけになります。</p>
-
+</code></pre><p>初期化すると、このフォルダに「guardfile」が生成されるので、そのファイルに監視対象のファイルを書き込みます。すでに記述されてるものに追加しても、それを削除して追記してもOKです。追記する場合は、watchの部分だけになります。</p>
 <pre><code>guard 'livereload' do  
 watch(/.html?/)  
 watch(/.css/)  
 watch(/.js/)  
 end
-</code></pre>
-
-<p>以上で準備は整いました。次のコマンドで監視を開始します。</p>
-
+</code></pre><p>以上で準備は整いました。次のコマンドで監視を開始します。</p>
 <pre><code>$ guard  
-</code></pre>
-
-<p>きちんと起動すると次のようなメッセージが表示されます。</p>
-
+</code></pre><p>きちんと起動すると次のようなメッセージが表示されます。</p>
 <pre><code>00:00:00 - INFO - LiveReload 1.6 is waiting for a browser to connect.  
-</code></pre>
-
-<p>この状態で、ブラウザ側のアドオンをクリックすると接続します。</p>
-
-<p class="media">
-<img class="" alt="インストールしたアドオンのマークをクリックし、赤い斜線が入った状態にします。" src="../../../assets/img/2013/2013-02-06-guard-livereload-installation/guard-livereload_fig02.png">
-</p>
-
+</code></pre><p>この状態で、ブラウザ側のアドオンをクリックすると接続します。</p>
+<!-- raw HTML omitted -->
 <p>うまく接続ができると、以下のように表示されます。</p>
-
 <pre><code>00:00:00 - INFO - Browser connected.  
-</code></pre>
-
-<p>上のメッセージの後すぐに下記のメッセージが出る場合は、何回かアドオンのオン/オフを繰り返すか、　Firefoxを再起動してみてください。</p>
-
+</code></pre><p>上のメッセージの後すぐに下記のメッセージが出る場合は、何回かアドオンのオン/オフを繰り返すか、　Firefoxを再起動してみてください。</p>
 <pre><code>00:00:00 - INFO - Browser disconnected.  
-</code></pre>
-
-<p>これでguardfileで指定されたファイルを更新すると、ブラウザが自動的にリロードされるようになりました。</p>
-
-<hr class="postscript" />
-
+</code></pre><p>これでguardfileで指定されたファイルを更新すると、ブラウザが自動的にリロードされるようになりました。</p>
+<!-- raw HTML omitted -->
 <p>「Windowsじゃなくて、Macを使えよ」って話なのですが、いろいろとオトナの事情で、ね…ということで。もっといいやり方があるよとか、ここ違うよとかあれば、@
 <a href="https://twitter.com/littlebuster">littlebusters</a>や<a href="https://www.facebook.com/creative.tweet">Facebookページ</a>までご指摘いただけると幸いです。</p>
 		</div>

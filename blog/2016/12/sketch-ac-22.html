@@ -50,37 +50,18 @@
 		<div class="content-main">
 			
 			<p><a href="http://www.adventar.org/calendars/1486">Sketch Advent Calendar 2016</a> 22日目の記事です。21日目の「<a href="http://tipsbear.com/sketch/?utm_source=dlvr.it&amp;utm_medium=twitter">初心者向け：これからSketchを使いたい人や既に使っている人のおさらいに！ Sketchの使い方のまとめ | Sketch Advent Calendar 2016 | tipsBear</a>」は非常にまとまっていて、この丁寧さは私も見習いたいです…（反省）</p>
-
 <p>で、予定ではプラグインについて書こうかと思っていたのですが、私が書くより<a href="http://qiita.com/hanamiju/items/a04d0a7f9e9adbb11799">ためになりそうな記事</a>が出ていたので、ネタに走りました、ハイ。SketchのショートカットがAdobeと違うので使いづらい！ という声を意外と聞くので、AppleScriptを使ってSketchのショートカットをIllustratorライクに設定してみます。</p>
-
 <p>まずは、<a href="http://creative-tweet.net/blog/2016/12/sketch-plugin-ac-19.html">Sketch Plugin Advent Calendar 19日目</a>で紹介した<a href="https://github.com/arkkimaagi/artboardzoom">Artboard Zoomプラグイン</a>をインストールします。</p>
-
 <p>続けて、<a href="https://gist.github.com/littlebusters/a86bd7ee67dc80bbe811da20e4014287">のちの手順で使うJSONファイル</a>を保存してください。コピペでエディタに貼り付けて保存してもいいですし、右上の「Download ZIP」からダウンロードしてもOKです。</p>
-
 <p>さらに、JSONをAppleScriptで使うために、<a href="https://itunes.apple.com/jp/app/json-helper-for-applescript/id453114608?mt=12">JSON Helper for AppleScript</a>をインストールします。</p>
-
 <p>「<strong>環境設定 → セキュリティとプライバシー → プライバシー</strong>」の「アクセシビリティ」で、スクリプトエディタ.appを許可しておいてください。</p>
-
 <p><a href="http://qiita.com/littlebusters/items/65374b03efd9399cb688#%E4%BB%A5%E4%B8%8B%E3%82%BD%E3%83%BC%E3%82%B9">システム環境設定にあるキーボードショートカットを設定するAppleScript</a>からソースをコピーし、スクリプトエディタ.appに貼り付けます。右上が「JavaScript」になっていたら、「AppleScript」に変更し一旦コンパイルしてみます。（と、ネタに走っていますが、元々はリンク先にある通り、Sketchをはじめとしたアプリで、キーボードショートカットの設定を保存しておくために作ったスクリプトだったりします）</p>
-
-<p class="media">
-    <img src="../../../assets/img/2016/sac2016-22/copyandpaste-compile.png" alt="">
-</p>
-
+<!-- raw HTML omitted -->
 <p>コンパイルが通ったら、実行ボタンを押します。ファイルを選択するウィンドウが表示されたら、先ほど保存したJSONファイルを選択しましょう。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2016/sac2016-22/exec-script.png" alt="">
-</p>
-
+<!-- raw HTML omitted -->
 <p>あとはショートカットができあがるのを眺めておきましょう。文字通り、GUIをAppleScriptで操作するので、スクリプトが頑張っている様子を眺めることができます。</p>
-
 <p>スクリプトの実行が終わったら、Illustratorライクなショートカットが設定されたSketchでエンジョイしましょう（思ったより共通のショートカットがなかったです）。</p>
-
-<p class="media">
-    <img src="../../../assets/img/2016/sac2016-22/finished.png" alt="">
-</p>
-
+<!-- raw HTML omitted -->
 <table>
 <thead>
 <tr>
@@ -89,134 +70,112 @@
 <th>ショートカット</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td align="left">クリッピングマスク → 作成</td>
 <td align="left">Shape with Mask</td>
 <td>cmd + 7</td>
 </tr>
-
 <tr>
 <td align="left">重ね順 → 最前面へ</td>
 <td align="left">Move To Front</td>
 <td>cmd + shift + ]</td>
 </tr>
-
 <tr>
 <td align="left">重ね順 → 前面へ</td>
 <td align="left">Forward</td>
 <td>cmd + ]</td>
 </tr>
-
 <tr>
 <td align="left">重ね順 → 背面へ</td>
 <td align="left">Backward</td>
 <td>cmd + [</td>
 </tr>
-
 <tr>
 <td align="left">重ね順 → 最背面へ</td>
 <td align="left">Move To Back</td>
 <td>cmd + shift + [</td>
 </tr>
-
 <tr>
 <td align="left">パス → 連結</td>
 <td align="left">Paths → Join</td>
 <td>cmd + j</td>
 </tr>
-
 <tr>
 <td align="left">配置&hellip;</td>
 <td align="left">Image → Replace&hellip;</td>
 <td>cmd + shift + p</td>
 </tr>
-
 <tr>
 <td align="left">カーニング狭く</td>
 <td align="left">Kern → Tighten</td>
 <td>option + ←</td>
 </tr>
-
 <tr>
 <td align="left">カーニング広く</td>
 <td align="left">Kern → Loosen</td>
 <td>option + →</td>
 </tr>
-
 <tr>
 <td align="left">アートボードを全体表示</td>
-<td align="left">ArtboardZoom <br>- Zoom to selected Artboard</td>
+<td align="left">ArtboardZoom <!-- raw HTML omitted -->- Zoom to selected Artboard</td>
 <td>cmd + 0</td>
 </tr>
-
 <tr>
 <td align="left">すべてのアートボードを全体表示</td>
 <td align="left">Center Canvas</td>
 <td>cmd + option + 0</td>
 </tr>
-
 <tr>
 <td align="left">100%表示</td>
 <td align="left">Actual Size</td>
 <td>cmd + 1</td>
 </tr>
-
 <tr>
 <td align="left">ロック → 選択</td>
 <td align="left">Lock Layer</td>
 <td>cmd + 2</td>
 </tr>
-
 <tr>
 <td align="left">隠す → 選択</td>
 <td align="left">Hide Layer</td>
 <td>cmd + 3</td>
 </tr>
-
 <tr>
 <td align="left">隠す → 選択</td>
 <td align="left">Bigger</td>
 <td>cmd + shift + .</td>
 </tr>
-
 <tr>
 <td align="left">ポイントサイズを大きく</td>
 <td align="left">Smaller</td>
 <td>cmd + shift + ,</td>
 </tr>
-
 <tr>
 <td align="left">ポイントサイズを小さく</td>
 <td align="left">Smaller</td>
 <td>cmd + 3</td>
 </tr>
-
 <tr>
 <td align="left">スマートガイド</td>
 <td align="left">Show Smart Guides</td>
 <td>cmd + u</td>
 </tr>
-
 <tr>
 <td align="left">左揃え</td>
 <td align="left">Align Left</td>
 <td>cmd + shift + l</td>
 </tr>
-
 <tr>
 <td align="left">中央揃え</td>
 <td align="left">Center</td>
 <td>cmd + shift + c</td>
 </tr>
-
 <tr>
 <td align="left">両端揃え</td>
 <td align="left">Justify</td>
 <td>cmd + shift + j</td>
 </tr>
-
 <tr>
 <td align="left">右揃え</td>
 <td align="left">Align Right</td>
@@ -224,9 +183,7 @@
 </tr>
 </tbody>
 </table>
-
 <p>注意点としては、</p>
-
 <ul>
 <li>両アプリケーションにあるメニューでも、設定していない場合があります（例：ルーラーはcmd + rではなく、Sketchデフォルトのctrl + r）。</li>
 <li>一部、上書きできないショートカットがあり、レイヤーをロックや隠すは解除のショートカットが有効になっていません。</li>
@@ -234,9 +191,7 @@
 <li>設定したショートカットを削除するスクリプトは用意していないので、マニュアルで削除してください。</li>
 <li>AppleScriptの動作をYosemiteまでしかテストできていません。もしEl Catian以上で試して実行できた方がいらっしゃいましたら、お知らせ頂けると幸いです。</li>
 </ul>
-
-<hr>
-
+<!-- raw HTML omitted -->
 <p><a href="http://www.adventar.org/calendars/2013">Sketch Plugin Advent Calendar 2016</a>もやってますので、よろしければこちらもどうぞ！</p>
 		</div>
 

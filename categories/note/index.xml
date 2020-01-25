@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Note on creative tweet.</title>
@@ -36,7 +36,6 @@
       
       <guid>https://creative-tweet.net/blog/2015/10/usage-hugo-1.html</guid>
       <description>&lt;p&gt;今回はWordPressからHugoへの乗り換えの一部始終を記載していきます。&lt;/p&gt;
-
 &lt;p&gt;ちょっと長くなったため、前編と後編に分割しています。前編はHugoでサイトを生成するまで、後編はデプロイを自動化するまで、の内容でお届けします。&lt;/p&gt;</description>
     </item>
     
@@ -64,11 +63,9 @@
       <pubDate>Mon, 22 Dec 2014 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2014/12/daitokai-advent-calendar-2014-22.html</guid>
-      <description>&lt;p&gt;アタック25の様相を見せる「&lt;a href=&#34;http://www.adventar.org/calendars/661&#34;&gt;大都会岡山Advent Calendar&lt;/a&gt;」22日目です。前日は&lt;a href=&#34;http://blog.livedoor.jp/ryosms/archives/7959735.html&#34;&gt;大都会が誇るリーサルウェポン&lt;/a&gt;こと&lt;a href=&#34;https://twitter.com/kiyokura&#34;&gt;きよくら&lt;/a&gt;さんの「&lt;a href=&#34;http://kiyokura.hateblo.jp/entry/2014/12/21/161733&#34;&gt;大都会岡山うどんAdvent Calendar 2014 一気書き &amp;#8211; きよくらの備忘録&lt;/a&gt;」でした。“私のような急場しのぎのネタではない素敵なエントリだと思いますので期待して正座待機ですね！”とか言うのやめろください。ちなみに私は「かめや」が大好きです。&lt;/p&gt;
-
+      <description>&lt;p&gt;アタック25の様相を見せる「&lt;a href=&#34;http://www.adventar.org/calendars/661&#34;&gt;大都会岡山Advent Calendar&lt;/a&gt;」22日目です。前日は&lt;a href=&#34;http://blog.livedoor.jp/ryosms/archives/7959735.html&#34;&gt;大都会が誇るリーサルウェポン&lt;/a&gt;こと&lt;a href=&#34;https://twitter.com/kiyokura&#34;&gt;きよくら&lt;/a&gt;さんの「&lt;a href=&#34;http://kiyokura.hateblo.jp/entry/2014/12/21/161733&#34;&gt;大都会岡山うどんAdvent Calendar 2014 一気書き – きよくらの備忘録&lt;/a&gt;」でした。“私のような急場しのぎのネタではない素敵なエントリだと思いますので期待して正座待機ですね！”とか言うのやめろください。ちなみに私は「かめや」が大好きです。&lt;/p&gt;
 &lt;p&gt;明日は@littlebustersさんです、はいがんばります。&lt;/p&gt;
-
-&lt;p&gt;ということで、24日に発売される「&lt;strong&gt;&lt;a href=&#34;http://www.amazon.co.jp/gp/product/4844364707/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=4844364707&amp;amp;linkCode=as2&amp;amp;tag=littlebuste04-22&#34;&gt;プロとして恥ずかしくない 新・WEBデザインの大原則&lt;/a&gt;&lt;img src=&#34;http://ir-jp.amazon-adsystem.com/e/ir?t=littlebuste04-22&amp;amp;l=as2&amp;amp;o=9&amp;amp;a=4844364707&#34; alt=&#34;&#34; /&gt;&lt;/strong&gt;」で、大都会から著者の一人として執筆しましたので、少しご紹介。&lt;/p&gt;</description>
+&lt;p&gt;ということで、24日に発売される「&lt;strong&gt;&lt;a href=&#34;http://www.amazon.co.jp/gp/product/4844364707/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=4844364707&amp;amp;linkCode=as2&amp;amp;tag=littlebuste04-22&#34;&gt;プロとして恥ずかしくない 新・WEBデザインの大原則&lt;/a&gt;&lt;img src=&#34;http://ir-jp.amazon-adsystem.com/e/ir?t=littlebuste04-22&amp;amp;l=as2&amp;amp;o=9&amp;amp;a=4844364707&#34; alt=&#34;&#34;&gt;&lt;/strong&gt;」で、大都会から著者の一人として執筆しましたので、少しご紹介。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -78,9 +75,7 @@
       
       <guid>https://creative-tweet.net/blog/2014/11/sketch-3-basics-was-completed.html</guid>
       <description>&lt;p&gt;ツイートやFacebookページなどでは告知していたのですが、7月に未完成の初版をリリースし、4ヶ月ほどかけてようやく完成しました。&lt;/p&gt;
-
 &lt;p&gt;完成するかどうかも分からないものを、早々にご購入いただいた方をはじめ、ソーシャルでのシェアにご協力いただいた方など、本当にありがとうございます。&lt;/p&gt;
-
 &lt;p&gt;本の内容などは、「&lt;a href=&#34;http://creative-tweet.net/sketch-3-basics/&#34;&gt;Sketch 3の基本操作を解説した電子書籍「Sketch 3の基本。」&lt;/a&gt;」をご覧頂くとして、背景というかその他諸々を書き綴りたいと思います。&lt;/p&gt;</description>
     </item>
     
@@ -91,7 +86,6 @@
       
       <guid>https://creative-tweet.net/blog/2012/02/font-mixer-memo.html</guid>
       <description>&lt;p&gt;先日公開した、&lt;a href=&#34;../01/font-mixer-100.html&#34; title=&#34;Fireworksの混植拡張機能、Font Mixerを作成しました。&#34;&gt;Fireworks拡張機能「Font Mixer」&lt;/a&gt;を制作するにあたっての自分用のメモですが、何かのヒントなれば、と公開します。&lt;/p&gt;
-
 &lt;p&gt;拡張機能といっても、ライブラリだったりスタイルだったりしますが、今回はコマンドおよびコマンドパネルについてです。&lt;/p&gt;</description>
     </item>
     

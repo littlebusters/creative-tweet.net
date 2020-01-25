@@ -65,73 +65,41 @@
 		
 		
 		<div class="content-main">
-			
-
-<h2 id="これは何">これは何？</h2>
-
+			<h2 id="これは何">これは何？</h2>
 <p>FireworksのDocumentDOMを、JSONとして書き出す拡張機能です。</p>
-
 <h2 id="動作環境とライセンス">動作環境とライセンス</h2>
-
 <p>OS X版 Fireworks CS6（Windows版とCS5以下は未テスト） / MITライセンス</p>
-
 <h2 id="使い方">使い方</h2>
-
 <p>JSON形式で書き出したいファイルを開きます。</p>
-
-<div class="media">
-    <a href="../../assets/img/2016/fireworks-to-sketch/fig01-create-fw-document.png"><img src="../../assets/img/2016/fireworks-to-sketch/fig01-create-fw-document.png" alt=""></a>
-</div>
-
+<!-- raw HTML omitted -->
 <p>プラグインを実行します。</p>
-
-<div class="media">
-    <img src="../../assets/img/2016/fireworks-to-sketch/fig02-run-plugin-on-fireworks.png" alt="">
-</div>
-
+<!-- raw HTML omitted -->
 <p>JSONファイルの書き出し先を選択します。</p>
-
-<div class="media">
-    <img src="../../assets/img/2016/fireworks-to-sketch/fig03-choose-export-folder.png" alt="">
-</div>
-
+<!-- raw HTML omitted -->
 <p>書き出しが終わると、書き出したオブジェクト数を表示します。必要なリソースファイルを、JSONファイルの書き出し先に指定した同階層のフォルダへ格納されます。</p>
-
-<div class="media">
-    <img src="../../assets/img/2016/fireworks-to-sketch/fig05-displayed-dialog.png" alt="">
-</div>
-
+<!-- raw HTML omitted -->
 <p>あとは焼くなり煮るなりして料理してください。拙作の「<a href="../../tools/sketch_fwjson_to_layers/detail.html">JSON to Layersプラグイン</a>」で、Sketch 3へ取り込むこともできます。</p>
-
 <h2 id="仕様">仕様</h2>
-
 <ul>
 <li>FireworksのDocumentDOMを、JSONとして書き出します。構造やプロパティ名などは、元と同じになるようにしていますが、一部のプロパティを削除したり独自のプロパティを追加したりしており、オリジナルそのままではありません。</li>
 <li>JSONファイルは、Fireworksドキュメントと同一名で保存します。リソースファイルを格納するフォルダは、「<code>fw2json-exported-</code> ＋ Fireworksドキュメント名」です。</li>
 <li>塗りや線にパターン・テクスチャを適用している場合、オリジナルのパターンおよびテクスチャファイルが存在すれば、リソースフォルダへ書き出します。
-
 <ul>
 <li>したがって、Fireworks内蔵のパターン・テクスチャは必ず書き出しされます。</li>
 <li>オリジナルの場合、ファイルを読み込んだ場所が記録されているため、その場所へファイルを配置するか、改めてファイルを読み込んでください。ファイルが存在しない場合、プロパティとして<code>false</code>を設定します。</li>
-</ul></li>
+</ul>
+</li>
 <li>塗りや線にパターンを適用している場合、その適用されているオブジェクトそのものをビットマップファイルとして書き出します。これは、パターンの開始位置を正確に再現するため、パターンファイルとは別に書き出しを行っています。</li>
 <li>書き出しする際は、オブジェクト1つずつ新規ドキュメントを作成しコピー &amp; ペースト、保存を繰り返しますので、かなりの負荷が予測されます。非表示にしているオブジェクトも書き出しに含まれますので、不要なページやレイヤー（シンボル含む）は整理してからプラグインを実行すれば、書き出し時間を短縮できます。Fireworks ConsoleやDOM Inspectorをインストールしている場合は、インスペクタを非表示にした状態でFireworksを再起動させるか、プラグインマネージャーで無効化してください。</li>
 <li>ドキュメントに配置されているシンボルインスタンスを元に、シンボルを書き出します。同一シンボルからつくられているインスタンスでも、配置している大きさが異なる場合は、異なるシンボルとして書き出します。</li>
 <li>配置されているインスタンスは、シンボルとのリンクを解除して中のオブジェクトを走査します。したがって、プラグイン実行後は必ず<strong>保存せずに閉じて</strong>ください。</li>
 </ul>
-
 <h2 id="既知のバグ">既知のバグ</h2>
-
 <ul>
 <li>今のところ確認できていません。</li>
 </ul>
-
 <h2 id="履歴">履歴</h2>
-
-<dl class="versionHistory">
-<dt>1.0.0［2016.6.19］</dt>
-<dd>初リリース</dd>
-</dl>
+<!-- raw HTML omitted -->
 
 		</div>
 

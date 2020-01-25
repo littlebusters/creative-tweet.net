@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JavaScript on creative tweet.</title>
@@ -27,7 +27,6 @@
       
       <guid>https://creative-tweet.net/blog/2014/12/daitokai-advent-calendar-2014-23.html</guid>
       <description>&lt;p&gt;アタック25の様相を見せる「&lt;a href=&#34;http://www.adventar.org/calendars/661&#34;&gt;大都会岡山Advent Calendar&lt;/a&gt;」23日目です。前日は@littlebustersさんの「&lt;a href=&#34;http://creative-tweet.net/blog/2014/12/daitokai-advent-calendar-2014-22.html&#34;&gt;大都会からの刺客として「プロとして恥ずかしくない 新・WEBデザインの大原則」の執筆に参加しました。 大都会岡山 Advent Calendar 2014&lt;/a&gt;」でした（長い）。 明日は@littlebustersさんです、はい3日目がんばります。&lt;/p&gt;
-
 &lt;p&gt;「勉強会が多い（要出典）」と言われている大都会ですが、その中でフロント（どこまで？）系のセミナーや勉強会を、開催された様子とともに少し紹介したいと思います。これがない！というのがあれば、まさかり投げてください。&lt;/p&gt;</description>
     </item>
     
@@ -38,7 +37,6 @@
       
       <guid>https://creative-tweet.net/blog/2012/05/ui-for-flautokerning.html</guid>
       <description>&lt;p&gt;@&lt;a href=&#34;https://twitter.com/fladdict&#34;&gt;fladdict&lt;/a&gt;さん作の「&lt;a href=&#34;http://fladdict.net/blog/2011/02/auto-kerning.html&#34;&gt;FLAutoKerning.js&lt;/a&gt;」で使用するカーニングペア情報を、ブラウザで設定できるインターフェイスをつくってみました。&lt;/p&gt;
-
 &lt;p&gt;ペアでしかカーニングできないという低機能ですが、キーボード操作だけでカーニングできます。ただし、モリサワの&lt;a href=&#34;http://typesquare.com/&#34;&gt;TypeSquare&lt;/a&gt;向けに作成していますので、他のWebフォントで使えるかどうかは未検証です。実際にご利用の際は、ご自身のサーバに設置してお使いください。（ライセンス的なアレで）&lt;/p&gt;</description>
     </item>
     

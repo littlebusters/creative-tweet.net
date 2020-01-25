@@ -54,70 +54,39 @@
 			</p>
 			
 			<p>サイトをリニューアルついでに、WordPressからHugoへ乗り換えました。</p>
-
 <p>そもそもWordPressはブログ以外に使っていなかったにも関わらず、アップデートやらセキュリティやらを気にするのにも疲れておりまして、Static Site Generatorへ乗り換えようと思っていました。</p>
-
 <p>Static Site Generatorといえば、<a href="http://jekyllrb.com/">Jekyll</a>や<a href="https://middlemanapp.com/jp/">Middleman</a>などが知られていると思います。</p>
-
 <p>私自身もサイトの一部のカテゴリーで、JekyllをラップしたようなGUIツールであるmixtureを使っていました。</p>
-
 <p>もちろん、それに移行する手もあったのですが、たった数ページの変換にも結構な時間を取られていたことや、そもそも開発・サービスが終わってしまったこともあって、その選択肢を取ることはできませんでした。</p>
-
 <p>そんな折、Hugoという単語を見かけるようになり、変換が早いと聞き及んだため「んじゃ、これで試してみるか」ぐらいの勢いで乗り換えを行いました（ちなみに移行そのものは、1年ぐらい前から計画していたんですね…）。</p>
-
 <ul>
 <li><a href="http://t32k.me/mol/log/hugo/">Jekyllが許されるのは小学生までだよね - MOL</a></li>
 <li><a href="http://re-dzine.net/2015/01/hugo/">MiddlemanからHugoへ移行した | REFLECTDESIGN</a></li>
 </ul>
-
 <p>あとは、<a href="http://gohugo.io/community/press/">Press, Blogs and Media Coverage</a>にまとめられている日本語のページをご覧ください。</p>
-
 <p>ちなみにどれぐらい早いかというと、記事84ページ ＋ カテゴリー14ページ ＋ タグ46ページをローカル環境で変換して150ms前後です。先述のmixtureを使って5ページ分をいわゆるビルドすると、正確には測っていませんが少なくとも2分ぐらいはかかっていました。</p>
-
 <p>というわけで、今回はWordPressからHugoへ移行して、デプロイまでを自動化したその概要をお伝えします。大まかな手順は次の通りです。</p>
-
 <ol>
 <li>Hugoの準備</li>
 <li>WordPressからHugoへコンテンツの変換</li>
 <li>テンプレート作成</li>
 <li>ビルドとデプロイ環境の準備</li>
 </ol>
-
 <h2 id="hugoの準備">Hugoの準備</h2>
-
 <p>Hugoは、Go言語で作られたStatic Site Generatorです。Go言語自体のインストールは不要で、各プラットフォームのパッケージをインストールすれば使うことができます。</p>
-
-<ul class="links">
-    <li><a href="https://gohugo.io/">Hugo - https://gohugo.io/</a></li>
-</ul>
-
+<!-- raw HTML omitted -->
 <p>OSXをお使いでHomebrewがインストールされていれば、次のコマンドでもインストール可能です。</p>
-
 <pre><code>$ brew install hugo
-</code></pre>
-
-<p>Hugoでは初期化したりビルドインサーバーを立ち上げたりと、多少なりともターミナルでの操作が必須です。とはいえ、そこまで難しい操作はなく、ターミナルの操作に多少慣れていれば十分に扱えるでしょう。</p>
-
+</code></pre><p>Hugoでは初期化したりビルドインサーバーを立ち上げたりと、多少なりともターミナルでの操作が必須です。とはいえ、そこまで難しい操作はなく、ターミナルの操作に多少慣れていれば十分に扱えるでしょう。</p>
 <h2 id="コンテンツをwordpressからhugoへ変換する">コンテンツをWordPressからHugoへ変換する</h2>
-
 <p>「<a href="https://github.com/SchumacherFM/wordpress-to-hugo-exporter">WordPress to Hugo Exporter</a>」というWordPressのプラグインを使用して、投稿している記事やページをMarkdownへ変換しました。変換したものはZIPでダウンロードできます。画像関連もこの中に含まれているので、別途ダウンロードする必要はありません。</p>
-
 <p>ただ、WordPressのアップローダを使ってアップしたものは<code>wp-content/uploads/</code>へ格納されており、変換したMarkdownでもそのフルパスで画像の場所が記述されています。</p>
-
 <p>新しいサイトではリソースの位置を変更したため、それに合わせてSublime Textの［Find → Find in Files&hellip;］でディレクトリを指定して一括で書き換えました。</p>
-
 <h2 id="テンプレート作成">テンプレート作成</h2>
-
 <p>テンプレート（いわゆるテーマ）については、他のStatic Site Generatorと同じように、テンプレートファイルを作成し、その中にスクリプトを埋め込んでいきます。</p>
-
-<ul class="links">
-    <li><a href="http://gohugo.io/overview/introduction/">Hugo Documents</a></li>
-</ul>
-
+<!-- raw HTML omitted -->
 <p>今回はHTMLを使って記述しましたが、Go言語のHTMLテンプレートエンジンである<a href="https://github.com/yosssi/ace">Ace</a>や<a href="https://github.com/eknkc/amber">Amber</a>を使って、JadeやSlimのように記述することもできるようです。</p>
-
 <p>作成方法などの詳細を書くと長くなってしまいますので割愛しますが、例えば<a href="http://creative-tweet.net/blog.html">ブログ記事一覧</a>はこんな感じになっています。</p>
-
 <pre><code>{{ partial &quot;head.html&quot; }}
 &lt;header class=&quot;siteHeader{{ if eq .Title &quot;creative tweet.&quot; }} is-top{{ else }} is-{{ lower .Title }}{{ end }}&quot; role=&quot;banner&quot;&gt;
 {{ partial &quot;header.html&quot; }}
@@ -141,40 +110,20 @@
 &lt;/div&gt;
 
 {{ partial &quot;footer.html&quot; }}
-</code></pre>
-
-<p><code>partial</code>では他のファイルを読み込んだり、<code>{{ .Title }}</code>では記事のタイトルを読み込んだりしています。</p>
-
+</code></pre><p><code>partial</code>では他のファイルを読み込んだり、<code>{{ .Title }}</code>では記事のタイトルを読み込んだりしています。</p>
 <p>自分で作成しなくともテーマが配布されているので、そこからカスタマイズするということも可能です。</p>
-
 <h2 id="ページの作成">ページの作成</h2>
-
 <p>ページの内容そのものを作るには、初期化して作成される<code>content</code>ディレクトへMarkdownファイルを作成し、ファイルの先頭にタイトルや日付・カテゴリーなどの設定を記述してから記事を書き始めます。</p>
-
 <p>次のコマンドを実行すると、その雛形が記述された状態でファイルを生成してくれます（雛形も自分で作成できます）。</p>
-
 <pre><code>$ hugo new path/to/filename.md
-</code></pre>
-
-<p>また次のコマンドを実行するとビルドインサーバーが立ち上がり、表示されたURLへアクセスすればブラウザで確認することができます。ちなみに<code>--watch</code>は、ライブリロードを有効にするオプションです。</p>
-
+</code></pre><p>また次のコマンドを実行するとビルドインサーバーが立ち上がり、表示されたURLへアクセスすればブラウザで確認することができます。ちなみに<code>--watch</code>は、ライブリロードを有効にするオプションです。</p>
 <pre><code>$ hugo server --watch
-</code></pre>
-
-<h2 id="ビルドとデプロイ環境の準備">ビルドとデプロイ環境の準備</h2>
-
-<p class="media">
-    <img src="../../../assets/img/2015/good-bye-wordpress/generate-and-build-deploy.png" alt="">
-</p>
-
+</code></pre><h2 id="ビルドとデプロイ環境の準備">ビルドとデプロイ環境の準備</h2>
+<!-- raw HTML omitted -->
 <p>最終的にビルドしてサーバーへデプロイ（アップロード）する必要があります。</p>
-
 <p>以前はWordPressを使ったり、WordPress管理外ファイルはFTPSを使っていたり、ファイルの管理面でも一部だけGitで管理していたりと、いろいろとごちゃごちゃになっていました。</p>
-
 <p>今回は、サイト全体をGitで管理しつつ最終的なデプロイもこれに絡めてやってみようということで、CIサービスの<a href="http://wercker.com/">wercker</a>と<a href="http://deploybot.com/">DEPLOYBOT</a>を使うことにしました。</p>
-
 <p>公開までの流れは無駄なリソースを使っている感じですが、次のようにしています。</p>
-
 <ol>
 <li>ローカルで記事の作成やレイアウトなどの開発→適当にコミット</li>
 <li>最終的な確認ができたらBitbucketのプライベートリポジトリへプッシュ</li>
@@ -182,25 +131,15 @@
 <li>ビルドが成功したら、そのデータをGitHubの公開リポジトリへデプロイ（プッシュ）</li>
 <li>GitHubへデプロイされたら、DEPLOYBOTでFTPSを使ってレンタルサーバーへデプロイ</li>
 </ol>
-
 <p>設定などの詳細はこれまた割愛しますが、私は2を実行するだけで開発データはBitbucketへ、ビルドした公開データはGitHubへバックアップしつつ、自動的に公開までできるようになりました。</p>
-
 <p>もちろんそれぞれにコミットが残っているので、ロールバックも簡単にできます。</p>
-
 <p>ちなみにGitHub Pageを使えば4で終わるのですが、ものの試しでDEPLOYBOTを使ってみようかなと思って、あえてレンタルサーバーで公開するようにしています。</p>
-
 <p>あとURLがどうしても変更になってしまうため、必要に応じて<code>.htaccess</code>でリダイレクトするように設定しました。</p>
-
 <h2 id="wordpressからhugoへ移行してみて">WordPressからHugoへ移行してみて</h2>
-
 <p>まずは「サイトにログインして、画像をアップして…」という煩わしさがありません。ローカルでほぼ完結するので、プレビューが正しければ、そのままプッシュするだけというのは、実にラクです。</p>
-
 <p>コメント欄をつけられないなどの課題もありますが、そこは外部サービスに頼ったりすれば解決できるかなと。</p>
-
 <p>自サイトを実験の場として使っているかたもいらっしゃると思うので、手放しでおすすめできるものではありませんが、記事を書くだけというのであれば、移行を考えてもいいんじゃないでしょうか。</p>
-
-<hr class="postscript">
-
+<!-- raw HTML omitted -->
 <p>今回割愛した部分は、また日を置いて公開できればと思います。</p>
 		</div>
 

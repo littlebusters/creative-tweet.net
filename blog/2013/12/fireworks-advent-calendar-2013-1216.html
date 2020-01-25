@@ -50,96 +50,55 @@
 		<div class="content-main">
 			
 			<p>この記事は<a href="http://www.adventar.org/calendars/136">Fireworks Lover Advent Calendar 2013</a> 16日目の記事です。</p>
-
 <p>車輪の再開発っぽいですが、スライス名を変更するコマンドを作成しました。</p>
-
 <p>スライス名の変更だと、「<a href="http://d.hatena.ne.jp/zakira/20090612">1 slice name changer</a>」や「<a href="http://www.pixelimage.jp/blog/2011/07/pi_slice.html">Pl_Slice</a>」が有名どころだと思いますが、コマンド実行できつつも、もう少し機能が欲しかったので、接頭辞・接尾辞・連番を付加できるようなコマンドにしてみました。</p>
-
 <p>あと、しばっちさんの14日目「<a href="http://blog.1dz.jp/?eid=822">Fireworksにはスライスレイヤーに色をつけられる | Webデザインのタネ</a>」をみて、ついでにスライスの色も変更できるようにしています。テストは、すぴかあやか（@<a href="https://twitter.com/spicagraph">spicagraph</a>）さんにしていただきました、ありがとうございます！</p>
-
 <h2 id="特長">特長</h2>
-
 <ul>
 <li>選択範囲に複数のスライスやスライス以外のオブジェクトがあっても実行できる。</li>
 <li>連番・接頭辞・接尾辞が付加できる。</li>
 <li>コマンドで実行できるため、ショートカットを設定できる。</li>
 </ul>
-
 <h2 id="使い方">使い方</h2>
-
 <h3 id="基本">基本</h3>
-
 <p>スライスを選択後、コマンドを実行すると、ダイアログが出ますので、設定するスライス名を入力してください。選択しているスライスに名前があれば、ダイアログに予め入力されます。複数のスライスを選択している場合は、Web レイヤーの一番上にあるスライス名が入力されます。</p>
-
 <p>特長に書いた通り、複数のオブジェクトを選択した状態でもスライス名を変更できますが、その場合は大人の事情によりWeb レイヤーの一番下にあるスライス名だけが変更されます。後述のオプションを使用すれば、複数のスライスに対して連番や接頭辞などを付加できます。</p>
-
 <h3 id="オプション">オプション</h3>
-
 <p>半角スペース（区切り文字）に続いて、オプション文字列を入れると実行されます。オプションを指定する順番は前後しても構いません。また、現在付けているスライス名を活かしてオプションを実行する場合は、スライス名を入力せず先頭に半角スペースを入力します。この場合、スライス名が設定されていないものは、ファイル名をスライス名として設定します。</p>
-
-<p><strong>-p</strong><br />
+<p><strong>-p</strong><br>
 接頭辞を付加します。オプション文字の後に半角スペースを入れ、付加する文字列を入力してください。</p>
-
-<p><strong>-s</strong><br />
+<p><strong>-s</strong><br>
 接尾辞を付加します。オプション文字の後に半角スペースを入れ、付加する文字列を入力してください。</p>
-
-<p><strong>-o</strong><br />
+<p><strong>-o</strong><br>
 連番を付加します。オプション文字の後に半角スペースを入れ、桁数分の文字を入力してください。2桁なら「00」、3桁なら「000」という感じです。文字数を数えているだけなので、半角スペース以外の文字なら何でもOKです。Web レイヤーの下から順番に番号が付きます。</p>
-
-<p><strong>-c</strong><br />
+<p><strong>-c</strong><br>
 スライスの色を設定します。オプション文字の後に半角スペースを入れ、#と16進数6桁で色を指定してください。赤にするなら「#ff000」、青にするなら「#0000ff」という感じです。色を指定しなかった（オプション文字列の後に半角スペースのみ）場合、デフォルトの色（#00ff00）になります。</p>
-
 <h3 id="入力例">入力例</h3>
-
 <p><strong>「slicename」という名前に2桁の連番を付ける場合</strong></p>
-
 <pre><code>slicename -o 00
-</code></pre>
-
-<p><strong>現在のスライス名に「prefix」という接頭辞と3桁の連番を付ける場合</strong></p>
-
+</code></pre><p><strong>現在のスライス名に「prefix」という接頭辞と3桁の連番を付ける場合</strong></p>
 <pre><code> -p prefix -o 000
-</code></pre>
-
-<p>-pの前に半角スペースを入れてください。</p>
-
+</code></pre><p>-pの前に半角スペースを入れてください。</p>
 <p><strong>スライスの色を変える場合</strong></p>
-
 <pre><code> -c #ff0000
-</code></pre>
-
-<p>-cの前に半角スペースを入れてください。</p>
-
+</code></pre><p>-cの前に半角スペースを入れてください。</p>
 <p>全オプションを指定した場合、名前は次の通り生成されます。連番が最後ではなく、接尾辞が最後になります。</p>
-
 <pre><code>slicename -o 00 -p prefix- -s -suffix -c #ff0000
 -&gt; prefix-slicename01-suffix
-</code></pre>
-
-<h2 id="ダウンロードとインストール">ダウンロードとインストール</h2>
-
+</code></pre><h2 id="ダウンロードとインストール">ダウンロードとインストール</h2>
 <p>下記よりダウンロードして、Extension Managerでインストールしてください。ライセンスはMITです。テストはOSXのFireworksCS6で行っていますが、不具合があればご一報ください。</p>
-
 <p>2014.2.25アップデート：1.0.1 バグフィックス</p>
-
 <ul>
 <li><a href="http://creative-tweet.net/downloads/SliceModifier-1.0.1.zxp">ZXP形式（CS5以上）</a></li>
 <li><a href="http://creative-tweet.net/downloads/SliceModifier-1.0.1.mxp">MXP形式</a></li>
 <li><a href="https://github.com/littlebusters/FwSliceModifier">GitHub/FwSliceModifier</a></li>
 </ul>
-
 <h2 id="事の発端">事の発端</h2>
-
 <p>実は、個人的に<a href="http://help.adobe.com/en_US/fireworks/cs/extend/index.html">Extending Fireworks</a>の翻訳（とりあえずDocument functionsだけで、最近はまったく翻訳できてないですが）をやってまして、それを公開しようかと思っていたのですが、まったく間に合わず（グダグダな翻訳を見たいという方がいらっしゃれば、BitbucketかGitHubに公開する用意はあります）。</p>
-
 <p>で、会社PCのOSのバージョンを上げる際に、バックアップを取り損ねた「1 slice name changer」をダウンロードしようかと思ったら、ページ内容が削除されているという衝撃の事実が判明して、「まぁ、ダウンロードできないならつくるかな…ネタになるし」という流れです。</p>
-
 <p>あと、いまだにFireworks使ってるの？という方もいらっしゃるかと思いますが、使えるツールを使いつつ、代替したりより高機能なものを模索というか切り替えていけばいいんじゃないですか、と思ってる人なので、ええ。</p>
-
 <p>ちなみに、作成後「Internet Archive見てみたらいいんじゃね？」ということで、まんまとサルベージできましたYO…うん、いいんだ…</p>
-
-<hr class="postsrcipt" />
-
+<!-- raw HTML omitted -->
 <p>明日は<a href="http://www.adventar.org/users/2025">hazakumi</a>さんです！</p>
 		</div>
 
