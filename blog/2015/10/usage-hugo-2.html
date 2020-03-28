@@ -116,21 +116,21 @@
 <p>ルートディレクトリへ<code>wercker.yml</code>を作成し、どのように動作させるのかを記述していきます。</p>
 <p>動作を1つ1つ記述することも可能ですが、動作をまとめたパッケージとしてwercker自身や他のユーザーが作成・公開したものを<a href="https://app.wercker.com/#explore">Registry</a>で探すことができます。</p>
 <p>その中から必要なものを組み合わせて作成した<code>wercker.yml</code>はこんな感じです。</p>
-<div class="highlight"><pre class="chroma"><code class="language-wercker.yml" data-lang="wercker.yml">box<span class="p">:</span><span class="w"> </span>golang<span class="w">
-</span><span class="w"></span>build<span class="p">:</span><span class="w">
-</span><span class="w">    </span>steps<span class="p">:</span><span class="w">
-</span><span class="w">        </span>-<span class="w"> </span>arjen/hugo-build<span class="w">
-</span><span class="w"></span>deploy<span class="p">:</span><span class="w">
-</span><span class="w">    </span>steps<span class="p">:</span><span class="w">
-</span><span class="w">        </span>-<span class="w"> </span>leipert/add-ssh-key-gh-bb<span class="p">:</span><span class="w">
-</span><span class="w">            </span>keyname<span class="p">:</span><span class="w"> </span>GITHUB_DEPLOY_KEY<span class="w">
-</span><span class="w">        </span>-<span class="w"> </span>add-to-known_hosts<span class="p">:</span><span class="w">
-</span><span class="w">            </span>hostname<span class="p">:</span><span class="w"> </span>github.com<span class="w">
-</span><span class="w">        </span>-<span class="w"> </span>leipert/git-push<span class="p">:</span><span class="w">
-</span><span class="w">            </span>host<span class="p">:</span><span class="w"> </span>github.com<span class="w">
-</span><span class="w">            </span>repo<span class="p">:</span><span class="w"> </span>littlebusters/creative-tweet.net<span class="w">
-</span><span class="w">            </span>basedir<span class="p">:</span><span class="w"> </span>public<span class="w">
-</span><span class="w">            </span>clean_removed_files<span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+<div class="highlight"><pre class="chroma"><code class="language-wercker.yml" data-lang="wercker.yml"><span class="k">box</span><span class="p">:</span><span class="w"> </span>golang<span class="w">
+</span><span class="w"></span><span class="k">build</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">steps</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span>- arjen/hugo-build<span class="w">
+</span><span class="w"></span><span class="k">deploy</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">steps</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span>- <span class="k">leipert/add-ssh-key-gh-bb</span><span class="p">:</span><span class="w">
+</span><span class="w">            </span><span class="k">keyname</span><span class="p">:</span><span class="w"> </span>GITHUB_DEPLOY_KEY<span class="w">
+</span><span class="w">        </span>- <span class="k">add-to-known_hosts</span><span class="p">:</span><span class="w">
+</span><span class="w">            </span><span class="k">hostname</span><span class="p">:</span><span class="w"> </span>github.com<span class="w">
+</span><span class="w">        </span>- <span class="k">leipert/git-push</span><span class="p">:</span><span class="w">
+</span><span class="w">            </span><span class="k">host</span><span class="p">:</span><span class="w"> </span>github.com<span class="w">
+</span><span class="w">            </span><span class="k">repo</span><span class="p">:</span><span class="w"> </span>littlebusters/creative-tweet.net<span class="w">
+</span><span class="w">            </span><span class="k">basedir</span><span class="p">:</span><span class="w"> </span>public<span class="w">
+</span><span class="w">            </span><span class="k">clean_removed_files</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span></code></pre></div><p><!-- raw HTML omitted -->box<!-- raw HTML omitted -->は使用する仮想環境を指定します。今回は準備されている<a href="https://app.wercker.com/#applications/51ad0329c67e056078000876/tab/details">golangのbox</a>を使用しました（参考：<a href="https://app.wercker.com/#explore/boxes/search/main">boxの一覧</a>）。</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->

@@ -69,15 +69,15 @@
 <p>手慣れたエディタを使いたい場合は、script要素にCDNのアドレスを指定して利用しましょう。面倒ですが、エディタで書いてコピペするという手もあります。</p>
 <h2 id="バインディング">バインディング</h2>
 <p>では早速、文字を表示するところから始めてみます。（ちなみに、コードは公式ドキュメントとほぼ同じです…）</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;app&#34;</span><span class="p"></span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span><span class="p"></span><span class="p">&gt;</span>{{ message }}<span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;app&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ message }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
   <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#app&#39;</span><span class="p">,</span>
   <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
     <span class="nx">message</span><span class="o">:</span> <span class="s1">&#39;Hello Vue.js!&#39;</span><span class="p">,</span>
-  <span class="p">}</span><span class="p">,</span>
-<span class="p">}</span><span class="p">)</span><span class="p">;</span>
+  <span class="p">},</span>
+<span class="p">});</span>
 </code></pre></div><p><a href="https://codepen.io/littlebusters/pen/eMYzmg">サンプルコード</a></p>
 <!-- raw HTML omitted -->
 <h3 id="htmlの設定">HTMLの設定</h3>
@@ -118,23 +118,23 @@
 <h2 id="methods">Methods</h2>
 <p>続いて、methodsというAPIの解説をします。簡単にいうとVue.js内の関数で、<code>data</code>内の値を変更したり計算や文字列の連結をしたりと、さまざまな処理を記述する部分です。</p>
 <p>ボタンを押すとclass属性の値を書き換える、という処理で解説します。</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;app&#34;</span><span class="p"></span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">v-bind:class</span><span class="o">=</span><span class="s">&#34;messageStyle&#34;</span><span class="p"></span><span class="p">&gt;</span>Hello Vue.js!<span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-on:click</span><span class="o">=</span><span class="s">&#34;changeClass()&#34;</span><span class="p"></span><span class="p">&gt;</span>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;app&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">v-bind:class</span><span class="o">=</span><span class="s">&#34;messageStyle&#34;</span><span class="p">&gt;</span>Hello Vue.js!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-on:click</span><span class="o">=</span><span class="s">&#34;changeClass()&#34;</span><span class="p">&gt;</span>
     class属性を変更する
-  <span class="p">&lt;</span><span class="p">/</span><span class="nt">button</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
+  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
   <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#app&#39;</span><span class="p">,</span>
   <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
     <span class="nx">messageStyle</span><span class="o">:</span> <span class="s1">&#39;before&#39;</span><span class="p">,</span>
-  <span class="p">}</span><span class="p">,</span>
+  <span class="p">},</span>
   <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">changeClass</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">changeClass</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
       <span class="k">this</span><span class="p">.</span><span class="nx">messageStyle</span> <span class="o">=</span> <span class="s1">&#39;after&#39;</span><span class="p">;</span>
     <span class="p">}</span>
-  <span class="p">}</span><span class="p">,</span>
-<span class="p">}</span><span class="p">)</span><span class="p">;</span>
+  <span class="p">},</span>
+<span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">before</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="mh">#4DC295</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">after</span>  <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="mh">#445C71</span><span class="p">;</span> <span class="p">}</span>
 </code></pre></div><p><a href="https://codepen.io/littlebusters/pen/QmXjPw">サンプルコード</a></p>
@@ -166,28 +166,28 @@
 <h2 id="v-if">v-if</h2>
 <p><code>v-if</code>は、その名の通り「条件分岐」です。条件にマッチした場合、<code>v-if</code>を設定している要素をレンダリングします。マッチしなかった場合は、要素そのものが存在しなくなります。</p>
 <p>その<code>v-if</code>を使って、ボタンを押すと表示されるポップアップを作成してみます。</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;app&#34;</span><span class="p"></span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-on:click</span><span class="o">=</span><span class="s">&#34;showPopup()&#34;</span><span class="p"></span><span class="p">&gt;</span>ポップアップを表示<span class="p">&lt;</span><span class="p">/</span><span class="nt">button</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&#34;popupState&#34;</span><span class="p"></span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p"></span><span class="p">&gt;</span>{{ message }}<span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-on:click</span><span class="o">=</span><span class="s">&#34;closePopup()&#34;</span><span class="p"></span><span class="p">&gt;</span>閉じる<span class="p">&lt;</span><span class="p">/</span><span class="nt">button</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;app&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-on:click</span><span class="o">=</span><span class="s">&#34;showPopup()&#34;</span><span class="p">&gt;</span>ポップアップを表示<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&#34;popupState&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ message }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-on:click</span><span class="o">=</span><span class="s">&#34;closePopup()&#34;</span><span class="p">&gt;</span>閉じる<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
   <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#app&#39;</span><span class="p">,</span>
   <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
     <span class="nx">message</span><span class="o">:</span> <span class="s1">&#39;Popup&#39;</span><span class="p">,</span>
     <span class="nx">popupState</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-  <span class="p">}</span><span class="p">,</span>
+  <span class="p">},</span>
   <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">showPopup</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">showPopup</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
       <span class="k">this</span><span class="p">.</span><span class="nx">popupState</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-    <span class="p">}</span><span class="p">,</span>
-    <span class="nx">closePopup</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">},</span>
+    <span class="nx">closePopup</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
       <span class="k">this</span><span class="p">.</span><span class="nx">popupState</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="p">}</span>
-<span class="p">}</span><span class="p">)</span><span class="p">;</span>
+<span class="p">});</span>
 </code></pre></div><p><a href="https://codepen.io/littlebusters/pen/eMwpag">サンプルコード</a></p>
 <h3 id="htmlの設定-2">HTMLの設定</h3>
 <p>HTMLでは、ポップアップを表示するためのボタンと、そのポップアップの要素にメッセージとポップアップを閉じるボタンを配置しています。</p>
@@ -207,28 +207,28 @@
 <p>条件にマッチした場合、要素を表示するディレクティブです。<code>v-if</code>と似ていますが、こちらは要素のstyle属性で<code>display: none;</code>の付加および除去を行います。ブラウザ上での表示結果は同じですが、非表示時にHTML上へ要素が存在するか否かが異なります。</p>
 <!-- raw HTML omitted -->
 <p><code>v-if</code>で使ったコードをそのまま流用し、<code>v-if</code>を<code>v-show</code>に変更します。</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;app&#34;</span><span class="p"></span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-on:click</span><span class="o">=</span><span class="s">&#34;showPopup()&#34;</span><span class="p"></span><span class="p">&gt;</span>ポップアップを表示<span class="p">&lt;</span><span class="p">/</span><span class="nt">button</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-show</span><span class="o">=</span><span class="s">&#34;popupState&#34;</span><span class="p"></span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p"></span><span class="p">&gt;</span>{{ message }}<span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-on:click</span><span class="o">=</span><span class="s">&#34;closePopup()&#34;</span><span class="p"></span><span class="p">&gt;</span>閉じる<span class="p">&lt;</span><span class="p">/</span><span class="nt">button</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;app&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-on:click</span><span class="o">=</span><span class="s">&#34;showPopup()&#34;</span><span class="p">&gt;</span>ポップアップを表示<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-show</span><span class="o">=</span><span class="s">&#34;popupState&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ message }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-on:click</span><span class="o">=</span><span class="s">&#34;closePopup()&#34;</span><span class="p">&gt;</span>閉じる<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
   <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#app&#39;</span><span class="p">,</span>
   <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
     <span class="nx">message</span><span class="o">:</span> <span class="s1">&#39;Popup&#39;</span><span class="p">,</span>
     <span class="nx">popupState</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-  <span class="p">}</span><span class="p">,</span>
+  <span class="p">},</span>
   <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">showPopup</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">showPopup</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
       <span class="k">this</span><span class="p">.</span><span class="nx">popupState</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-    <span class="p">}</span><span class="p">,</span>
-    <span class="nx">closePopup</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">},</span>
+    <span class="nx">closePopup</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
       <span class="k">this</span><span class="p">.</span><span class="nx">popupState</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="p">}</span>
-<span class="p">}</span><span class="p">)</span><span class="p">;</span>
+<span class="p">});</span>
 </code></pre></div><p><a href="https://codepen.io/littlebusters/pen/WzqOrY">サンプルコード</a></p>
 <p>これを実行し開発者ツールでみると、<code>v-show</code>を設定したdiv要素に<code>style=&quot;display: none;&quot;</code>が付加されていることがわかります。「ポップアップを表示」ボタンを押すと、<code>display: none;</code>が取り除かれ、ポップアップが表示されます。</p>
 <!-- raw HTML omitted -->
@@ -238,26 +238,26 @@
 <p><code>v-for</code>は繰り返しの処理で、同じ構成の要素を連続して作成するといった場合に使用します。</p>
 <p>例えば、日付とタイトルで構成されたニュース記事のリストや、アプリのタイトルやアイコン・レビューといった複雑な構成のカードUIの一覧など、同じ要素が繰り返し使われているパターンは多くあります。</p>
 <p>ここでは、簡単にニュース記事のリストを作成してみます。</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;newsList&#34;</span><span class="p"></span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">ul</span><span class="p"></span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&#34;news in newsContents&#34;</span><span class="p"></span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">datatime</span><span class="p"></span><span class="p">&gt;</span>{{ news.date }}<span class="p">&lt;</span><span class="p">/</span><span class="nt">datetime</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;news.url&#34;</span><span class="p"></span><span class="p">&gt;</span>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;newsList&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&#34;news in newsContents&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">datatime</span><span class="p">&gt;</span>{{ news.date }}<span class="p">&lt;/</span><span class="nt">datetime</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;news.url&#34;</span><span class="p">&gt;</span>
         {{ news.title }}
-      <span class="p">&lt;</span><span class="p">/</span><span class="nt">a</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="p">/</span><span class="nt">li</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="p">/</span><span class="nt">ul</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
+      <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
   <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#newsList&#39;</span><span class="p">,</span>
   <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
     <span class="nx">newsContents</span><span class="o">:</span> <span class="p">[</span>
-      <span class="p">{</span><span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;1988.9.30&#39;</span><span class="p">,</span> <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://example.com/news/1&#39;</span><span class="p">,</span> <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;News Title1&#39;</span><span class="p">,</span><span class="p">}</span><span class="p">,</span>
-      <span class="p">{</span><span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;1989.9.16&#39;</span><span class="p">,</span> <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://example.com/news/2&#39;</span><span class="p">,</span> <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;News Title2&#39;</span><span class="p">,</span><span class="p">}</span><span class="p">,</span>
-      <span class="p">{</span><span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;2005.9.21&#39;</span><span class="p">,</span> <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://example.com/news/3&#39;</span><span class="p">,</span> <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;News Title3&#39;</span><span class="p">,</span><span class="p">}</span><span class="p">,</span>
+      <span class="p">{</span><span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;1988.9.30&#39;</span><span class="p">,</span> <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://example.com/news/1&#39;</span><span class="p">,</span> <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;News Title1&#39;</span><span class="p">,},</span>
+      <span class="p">{</span><span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;1989.9.16&#39;</span><span class="p">,</span> <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://example.com/news/2&#39;</span><span class="p">,</span> <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;News Title2&#39;</span><span class="p">,},</span>
+      <span class="p">{</span><span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;2005.9.21&#39;</span><span class="p">,</span> <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://example.com/news/3&#39;</span><span class="p">,</span> <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;News Title3&#39;</span><span class="p">,},</span>
     <span class="p">]</span>
   <span class="p">}</span>
-<span class="p">}</span><span class="p">)</span><span class="p">;</span>
+<span class="p">});</span>
 </code></pre></div><p><a href="https://codepen.io/littlebusters/pen/MVMQBZ">サンプルコード</a></p>
 <h3 id="htmlの設定-3">HTMLの設定</h3>
 <p>今回の例では、<code>v-for</code>が設定されているli要素が繰り返し生成されます。datetime要素で日付を、a要素にタイトルとそのリンク先が設定されます。</p>
@@ -281,35 +281,35 @@
 <!-- raw HTML omitted -->
 <p>例えば、「リスト項目がチェックボックスと項目名で構成されたToDoリスト」であれば、リスト項目をComponent化することで、リストがネストできるようになったとしても、子要素でも再利用ができるようになります。SketchやXDのシンボルを想像してもらうと理解しやすいでしょう。</p>
 <!-- raw HTML omitted -->
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/x-template&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;tmpl-list-item&#34;</span><span class="p"></span><span class="p">&gt;</span>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/x-template&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;tmpl-list-item&#34;</span><span class="p">&gt;</span>
   <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span>
     <span class="o">&lt;</span><span class="nx">label</span><span class="o">&gt;</span>
       <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&#34;checkbox&#34;</span> <span class="nx">v</span><span class="o">-</span><span class="nx">model</span><span class="o">=</span><span class="s2">&#34;itemdata.checked&#34;</span><span class="o">&gt;</span>
-      <span class="p">{</span><span class="p">{</span> <span class="nx">itemdata</span><span class="p">.</span><span class="nx">label</span> <span class="p">}</span><span class="p">}</span>
-    <span class="o">&lt;</span><span class="err">/</span><span class="err">l</span><span class="err">a</span><span class="err">b</span><span class="err">e</span><span class="err">l</span><span class="err">&gt;</span>
-  <span class="o">&lt;</span><span class="err">/</span><span class="err">l</span><span class="err">i</span><span class="err">&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">script</span><span class="p">&gt;</span>
+      <span class="p">{{</span> <span class="nx">itemdata</span><span class="p">.</span><span class="nx">label</span> <span class="p">}}</span>
+    <span class="o">&lt;</span><span class="err">/label&gt;</span>
+  <span class="o">&lt;</span><span class="err">/li&gt;</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;app&#34;</span><span class="p"></span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">ul</span><span class="p"></span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">list-item</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&#34;item in todoData&#34;</span> <span class="na">v-bind:itemdata</span><span class="o">=</span><span class="s">&#34;item&#34;</span><span class="p"></span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">list-item</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="p">/</span><span class="nt">ul</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;app&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">list-item</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&#34;item in todoData&#34;</span> <span class="na">v-bind:itemdata</span><span class="o">=</span><span class="s">&#34;item&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">list-item</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">Vue</span><span class="p">.</span><span class="nx">component</span> <span class="p">(</span><span class="s1">&#39;list-item&#39;</span><span class="p">,</span> <span class="p">{</span>
   <span class="nx">template</span><span class="o">:</span> <span class="s1">&#39;#tmpl-list-item&#39;</span><span class="p">,</span>
   <span class="nx">props</span><span class="o">:</span> <span class="p">[</span>
     <span class="s1">&#39;itemdata&#39;</span><span class="p">,</span>
-  <span class="p">]</span><span class="p">,</span>
-<span class="p">}</span><span class="p">)</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
+  <span class="p">],</span>
+<span class="p">});</span>
+<span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
   <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#app&#39;</span><span class="p">,</span>
   <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
     <span class="nx">todoData</span><span class="o">:</span> <span class="p">[</span>
-     <span class="p">{</span><span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;ToDo1&#39;</span><span class="p">,</span> <span class="nx">checked</span><span class="o">:</span> <span class="kc">false</span><span class="p">}</span><span class="p">,</span>
-     <span class="p">{</span><span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;ToDo2&#39;</span><span class="p">,</span> <span class="nx">checked</span><span class="o">:</span> <span class="kc">true</span><span class="p">}</span><span class="p">,</span>
+     <span class="p">{</span><span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;ToDo1&#39;</span><span class="p">,</span> <span class="nx">checked</span><span class="o">:</span> <span class="kc">false</span><span class="p">},</span>
+     <span class="p">{</span><span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;ToDo2&#39;</span><span class="p">,</span> <span class="nx">checked</span><span class="o">:</span> <span class="kc">true</span><span class="p">},</span>
     <span class="p">]</span>
-  <span class="p">}</span><span class="p">,</span>
-<span class="p">}</span><span class="p">)</span><span class="p">;</span>
+  <span class="p">},</span>
+<span class="p">});</span>
 </code></pre></div><p><a href="https://codepen.io/littlebusters/pen/VXJXZP">サンプルコード</a></p>
 <h3 id="htmlの設定-4">HTMLの設定</h3>
 <p>HTMLでは、いきなりscript要素が出てきました。これはComponentの表示部分（テンプレート）を作成する方法の一つで、script要素内の記述をComponentのテンプレートとして使うことができます。script要素といってもJavaScriptを記述する必要はなく、script要素内へこれまでと同じようにHTMLを記述すればOKです。</p>
@@ -344,13 +344,13 @@
 <p>今回の例では、<code>todoData</code>の値を渡す必要がありますが、<code>todoData</code>はv-forで処理されるため、1行ずつのデータが<code>v-for</code>ないの変数<code>item</code>へ値が入り、<code>itemdata</code>としてカスタム要素の中へ送られます。</p>
 <!-- raw HTML omitted -->
 <p>次のようにv-bindを複数使い、2つ以上のデータを渡すこともできます。</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!--</span><span class="c"> 細部は省略 </span><span class="c">--&gt;</span>
-<span class="p">&lt;</span><span class="nt">list-item</span> <span class="na">v-bind:props1</span><span class="o">=</span><span class="s">&#34;hoge&#34;</span> <span class="na">v-bind:props2</span><span class="o">=</span><span class="s">&#34;fuga&#34;</span><span class="p"></span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">list-item</span><span class="p">&gt;</span>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- 細部は省略 --&gt;</span>
+<span class="p">&lt;</span><span class="nt">list-item</span> <span class="na">v-bind:props1</span><span class="o">=</span><span class="s">&#34;hoge&#34;</span> <span class="na">v-bind:props2</span><span class="o">=</span><span class="s">&#34;fuga&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">list-item</span><span class="p">&gt;</span>
 </code></pre></div><div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 細部は省略
 </span><span class="c1"></span><span class="nx">props</span><span class="o">:</span> <span class="p">[</span>
   <span class="s1">&#39;props1&#39;</span><span class="p">,</span>
   <span class="s1">&#39;props2&#39;</span>
-<span class="p">]</span><span class="p">,</span>
+<span class="p">],</span>
 </code></pre></div><p><code>new Vue()</code>以降の部分はこれまでと同様です。</p>
 <h3 id="v-modelで値が相互に変更されているかを確認してみる">v-modelで値が相互に変更されているかを確認してみる</h3>
 <p>Consoleで次のスクリプトを実行すると、ToDo1のチェックボックがオンになります。</p>
