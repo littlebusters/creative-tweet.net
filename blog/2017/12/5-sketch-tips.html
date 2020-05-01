@@ -57,29 +57,37 @@
 <h2 id="rectangleのradiusは省略できる">RectangleのRadiusは省略できる</h2>
 <p>個別にRadiusを設定する場合、角の数だけ「;（セミコロン）」で数値を区切って入力しますが、角の数より入力した数値のほうが少ない場合、入力した数値の最後の値が残りの角の設定になります。</p>
 <p>例えば、四角形の右下と左下の値が一緒の場合、「10;10;0」と入力します。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+	<img src="../../../assets/img/2017/5-sketch-tips/radius-settings.png" alt="">
+</p>
 <h2 id="artboard直下のgroup-layerをフォルダとして使う">Artboard直下のGroup Layerをフォルダとして使う</h2>
 <p>レイヤーをグループ化するとまとまって動くことになりますが、単にフォルダとして使いたい場合、まとまって動くと困ってしまいます。</p>
 <p>グループレイヤーの「Select group&rsquo;s content on click」オプションは、そのレイヤーに含まれているレイヤーを直接選択するための設定ですが、見方を変えるとレイヤーリスト上でレイヤーをまとめるためのフォルダとして使うことができます。</p>
 <p>例えばヘッダーやフッターで要素をまとめたいときや、背景にしておきたいオブジェクトがあるにもかかわらず、Bring to FrontやSend to Backなどで順番をいちいち調整したくないときに使うといいかもしれません。</p>
-<!-- raw HTML omitted -->
-<p>「Select group&rsquo;s content on click」オプションがオンになっていると、選択して移動が面倒に感じるかもしれませんが、フォルダとして使っているグループ直下のレイヤーのいずれかを選択 → <!-- raw HTML omitted -->esc<!-- raw HTML omitted -->キー（→フォルダとして使っているグループレイヤーに選択範囲が移動） → <!-- raw HTML omitted -->command<!-- raw HTML omitted --> ＋ <!-- raw HTML omitted -->option<!-- raw HTML omitted -->（→ポインターの位置に関係なく移動できる）を押しながらドラッグで簡単に移動できます。詳しくは「<a href="http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-23.html">Sketch 3でレイヤーがどこにあろうと、確実にドラッグできるキーコンビネーションを紹介しますよ。</a>」で（かなり前からある機能です）。</p>
+<p class="media">
+	<img src="../../../assets/img/2017/5-sketch-tips/group-layer-as-folder.png" alt="">
+</p>
+<p>「Select group&rsquo;s content on click」オプションがオンになっていると、選択して移動が面倒に感じるかもしれませんが、フォルダとして使っているグループ直下のレイヤーのいずれかを選択 → <kbd>esc</kbd>キー（→フォルダとして使っているグループレイヤーに選択範囲が移動） → <kbd>command</kbd> ＋ <kbd>option</kbd>（→ポインターの位置に関係なく移動できる）を押しながらドラッグで簡単に移動できます。詳しくは「<a href="http://creative-tweet.net/blog/2014/12/sketch-3-advent-calendar-2014-23.html">Sketch 3でレイヤーがどこにあろうと、確実にドラッグできるキーコンビネーションを紹介しますよ。</a>」で（かなり前からある機能です）。</p>
 <h2 id="symbolやshared-styleなどを階層化するときのの前後にあるスペースは無視される">SymbolやShared Styleなどを階層化するときの「/」の前後にあるスペースは無視される</h2>
 <p>正直微妙すぎてTipsでもない気がしますが、階層化するときに入力する「/（スラッシュ）」の前後の半角スペースは無視されるため、スペースの有無を間違えても問題なく階層化できます。</p>
 <h2 id="color-pickerはアクティブなpopupの色を設定できる">Color PickerはアクティブなPopupの色を設定できる</h2>
-<p>Color Pickerは表示されているPopupの色を設定することができます。通常<!-- raw HTML omitted -->control<!-- raw HTML omitted --> ＋ <!-- raw HTML omitted -->C<!-- raw HTML omitted -->は、Fill Colorをピックアップしますが、BorderのPopupが表示された状態であれば、Border Colorを設定することができます。つまり、BorderのPopupを展開して<!-- raw HTML omitted -->control<!-- raw HTML omitted --> ＋ <!-- raw HTML omitted -->C<!-- raw HTML omitted -->のショートカットを使えば、Popupのスポイトをクリックすることなくすぐに色を選択できます（Dorp Shadowとかでも有効です）。</p>
+<p>Color Pickerは表示されているPopupの色を設定することができます。通常<kbd>control</kbd> ＋ <kbd>C</kbd>は、Fill Colorをピックアップしますが、BorderのPopupが表示された状態であれば、Border Colorを設定することができます。つまり、BorderのPopupを展開して<kbd>control</kbd> ＋ <kbd>C</kbd>のショートカットを使えば、Popupのスポイトをクリックすることなくすぐに色を選択できます（Dorp Shadowとかでも有効です）。</p>
 <p>いちいちBorderのPopupを表示するのが面倒なものぐさな方は、Border Colorのみ設定されている場合、Color Pickerを使うとBorder Colorをピックアップ可能ということを利用しましょう（ただし、Fill Colorが1つのみの場合）。</p>
-<p>つまり、<!-- raw HTML omitted -->F<!-- raw HTML omitted -->キーでFill Colorを一時的に無効化し、<!-- raw HTML omitted -->control<!-- raw HTML omitted --> ＋ <!-- raw HTML omitted -->C<!-- raw HTML omitted -->のショートカットでカラーピッカーを使えばBorder Colorのピックアップができるできるという寸法です。色を設定したら、もう一度<!-- raw HTML omitted -->F<!-- raw HTML omitted -->キーを押して、Fill Colorの有効化を忘れずに。</p>
+<p>つまり、<kbd>F</kbd>キーでFill Colorを一時的に無効化し、<kbd>control</kbd> ＋ <kbd>C</kbd>のショートカットでカラーピッカーを使えばBorder Colorのピックアップができるできるという寸法です。色を設定したら、もう一度<kbd>F</kbd>キーを押して、Fill Colorの有効化を忘れずに。</p>
 <p>もちろん、プラグインを使うという手もありますが…</p>
 <h2 id="実はsytle-copyしなくてもstyle-pasteできる">実はSytle CopyしなくてもStyle Pasteできる</h2>
-<p>実は、普通に<!-- raw HTML omitted -->Command<!-- raw HTML omitted --> ＋ <!-- raw HTML omitted -->C<!-- raw HTML omitted -->でコピーし、<!-- raw HTML omitted -->Comannd<!-- raw HTML omitted --> ＋ <!-- raw HTML omitted -->Option<!-- raw HTML omitted --> ＋ <!-- raw HTML omitted -->V<!-- raw HTML omitted -->のPaste Styleでスタイルをコピー&amp;ペーストできます。Copy Styleのショートカットは今すぐ忘れましょう。</p>
-<!-- raw HTML omitted -->
+<p>実は、普通に<kbd>Command</kbd> ＋ <kbd>C</kbd>でコピーし、<kbd>Comannd</kbd> ＋ <kbd>Option</kbd> ＋ <kbd>V</kbd>のPaste Styleでスタイルをコピー&amp;ペーストできます。Copy Styleのショートカットは今すぐ忘れましょう。</p>
+<p class="media">
+	<img src="../../../assets/img/2017/5-sketch-tips/style-paste.gif" alt="">
+</p>
 <p>ハイ、忘れた！</p>
 <h2 id="おまけsketch-runnerを使うときimを英数に強制する">おまけ：Sketch Runnerを使うとき、IMを英数に強制する</h2>
 <p>皆さんも息を吐くように<a href="http://sketchrunner.com/">Sketch Runner</a>をお使いだと思いますが、タイプした文字が日本語入力になっているとちょっとイラっとしませんか？</p>
 <p>有償の<a href="https://www.keyboardmaestro.com/main/">Keyboard Maestro</a>をお持ちの方限定ですが、Sketch Runnerを実行したとき、強制的に「英数」にすることができます。</p>
 <p>設定はこんな感じです。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+	<img src="../../../assets/img/2017/5-sketch-tips/keyboard-maestro-settings.png" alt="">
+</p>
 <p>ショートカットをカスタマイズしていたら適当に変更してください。</p>
 <p><a href="../../../downloads/Force_Romaji.zip">Sketch Runner実行時に英数強制マクロのダウンロード</a></p>
 		</div>

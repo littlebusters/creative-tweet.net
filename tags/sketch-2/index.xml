@@ -259,7 +259,9 @@
       <pubDate>Sat, 30 Nov 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2013/11/sketch-app-advent-calendar-2013.html</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
+      <description>&lt;p class=&#34;media&#34;&gt;
+  &lt;img src=&#34;../../assets/img/2013/2013-11-30-sketch-app-advent-calendar-2013/sketchapp_advent_calendar_2013.png&#34; alt=&#34;sketch.app advent calendar 2013&#34; /&gt;
+&lt;/p&gt;
 &lt;p&gt;ということで、タイトルの通りです。酔った勢いで&lt;a href=&#34;http://www.adventar.org/calendars/99&#34;&gt;カレンダー&lt;/a&gt;立てちゃって、後悔するパターンですね。&lt;/p&gt;
 &lt;p&gt;12/1まであと数時間というところでの告知ですが、Sketch.appのアプリケーションウィンドウの解説から、ちょっとしたTipsまでいろいろと紹介していきます。&lt;/p&gt;</description>
     </item>
@@ -280,7 +282,9 @@
       <pubDate>Mon, 03 Jun 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2013/06/extending-sketchapp.html</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
+      <description>&lt;p class=&#34;notics-alert&#34;&gt;
+この記事はSketchの古いバージョンを元に書いた内容です。最新バージョンでは、動作が異なる場合があります。
+&lt;/p&gt;
 &lt;p&gt;以前の記事（&lt;a href=&#34;http://creative-tweet.net/blog/2013/05/introduction-of-thesketch.html&#34;&gt;ちょっと別の世界も見てみませんか？ベクターベースのグラフィックツール Sketchを紹介してみるよ。&lt;/a&gt;）で、Sketch.appはスクリプトによる拡張ができると書きました。しかしながらJSTalkという、新しく作るには若干学習コストのかかる言語で書く必要があり、なかなか手を出しにくい機能なのも事実です。&lt;/p&gt;
 &lt;p&gt;そんな中、Fireworksのコマンド集&lt;a href=&#34;https://github.com/bomberstudios/fireworks&#34;&gt;Orange Commands&lt;/a&gt;の中の人が、その一部をSketch.appプラグインに移植されています（しかも結構前から）。今回はこのプラグイン集を紹介してみたいと思います。&lt;/p&gt;</description>
     </item>
@@ -300,7 +304,7 @@
       <pubDate>Wed, 08 May 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2013/05/introduction-of-thesketch.html</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
+      <description>&lt;p class=&#34;notics-alert&#34;&gt;この記事はSketchの古いバージョンを元に書いた内容です。最新バージョンでは、動作が異なる場合があります。&lt;/p&gt;
 &lt;p&gt;SketchはOSX向けのベクターベースのグラフィックツールです。AdobeでいうところのPhotoshopというよりはFireworks（やIllustrator）に近く、ワイヤーフレームのような軽いものから、ユーザーインターフェイスのデザインやイラストレーション・アイコン作成などもこなせるアプリです。&lt;/p&gt;
 &lt;p&gt;実は先週あたりからこの記事をポツポツと書いていたら、&lt;a href=&#34;http://blogs.adobe.com/fireworks/2013/05/the-future-of-adobe-fireworks.html&#34;&gt;Fireworksが新規機能開発終了&lt;/a&gt;というビッグニュースが入ってきまして、こんなタイミングでこの記事を出したらｱﾜﾜﾜとか思いながらも、空気を読まずに公開します。&lt;/p&gt;
 &lt;p&gt;置き換えしようぜ！という意向ではなく、こんなアプリもあるよというスタンスですので、生暖かく見守ってあげてください。&lt;/p&gt;</description>

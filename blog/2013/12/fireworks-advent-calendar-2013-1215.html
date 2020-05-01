@@ -65,27 +65,44 @@
 <h2 id="あると捗るもの">あると捗るもの</h2>
 <h3 id="dom-inspectorfireworksコマンドパネル">Dom Inspector（Fireworksコマンドパネル）</h3>
 <p>現在選択しているオブジェクトやドキュメントの情報を視覚的に表示してくれます。属性値の変更が可能であれば、このパネルから変更ができます。</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-12-24-fireworks-advent-calendar-2013-1215/fwadcmd-inspector.png" alt="DOM Inspector">
+</p>
+<dl class="links">
+	<dt>ダウンロード</dt>
+	<dd><a href="http://fireworks.abeall.com/extensions/panels/">Aaron Beall &#8211; Fireworks Guru &#8211; Panels</a></dd>
+</dl>
 <p>ここの一覧にあります。DownloadをクリックするとSWFが再生されるので、それを保存してCoomand Panelsフォルダに入れてください。</p>
 <p>ちなみにこのパネルの右下にある、自動更新（auto refresh）にチェックを入れておくと、テキストオブジェクトの編集時にテキストの部分選択ができなくなるので注意してください。</p>
 <h3 id="fireworks-consolefireworksコマンドパネル">Fireworks Console（Fireworksコマンドパネル）</h3>
 <p>Adobe謹製のデバッガーがないので、これを使います。以前は、<code>alert()</code>でアラートを表示しながらデバッグという、古典的な方法を取らざるを得ませんでしたが、これのおかげでかなり捗るようになりました。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="http://creative-tweet.net/blog/wp-content/uploads/2013/12/fwadcmd-console.png" alt="Fireworks Console">
+</p>
 <p>パネルの上部は、スクリプトを直接書いて実行できます。お決まりの<code>fw.getDocumentDOM()</code>と<code>fw.selection</code>は、それぞれdomとselとして定義されているので、ここでは不要です。</p>
 <p>console.log()などで、パネルの下にログを表示できます。配列やオブジェクトも文字列として出力してくれます。Autoのチェックボックスは入れておく方がいいでしょう。手動でログ出力するには、その左にある「Print .jsf log」ボタンをクリックします。</p>
-<!-- raw HTML omitted -->
+<dl class="links">
+	<dt>ダウンロード</dt>
+	<dd><a href="http://johndunning.com/fireworks/about/FWConsole">Fireworks Console &#8211; Adobe Fireworks Extensions, Commands and Panels &#8211; johndunning.com</a></dd>
+</dl>
 <h3 id="commandsfireworksコマンドパネル">Commands（Fireworksコマンドパネル）</h3>
 <p>Fireworks Consoleと同じ作者のコマンドパネルです。PhotoshopやIllustratorのアクションパネルにボタンモードがあると思いますが、それをFireworksで実現します。またスタイルやメニュー項目など、コマンド以外もクリック一つで実行できるようになります。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="http://creative-tweet.net/blog/wp-content/uploads/2013/12/fwadcmd-commands.png" alt="Commandsパネル">
+</p>
 <p>ショートカットを設定するまでもないんだけど、たまに使うようなコマンドをFavorite（星マークを付ける）に登録しておけば、メニューから辿らなくてもすぐに使えて便利です。私は、開発中はショートカットを設定しないので、これをよく使っています。</p>
-<!-- raw HTML omitted -->
+<dl class="links">
+	<dt>ダウンロード</dt>
+	<dd><a href="http://johndunning.com/fireworks/about/Commands">Commands &#8211; Adobe Fireworks Extensions, Commands and Panels &#8211; johndunning.com</a></dd>
+</dl>
 <h2 id="一番簡単なコマンドの作り方">一番簡単なコマンドの作り方</h2>
 <p>いろんなブログで言及されていますが、ヒストリーから「手順をコマンドとして保存」をすることで、簡単にコマンドが作成できます。</p>
 <p>が、定型のモノしか保存できないため、やはり自分の欲しい機能はカスタマイズするしかありません。</p>
 <h2 id="コマンドをカスタマイズしてみよう">コマンドをカスタマイズしてみよう</h2>
 <p>保存ボタンの横にある「手順をコピー」をクリックすると、その手順のスクリプトが取得できます。今回はこれを元に、数値入力してオブジェクトの移動ができるようなコマンドを作ってみます。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="http://creative-tweet.net/blog/wp-content/uploads/2013/12/fwadcmd-history-panel.png" alt="手順のコピー">
+</p>
 <p>まずはオブジェクトを移動させ、手順をコピーするとこんなスクリプトが取得できるはずです。</p>
 <pre><code>fw.getDocumentDOM().moveSelectionBy({x:140, y:93}, false, false);
 </code></pre><p>ひとまず、これをエディタにペーストして保存しましょう。ファイル名には自由に付けて大丈夫です。拡張子は.jsfになります。</p>

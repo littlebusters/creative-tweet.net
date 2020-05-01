@@ -51,19 +51,40 @@
 			
 			<p><a href="http://www.adventar.org/calendars/99">Sketch.app Advent Calender 2013</a> 16日目の記事です。</p>
 <p>Sketch.appのパスの描画について、基本的な使い方と設定についてお届けします。</p>
-<!-- raw HTML omitted -->
+<p class="notics">
+  <b>Sketchの基本。</b>というSketch（Sketch 3）の基本操作にフォーカスした電子書籍をリリースしました。詳しくはこちらの「<a href="http://creative-tweet.net/sketch-3-basics/">Sketchの基本。</a>」のページをご覧ください。
+</p>
+<p class="notics">
+  この記事はSketch 2を元にした記事です。最新版の動作とは異なる可能性が高いため、参考程度にご覧ください。
+</p>
+<dl class="links">
+  <dt>
+    記事の一覧
+  </dt>
+  <dd>
+    <a href="http://creative-tweet.net/blog/2013/11/sketch-app-advent-calendar-2013.html">オレオレSketch.app Advent Calendar 2013やりますよ。 | creative tweet.</a>
+  </dd>
+</dl>
 <p>Skecth.appはベクターベースのツールですので、当然ながらベジェ曲線が扱えます。ベクター描画時の操作はIllustratorと同じ感覚なので、慣れてる方なら少し使うだけでなれると思います。</p>
 <h2 id="パスの描画">パスの描画</h2>
-<p>ベクターツールのデフォルトキーバインドはVectorの<!-- raw HTML omitted -->V<!-- raw HTML omitted -->です。Pathの<!-- raw HTML omitted -->P<!-- raw HTML omitted -->と思ってこれを押しちゃうと、フリーフォームのペンツールになるので注意です。</p>
-<p>クリックでアンカーポイントが置かれます。アンカーポイントを置く時にドラッグすれば、ハンドルを出すことができます。ハンドルの調整中に<!-- raw HTML omitted -->Command<!-- raw HTML omitted -->キーを押すと、コーナーポイントを作成できます。</p>
-<!-- raw HTML omitted -->
-<p>パスの描画を終えるには、<!-- raw HTML omitted -->Enter<!-- raw HTML omitted -->キーを押します。再度パスを編集する場合は、そのシェイプをダブルクリックする、選択した状態で<!-- raw HTML omitted -->Enter<!-- raw HTML omitted -->キーを押す、ツールバーの編集ボタンを押すのいずれかで編集モードになります。</p>
-<!-- raw HTML omitted -->
+<p>ベクターツールのデフォルトキーバインドはVectorの<kbd>V</kbd>です。Pathの<kbd>P</kbd>と思ってこれを押しちゃうと、フリーフォームのペンツールになるので注意です。</p>
+<p>クリックでアンカーポイントが置かれます。アンカーポイントを置く時にドラッグすれば、ハンドルを出すことができます。ハンドルの調整中に<kbd>Command</kbd>キーを押すと、コーナーポイントを作成できます。</p>
+<p class="media">
+  <img src="../../../assets/img/2013/2013-12-16-sketch-app-advent-calendar-2013-path-basic/path1-draw.png" alt="パスの描画">
+</p>
+<p>パスの描画を終えるには、<kbd>Enter</kbd>キーを押します。再度パスを編集する場合は、そのシェイプをダブルクリックする、選択した状態で<kbd>Enter</kbd>キーを押す、ツールバーの編集ボタンを押すのいずれかで編集モードになります。</p>
+<p class="media">
+  <img src="../../../assets/img/2013/2013-12-16-sketch-app-advent-calendar-2013-path-basic/path1-editmode.png" alt="パスの編集モード">
+</p>
 <p>一度オープンパスとして確定した場合は、パス編集モードで閉じることができませんので、［Edit］→［Paths］にある「Close path」を適用します。逆にクローズパスの場合は、このメニューにチェックが入っている状態になりますので、選択すればオープンパスになります。</p>
 <p>オープンパスの描画の続きを逆からしたい場合は、［Edit］→［Paths］にある「Reverse Order」を適用すると、逆からになります。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-12-16-sketch-app-advent-calendar-2013-path-basic/path1-cont.png" alt="パスの方向を逆転">
+</p>
 <p>また、ベクターツールにすると、ツールバーの下にアンカーポイントの座標の処理を設定するプルダウンメニューが表示されます。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-12-16-sketch-app-advent-calendar-2013-path-basic/path1-round.png" alt="アンカーポイントのスナップ">
+</p>
 <p><strong>Don’t round to nearest pixels</strong><br>
 座標の丸めは行われません。</p>
 <p><strong>Round to half pixels</strong><br>
@@ -71,7 +92,9 @@
 <p><strong>Rount to full pixels edges</strong><br>
 小数点以下が丸められます。</p>
 <h2 id="アンカーポイントとハンドルの編集">アンカーポイントとハンドルの編集</h2>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-12-16-sketch-app-advent-calendar-2013-path-basic/path1-point.png" alt="アンカーポイントの編集">
+</p>
 <p>パス編集モードで、アンカーポイントとハンドルの編集ができます。編集モードになるとツールバーの下にパス用のツールが表示されます。ちなみに、パス描画時に角にしたハンドルを再度編集しようとすると、ハンドルの位置が初期化されるので注意してください。</p>
 <p>四角のマークは、アンカーポイントの選択で、ドラッグによる範囲選択を有効にするかどうかを設定します。編集しているのがオープンパスの場合に有効です。クローズパスの場合は、どちらにしてもドラッグでアンカーポイントを選択できます。</p>
 <p>さらにアンカーポイントを選択すると、その右にツールが追加表示されます。</p>
@@ -91,7 +114,9 @@
 右のボックスに角丸の大きさを入力すると角丸になります。</p>
 <p>これらの設定は、アンカーポイントごとに適用できますので、四角の角のうち2つを角丸にすることもできますし、すべての角丸の大きさも変更できます。</p>
 <h2 id="片方のハンドルを削除する">片方のハンドルを削除する</h2>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-12-16-sketch-app-advent-calendar-2013-path-basic/path1-del-handle.png" alt="ハンドルの操作">
+</p>
 <p>コーナーポイント（ハンドルあり）を適用した後に、削除したいハンドルをクリックしてdeleteキーで削除できます。コーナーポイント（ハンドルあり）以外は、うまく削除できません。また、ハンドルが選択できているか見た目で分からないのも修正してほしいですね。</p>
 		</div>
 

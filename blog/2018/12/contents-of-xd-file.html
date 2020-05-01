@@ -58,7 +58,7 @@
 <h2 id="xdファイルの正体とは">XDファイルの正体とは？</h2>
 <p>早速ですが、XDファイルをZIPとして展開できるのはご存知でしょうか？ 拡張子をZIPに変更してダブルクリックするか、ターミナルなどを使って<code>unzip</code>すれば簡単に展開できます。</p>
 <p>中身はオブジェクトの情報が保存されている「<code>.agc</code>ファイル」やプレビュー用の画像などが収められています。</p>
-<!-- raw HTML omitted -->
+<p class="media"><img src="../../../assets/img/2018/contents-of-xd-file/extended-xd-file.png" alt=""></p>
 <p>見慣れない拡張子の<code>.agc</code>ファイルですが、実態はJSONですので、お使いのエディタや<a href="https://stedolan.github.io/jq/">jq</a>などのツールを使って一括で整形・プロパティのソートしてみましょう。</p>
 <p>macOSでjqを使う場合、次のコマンドで<code>.agc</code>と<code>manifest</code>をまとめて整形・ソートできます。</p>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">$ find <span class="s2">&#34;フォルダのパス&#34;</span> <span class="se">\(</span> -name <span class="s2">&#34;manifest&#34;</span> -o -name <span class="s2">&#34;*.agc&#34;</span> <span class="se">\)</span> -exec sh -c <span class="s1">&#39;cat {} | /usr/local/bin/jq -rS . &gt; {}.1 &amp;&amp; mv {}.1 {}&#39;</span> <span class="se">\;</span>
@@ -84,7 +84,7 @@
 フォーマット自体はPNGのため、ファイルそのものを開くことはできます。しかし、ページの設定から配置しているオブジェクトなど、Fireworks独自の要素はPNGのチャンクと呼ばれる領域に書き込まれているため、それを読み出すことは困難です。</p>
 <p>つまりアプリが終わると、そのデータは徐々に寿命を迎え、やがて価値が失われてしまいます。アプリが使えなくなるまでにファイルを変換することもできますが、これまでに蓄積してきたすべての資産を変換するのは現実的ではないでしょう。</p>
 <p>SketchやXDでは簡単にファイルを展開でき、かつ汎用的なデータフォーマット（JSON）が使われています。そのデータを他のアプリで利用する場合、「加工」自体は必要ですが、例えばSketchでプラグインを開発すれば、XDファイルの内容を可能な限りで再現することだってできます。</p>
-<!-- raw HTML omitted -->
+<div style="padding:64.17% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/306618919?byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 <p>Sketchがたくさんのサードパーティサービスと連携できているのは、この「オープンなデータフォーマット」のおかげといっても過言ではないでしょう。そしてXDが同じように「オープンなデータフォーマット」を採用してくれたことで、クリエイティブツール界隈がよりいっそう開かれたと思っています。</p>
 <p>「オープンなデータフォーマット」によって、ファイルの寿命が長くなることはもちろんのこと、他のアプリへの乗り換えもしやすくなります。先のようにGitでバージョン管理をしたり、独自のアプリをつくってファイルを解析してみたりと、他の用途で使いやすくなるのでいろんな可能性が広がると思いませんか？</p>
 <p>今までにもこうしたファイル形式の採用がなかったわけではありません（例えば<code>.docx</code>や<code>.xlsx</code>とか）。これから大きなシェアを獲得していくであろうクリエイティブツールで採用された点が、とても有意義だと思うわけです。<br>

@@ -49,12 +49,14 @@
 		
 		<div class="content-main">
 			
-			<p><!-- raw HTML omitted -->Fireworks Lover Advent Calendar 2012<!-- raw HTML omitted -->の7日目の記事です。</p>
+			<p><a title="Fireworks Lover Advent Calendar 2012" href="http://www.adventar.org/calendars/14" target="_blank">Fireworks Lover Advent Calendar 2012</a>の7日目の記事です。</p>
 <p>スマートフォン対応の案件も増える中、少々面倒なモノの1つにRetina対応の画像準備があったりします。もちろんFireworks Loverな私ですから、FireworksでRetina対応画像の書き出しができる拡張機能を探してみるわけですが、バシャログさんの拡張機能しか見当たりませんでした。</p>
-<p>参考：<!-- raw HTML omitted -->【Fireworks】Retina対応用にページを分けるFireworksコマンド | バシャログ。<!-- raw HTML omitted --></p>
+<p>参考：<a title="【Fireworks】Retina対応用にページを分けるFireworksコマンド | バシャログ。" href="http://c-brains.jp/blog/wsg/12/06/12-193119.php" target="_blank">【Fireworks】Retina対応用にページを分けるFireworksコマンド | バシャログ。</a></p>
 <p>こちらで十分機能は満たしているんですが、ちょっと違うアプローチで俺得拡張機能を作ってみました（半分ネタです）。</p>
-<p>@2xで作成するのが通常だと思いますが、過去の資産を利用するにあたり、あえて拡大する方向に。<!-- raw HTML omitted -->ほら、Retina向けに×2倍とかで作成して、奇数ピクセルでストローク引いてるところとか、縮小したらボケちゃうじゃない？<!-- raw HTML omitted -->スクリプトの処理を拡大から縮小に変更するのは、まぁ比較的簡単にできるので…。あとは、書き出したあとに不要な画像の整理をしないでもいいように、接尾辞が付いているもののみRetina向けの書き出しします。</p>
-<!-- raw HTML omitted -->
+<p>@2xで作成するのが通常だと思いますが、過去の資産を利用するにあたり、あえて拡大する方向に。<small>ほら、Retina向けに×2倍とかで作成して、奇数ピクセルでストローク引いてるところとか、縮小したらボケちゃうじゃない？</small>スクリプトの処理を拡大から縮小に変更するのは、まぁ比較的簡単にできるので…。あとは、書き出したあとに不要な画像の整理をしないでもいいように、接尾辞が付いているもののみRetina向けの書き出しします。</p>
+<p class="link">
+<a href="../../../tools/retina_image_exporter/detail.html">Retina画像の書き出しを補助する［Fireworks拡張機能］ </a>
+</p>
 <h2 id="できること">できること</h2>
 <ul>
 <li>非Retinaで作成した特定の接尾辞の付いたスライスを、Retina対応（2倍の大きさ）で書き出しができます。</li>
@@ -62,12 +64,18 @@
 </ul>
 <h2 id="使い方">使い方</h2>
 <p>Retinaで書き出をしたいスライスの名前に、特定の接尾辞を付けます。デフォルトは「_x2」です。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+<img alt="スライス名の設定" src="../../../assets/img/2012-12-07-retina-image-exporter/setting.png">
+</p>
 <p>スクリプトを実行すると、接尾辞の入力を促されるので、スライスに付けた接尾辞を入力してください。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+<img alt="接尾辞の入力" src="../../../assets/img/2012-12-07-retina-image-exporter/postfix.png">
+</p>
 <p>2回ほど書き出しダイアログが表示されます。1回目のダイヤログがRetina向け画像の書き出し、2回目のダイヤログが通常画像の書き出しです。それぞれ書き出しが必要なスライスを選択した状態になっていますので、適当に設定して書き出ししてください。</p>
 <p>きちんと書き出しができました。</p>
-<!-- raw HTML omitted -->
+<p class="media">x
+<img alt="書き出し結果" src="../../../assets/img/2012-12-07-retina-image-exporter/exported.png">
+</p>
 <h2 id="注意点">注意点</h2>
 <ul>
 <li>ページを複製して拡大しているので、割と負荷が大きいと思います。</li>
@@ -88,7 +96,7 @@
 <li>ページを拡大（解像度を2倍）して、接尾辞がついたスライスを@2x向けの画像を書き出しします。</li>
 <li>書き出しのダイヤログを出し、処理が終わったら複製したページを削除します。</li>
 </ol>
-<!-- raw HTML omitted -->
+<hr class="postscript">
 <p>というわけで、半分ネタ半分本気の俺得拡張機能の紹介でした。</p>
 		</div>
 

@@ -59,17 +59,28 @@
 <p>Sketchのテキストレイヤーでは、1文字目のフォントがそのテキストレイヤー全体の行間処理を引っ張ります（完全に検証しているわけではないため、そのような動作に見える、ということです）。つまり、和文の1文字目を欧文にすることで、「ずれる」現象を回避することができます（ただし途中に行間の大きいZapfinoなどを使うと、そちらに引っ張られます）。</p>
 <p>とはいえ、1文字目に欧文フォントを指定できるレイヤーは限られていると思いますので、Adobe Blankを利用して1文字目を無理やり欧文フォントにしてやります。</p>
 <p>Adobe Blankは、「目に見えない」という特殊なフォントで、これを適用したテキストはテキスト情報はあるものの、文字としての実体は画面に表示されなくなります。この特性を利用して、Adobe Blankを適用した半角スペースを1文字目に挿入し、意図的に見えなくしつつ欧文フォントを適用するという手法を、プラグインで実行できるように作成しました。</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<div class="media">
+	<img src="../../../assets/img/2016/line-height-fixer/sketch-line-height-fixer.gif">
+	<p class="mediaCaption">Hackedの行間が途中おかしくなりますが、同時にLine-heightを動かしているためです。単体で値を変化させる場合は、この現象は起きません。</p>
+</div>
+<p class="annotation">
+半角スペース以外の文字でも良いのですが、気にせずコピー & ペーストした時に害が少ないかつ気づきやすいのではないかということで、半角スペースにしています。
+</p>
 <h2 id="インストール">インストール</h2>
 <p>プラグインをダウンロードし、<code>LineHeight Fixer.sketchplugin</code>ファイルをダブルクリックしてインストールします。Plugins Directoryにはあえて登録してませんので、Sketch Toolboxではインストールできません。</p>
-<!-- raw HTML omitted -->
+<ul class="links">
+	<li>プラグインリポジトリ：<a href="https://github.com/littlebusters/Sketch-Line-Height-Fixer">Sketch Line-height Fixer</a></li>
+	<li><a href="https://github.com/littlebusters/Sketch-Line-Height-Fixer/archive/master.zip">プラグインのダウンロード</a></li>
+</ul>
 <p>またAdobe Blankが必要ですので、リポジトリからダウンロードし、OpenType（.otf）版をあらかじめインストールしておいてください。インストールされていない場合でもプラグイン自体は実行できますが、「インストールしてね」というメッセージが表示されるのみとなります。</p>
-<!-- raw HTML omitted -->
+<ul class="links">
+	<li>Adobe Blankリポジトリ：<a href="https://github.com/adobe-fonts/adobe-blank">Adobe Blank</a></li>
+	<li><a href="https://github.com/adobe-fonts/adobe-blank/archive/master.zip">フォントのダウンロード</a></li>
+</ul>
 <h2 id="使い方">使い方</h2>
 <p>テキストレイヤーを選択し、プラグインを実行してください。複数のレイヤーを選択していても実行できます。</p>
 <p>初めから1文字目に半角スペースがある場合、半角スペースを挿入せずそのスペースへAdobe Blankを適用します。</p>
-<p>1文字目に半角スペースが必要な場合は、任意で挿入してください。ただし、スペースを挿入してもAdobe Blankが適用されてしまうため、スペース挿入後、<!-- raw HTML omitted -->Shift<!-- raw HTML omitted --> ＋ <!-- raw HTML omitted -->←<!-- raw HTML omitted -->でスペースを選択（選択している状態は見えません）し、フォントの変更が必要です。</p>
+<p>1文字目に半角スペースが必要な場合は、任意で挿入してください。ただし、スペースを挿入してもAdobe Blankが適用されてしまうため、スペース挿入後、<kbd>Shift</kbd> ＋ <kbd>←</kbd>でスペースを選択（選択している状態は見えません）し、フォントの変更が必要です。</p>
 <h2 id="注意など">注意など</h2>
 <p>100%動作を保証するものではありません。なんらかのリスクがあることは承知の上で、ご利用ください。</p>
 <p>あとチームで使う場合は、スペースがあるかどうか見た目にわからないため、必ず意識合わせをしておくほうが事故になりづらいと思います。</p>

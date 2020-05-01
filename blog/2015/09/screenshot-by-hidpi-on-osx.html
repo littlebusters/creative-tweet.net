@@ -57,33 +57,53 @@
 <h2 id="非retina機でhidpiを設定するには">非Retina機でHiDPIを設定するには</h2>
 <p>Appleが配布している、「Quartz Debuger」というツールを使います。<a href="https://developer.apple.com/downloads/">ツールのダウンロードページ</a>から、「Graphics Tools for Xcode N.N（N.Nは数字）」をダウンロードしましょう。ただし、このページへアクセするにはApple Developerへのユーザー登録が必要です。</p>
 <p>ダウンロードしたディスクイメージに入っている「Quartz Debuger.app」をインストールします。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+<img src="../../../assets/img/2015/screenshot-by-hidpi-on-osx/quartz-debug-app.png" class="media-flexibleBounding" alt="ダウンロードしたディスクイメージに入っている「Quartz Debug.app」">
+</p>
 <p>インストールといってもインストーラーはないので、適当なところで良いと思いますが、アプリケーション → ユーティリティーあたりへコピーするのが無難でしょうかね。</p>
 <p>ちなみに、Xcodeで［Xcode］メニューから［Open Developer Tools］→［More Developer Tools&hellip;］からも、ダウンロードセンターへアクセスできます。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+<img src="../../../assets/img/2015/screenshot-by-hidpi-on-osx/access-download-center-from-xcode.png" class="media-flexibleBounding" alt="">
+</p>
 <p>「Quartz Debuger」を立ち上げたら、［Window］メニューから［UI Resolution］を選択します。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+<img src="../../../assets/img/2015/screenshot-by-hidpi-on-osx/select-ui-resolution.png" class="media-flexibleBounding" alt="">
+</p>
 <p>表示されたウィンドウの「Enable HiDPI display modes」にチェックを入れます。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+<img src="../../../assets/img/2015/screenshot-by-hidpi-on-osx/ui-resolution-window.png" class="media-flexibleBounding" alt="">
+</p>
 <p>「ログアウトしないと設定が有効にならないよ」というダイアログが表示されますので、ドキュメントの保存などを終わらせてログアウトしましょう。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+<img src="../../../assets/img/2015/screenshot-by-hidpi-on-osx/enabled-alert.png" class="media-flexibleBounding" alt="">
+</p>
 <p>再ログイン後、環境設定のディスプレイを開き、［解像度］のラジオボタンを［変更］にすると、変更可能な解像度が表示されます。リストの一番下にある非Retinaでは見慣れない「（HiDPI）」という項目を選択すると、高解像度化することができます。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+<img src="../../../assets/img/2015/screenshot-by-hidpi-on-osx/display-control-panel.png" class="media-flexibleBounding" alt="">
+</p>
 <p>HiDPIにするとiMac 27インチであれば、1280×720px相当で画面がレンダリングされます。単純に画面が拡大した状態ですが、アクセシビリティの画面拡大と異なり、1pxを2pxでレンダリングしているので、エッジもぼやけず綺麗に表示されます。</p>
 <h2 id="解像度を元に戻す">解像度を元に戻す</h2>
 <p>元に戻すには、同じく環境設定のディスプレイからiMac向けの解像度を選択します。</p>
 <p>ただ1つ欠点がありまして、HiDPIから通常の解像度に戻すと、各アプリケーションのウィンドウはHiDPI時の論理的な大きさを保持してしまうため、HiDPIにする前の大きさに戻すことができません。</p>
 <p>これを解決するため、「<a href="https://cordlessdog.com/stay/">Stay</a>」というウィンドウの配置を記憶・復元してくれるアプリケーションを使います。</p>
-<!-- raw HTML omitted -->
+<p class="linkSection">
+ダウンロード：<a href="https://cordlessdog.com/stay/">Codeless Dog: Stay</a>
+</p>
 <p>$15の有償ソフトウェアですが、試用期間（確か14日間）があるので、とりあえず試すことはできます。また、<a href="https://itunes.apple.com/jp/app/stay/id435410196?mt=12">Mac App Store版</a>もあるみたいなので、ライセンス管理とかが面倒ならこちらから購入してもいいと思います。（為替レート的にMac App Storeで買ったほうがちょっと安いかも？）</p>
 <h2 id="stayを使う">Stayを使う</h2>
 <p>使い方は簡単です。Stayを起動すると右上にディスプレイっぽいアイコンが表示されるので、その中から「Store Windows for All Applications」を選択してウィンドウの配置を記録しておきます。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+<img src="../../../assets/img/2015/screenshot-by-hidpi-on-osx/stay-store-window.png" class="media-flexibleBounding" alt="">
+</p>
 <p>あとは解像度が元に戻る際に勝手に復元してくれます。強制的に戻す場合は、戻す時は「Restore Windows」を選択すればOKです。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+<img src="../../../assets/img/2015/screenshot-by-hidpi-on-osx/stay-restore-window.png" class="media-flexibleBounding" alt="">
+</p>
 <p>ひとまずウィンドウの位置さえ戻ればよかったため、深くは使い込んでませんが、ApplescriptやShellを走らせたり、Storeしているウィンドウを管理したりと、他にもいろいろとできるようです。</p>
 <p>ただ、ウィンドウの位置を復元するだけですので、例えば閉じてしまった特定のフォルダを元に戻すということはできないため、そこだけは注意が必要です。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+<img src="../../../assets/img/2015/screenshot-by-hidpi-on-osx/stay-pref-panel.png" class="media-flexibleBounding" alt="StayのPreferencesパネル">
+</p>
 <p>正直、そこまで使う必要もないTipsですが、ひとまずメモということで。</p>
 		</div>
 

@@ -56,42 +56,76 @@
 			<p>タイトルの通りですが、FireworksからJSONファイルを書き出すコマンドと、そのJSONファイルを読み込み可能な限りFireworksの構造をSketch 3へ取り込むプラグインを作りました。</p>
 <p>Fireworksの開発が2013年に事実上中止し、次期OS XことmacOSではAdobe CS6シリーズの動作に必要なJava SE 6がサポート外となることから、他のツールへ移行された方が大半でしょう。そのような状況で、いまさら過去のFireworks PNGを扱うことも少なくなっていると思いますが、開けなくなる前にコンバートする方法の一つとして作成しました。</p>
 <p>こんな感じです。</p>
-<!-- raw HTML omitted -->
+<iframe name='quickcast' src='http://quick.as/embed/pk7yuzz8b' scrolling='no' frameborder='0' width='100%' allowfullscreen></iframe><script src='http://quick.as/embed/script/1.60'></script>
 <h2 id="インストール">インストール</h2>
 <h3 id="fw-to-json">Fw to JSON</h3>
-<!-- raw HTML omitted -->
+<ul class="links">
+<li><a href="https://github.com/littlebusters/Fw-to-JSON/archive/master.zip">コマンドのダウンロード</a></li>
+<li><a href="https://github.com/littlebusters/Fw-to-JSON">Fw to JSONリポジトリ</a></li>
+</ul>
 <p>解凍したフォルダ名を<code>Fw to JSON</code>に変更し、次のどちらかのフォルダへ入れてください。Windowsのかたは、お手数ですがググってください。ちなみにOS X版でしかテストできていません。</p>
 <pre><code>~/Library/Application Support/Adobe/Fireworks CS6/Commands
 
 /Applications/Adobe Fireworks CS6/Configuration/Commands
 </code></pre><h3 id="fwjson-to-layers">FwJSON to Layers</h3>
-<!-- raw HTML omitted -->
+<ul class="links">
+<li><a href="https://github.com/littlebusters/JSON-to-Layers/archive/master.zip">プラグインのダウンロード</a></li>
+<li><a href="https://github.com/littlebusters/JSON-to-Layers">JSON to Layresリポジトリ</a></li>
+</ul>
 <p>Sketch Toolboxを使うかZIPをダウンロードしてください。ZIPをダウンロードした場合は、伸張したフォルダにある<code>.sketchplugin</code>ファイルをダブルクリックすればインストールできます。</p>
 <p>READMEには書いていませんが、開発を始めたのがSketch 3.4.xあたりだったため、このバージョン以上であれば動作する可能性はあります（が、環境を整える時間が取れないため、互換性テストはしていません）。</p>
 <h2 id="使い方">使い方</h2>
 <p>まずは、FireworksでJSON形式としてエクスポートしたいファイルを開きます。新規で作成している場合は、1度保存してください。</p>
-<!-- raw HTML omitted -->
-<p>コマンドから「Fw to JSON」を実行します。<!-- raw HTML omitted -->Fireworks Console<!-- raw HTML omitted -->と<!-- raw HTML omitted -->DOM Inspector<!-- raw HTML omitted -->をインストールされている場合は、処理に時間がかかり落ちる確率が高くなるため、インスペクタを非表示した上でFireworksを再起動してからコマンドを実行してください。</p>
-<!-- raw HTML omitted -->
+<div class="media">
+	<a href="../../../assets/img/2016/fireworks-to-sketch/fig01-create-fw-document.png"><img src="../../../assets/img/2016/fireworks-to-sketch/fig01-create-fw-document.png" alt=""></a>
+</div>
+<p>コマンドから「Fw to JSON」を実行します。<b>Fireworks Console</b>と<b>DOM Inspector</b>をインストールされている場合は、処理に時間がかかり落ちる確率が高くなるため、インスペクタを非表示した上でFireworksを再起動してからコマンドを実行してください。</p>
+<div class="media">
+	<img src="../../../assets/img/2016/fireworks-to-sketch/fig02-run-plugin-on-fireworks.png" alt="">
+</div>
 <p>表示されたダイアログで保存先を選択します。</p>
-<!-- raw HTML omitted -->
+<div class="media">
+	<img src="../../../assets/img/2016/fireworks-to-sketch/fig03-choose-export-folder.png" alt="">
+</div>
 <p>もし警告が出たら、「同じ名前のファイルが存在するので上書きしてもいい？」って怪しい英語で聞いてます。</p>
-<!-- raw HTML omitted -->
+<div class="media">
+	<img src="../../../assets/img/2016/fireworks-to-sketch/fig04-alert.png" alt="">
+</div>
 <p>エクスポートが始まったら、アラートが出るまで眺めておいてください。</p>
-<!-- raw HTML omitted -->
+<div class="media">
+	<img src="../../../assets/img/2016/fireworks-to-sketch/fig05-displayed-dialog.png" alt="">
+	<p class="mediaCaption">エクスポートしたオブジェクト数やテクスチャ数を、それとなしに表示します。</p>
+</div>
 <p>エクスポートが終わったらSketch 3で新規ドキュメントを作成し、プラグインを実行します。</p>
-<!-- raw HTML omitted -->
+<div class="media">
+	<img src="../../../assets/img/2016/fireworks-to-sketch/fig07-run-plugin-on-sketch.png" alt="">
+</div>
 <p>ダイアログで先ほどエクスポートしたJSONファイルを選択します。</p>
-<!-- raw HTML omitted -->
+<div class="media">
+	<img src="../../../assets/img/2016/fireworks-to-sketch/fig06-choose-json-file.png" alt="">
+</div>
 <p>少し待つとインポート完了です。この記事に使用した画像の内容程度だと一瞬ですが、3.5MBぐらいのJSONファイルを読み込むと、20〜30秒ほどかかります。</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<div class="media">
+	<a href="../../../assets/img/2016/fireworks-to-sketch/fig08-result.png"><img src="../../../assets/img/2016/fireworks-to-sketch/fig08-result.png" alt=""></a>
+</div>
+<div class="media">
+	<a href="../../../assets/img/2016/fireworks-to-sketch/fig09-layer-structure.png"><img src="../../../assets/img/2016/fireworks-to-sketch/fig09-layer-structure.png" alt=""></a>
+	<p class="mediaCaption">レイヤー構造もこの通り。</p>
+</div>
+<div class="media">
+	<a href="../../../assets/img/2016/fireworks-to-sketch/fig10-path.png"><img src="../../../assets/img/2016/fireworks-to-sketch/fig10-path.png" alt=""></a>
+	<p class="mediaCaption">パスもきちんと編集可能な状態です。</p>
+</div>
+<div class="media">
+	<a href="../../../assets/img/2016/fireworks-to-sketch/fig11-text-properties.png"><img src="../../../assets/img/2016/fireworks-to-sketch/fig11-text-properties.png" alt=""></a>
+	<p class="mediaCaption">テキストも可能な限り再現します。処理の違いにより、位置がずれます。</p>
+</div>
 <p>詳しい仕様等は各ページをご確認ください。</p>
 <h2 id="経緯的なもの">経緯的なもの</h2>
 <p>Fireworks PNGをPhotoshopで開くことはできますが、再現率は100%ではありません。もちろん、拙作のプラグインを用いてSketch 3へインポートしても、欠落する情報は多々あります。ただ、ひとまず汎用的なJSON形式で書き出せるだけの情報を残しておけば、他でも流用しやすくできるのでは？ ということつくり始めたものです（そういう意味でいうと、JSON to Layersはおまけ的な位置づけ）。</p>
 <p>JSONであれば、Photoshop・IllustratorはJSXで、CocoaScriptに対応しているAcorn等でも、取り込むことはできるんじゃないでしょうか（その労力に見合うかはおいといて）。個人的にFireworksの代替アプリとして推している、Affinity DesignerがCocoaScriptに対応すれば最強なんですけどね。</p>
 <p>極力必要な情報は書き出すようにしていますが、コトの発端がSketch 3で取り込むことだったため、すべての状況には対応しきれていないかもしれません。そこはPull Requestをお待ちしてます。</p>
-<!-- raw HTML omitted -->
+<hr class="postscript">
 <p>Fireworks向けのコマンド制作はこれが最後になるでしょう。まだFireworksを使ってる方は、そろそろ「おやすみ」と言ってあげていい頃じゃないでしょうか。</p>
 <h2 id="謝辞">謝辞</h2>
 <p>プラグインの制作にあたり、Fireworks PNGをご提供くださった皆さま、ありがとうございました。</p>

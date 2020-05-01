@@ -56,7 +56,9 @@
       <pubDate>Tue, 24 Jan 2012 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2012/01/font-mixer-100.html</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
+      <description>&lt;p class=&#34;notics-alert&#34;&gt;
+この記事は、Font Mixer 1.0.0を公開した時のものです。
+&lt;/p&gt;
 &lt;p&gt;Fireworksの混植拡張機能「Font Mixer」を作成しました。&lt;/p&gt;
 &lt;p&gt;Fireworksで和文フォント×和文フォントの混植をする場合、フォントを変更したいテキストを選択しフォントを変更という作業を繰り返す必要があり、非常に手間がかかってしまいます。この手間を大幅に軽減する、Fireworks拡張機能を作成しました。&lt;/p&gt;</description>
     </item>

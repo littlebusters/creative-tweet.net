@@ -49,44 +49,67 @@
 		
 		<div class="content-main">
 			
-			<!-- raw HTML omitted -->
+			<p class="notics-alert">
+この記事はSketchの古いバージョンを元に書いた内容です。最新バージョンでは、動作が異なる場合があります。
+</p>
 <p>以前の記事（<a href="http://creative-tweet.net/blog/2013/05/introduction-of-thesketch.html">ちょっと別の世界も見てみませんか？ベクターベースのグラフィックツール Sketchを紹介してみるよ。</a>）で、Sketch.appはスクリプトによる拡張ができると書きました。しかしながらJSTalkという、新しく作るには若干学習コストのかかる言語で書く必要があり、なかなか手を出しにくい機能なのも事実です。</p>
 <p>そんな中、Fireworksのコマンド集<a href="https://github.com/bomberstudios/fireworks">Orange Commands</a>の中の人が、その一部をSketch.appプラグインに移植されています（しかも結構前から）。今回はこのプラグイン集を紹介してみたいと思います。</p>
-<!-- raw HTML omitted -->
+<p class="notics">
+  <b>Sketchの基本。</b>というSketch（Sketch 3）の基本操作にフォーカスした電子書籍をリリースしました。詳しくはこちらの「<a href="http://creative-tweet.net/sketch-3-basics/">Sketchの基本。</a>」のページをご覧ください。
+</p>
+Sketch 2.2.4で動作を確認しているため、バージョンによっては動いたり動かなかったりすると思いますので、予めご了承ください。
 <h2 id="プラグインを使うには">プラグインを使うには</h2>
 <p>まずは、プラグインのダウンロードと解凍しておきましょう。</p>
 <p><strong>プラグインのGitHubリポジトリ</strong><br>
 <a href="https://github.com/sketchplugins/plugin-directory">sketchplugins/plugin-directory</a></p>
 <p>続いて、Sketchの環境設定でプラグインの有効化が必要ですので、［Sketch］メニューから、［Preferences］を選択します。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig1.png" alt="" />
+</p>
 <p>［Preferences］の［General］タブにある「Enable Scripting」をクリックして有効にすると、メニューに［Plugins］が表示されます。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig2.png" alt="" />
+</p>
 <p>続けて、［Plugins］メニューから［Custom Script&hellip;］を選択します。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig3.png" alt="" />
+</p>
 <p>JSTalkを記述するウィンドウが出てくるので、下にある歯車マークをクリックし、「Open Plugins Folder」を選択します。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig4.png" alt="" />
+</p>
 <p>FinderでPluginsフォルダが開きますので、その中に解凍してできたフォルダを入れると準備完了です。Gitが使える方は、このフォルダへcloneしてもOKです。</p>
 <p>続けてプラグインについて解説していきます。</p>
 <h2 id="alignグループ">Alignグループ</h2>
 <p><strong>Space Horizontal</strong><br>
 選択しているオブジェクト中で一番下にあるレイヤーを基準に、オブジェクトを入力した数値分の間隔を空けて水平方向に再配置します。オブジェクトを回転している場合は、回転していない状態と見なして再配置されます（角度を0に戻すと入力した値分の間隔が空いている）。垂直方向は変化しません。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig5.png" alt="" />
+</p>
 <p><strong>Space Vertical</strong><br>
 選択しているオブジェクト中で一番下にあるレイヤーを基準に、オブジェクトを入力した数値分の間隔を空けて垂直方向に再配置します。オブジェクトを回転している場合は、回転していない状態と見なして再配置されます（角度を0に戻すと入力した値分の間隔が空いている）。水平方向は変化しません。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig6.png" alt="" />
+</p>
 <h2 id="alpha-グループ">Alpha グループ</h2>
 <p><strong>Alpha N%</strong><br>
 オブジェクトのアルファを設定します。「Alpha…」は値を入力できます。</p>
 <h2 id="effects-グループ">Effects グループ</h2>
 <p><strong>Offset</strong><br>
 入力した値分、幅と高さをオフセットしたオブジェクトを複製します（角丸の大きさや線幅は変更されません）。マイナスの値も入力できますが、オフセットした結果、幅や高さが0以下になる場合、同じ大きさのオブジェクトが複製されます。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig7.png" alt="" />
+</p>
 <p><strong>Repeat Horizontal</strong><br>
 選択しているオブジェクトを、入力した値の数だけ水平方向に複製します。オブジェクト同士の間隔は10pxになるようです。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig8.png" alt="" />
+</p>
 <p><strong>Repeat Vertical</strong><br>
 選択しているオブジェクトを、入力した値の数だけ垂直方向に複製します。オブジェクト同士の間隔は10pxになるようです。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig9.png" alt="" />
+</p>
 <h2 id="export-グループ">Export グループ</h2>
 <p>アートボードやスライスを書き出すプラグインです。が、私の環境ではうまく実行できず機能しませんでした。GitHub でも ISSUE が上がってるようですね。以下、プラグイン名から読み取った機能です。</p>
 <p><strong>All Artboards as PDF</strong><br>
@@ -111,10 +134,14 @@
 <p>ガイドライン関連のプラグインです。こちらの一部も GitHub に ISSUE が上がっている通り、動作しないようです。</p>
 <p><strong>Add Guides Manually to Artboard</strong><br>
 任意の座標にガイドラインを作成します。値は、X, Y で入力し、垂直方向だけ作成する場合は、X 座標のみ（e.g. 10）、水平方向だけ作成する場合は、カンマ + Y 座標（e.g. ,10）と入力します。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig10.png" alt="" />
+</p>
 <p><strong>Around Selection</strong><br>
 選択しているオブジェクトを囲うように、ガイドラインを作成します。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig11.png" alt="" />
+</p>
 <p><strong>Clear All Guides in Current Artboard</strong><br>
 現在編集しているアートボードのガイドラインをすべてクリアします。</p>
 <p><strong>Clear All Guides in Current Page</strong><br>
@@ -125,10 +152,14 @@
 現在編集しているページの垂直ガイドラインをクリアします。いまいちキチンと動きませんでした。</p>
 <p><strong>Repeat Guides horizontally on Artboard</strong><br>
 水平ガイドラインをリピートして作成します。値は、開始位置（X座標）, 間隔, リピート回数の順番で入力します。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig12.png" alt="" />
+</p>
 <p><strong>Repeat Guides vertically on Artboard</strong><br>
 垂直ガイドラインをリピートして作成します。値は、開始位置（Y座標）, 間隔, リピート回数の順番で入力します。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig13.png" alt="" />
+</p>
 <h2 id="pages-グループ">Pages グループ</h2>
 <p><strong>Add New Page</strong><br>
 新しいページを追加します。</p>
@@ -142,41 +173,57 @@
 <h2 id="position-グループ">Position グループ</h2>
 <p><strong>Fix Position</strong><br>
 Positionの小数点以下の数値を四捨五入します。サイズも四捨五入されますが、すべてのアンカーポイントではなく、サイズ算出に使う外周のアンカーポイントのみが四捨五入されます。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig14.png" alt="" />
+</p>
 <p><strong>Set Position</strong><br>
 選択しているオブジェクトを、任意の X, Y 座標に移動します。四則演算可能。片方の値のみを入力した場合、オブジェクトが異次元に飛ぶので注意です。</p>
 <p><strong>Swap Position</strong><br>
 オブジェクトが2つ選択されている場合、各オブジェクトの左上座標を起点にオブジェクトを入れ替えます。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig15.png" alt="" />
+</p>
 <h2 id="properties-グループ">Properties グループ</h2>
 <p><strong>Make Pill</strong><br>
 選択しているオブジェクトから、角丸が100%の矩形を作成します。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig16.png" alt="" />
+</p>
 <p><strong>Rotation…</strong><br>
 選択しているオブジェクトを、入力した値で回転します。複数選択している場合は、個別に回転します。グループ化されている場合、グループの角度が入力した値に設定されます。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig17.png" alt="" />
+</p>
 <p><strong>Set Radius…</strong><br>
 角丸を、入力した値で設定します。ただし、Radius が有効なオブジェクトに限ります。</p>
 <h2 id="size-グループ">Size グループ</h2>
 <p><strong>Equalize Height</strong><br>
 選択しているオブジェクトの高さを、最も値の大きいオブジェクトに揃えます。高さが変更されるオブジェクトは、下方向に延長されます。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig18.png" alt="" />
+</p>
 <p><strong>Equalize Width</strong><br>
 選択しているオブジェクトの幅を、最も値の大きいオブジェクトに揃えます。幅が変更されるオブジェクトは、右方向に延長されます。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig19.png" alt="" />
+</p>
 <p><strong>Height</strong><br>
 選択しているオブジェクトの高さを、入力した値に設定します。複数選択している場合は、個別に高さが設定され、グループ化されている場合、グループの高さが入力した値に設定されます。</p>
 <p><strong>Scale to 4-3</strong><br>
 幅を基準に、4 : 3の大きさにスケーリングします。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig20.png" alt="" />
+</p>
 <p><strong>Scale to 16-9</strong><br>
 幅を基準に、16 : 9の大きさにスケーリングします。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-06-03-extending-sketchapp/sktcmnd-fig21.png" alt="" />
+</p>
 <p><strong>Set Size</strong><br>
 選択しているオブジェクトを、入力した値（ width, height ）に設定します。四則演算可能。複数選択している場合は、個別に幅と高さが設定され、グループ化されている場合、グループの幅と高さが入力した値に設定されます。片方の値のみを入力した場合、オブジェクトが異次元に飛ぶので注意です。</p>
 <p><strong>Width</strong><br>
 選択しているオブジェクトの幅を、入力した値に設定します。複数選択している場合は、個別に幅が設定され、グループ化されている場合、グループの幅が入力した値に設定されます。</p>
-<!-- raw HTML omitted -->
+<hr class="postscript" />
 <p>基本的なプラグインばかりですが、ちょっと足りない部分を補ってくれるものばかりです。自分でフォルダを作っていれれば、オリジナルのグループも作れますので、必要なプラグインだけインストールすることもできます。</p>
 <p>またプラグイン自体を利用するのもさることながら、中身を覗いて改造したり新しく作ったりできそうです。</p>
 		</div>

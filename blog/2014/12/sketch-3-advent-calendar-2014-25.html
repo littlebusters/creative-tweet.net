@@ -62,11 +62,15 @@
 <p>アートボードをスライドとして使うための設定を行います。</p>
 <p>大概の場合、サイズの比率は4:3だと思いますので、「<strong>Insert → Artboard</strong>」から、「iPad Screens」にある、「Landscape 1024x768px」を選んでアートボードを挿入します。</p>
 <p>「<strong>View → Layout Settings…</strong>」を選択し、レイアウトグリッドの設定や、ルーラーを表示してセンターや左右下の安全マージンのガイドラインも作成しておきましょう。こうすることで、アートボードの複製と同時にこれらの設定も複製されます。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2014/2014-12-25-sketch-3-advent-calendar-2014-25/grid-guideline.png" alt="" class="media-flexibleBounding">
+</p>
 <p>ガイドラインの作成は、<a href="https://github.com/gau/SpeedGuide-for-Sketch">SpeedGuide for Sketch</a>が便利です（要手動インストール）。</p>
 <h3 id="スライドレイアウト">スライドレイアウト</h3>
 <p>作成したアートボードを複製しながら、カバー・セクション・箇条書き・図入りのレイアウトなど、元となるレイアウトを作成しておきましょう。ガイドラインも、スライドのレイアウトに合わせて調整しておきます。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2014/2014-12-25-sketch-3-advent-calendar-2014-25/layout-settings.png" alt="" class="media-flexibleBounding">
+</p>
 <h3 id="カラーパターンの作成">カラーパターンの作成</h3>
 <p><a href="http://sadakoa.hateblo.jp/entry/2014/12/02/113410">2日目の@sadako_A_さんが紹介</a>してくださった「<a href="https://github.com/jodyheavener/Swatches">Swatches</a>」や、<a href="http://t32k.me/mol/log/my-sketch-plugin/">16日目の石本さんが作成</a>された「<a href="https://github.com/t32k/material-design-color-palette-sketch-plugin">Material Design Color Palette</a>」を使ってカラーパターンを作成しましょう。</p>
 <p>作成したカラーパターンは、ドキュメントのプリセットへ登録しておきます。プリセットへ色を追加するのが面倒という場合は、オブジェクトをシンボルとして登録しておけば、シンボルを配置してスポイトツールで色を取得する、ということも可能です。</p>
@@ -75,62 +79,82 @@
 <h3 id="タイポグラフィの設定">タイポグラフィの設定</h3>
 <p>私の場合、スライドタイトル・リード・見出し・本文・注記ぐらいのタイポグラフィを準備しています。</p>
 <p>テキストサイズの作成には、<a href="https://github.com/automat/sketch-plugin-typographic-scale">Typograhic Scale</a>プラグインを使うと、選択しているテキストレイヤーを基準に、大小のサイズを作成してくれます。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2014/2014-12-25-sketch-3-advent-calendar-2014-25/typography.png" alt="" class="media-flexibleBounding">
+</p>
 <p>作成できたらテキストスタイルに登録しましょう。場合によっては、行揃えや箇条書きなどのバリエーションもつくっておくとよいかもしれません。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2014/2014-12-25-sketch-3-advent-calendar-2014-25/text-style.png" alt="" class="media-flexibleBounding">
+</p>
 <h3 id="パーツ類">パーツ類</h3>
 <p>よく使うパーツ類やスタイルは、シンボルや共有スタイルとして登録しておきましょう。</p>
 <h2 id="スライドを作成する">スライドを作成する</h2>
 <h3 id="スライドの追加編集管理">スライドの追加・編集・管理</h3>
-<p>スライドの挿入はアートボードを都度作成してもよいのですが、アートボードを選択して「<strong>Edit → Duplicate</strong>」（ショートカット：<!-- raw HTML omitted -->Command<!-- raw HTML omitted --> + <!-- raw HTML omitted -->D<!-- raw HTML omitted -->）しましょう。この場合は、選択しているアートボードの右方向に空いている部分へ複製されます。</p>
-<!-- raw HTML omitted -->
+<p>スライドの挿入はアートボードを都度作成してもよいのですが、アートボードを選択して「<strong>Edit → Duplicate</strong>」（ショートカット：<kbd>Command</kbd> + <kbd>D</kbd>）しましょう。この場合は、選択しているアートボードの右方向に空いている部分へ複製されます。</p>
+<p class="media">
+  <img src="../../../assets/img/2014/2014-12-25-sketch-3-advent-calendar-2014-25/duplicate.png" alt="" class="media-flexibleBounding">
+</p>
 <p>選択しているアートボードの下側へ複製したい場合は、<a href="https://github.com/bomberstudios/sketch-commands">Sketch Commands</a>にある、「<strong>Duplicate → Duplicate Artboard Below</strong>」を使います。</p>
 <p>アートボードの位置を入れ替える場合は、入れ替えるアートボードを選択し、<a href="https://github.com/bomberstudios/sketch-commands">Sketch Commands</a>にある「<strong>Position → Swap Positions…</strong>」を使ってください。</p>
 <p>また、アートボード名が変わってしまいますが、<a href="https://github.com/elihorne/smartboards">Smartboards</a>を使うと座標を基準に整列することができます。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2014/2014-12-25-sketch-3-advent-calendar-2014-25/apply-gridify.png" alt="" class="media-flexibleBounding">
+</p>
 <p>規則性のあるアートボード名であれば、すべてのアートボードを選択（<strong>Sketch Commands → Select → All Artboards in Page</strong>）し、<a href="https://github.com/rodi01/RenameIt">RenameIt</a>で名前をつけ直すという方法があります。</p>
 <h3 id="セクション">セクション</h3>
 <p>他のプレゼンテーションツールのようにセクションごとにグループ化はできませんので、ページを利用してセクションを管理します。単一ページでやってしまうと、セクションを入れ替える時が大変になってしまうので、特にスライドが多い場合は、ページ管理を積極的に使うことをオススメします。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2014/2014-12-25-sketch-3-advent-calendar-2014-25/page-management.png" alt="" class="media-flexibleBounding">
+</p>
 <p>アートボードの切り替えは、<a href="https://github.com/vrjbndr/select-next-artboard">Workflow Sketch Plugins</a>にショートカットを割り当ててやると、マウスの往復が減ってラクになります。</p>
 <h3 id="スライドの背景色を変更する">スライドの背景色を変更する</h3>
 <p>アートボードレイヤーを選択し、インスペクタの<strong>Background</strong>で背景色を設定します。</p>
-<!-- raw HTML omitted -->
-<p>ちなみに、アートボードを選択するにはレイヤーリストで選択してもよいのですが、オブジェクトを選択中に<!-- raw HTML omitted -->esc<!-- raw HTML omitted -->で親グループの選択ができることを利用して、アートボード直下のいずれかのレイヤーを選択後、<!-- raw HTML omitted -->esc<!-- raw HTML omitted -->キーを押すとすぐにアートボードを選択することができます。</p>
+<p class="media">
+  <img src="../../../assets/img/2014/2014-12-25-sketch-3-advent-calendar-2014-25/bg-color.png" alt="" class="media-flexibleBounding">
+</p>
+<p>ちなみに、アートボードを選択するにはレイヤーリストで選択してもよいのですが、オブジェクトを選択中に<kbd>esc</kbd>で親グループの選択ができることを利用して、アートボード直下のいずれかのレイヤーを選択後、<kbd>esc</kbd>キーを押すとすぐにアートボードを選択することができます。</p>
 <p>それすら面倒な場合や、共有スタイルを使って一括で色を変更したいという場合は、最背面にアートボードと同じ大きさの矩形レイヤーを配置するのもよいでしょう。アートボードを同じ大きさの矩形レイヤーを作成するには、<a href="https://github.com/makzan/Sketch-Plugin-Scripts">Sketch Plugin Scripts</a>にある、「<strong>fill_artboard</strong>」を使うと便利です。</p>
 <h3 id="日本語に詰めを適用する">日本語に詰めを適用する</h3>
 <p>こちらを参照してください→ 「<a href="http://creative-tweet.net/blog/2014/10/apply-proportional-metrics-on-sketch.html">Sketch（や他のアプリ）で、文字詰めをする方法を解説するよ。</a>」</p>
 <h3 id="箇条書きにする">箇条書きにする</h3>
 <p>テキストレイヤーを選択し、インスペクタに表示されている「<strong>Options → List Type</strong>」から<strong>Numbered</strong>（番号）か<strong>Bullet</strong>（黒丸）を選択してください。段落または改行のあった部分へ、リストマークが付加されます。</p>
 <p>テキストスタイルを適用しているテキストレイヤーへ追加すると、スタイルが変わってしまうので、注意してください。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2014/2014-12-25-sketch-3-advent-calendar-2014-25/listed-setting.png" alt="" class="media-flexibleBounding">
+</p>
 <h3 id="画像を挿入する">画像を挿入する</h3>
 <p>アートボードサイズより大きな画像を配置しても、アートボード外は表示されませんので、わざわざマスクする必要はありません。</p>
 <p>また、<a href="https://github.com/timuric/Content-generator-sketch-plugin">Content Generator</a>を使うと、ひとまずのダミーを挿入することができます。塗りのParttern Fillで画像が挿入されるため、レイヤーのサイズを変更してもトリミングする必要はありません（ただし、必ず画像がセンターに来るためバランスの調整にはやはりマスクを用いる必要があります）。</p>
 <p>Flickrから引っ張ってくる「<a href="https://github.com/nickstamas/Sketch-Quick-Pic">Quick Pic</a>」というプラグイン（要手動インストール）や、つい先日公開された、Instagramから画像を引っ張ってくる「<a href="https://github.com/abynim/SketchSquares">SketchSquares</a>」というプラグイン（要手動インストール）もあります。</p>
 <h3 id="仕上げの書き出し">仕上げの書き出し</h3>
 <p>でき上がったら、「<strong>File → Export Artboards to PDF</strong>」で、PDFに変換…の前に、レイヤーリストの上位にあるアートボードから順に変換されるため、レイヤーリストで並び替えをする必要があります。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2014/2014-12-25-sketch-3-advent-calendar-2014-25/layer-list-order.png" alt="" class="media-flexibleBounding">
+</p>
 <p>アートボードをソートできるプラグインを使って整理しましょう。ただし座標を基準とするソートでは、アートボードが上辺や左辺がずれていると、思うようにソートできないため、先にアートボードを整列してからソートしてください。</p>
 <p>アートボードが横または縦一列に並んでいる場合は、 <a href="https://github.com/getflourish/Sketch-Mate">Sketch Mate</a>（要手動インストール）にある、「<strong>Sort → Sort Layers</strong>」で「<strong>Top</strong>」または「<strong>Left</strong>」でソートしましょう。</p>
 <p>アートボードを碁盤の目状に配置している場合は、<strong>Sketch Mate</strong>の「<strong>Artboards → Sort Artboards by Position</strong>」を適用した後、「<strong>Sort → Sort Layers</strong>」の「<strong>Top</strong>」でさらにソートしてやると、レイヤーリストが左上からZ字順に並び変わります。</p>
 <p>レイヤーリスト上のみでソートする場合のプラグインも用意してみました。<br>
 <a href="https://gist.github.com/littlebusters/17c5d3cff17e88469809">Sort by Artboad Name on Layer List.sketchplugin</a><br>
-ダウンロードして、プラグインフォルダへ。ショートカットは<!-- raw HTML omitted -->Shift<!-- raw HTML omitted --> + <!-- raw HTML omitted -->Control<!-- raw HTML omitted --> + <!-- raw HTML omitted -->F<!-- raw HTML omitted -->に割り当てているので、適宜変更してください。</p>
+ダウンロードして、プラグインフォルダへ。ショートカットは<kbd>Shift</kbd> + <kbd>Control</kbd> + <kbd>F</kbd>に割り当てているので、適宜変更してください。</p>
 <p>並び替えたら、PDFで書き出しします。書き出しされたPDFは、画像関連の圧縮がかかっていない状態ですので、適宜Acrobatなどを使って圧縮するとよいでしょう。</p>
 <h2 id="テンプレートとして保存して再利用しやすく">テンプレートとして保存して再利用しやすく</h2>
 <h3 id="テンプレートとして保存する">テンプレートとして保存する</h3>
 <p>テンプレートとして保存しておくには2つ方法があり、1つ目は「<strong>File → Save as Template</strong>」で保存すると、「<strong>File → New From Templates</strong>」のリストに加わります。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2014/2014-12-25-sketch-3-advent-calendar-2014-25/save-as-template.png" alt="" class="media-flexibleBounding">
+</p>
 <p>もう1つがテンプレートとして保存するのではなく、「<strong>File → New From Templates</strong>」の<strong>Reveal in Finder</strong>で表示されるフォルダへ、SketchファイルやSketchファイルの入ったフォルダのエイリアスを入れても、表示することができます。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2014/2014-12-25-sketch-3-advent-calendar-2014-25/alias-into-template-folder.png" alt="" class="media-flexibleBounding">
+</p>
 <p>個人的には、別の場所に保存をしておいて、上記フォルダへ別途保存しているフォルダのエイリアスを入れておく方が、バージョンアップなどで消える可能性も低いのでオススメです。</p>
 <h3 id="テンプレートを再編集する">テンプレートを再編集する</h3>
 <p>テンプレートファイルの再編集は、 「<strong>Save as Template</strong>」で保存した場合は、上記Templatesフォルダにあるファイルを、エイリアス方式を使っている場合は、そのファイルを修正します。</p>
 <h2 id="一応ダウンロードできます">一応ダウンロードできます</h2>
 <p>ざっくりつくったものですが、よろしければ<a href="http://creative-tweet.net/downloads/slide-template.zip">ダウンロード</a>をどうぞ。</p>
 <p>また、こもりまさあき（@<a href="https://twitter.com/cipher/">cipher</a>）さんが、<a href="https://gumroad.com/d/7afe70a5c4f366df9a84aac6b73142b8">4:3</a>と<a href="https://github.com/gaspanik/SketchSlideHD">16:9</a>のSketchファイルを公開されています。4:3は有料ですが、缶コーヒー1本我慢すればよい金額ですので、こちらも参考になさってください。</p>
-<!-- raw HTML omitted -->
+<hr class="postscript" />
 <p>というわけで、大概のプレゼンテーションスライドであれば、Sketchで作成ができます。スライド作成としてはシンプルな機能しかありませんが、逆にアニメーションを調整したりトランジションで迷ったりする時間はなくなります。<br>
 確かに見た目も重要なのですが、必要以上にこだわって時間がかかってしまうよりは、はじめからそいうことをできない方が、スライドづくりも潔く進められるんじゃないでしょうか、えぇ（ちなみに、アニメーションやトランジションは、効果的に使えばありだと思ってる人です）。</p>
 <p>それでは、Happy Holidays!!</p>

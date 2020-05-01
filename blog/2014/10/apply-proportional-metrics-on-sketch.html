@@ -57,7 +57,9 @@
 <p>しかし、OpenTypeの機能を使うことで、実は文字詰めができることはご存知でしょうか？</p>
 <p>今回は、Sketchをはじめとした、Adobeアプリケーション以外で文字詰めをする方法をご紹介します。</p>
 <p>Sketch用にプラグインをつくりましたので、こちらもどうぞ。</p>
-<!-- raw HTML omitted -->
+<ul>
+<li><a href="http://creative-tweet.net/blog/2017/01/switch-text-spacing-plugin.html" target="_blank" title="Sketchで文字詰めを簡単に適用できるプラグインを作りました。 | creative tweet.">Sketchで文字詰めを簡単に適用できるプラグインを作りました。</a></li>
+</ul>
 <p>タイトルには「Sketch」と入れましたが、それ以外のアプリケーションでも以下の条件を満たせば、文字詰めできる可能性は高いです。</p>
 <dl>
 <dt>フォントがOpenTypeフォントである</dt>
@@ -68,16 +70,28 @@
 <h2 id="opentypeの機能を使って文字詰めをする手順">OpenTypeの機能を使って文字詰めをする手順</h2>
 <p>ここでは、Sketchを使って解説を進めます。</p>
 <p>まずは文字を適当に入力し、OpenTypeフォントを適用します。ここでは、OSXにバンドルされている「ヒラギノ角ゴシックProN W3」を使っています。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2014/2014-10-24-apply-proportional-metrics-on-sketch/input-text.png" alt="適当にテキストを入力" class="media-flexibleBounding">
+</p>
 <p>OSのフォントパネルを表示します。Sketchでは、「<strong>View → Show Fonts</strong>」です。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2014/2014-10-24-apply-proportional-metrics-on-sketch/view-show-fonts-panel.png" alt="View → Show Fontsを選択" class="media-flexibleBounding">
+</p>
 <p>表示されたフォントパネルにある「歯車」マークから、「Typography&hellip;（タイポグラフィ&hellip;）」を選択します。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2014/2014-10-24-apply-proportional-metrics-on-sketch/fonts-panel-click-giar.png" alt="Fontsパネルの歯車をから、Typograpy...を選択する" class="media-flexibleBounding">
+</p>
 <p>Typographyパネルが表示されたら、「Text Spacing（文字間隔）」を展開します。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2014/2014-10-24-apply-proportional-metrics-on-sketch/typography-panel.png" alt="Text Spacingをクリックして展開" class="media-flexibleBounding">
+</p>
 <p>テキストの内容を選択し、「Alternate Proportional Widths（代替プロポーショナル幅）」を適用すると、文字に設定されているプロポーショナルメトリクスに応じて、文字が詰まります。</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2014/2014-10-24-apply-proportional-metrics-on-sketch/apply-proportional-metrics.png" alt="テキストを選択し、Alternate Proportional Widthsを適用する" class="media-flexibleBounding">
+</p>
+<p class="media">
+  <img src="../../../assets/img/2014/2014-10-24-apply-proportional-metrics-on-sketch/result-apply-proportional-metrics.png" alt="プロポーショナルメトリクスの未適用／適用の比較" class="media-flexibleBounding">
+</p>
 <dl>
 <dt>スクリーンキャスト</dt>
 <dd><a href="https://v.usetapes.com/p3Gil2rqOJ">Sketchでプロポーショナルメトリクスを適用</a></dd>
@@ -95,18 +109,24 @@
 <li><strong>Illustrator CC 2014.1.0</strong> : プロポーショナルメトリクス有効 ＋ カーニング「0」</li>
 <li><strong>Sketch 3.1.1</strong> : プロポーショナルメトリクス有効 ＋ Kern &gt; Use None</li>
 </ul>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2014/2014-10-24-apply-proportional-metrics-on-sketch/ai-sketch-none-kern.png" alt="SketchとIllustratorの比較（プロポーショナルメトリクスあり／カーニングなし）" class="media-flexibleBounding">
+</p>
 <ul>
 <li><strong>Illustrator CC 2014.1.0</strong> : プロポーショナルメトリクス有効 ＋ カーニング「自動」</li>
 <li><strong>Sketch 3.1.1</strong> : プロポーショナルメトリクス有効 ＋ Kern &gt; Use Default</li>
 </ul>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2014/2014-10-24-apply-proportional-metrics-on-sketch/ai-sketch-default-kern.png" alt="SketchとIllustratorの比較（プロポーショナルメトリクスあり／カーニングあり）" class="media-flexibleBounding">
+</p>
 <p>Sketchでは行頭の文字がやや詰まっている状態ですが、全体的にはほぼ同等な感じです。そもそも「Sketchで文字組」というのは、本来の用途ではないと思うので、これで十分ではないでしょうか（きちんと文字組するのであれば、InDesignやIllustratorを使った方がいいですね）。</p>
 <h2 id="その他のopentypeの機能と利用できるアプリケーション">その他のOpenTypeの機能と利用できるアプリケーション</h2>
 <p>Typographyパネルには「Text Spacing」以外にも項目があり、合字やルビなどのOpenTypeの機能も使うことができます。パネルに表示されつつも、実際に有効になるかどうかは、フォントやアプリケーションによって異なります。</p>
 <p>また、アプリケーションによって、Typographyパネルに表示される項目そのものが異なります。</p>
 <p>例えば「Keynote ’09」では、Sketchで表示されている項目にプラスして異字体まで使えますが、「Keynote 6」は異字体を使えるものの、なぜか他の項目がオミットされています。（OSX 10.10をまだインストールしていないので、最新版のKeynoteでどうなっているのかはわかりません…）</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2014/2014-10-24-apply-proportional-metrics-on-sketch/keynote-spec.png" alt="Keynote &#039;09とKeynote 6では、Typographyパネルの項目が異なる" class="media-flexibleBounding">
+</p>
 <p>その他でTypographyパネルを表示して、プロポーショナルメトリクスが適用できることを確認できたのは、以下のアプリケーションです。</p>
 <ul>
 <li>Sketch</li>
@@ -117,7 +137,7 @@
 <li>Jedit X</li>
 <li>Acron</li>
 </ul>
-<!-- raw HTML omitted -->
+<hr class="postscript" />
 <p>おそらく、結構前から使えたんじゃないかなぁと思うのですが、つい先日、iMovieで「<a href="http://creative-tweet.net/blog/2014/07/published-the-basic-of-sketch.html">Sketch 3の基本。</a>」のスクリーンキャストを編集している際に、偶然にも発見に至りました。これで「文字詰めが手動」と言われ続けたSketch（をはじめとした非Adobeプロダクト）が、少しは利用しやすくなったのでは？と思います。</p>
 		</div>
 

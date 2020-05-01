@@ -58,43 +58,61 @@
 <p>大きな新機能は、プラグインマネージャとローカルネットワークでのドキュメントシェアの2つです。</p>
 <h3 id="プラグインマネージャー">プラグインマネージャー</h3>
 <p>Preferencesへプラグインマネージャーのパネルが実装されました。ひとまずはプラグインの有効／無効の切り替えが可能です。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+	<img src="../../../assets/img/2015/sketch-has-been-updated-to-3.4/plugins-manager.png" alt="">
+</p>
 <p>ただし、プラグインマネージャーで扱うためには、プラグイン自体が新しい形式に対応している必要があり、古い形式だと「Lagacy Plugins」としてまとめられてしまいます。プラグイン自体は古い形式でも使えますが、どうしてもという場合は、GitHubなどから作者へ要望を投げてみるとよいでしょう。</p>
-<!-- raw HTML omitted -->
+<dl class="links">
+	<dt>参考：</dt>
+	<dd><a href="http://qiita.com/littlebusters@github/items/b919693f4f3d4c183ce0">Sketch.app Plugin の開発メモ - Qiita</a></dd>
+</dl>
 <p>プラグインを選択して左下の歯車アイコンやコンテキストメニューからアンインストールできたり、ドキュメントを閲覧（多くはGitHubへジャンプ）したりできます。</p>
 <p>右下の「Get Plugins&hellip;」ボタンは、Bohemian Coding社のプラグインリストのページへジャンプすることができます。とはいえ、このパネル上では肝心のインストールができないため、当面はSketch Toolboxを手放せそうにありませんね。</p>
 <p>ただ、新しくなったプラグインファイルの設定を見ていると、アップデート向けの情報も記述できるようになっているので、今後プラグインのアップデートもできるようになるかもしれません。</p>
 <h3 id="アートボードをローカルネットワーク上のブラウザでプレビュー">アートボードをローカルネットワーク上のブラウザでプレビュー</h3>
 <p>ブラウザを使ってアートボードをプレビューできるようになりました。</p>
 <p>ツールバーの「Share」をクリックし、「Enable Local Sharing」のトグルスイッチを切り替えます。「Enable」にすると、デフォルトブラウザが立ち上がり、アートボードとページの一覧が表示されますので、確認したいアートボードを選択してください。また、［File → Local Sharing］でも同様のことが可能です。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+	<img src="../../../assets/img/2015/sketch-has-been-updated-to-3.4/local-sharing.png" alt="">
+</p>
 <p>ブラウザでアクセスすると、アートボードの一覧が表示されます。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+	<img src="../../../assets/img/2015/sketch-has-been-updated-to-3.4/local-sharing-brower.png" alt="">
+	<p class="mediaCaption">Templatesにある「Welcome to Sketch」をローカル共有した状態（縦長なので下はカットしてます）</p>
+</p>
 <p>当然、モバイルデバイスのブラウザからもアクセス可能です。</p>
 <p>Sketch Mirrorが不要になるかも？という感じですが、モバイルデバイスでアクセスする場合、アドレスバーなどを隠せるブラウザでないと確認の邪魔になります。また解像度がやや低めのため、アプリのUI確認はやはりMirrorは必要です。</p>
 <h2 id="機能強化">機能強化</h2>
 <p>こちらは軽くご紹介。計測関連が地味にアップデートしてます。</p>
 <h3 id="グループ内オブジェクトとの計測が可能に">グループ内オブジェクトとの計測が可能に</h3>
-<p><!-- raw HTML omitted -->Option<!-- raw HTML omitted -->でオブジェクトの間隔を計測することができましたが、さらに<!-- raw HTML omitted -->Command<!-- raw HTML omitted -->を押すことで、グループ内オブジェクトとの計測をすることができるようになりました。</p>
-<!-- raw HTML omitted -->
+<p><kbd>Option</kbd>でオブジェクトの間隔を計測することができましたが、さらに<kbd>Command</kbd>を押すことで、グループ内オブジェクトとの計測をすることができるようになりました。</p>
+<div class="media">
+	<img src="../../../assets/img/2015/sketch-has-been-updated-to-3.4/drill-down.png" alt="">
+	<p class="mediaCaption">グループ化されたアイコン内でも計測が可能に</p>
+</div>
 <h3 id="レイヤーリストから計測が可能に">レイヤーリストから計測が可能に</h3>
-<p>レイヤーリスト上で<!-- raw HTML omitted -->Option<!-- raw HTML omitted -->を押しておくと、マウスオーバーしてレイヤーと選択中のレイヤーとの計測が可能になりました。</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<p>レイヤーリスト上で<kbd>Option</kbd>を押しておくと、マウスオーバーしてレイヤーと選択中のレイヤーとの計測が可能になりました。</p>
+<div class="media">
+	<img src="../../../assets/img/2015/sketch-has-been-updated-to-3.4/hover-layer-list.png" alt="">
+</div>
+<hr class="postscript">
 <p>他にも</p>
 <ul>
 <li>塗りからグラデーションへ変更時、ベースが塗りのカラーに</li>
 <li>書き出しプレビューで透明部分を市松模様に</li>
 <li>オートセーブをPreferencesから切り替え可能</li>
 <li>Android向けのアイコン用テンプレートの追加</li>
-<li>レイヤーリストで<!-- raw HTML omitted -->Option<!-- raw HTML omitted -->を押すと、ロックと表示の切り替えができるように</li>
+<li>レイヤーリストで<kbd>Option</kbd>を押すと、ロックと表示の切り替えができるように</li>
 </ul>
 <p>など、細かなリファインやバグフィックスも含めて、たくさんのアップデートがあります。</p>
 <p><a href="http://www.sketchapp.com/support/updates/sketch-3.4/">Bohemian Coding - Sketch 3.4</a></p>
 <p>あと、SketchToolをインストールしている方は、こちらもアップデートしておきましょう。</p>
 <p><a href="http://www.sketchapp.com/tool/">Bohemian Coding - SketchTool</a></p>
 <p>残念ながら、OpenTypeフォントの行間に関するバグは放置されたままなので、みなさんでバグレポート送りましょう！</p>
-<!-- raw HTML omitted -->
+<p class="notics">
+  <b>Sketchの基本。</b>というSketch（Sketch 3）の基本操作にフォーカスした電子書籍をリリースしました。詳しくはこちらの「<a href="http://creative-tweet.net/sketch-3-basics/">Sketchの基本。</a>」のページをご覧ください。
+</p>
+Sketch 3.4に合わせて内容をアップデート済みです。また、[メニューの日本語への意訳](/blog/2014/04/japanese-translation-for-sketch3.html)も更新していますので、こちらもよろしくお願いします。
 		</div>
 
 		<section class="article-taxonomy">

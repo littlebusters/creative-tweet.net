@@ -49,8 +49,12 @@
 		
 		<div class="content-main">
 			
-			<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+			<p class="media">
+  <img src="../../../assets/img/2013/2013-04-24-used-the-mixture/used_the_mixture_main.png" alt="" />
+</p>
+<p class="notics-alert">
+この記事はmixtureの古いバージョンで書かれたものです。またmixture自体はフリー化し、メンテナンスが行われていないため、使用する場合はご注意ください。できれば他のStatic Site Generatorに乗り換えることをお勧めします。
+</p>
 <p>ブログ自体はWordPressを使用していますが、それ以外のディレクトリは静的HTMLを使っています。特にFireworksの拡張機能を配布しているページは、配布物が増えるたびにグローバルナビを書き換えたり、コンテンツの細かいところを書き換えたりとちょっと面倒です。ここで、気になっていたMIXTUREを使って再構築した備忘録ついでに。</p>
 <dl>
 <dt>MIXTURE についてはこちら</dt>
@@ -70,15 +74,25 @@
 <p>MIXTURE は頻繁にアップデートされているため、この内容の通りテストしても動かない場合がありますので、ご了承ください。</p>
 <h2 id="準備">準備</h2>
 <p>まずは、MIXTURE をダウンロードします。</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<dl class="links">
+  <dt>
+    MIXTUREのダウンロード
+  </dt>
+  <dd>
+    <a href="http://mixture.io/#download" target="_blank" title="Mixture - A rapid prototyping and static site generation tool for designers and developers">Mixture &#8211; A rapid prototyping and static site generation tool for designers and developers</a>
+  </dd>
+</dl>
 <p>インストールして起動すると、最初にベースとする Boilerplate を選ぶ画面になります。Bootstrap を始め、BourbonやSassaparillaなども選択できますし、一から構築するための「Empty」もあります。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-04-24-used-the-mixture/mixture_fig3_boilerplates.png" alt="" />
+</p>
 <p>今回は再構築ですので、「Empty」を選んですすめました。</p>
 <p>Boilerplateを選ぶと、フォルダを選ぶダイアログが表示されます。ここで選んだフォルダに、必要なファイルがダウンロードされるので、いちいちサイトからダウンロードするという手間がかかりません。</p>
 <h2 id="ダウンロードされたフォルダの中身">ダウンロードされたフォルダの中身</h2>
 <p>選んだフォルダには以下のような構成になります。（BoilerplateがEmptyの場合）</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-04-24-used-the-mixture/mixture_fig1_structure.png" alt="" />
+</p>
 <dl>
 <dt><strong>assets</strong></dt>
 <dd>共通で使うリソースを入れるフォルダになります。</dd>
@@ -92,7 +106,9 @@
 <p>選んだBoilerplateによっては、compassフォルダがあったりBourbonフォルダがあったります。（あとpackage.pngとfavicon.icoがありますが、今更 説明は不要でしょう）</p>
 <h2 id="とりあえずプレビューしてみる">とりあえずプレビューしてみる</h2>
 <p>ダウンロードが終わり準備ができると、下図のようなウィンドウが表示されます。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-04-24-used-the-mixture/mixture_fig4_dafaultwindow.png" alt="" />
+</p>
 <p>左のメニューですが、</p>
 <dl>
 <dt><strong>ToDo</strong></dt>
@@ -133,7 +149,10 @@
 </code></pre><p>さらに、index.liquid のどこかに、</p>
 <pre><code>{{ model.twitter }}
 </code></pre><p>と記述すれば、「@littlebusters」と出力されます（&ldquo;model&quot;はnamescpace）。完全にパターン化しておけば、JSONファイルの変更だけで、コンテンツを更新することも可能です。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-04-24-used-the-mixture/mixture_fig7_globalmodel.png" alt="" />
+  <span class="mediaCaption">画像内が {{ twitter }} になっていますが、正しくは {{ model.twitter }} です。</span>
+</p>
 <h2 id="liquid-のテンプレートタグ">Liquid のテンプレートタグ</h2>
 <p>前項で実は記述してしまったんですが、Liquidテンプレートタグは以下のように書きます。</p>
 <pre><code>{{ &quot;app.css&quot; | asset_url | stylesheet_tag }}
@@ -142,21 +161,29 @@
 <pre><code>{{ &quot;imagefilename.png&quot; | asset_url }}
 </code></pre><p>と記述してやれば、ファイルのパスを自動的に生成します。同じファイル名がある場合でも、正しいファイルにリンクされてました。（細かいテストはしてないので、どういう動作になっているかわかりませんが…）</p>
 <p>他にも分岐（if）だったり、繰り返し（for）もあり、modelsと併用すれば、リストの書き出しなんかも簡単にできるようです。これ以外のタグやフィルターについては、ドキュメントを参照してください。</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<dl class="links">
+  <dt>
+    MIXTURE のドキュメントサイト
+  </dt>
+  <dd>
+    <a href="http://docs.mixture.io/" target="_blank" title="Welcome : Mixture Documentation">Welcome : Mixture Documentation</a>
+  </dd>
+</dl>
 <h2 id="画像の最適化とcssやjsのminifier">画像の最適化とCSSやJSのMinifier</h2>
 <p>画像やCSS・Javascriptをフォルダに入れるだけで、ファイルの最適化やMinifierが行われます。</p>
 <p>MIXTUREで最適化されたPNGファイルを見てみましたが、不要な情報を削除しているだけのようです。本格的にファイルサイズを下げるなら他のツールが必要になりますが、とりあえずフォルダに入れるだけで最適化されるのは楽ですね。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-04-24-used-the-mixture/mixture_fig6_pngminifier.png" alt="オリジナルのFireworks PNGは193KB、MIXTUREで最適化されたPNGは61KB、ImageOptimaで最適化されたPNGは139KB" />
+</p>
 <p>CSSやJavascriptはホントに入れるだけで、hogehoge.min.jsやfugafuga.min.cssが生成されます。</p>
 <p>この辺りの有効化・無効化は、mixture.jsonで設定できるようです。</p>
 <h2 id="書き出し">書き出し</h2>
 <p>一通り組み上がったら、Toolsにある「Convert to HTML」をしてみましょう。「convert_html」というフォルダが生成され、その中に必要なリソースが保存されます。そのままサーバにアップすればコンテンツを公開することができます。ただし、asset_urlで取得しているものは、うまく取得できていないことがありますので、念のため確認しましょう（特にWindows版）。</p>
-<!-- raw HTML omitted -->
+<hr class="postscript" />
 <p>というわけで、駆け足の説明になりましたが、とりあえず雰囲気でサクっと作ってみるとか、CMS までは入らないけど、少し簡単な方法で静的HTMLを作りたいという時の選択肢にはなるかなと思います。</p>
 <p>クライアントにExcelなどのスプレッドシートからJSONを出力できるマクロを提供しておけば、MIXTUREと組み合わせてHTMLを書かなくてもページを作成するとか（大規模なサイトには向きませんが）、オレオレフレームワークを作ってみるとか、いろいろとできそうな感じです。</p>
 <p>公開時は有償だったのですが、どうやらビジネスモデルに問題があったようでフリー化されました。アップデートは提供するということなんですが、内蔵されているSassが若干古くなってるので、本気で使うには少しつらいかもしれません…</p>
-<p>間違いがありましたら、Twitter（<a href="http://twitter.com/littlebusters">@littlebusters</a>） や Facebook ページ（<a href="http://www.facebook.com/creative.tweet">creative tweet.</a>）などにお知らせいただけると幸いです。<!-- raw HTML omitted --></p>
+<p>間違いがありましたら、Twitter（<a href="http://twitter.com/littlebusters">@littlebusters</a>） や Facebook ページ（<a href="http://www.facebook.com/creative.tweet">creative tweet.</a>）などにお知らせいただけると幸いです。</section></p>
 		</div>
 
 		<section class="article-taxonomy">

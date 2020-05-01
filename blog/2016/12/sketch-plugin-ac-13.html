@@ -50,10 +50,13 @@
 		<div class="content-main">
 			
 			<p>Sketchプラグインを適当に選んで紹介していく、<a href="http://www.adventar.org/calendars/2013">Sketch Plugin Advent Calendar 2016</a> 13日目は、書き出すSVGを自動的に圧縮してくれる「SVGO Compressorプラグイン」です。</p>
-<!-- raw HTML omitted -->
+<dl class="links">
+	<dt>GitHub</dt>
+	<dd><a href="https://github.com/bohemiancoding/svgo-compressor">https://github.com/bohemiancoding/svgo-compressor</a></dd>
+</dl>
 <p>2016年は近年まれに見る「SVG元年」ではなかったかと個人的には思っていますが、そのSVGの書き出しに欠かせないプラグインです。</p>
 <p>実はターミナルを使って余計な要素を書き出さないよう、<a href="https://www.sketchapp.com/learn/documentation/preferences/">ある程度の設定はできる</a>のですが、このプラグインは圧縮エンジンに<a href="https://github.com/svg/svgo">SVGO</a>を使っているので、その比じゃないぐらい圧縮が可能です。</p>
-<!-- raw HTML omitted -->
+<p class="code-comment">プラグインを使っていない時のコード</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
 &lt;svg width=&quot;150px&quot; height=&quot;150px&quot; viewBox=&quot;0 0 150 150&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;
     &lt;!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch --&gt;
@@ -71,7 +74,7 @@
         &lt;/g&gt;
     &lt;/g&gt;
 &lt;/svg&gt;
-</code></pre><!-- raw HTML omitted -->
+</code></pre><p class="code-comment">プラグインを使っている時のコード</p>
 <pre><code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;150&quot; height=&quot;150&quot; viewBox=&quot;0 0 150 150&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;
   &lt;defs&gt;
     &lt;rect id=&quot;a&quot; width=&quot;150&quot; height=&quot;150&quot;/&gt;
@@ -83,9 +86,11 @@
 &lt;/svg&gt;
 </code></pre><p>使い方も簡単で、プラグインをインストールするだけ。右下のExport Objectボタンや「<strong>File</strong> → <strong>Export&hellip;</strong>」で書き出しをすれば自動的に圧縮してくれます（書き出しのアクションがトリガーになっているため、デスクトップへドラッグ＆ドロップする場合などは対象外です）。</p>
 <p>また、SVGOのオプションも使えるようになっており、プラグインメニューから「<strong>About SVGO Compressor</strong>」を選択し、表示されるウィンドウの［Edit SVGO Settings&hellip;］ボタンを押せば、設定のJSONファイルを編集することができます。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+	<img src="../../../assets/img/2016/spac2016-13/svgo-compressor.png" alt="">
+</p>
 <p>各種オプションについては、<a href="https://github.com/svg/svgo#what-it-can-do">SVGOのGitHub</a>に掲載されているのでそちらをご覧ください。</p>
-<!-- raw HTML omitted -->
+<hr>
 <p>それでは、楽しいSketchライフを。</p>
 		</div>
 

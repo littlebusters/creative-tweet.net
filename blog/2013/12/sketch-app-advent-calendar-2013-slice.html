@@ -51,43 +51,76 @@
 			
 			<p><a href="http://www.adventar.org/calendars/99">Sketch.app Advent Calender 2013</a> 15日目の記事です。</p>
 <p>今回は、Sketch.appのスライスについて解説していきます。</p>
-<!-- raw HTML omitted -->
+<p class="notics">
+  <b>Sketchの基本。</b>というSketch（Sketch 3）の基本操作にフォーカスした電子書籍をリリースしました。詳しくはこちらの「<a href="http://creative-tweet.net/sketch-3-basics/">Sketchの基本。</a>」のページをご覧ください。
+</p>
+<p class="notics">
+  この記事はSketch 2を元にした記事です。最新版の動作とは異なる可能性が高いため、参考程度にご覧ください。
+</p>
+<dl class="links">
+  <dt>
+    記事の一覧
+  </dt>
+  <dd>
+    <a href="http://creative-tweet.net/blog/2013/11/sketch-app-advent-calendar-2013.html">オレオレSketch.app Advent Calendar 2013やりますよ。 | creative tweet.</a>
+  </dd>
+</dl>
 <p>Sketch.appのスライスは、書き出しフォーマットとその詳細を個別に設定できないことを除けば、割と使いやすくできています。その設定も結局は、JPEGminiやImageAlphaなどのツールを通すので、できないならできないでなんとかなります。</p>
 <p>そのスライスを作成するには、書き出しモードから自分でスライスを設定するか、オブジェクトを基準にしてスライスを作成する方法の2つがあります。</p>
-<p>自分でスライスを設定するには、まずは［File］から［Export…］を選び、書き出しモードにします。ショートカットは<!-- raw HTML omitted -->Command<!-- raw HTML omitted -->＋<!-- raw HTML omitted -->Shift<!-- raw HTML omitted -->＋<!-- raw HTML omitted -->E<!-- raw HTML omitted -->です。「Inspector」が「Slices」に変わっていれば、書き出しモードになっています。この状態でアートボード上をドラッグすれば、スライスを作成できます（ちなみに、スライス on スライスも可能です）。</p>
-<!-- raw HTML omitted -->
+<p>自分でスライスを設定するには、まずは［File］から［Export…］を選び、書き出しモードにします。ショートカットは<kbd>Command</kbd>＋<kbd>Shift</kbd>＋<kbd>E</kbd>です。「Inspector」が「Slices」に変わっていれば、書き出しモードになっています。この状態でアートボード上をドラッグすれば、スライスを作成できます（ちなみに、スライス on スライスも可能です）。</p>
+<p class="media">
+  <img src="../../../assets/img/2013/2013-12-15-sketch-app-advent-calendar-2013-slice/slice-export-mode.png" alt="書き出しモード">
+</p>
 <p>書き出しモードにする際、スライスが1つも設定されていない場合は、「アートボードを基準にしたスライスを作りますか？」というダイアログが表示されます。アートボードを丸ごと書き出す場合は、「Create」を選んでください。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-12-15-sketch-app-advent-calendar-2013-slice/slice-dialoge.png" alt="スライスを作成するダイアログ">
+</p>
 <p>オブジェクトを基準にスライスを作成する場合は、オブジェクトを選択して［File］にある［Add Slice For Selection］を選びます（画像ではショートカットがありますが、個別で設定しているもので、デフォルトではありません）。通常はこちらを使うことが多いでしょう。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-12-15-sketch-app-advent-calendar-2013-slice/slice-add-slice.png" alt="選択範囲からスライスの作成">
+</p>
 <p>選択範囲から作成する場合は、オブジェクトごとにスライスが作成されます。グループ化されている場合は、グループで1スライスになります。スライス名はオブジェクト名がそのままは反映されますので、きちんと名前を付けておきましょう。</p>
-<p>書き出しモードはスライス部分以外をクリックすると、書き出しモードが終了してしまうので、クリックしたい衝動に駆られたら、迷わずスライスをクリックしましょう。<!-- raw HTML omitted -->Tab<!-- raw HTML omitted -->キーでの選択や、レイヤーリストがスライスリストになっているので、ここでも選択できます。</p>
+<p>書き出しモードはスライス部分以外をクリックすると、書き出しモードが終了してしまうので、クリックしたい衝動に駆られたら、迷わずスライスをクリックしましょう。<kbd>Tab</kbd>キーでの選択や、レイヤーリストがスライスリストになっているので、ここでも選択できます。</p>
 <h2 id="slicesパネル">Slicesパネル</h2>
 <h3 id="export-all">Export All</h3>
-<p>現在のドキュメントで設定されているスライスをすべて書き出します。ちなみに、ボタンを押さなくても<!-- raw HTML omitted -->Enter<!-- raw HTML omitted -->キーで保存ダイアログを表示できます。ただし、他のアートボードで設定しているスライスも書き出されるので、ご注意を。</p>
+<p>現在のドキュメントで設定されているスライスをすべて書き出します。ちなみに、ボタンを押さなくても<kbd>Enter</kbd>キーで保存ダイアログを表示できます。ただし、他のアートボードで設定しているスライスも書き出されるので、ご注意を。</p>
 <h3 id="スライス名とサイズ座標">スライス名とサイズ・座標</h3>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-12-15-sketch-app-advent-calendar-2013-slice/slice-basic-info.png" alt="スライスの情報">
+</p>
 <p>現在選択しているスライスの名前やサイズ・座標です。ここで変更すれば、スライスの変更ができます。</p>
 <h3 id="書き出すオブジェクトレイヤーの選択">書き出すオブジェクト（レイヤー）の選択</h3>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-12-15-sketch-app-advent-calendar-2013-slice/slice-select-objects.png" alt="書き出すオブジェクトの選択">
+</p>
 <p>「Include all layers」を選択すると、範囲内のオブジェクトを全て含んだ状態で書き出します。</p>
 <p>「Only include the following」は、下のリストで選択したオブジェクトのみを書き出します。リストには、選択しているスライスの範囲にかかっているオブジェクトが表示されます。</p>
 <p>本来は透過させるオブジェクトでも、作成中は背景を入れたりすることがありますが、そういう場合に背景のチェックマークを外しておけば、背景のない状態で書き出しができます。</p>
 <p>が、スライスが作成された直後の状態で、親になっているグループにチェックが入っていれば、それに内包されるオブジェクトにチェックがなくとも全て書き出されます。一部だけを書き出したい場合は、親についているチェックを一旦外し、書き出したい部分だけにチェックを入れる必要があります。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-12-15-sketch-app-advent-calendar-2013-slice/slice-select-children.png" alt="個別に書き出すには">
+</p>
 <h3 id="trim-transparent-pixels">Trim transparent pixels</h3>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-12-15-sketch-app-advent-calendar-2013-slice/slice-trim-transparent.png" alt="透明なピクセルを削除">
+</p>
 <p>ここをチェックしておくと、オブジェクトの境界より大きなスライスを作成していても、透明部分のピクセルを自動的にカットしてくれます。正確にスライスを作成しなくても大丈夫です。</p>
 <h3 id="also-export-as">Also export as</h3>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-12-15-sketch-app-advent-calendar-2013-slice/slice-export-hdpi.png" alt="同時に別解像度を書き出すオプション">
+</p>
 <p>そのままですが、@2xまたは@1xを同時に書き出す場合にチェックしておきます。@1xで作成している場合は「Double size」を、@2xで作成している場合は「Half size」を選択します。</p>
 <h3 id="プレビュー--書き出し--他のアプリへ">プレビュー / 書き出し / 他のアプリへ</h3>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-12-15-sketch-app-advent-calendar-2013-slice/slice-exporting.png" alt="書き出しプレビューやアプリとの連携">
+</p>
 <p>左は小さくて見えづらいですが、現在選択しているスライスのサムネールです。これ自体をドラッグして、特定のフォルダに入れたりアートボードに配置したりできます。</p>
 <p>「Export」ボタンで現在のスライスを書き出します。ダイアログが表示されるので、書き出しフォーマットを選択して書き出しましょう。書き出せるフォーマットは「PNG」「JPG」「TIFF」「PDF」「EPS」「SVG」です。</p>
 <p>右はメールやメッセージ、Twitterなどに渡すことができます。</p>
 <h3 id="create-slice-form-artboards">Create Slice form Artboards</h3>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-12-15-sketch-app-advent-calendar-2013-slice/slice-create-artboard.png" alt="アートボードからスライスを作成">
+</p>
 <p>アートボードの大きさを基準にしたスライスを作成できます。</p>
 		</div>
 

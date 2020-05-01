@@ -51,17 +51,31 @@
 			
 			<p>最近はmixture を使って組み上げることが多いのですが、使っている理由の一つにライブリロードがあります。</p>
 <p>正直ライブリロードだけなら珍しいことはないのですが、ブラウザに拡張機能などを入れることなく1つのブラウザを操作するだけで、mixtureのビルドインサーバーに接続しているすべてのブラウザ（デバイスを問わず）のページ移動を同期するため、快適な確認作業とスクリーンショット撮りができるのです。（逆に、各ブラウザで別々のページを確認できないのですが）</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<dl class="links">
+  <dt>
+    mixtureが公開しているブラウジング同期の動画
+  </dt>
+  <dd>
+    <a href="http://www.youtube.com/watch?v=ER-la4wunyo&#038;feature=share&#038;list=LLzjZ5b8kZQGmAjX2dzlzY_Q">mixture  Device Lab 18.12.2012</a>
+  </dd>
+</dl>
 <p>スマートフォンやタブレットはもちろん、3DSやPSVITAまで同期していることが分かります。</p>
 <p>で、制作途中でページ全体のスクリーンショットを撮る場合、PCはPhamtom.jsとCasper.jsでサクッと撮れるわけですが、iOSはちまちまと各ブラウザを操作してスクリーンショットを撮って…と、とても面倒な作業になります。これが同期機能とアプリを組み合わせることで、少しラクができますよという話です。</p>
 <p>ちなみに私が使っているアプリは、岡山を中心にいろいろと活躍されている、ニイハチヨンサン 大月さん作の「<a href="https://itunes.apple.com/jp/app/rollpaper/id461036409?mt=8">RollPaper</a>」です（なのでタイトルに入れました）。RollPaperでmixtureのビルトインサーバーに接続しておけば、PCのブラウザを操作すればRollPaper側も勝手に移動しますので、ページロードが終わったらスクリーンショットを撮るためのボタンを押すだけです。</p>
 <p>同期機能については、他ツール（Prepros・CodeKit・Hammer）にはないですし、Adobe Edge Inspectは同期しますが、ページ全体のスクリーンショットを撮ることができないため、mixtureとRollPaper（とか他のアプリ）の組み合わせは、覚えておいて損はないのではと思います。（今回は実機でのレンダリング結果が必要という場合なので、とりあえずならメディアクエリを仕込んでscreenshot.jsで処理した方が絶対的に早いですが）</p>
 <p>ちなみに、同期される側（リモート）の読み込みが終わる前にメインで操作しているブラウザ（ホスト）で移動してしまうと、リモート側の読み込み完了がトリガーになって、ホスト側が移動してしまうので注意が必要です。</p>
 <p>願わくば、ページロードが終わったら勝手にスクリーンショットを撮るオプションがあるとうれしいです＞大月さん</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<dl class="links">
+  <dt>
+    <a href="http://mixture.io/">mixture  &#8211; A rapid prototyping and static site generation tool for designers and developers</a>
+  </dt>
+  <dt>
+    <a href="http://2843.jp/rollpaper/">RollPaper（ロールペイパー） &#8211; iPhone/iPad App can take the screenshot of the whole of a Web page</a>
+  </dt>
+  <dd>
+    RollPaper公式ページ。<a href="https://itunes.apple.com/us/app/id461036409">iTunes Store</a>
+  </dd>
+</dl>
 		</div>
 
 		<section class="article-taxonomy">

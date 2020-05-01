@@ -17,8 +17,12 @@
       <pubDate>Wed, 24 Apr 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2013/04/used-the-mixture.html</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+      <description>&lt;p class=&#34;media&#34;&gt;
+  &lt;img src=&#34;../../assets/img/2013/2013-04-24-used-the-mixture/used_the_mixture_main.png&#34; alt=&#34;&#34; /&gt;
+&lt;/p&gt;
+&lt;p class=&#34;notics-alert&#34;&gt;
+この記事はmixtureの古いバージョンで書かれたものです。またmixture自体はフリー化し、メンテナンスが行われていないため、使用する場合はご注意ください。できれば他のStatic Site Generatorに乗り換えることをお勧めします。
+&lt;/p&gt;
 &lt;p&gt;ブログ自体はWordPressを使用していますが、それ以外のディレクトリは静的HTMLを使っています。特にFireworksの拡張機能を配布しているページは、配布物が増えるたびにグローバルナビを書き換えたり、コンテンツの細かいところを書き換えたりとちょっと面倒です。ここで、気になっていたMIXTUREを使って再構築した備忘録ついでに。&lt;/p&gt;</description>
     </item>
     

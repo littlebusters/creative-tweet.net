@@ -64,15 +64,31 @@
 <h2 id="インストール">インストール</h2>
 <p>Rubyが既にインストールされている前提で話を進めます。まだインストールしていない場合は、Google先生に聞いてみてください。あと定番の文言ですが、以下の手順は自己責任でお願いします。</p>
 <h3 id="ドキュメント">ドキュメント</h3>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<ul class="links">
+  <li>
+    <a href="https://github.com/guard/guard-livereload">guard/guard-livereload · GitHub</a>
+  </li>
+  <li>
+    <a href="https://github.com/guard/guard#installation">guard/guard · GitHub</a>
+  </li>
+</ul>
 <h3 id="rubyのライブラリ関連をインストール">Rubyのライブラリ関連をインストール</h3>
 <p>ライブラリと言いながら、まずはあとでライブラリをインストールのに必要なDevKitをインストールしておきます。</p>
-<!-- raw HTML omitted -->
+<ul class="links">
+  <li>
+    <a href="http://rubyinstaller.org/downloads/">Downloads</a>
+  </li>
+</ul>
 <p>インストールについては、こちらを参考にしました。</p>
-<!-- raw HTML omitted -->
+<ul class="links">
+  <li>
+    <a href="http://www.rubylife.jp/railsinstall/rails/index4.html">DevKitのインストール - Railsインストール</a>
+  </li>
+</ul>
 <p>左のダウンロードできるファイルの一覧に「Development Kit」という項目がありますので、それをダウンロードします。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+<img alt="Development Kitをダウンロード" src="../../../assets/img/2013/2013-02-06-guard-livereload-installation/guard-livereload_fig01.png">
+</p>
 <p>ダウンロードができたら、Cドライブ直下に「devkit」というフォルダを作っておき、その中にダウンロードしたファイルを解凍します。</p>
 <p>続けてみんな大好き「黒い画面」ことコマンドプロンプトを立ち上げ、ダウンロードファイルを解凍したフォルダ<code>C:\devkit</code>へ移動します。</p>
 <pre><code>$ cd C:\devkit  
@@ -95,8 +111,14 @@
 <h2 id="firefoxのセットアップ">Firefoxのセットアップ</h2>
 <p>私のメインブラウザがFirefoxなので、それ以外は試してませんが、多分大丈夫だと思います。</p>
 <p>Firefoxにアドオンを追加しますが、<a href="http://livereload.com/">LiveReload.com</a>からリンクされている、ver.2.0.8だとうまく動かないため、2.0.9をインストールします。が、おそらく正式にオリジナルの作者がビルドしたものでなく、StackOverFlowなどに投稿されている修正を2.0.8に施してどなたかがビルドされたものです。（詳細は追えてませんが、ザックリと流れを見た感じ）</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<ul class="links">
+  <li>
+    <a href="https://github.com/downloads/siasia/livereload-extensions/LiveReload-2.0.9.xpi">2.0.9ダウンロード（直接リンク）</a>
+  </li>
+  <li>
+    <a href="https://github.com/livereload/livereload-extensions/pull/8">ことの顛末はこの辺り</a>
+  </li>
+</ul>
 <h2 id="監視を開始する">監視を開始する</h2>
 <p>ここから「黒い画面」に戻ります。監視したいフォルダに移動し初期化します。ここでは、C直下に<code>www</code>というフォルダを作成し、さらにその中に<code>htdocs</code>というフォルダを作成、<code>htdocs</code>を監視フォルダにしています。</p>
 <pre><code>$ cd C:\www\htdocs  
@@ -112,13 +134,15 @@ end
 </code></pre><p>きちんと起動すると次のようなメッセージが表示されます。</p>
 <pre><code>00:00:00 - INFO - LiveReload 1.6 is waiting for a browser to connect.  
 </code></pre><p>この状態で、ブラウザ側のアドオンをクリックすると接続します。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+<img class="" alt="インストールしたアドオンのマークをクリックし、赤い斜線が入った状態にします。" src="../../../assets/img/2013/2013-02-06-guard-livereload-installation/guard-livereload_fig02.png">
+</p>
 <p>うまく接続ができると、以下のように表示されます。</p>
 <pre><code>00:00:00 - INFO - Browser connected.  
 </code></pre><p>上のメッセージの後すぐに下記のメッセージが出る場合は、何回かアドオンのオン/オフを繰り返すか、　Firefoxを再起動してみてください。</p>
 <pre><code>00:00:00 - INFO - Browser disconnected.  
 </code></pre><p>これでguardfileで指定されたファイルを更新すると、ブラウザが自動的にリロードされるようになりました。</p>
-<!-- raw HTML omitted -->
+<hr class="postscript" />
 <p>「Windowsじゃなくて、Macを使えよ」って話なのですが、いろいろとオトナの事情で、ね…ということで。もっといいやり方があるよとか、ここ違うよとかあれば、@
 <a href="https://twitter.com/littlebuster">littlebusters</a>や<a href="https://www.facebook.com/creative.tweet">Facebookページ</a>までご指摘いただけると幸いです。</p>
 		</div>

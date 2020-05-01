@@ -56,7 +56,7 @@
       <pubDate>Thu, 06 Dec 2012 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2012/12/retina-image-exporter.html</guid>
-      <description>&lt;p&gt;&lt;!-- raw HTML omitted --&gt;Fireworks Lover Advent Calendar 2012&lt;!-- raw HTML omitted --&gt;の7日目の記事です。&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a title=&#34;Fireworks Lover Advent Calendar 2012&#34; href=&#34;http://www.adventar.org/calendars/14&#34; target=&#34;_blank&#34;&gt;Fireworks Lover Advent Calendar 2012&lt;/a&gt;の7日目の記事です。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -65,7 +65,7 @@
       <pubDate>Thu, 25 Oct 2012 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2012/10/fw-ex-paste-from-ai.html</guid>
-      <description>&lt;p&gt;しばっちさんがポストされていた「&lt;!-- raw HTML omitted --&gt;IllustratorからFireworksに狙い通りの幅でペーストする | Webデザインのタネ&lt;!-- raw HTML omitted --&gt;」をもとにコマンドを作成しました。&lt;/p&gt;</description>
+      <description>&lt;p&gt;しばっちさんがポストされていた「&lt;a title=&#34;IllustatorからFireworksに狙い通りの幅でペーストする&#34; href=&#34;http://blog.1dz.jp/?eid=786&#34;&gt;IllustratorからFireworksに狙い通りの幅でペーストする | Webデザインのタネ&lt;/a&gt;」をもとにコマンドを作成しました。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -103,7 +103,9 @@
       <pubDate>Tue, 24 Jan 2012 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2012/01/font-mixer-100.html</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
+      <description>&lt;p class=&#34;notics-alert&#34;&gt;
+この記事は、Font Mixer 1.0.0を公開した時のものです。
+&lt;/p&gt;
 &lt;p&gt;Fireworksの混植拡張機能「Font Mixer」を作成しました。&lt;/p&gt;
 &lt;p&gt;Fireworksで和文フォント×和文フォントの混植をする場合、フォントを変更したいテキストを選択しフォントを変更という作業を繰り返す必要があり、非常に手間がかかってしまいます。この手間を大幅に軽減する、Fireworks拡張機能を作成しました。&lt;/p&gt;</description>
     </item>

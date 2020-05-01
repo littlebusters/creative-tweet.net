@@ -73,7 +73,10 @@
 <pre><code>fw.selection;
 </code></pre><p>で、現在選択しているオブジェクトの情報を配列で取得できます。複数選択している場合は添字の小さいものが前面にあるオブジェクトになります。配列の中身はObject型のデータです。</p>
 <h3 id="オブジェクトの構造">オブジェクトの構造</h3>
-<!-- raw HTML omitted -->
+<p class="media">
+<img src="../../../assets/img/2012/2012-02-05-font-mixer-memo/textruns_object.png" alt="">
+<span class="mediaCaption">四角内はプロパティ名です</span>
+</p>
 <p>取得したobjectからFont Mixerのテキスト処理で使う、TextRuns objectを取得します。</p>
 <p>TextRuns objectの中には、TextAttrs objectとSingleTextRun objectが格納されています。TextAttrs objectは、テキストオブジェクト自体が持つサイズや行揃えなどのテキストプロパティです。</p>
 <p>ただし、複数のテキストプロパティが存在する場合、1文字目のテキストプロパティがTextAttrs objectに格納されるようなので、テキストオブジェクト自体というより、「1文字目の情報」といった方がいいかもしれません。</p>

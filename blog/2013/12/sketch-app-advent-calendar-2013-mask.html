@@ -50,14 +50,33 @@
 		<div class="content-main">
 			
 			<p><a href="http://www.adventar.org/calendars/99">Sketch.app Advent Calender 2013</a> 20日目の記事です。今回はマスクの使い方について解説をお届けします。</p>
-<!-- raw HTML omitted -->
+<p class="notics">
+  <b>Sketchの基本。</b>というSketch（Sketch 3）の基本操作にフォーカスした電子書籍をリリースしました。詳しくはこちらの「<a href="http://creative-tweet.net/sketch-3-basics/">Sketchの基本。</a>」のページをご覧ください。
+</p>
+<p class="notics">
+  この記事はSketch 2を元にした記事です。最新版の動作とは異なる可能性が高いため、参考程度にご覧ください。
+</p>
+<dl class="links">
+  <dt>
+    記事の一覧
+  </dt>
+  <dd>
+    <a href="http://creative-tweet.net/blog/2013/11/sketch-app-advent-calendar-2013.html">オレオレSketch.app Advent Calendar 2013やりますよ。 | creative tweet.</a>
+  </dd>
+</dl>
 <p>マスクの作り方は2種類ありますので、下の画像のようにオブジェクトを準備して、これを元に解説していきます。あと、シェイプという言葉が出てきますが、パスのオブジェクトをシェイプとしています。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-12-20-sketch-app-advent-calendar-2013-mask/mask-objects.png" alt="テストで使うオブジェクト">
+</p>
 <h2 id="通常のマスク">通常のマスク</h2>
-<p>マスクとするシェイプを選択し、［Edit］→［Use as Mask］を選択すると、塗りの範囲がマスクになります。ショートカットは<!-- raw HTML omitted -->Command<!-- raw HTML omitted -->＋<!-- raw HTML omitted -->Control<!-- raw HTML omitted -->＋<!-- raw HTML omitted -->M<!-- raw HTML omitted -->です。</p>
-<!-- raw HTML omitted -->
+<p>マスクとするシェイプを選択し、［Edit］→［Use as Mask］を選択すると、塗りの範囲がマスクになります。ショートカットは<kbd>Command</kbd>＋<kbd>Control</kbd>＋<kbd>M</kbd>です。</p>
+<p class="media">
+  <img src="../../../assets/img/2013/2013-12-20-sketch-app-advent-calendar-2013-mask/mask-usemask.png" alt="マスクのメニュー">
+</p>
 <p>基本的に、マスクとしたシェイプより上にあるオブジェクトがマスクされます。またマスクのシェイプは、塗りや線の設定やドロップシャドウ・ブラーなどのエフェクトを掛けることができます。エフェクトに関してはマスクのシェイプのみに適用されるため、マスクされたオブジェクトには影響しません。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-12-20-sketch-app-advent-calendar-2013-mask/mask-mask-detail.png" alt="マスクの範囲">
+</p>
 <h2 id="画像のマスク">画像のマスク</h2>
 <p>ビットマップオブジェクトとシェイプを1つずつ選択した状態で、［Edit］→［Mask with Selected Shape］を選択すると、グループ化された状態でマスクがかかります。シェイプがビットマップオブジェクトの上にあってもOKです。</p>
 <p>メニューがグレーアウトしている場合は、シェイプがグループ化されていないか、余計なオブジェクトが選択されていないかを確認してください。</p>
@@ -65,16 +84,24 @@
 <h2 id="マスクの影響を無視する">マスクの影響を無視する</h2>
 <p>マスクとしたシェイプより上にあるオブジェクトがマスクされるため、先の例では文字が見えなくなってしまいました。マスクの影響を無視して、文字を見えるようにします。これも2種類あります。</p>
 <p>無効化したいオブジェクトを選択し、［Edit］→［Ignore Underlying Mask］を選択します。これにより、選択したオブジェクトから上にあるものがマスクから除外されます。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-12-20-sketch-app-advent-calendar-2013-mask/mask-ignore.png" alt="マスクを無視する">
+</p>
 <p>または、マスクはグループ化された外には影響しないため、必要なオブジェクトを選択しグループ化することでも、マスクの影響を限定できます。画像のマスクをした場合、グループ化されるのはこれが理由だと思います。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-12-20-sketch-app-advent-calendar-2013-mask/mask-grouping.png" alt="マスク関連のオブジェクトはグループ化">
+</p>
 <p>ただ、「Ignore Underlying Mask」をした場合、そのオブジェクトにマスクを無視するフラグが立てられるだけなので、フラグを立てたオブジェクトより上にあるオブジェクトをこれの下に入れると、マスクの影響を受けるようになります。従って手っ取り早く、グループ化した方がハンドリングしやすいと思います。</p>
 <h2 id="マスクの種類">マスクの種類</h2>
 <p>マスクには「Outline Mask」と「Alpha Mask」の2種類があり、［Edit］→［Mask Mode］から選択できます。マスクを適用した後からでも変更できます。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-12-20-sketch-app-advent-calendar-2013-mask/mask-type.png" alt="マスクの種類">
+</p>
 <p>「Outline Mask」はシェイプの塗りの範囲がマスクになります。塗りの色や不透明度などは、マスク自体に影響しません。</p>
 <p>「Alpha Mask」は、塗りのアルファ値に応じて、マスクしたオブジェクトを透明化します。塗りの設定から、グラデーションを選択し、各ポイントでアルファ値を設定します。塗りの色は無視されるので、どんな色を使っていても構いません。</p>
-<!-- raw HTML omitted -->
+<p class="media">
+  <img src="../../../assets/img/2013/2013-12-20-sketch-app-advent-calendar-2013-mask/mask-line.png" alt="マスクに線を適用">
+</p>
 <p>この場合は、アルファ値を線に設定すると、マスクを選択した際に表示されるバウンティボックスの範囲と線がかぶっている部分をマスクとして使うことができます。ただし、線のマスクに関しては色が有効になっているため、線の色を半透明にするとオブジェクトに影響します。また、マスクの範囲が特殊になるので、線の位置はInsideで使った方がよいでしょう。</p>
 		</div>
 

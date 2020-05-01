@@ -367,7 +367,8 @@
       <guid>https://creative-tweet.net/blog/2015/12/sketch-advent-calendar-17.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://qiita.com/advent-calendar/2015/sketch3&#34;&gt;Sketch 3 Advent Calendar 2015&lt;/a&gt;の17日目の記事です（公開日改ざん）。日課で“Sketch 3”や“Sketch3”とリアルタイム検索しているおじさんが、「Sketch 3でこれできないの？」という疑問に勝手に答えていきます。&lt;/p&gt;
 &lt;p&gt;今回はこちら。&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;</description>
+&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Open Pathだと位置変更できないから、いったんClose PathにしてPosition変更してから再度Open Pathにすれば大丈夫っぽい。もっと効率のいい方法あるんかな &lt;a href=&#34;https://t.co/XpiTBPLGWQ&#34;&gt;pic.twitter.com/XpiTBPLGWQ&lt;/a&gt;&lt;/p&gt;&amp;mdash; 高橋としゆき (@gautt) &lt;a href=&#34;https://twitter.com/gautt/status/678956068341350400&#34;&gt;2015, 12月 21&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
     </item>
     
     <item>
@@ -455,7 +456,7 @@
       <pubDate>Fri, 23 Jan 2015 00:00:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/tools/sketch_regexp_rename/detail.html</guid>
-      <description>これは何？ 選択したレイヤーを正規表現でリネームできるSketchプラグインです。 動作環境 ライセンス 使い方 対象とするレイヤーを選択します。 プラ</description>
+      <description>これは何？ 選択したレイヤーを正規表現でリネームできるSketchプラグインです。 動作環境 Sketch 3.2以降 ライセンス MITライセンス 使い方 対象とす</description>
     </item>
     
     <item>
@@ -564,7 +565,7 @@
       <pubDate>Sun, 11 May 2014 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/tools/sketch_css_sprite_mixin/detail.html</guid>
-      <description>これは何？ Sketch上のオブジェクトから、CSS PreprocessorのMixinsを生成するプラグインです。 動作環境 ライセンス 使い方 ア</description>
+      <description>これは何？ Sketch上のオブジェクトから、CSS PreprocessorのMixinsを生成するプラグインです。 動作環境 Sketch 3.2以降 ライセ</description>
     </item>
     
     <item>
@@ -582,7 +583,10 @@
       <pubDate>Wed, 16 Apr 2014 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2014/04/sketch-3-is-new-available.html</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;</description>
+      <description>&lt;p class=&#34;media&#34;&gt;
+  &lt;img src=&#34;../../assets/img/2014/2014/2014-04-16-sketch-3-is-new-available/sketch3-cover.png&#34; alt=&#34;sketch3-cover&#34;&gt;
+&lt;/p&gt;
+インターフェイスのリファインや細かな機能のブラッシュアップ、そして待望のシンボルを搭載してのメジャーアップデートになりました。</description>
     </item>
     
     <item>
@@ -833,7 +837,9 @@
       <pubDate>Sat, 30 Nov 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2013/11/sketch-app-advent-calendar-2013.html</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
+      <description>&lt;p class=&#34;media&#34;&gt;
+  &lt;img src=&#34;../../assets/img/2013/2013-11-30-sketch-app-advent-calendar-2013/sketchapp_advent_calendar_2013.png&#34; alt=&#34;sketch.app advent calendar 2013&#34; /&gt;
+&lt;/p&gt;
 &lt;p&gt;ということで、タイトルの通りです。酔った勢いで&lt;a href=&#34;http://www.adventar.org/calendars/99&#34;&gt;カレンダー&lt;/a&gt;立てちゃって、後悔するパターンですね。&lt;/p&gt;
 &lt;p&gt;12/1まであと数時間というところでの告知ですが、Sketch.appのアプリケーションウィンドウの解説から、ちょっとしたTipsまでいろいろと紹介していきます。&lt;/p&gt;</description>
     </item>
@@ -864,7 +870,9 @@
       <pubDate>Mon, 03 Jun 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2013/06/extending-sketchapp.html</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
+      <description>&lt;p class=&#34;notics-alert&#34;&gt;
+この記事はSketchの古いバージョンを元に書いた内容です。最新バージョンでは、動作が異なる場合があります。
+&lt;/p&gt;
 &lt;p&gt;以前の記事（&lt;a href=&#34;http://creative-tweet.net/blog/2013/05/introduction-of-thesketch.html&#34;&gt;ちょっと別の世界も見てみませんか？ベクターベースのグラフィックツール Sketchを紹介してみるよ。&lt;/a&gt;）で、Sketch.appはスクリプトによる拡張ができると書きました。しかしながらJSTalkという、新しく作るには若干学習コストのかかる言語で書く必要があり、なかなか手を出しにくい機能なのも事実です。&lt;/p&gt;
 &lt;p&gt;そんな中、Fireworksのコマンド集&lt;a href=&#34;https://github.com/bomberstudios/fireworks&#34;&gt;Orange Commands&lt;/a&gt;の中の人が、その一部をSketch.appプラグインに移植されています（しかも結構前から）。今回はこのプラグイン集を紹介してみたいと思います。&lt;/p&gt;</description>
     </item>
@@ -875,7 +883,10 @@
       <pubDate>Sun, 26 May 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2013/05/battle-of-design-tools.html</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;</description>
+      <description>&lt;p class=&#34;notics-alert&#34;&gt;
+このイベントは終了しました。
+&lt;/p&gt;
+Sketchフィーバーからずいぶん時間が経ってしまいましたが、大都会岡山で、「Ps / Ai / Fw / Sketch ガチンコバトル勉強会」を開催することになりました。基本的にはウェブサイトやアプリのユーザーインターフェイス などをつくる、いわゆる「デザイン」ツールの勉強会です。</description>
     </item>
     
     <item>
@@ -893,7 +904,7 @@
       <pubDate>Wed, 08 May 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/blog/2013/05/introduction-of-thesketch.html</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
+      <description>&lt;p class=&#34;notics-alert&#34;&gt;この記事はSketchの古いバージョンを元に書いた内容です。最新バージョンでは、動作が異なる場合があります。&lt;/p&gt;
 &lt;p&gt;SketchはOSX向けのベクターベースのグラフィックツールです。AdobeでいうところのPhotoshopというよりはFireworks（やIllustrator）に近く、ワイヤーフレームのような軽いものから、ユーザーインターフェイスのデザインやイラストレーション・アイコン作成などもこなせるアプリです。&lt;/p&gt;
 &lt;p&gt;実は先週あたりからこの記事をポツポツと書いていたら、&lt;a href=&#34;http://blogs.adobe.com/fireworks/2013/05/the-future-of-adobe-fireworks.html&#34;&gt;Fireworksが新規機能開発終了&lt;/a&gt;というビッグニュースが入ってきまして、こんなタイミングでこの記事を出したらｱﾜﾜﾜとか思いながらも、空気を読まずに公開します。&lt;/p&gt;
 &lt;p&gt;置き換えしようぜ！という意向ではなく、こんなアプリもあるよというスタンスですので、生暖かく見守ってあげてください。&lt;/p&gt;</description>

@@ -55,7 +55,12 @@
 			
 			<p>Font Mixerという、ひらがなやカタカナといった文字種を指定して、フォントファミリーやサイズなどを変更できるSketchプラグインをつくりました。</p>
 <p>そのUIをWebViewで作成したので、その手順と注意点をまとめてみました。</p>
-<!-- raw HTML omitted -->
+<dl class="links">
+<dt>プラグインのダウンロード</dt>
+<dd><a href="https://github.com/littlebusters/Sketch-Font-Mixer/releases/latest">Font Mixer - Sketch Plugin</a></dd>
+<dt>紹介記事</dt>
+<dd><a href="https://note.mu/littlebusters/n/n7e53f4328ac8">Sketchで文字種を指定して混植ができるプラグインをつくった</a></dd>
+</dl>
 <p>現在、モダンなプラグイン開発環境として提供されているのが、<a href="https://skpm.io/">skpm</a>というプラグインマネージャです。Node.jsのエコシステムを利用しており、Babelで書いたものをWebpackでビルド、Sketchにて実行できるES5相当のJavaScriptにPolyfillしてくれます。</p>
 <p>また、Sketch用のNodeモジュールがあり、今回は<a href="https://github.com/skpm/sketch-module-web-view">sketch-module-web-view</a>というUIをWebView（HTML + CSS + JavaScript）で構築するためのモジュールを使って進めました。</p>
 <h2 id="開発環境の準備">開発環境の準備</h2>
@@ -66,8 +71,8 @@
 </code></pre></div><p>skpmがインストールできたら、テンプレートを指定してWebViewモジュール込みでスケルトンを生成します。</p>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">$ skpm create my-plugin --template<span class="o">=</span>skpm/with-webview
 </code></pre></div><p>次のメッセージが表示されれば、インストール終了です。これでSketchを立ち上げて「my-plugin」を実行すれば、WebViewのウィンドウが立ち上がるようになります。</p>
-<!-- raw HTML omitted -->
-<p><!-- raw HTML omitted -->ちなみにSketchプラグインフォルダには、ビルドされたプラグインのエイリアスが作成されていますので、開発環境からコピーする必要はありません。<!-- raw HTML omitted --></p>
+<p class="media"><img src="../../../assets/img/2018/making-sketch-plugin-ui-with-webview/my-plugin-running.png" alt=""></p>
+<p><small>ちなみにSketchプラグインフォルダには、ビルドされたプラグインのエイリアスが作成されていますので、開発環境からコピーする必要はありません。</small></p>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">✔ Done!
 
 
@@ -86,7 +91,7 @@ To publish the plugin:
 <p>Sketchは起動時しかプラグインを読み込みません。したがって、プラグインの内部が変更になっても再読み込みしないため、変更を反映するために再起動が必要です。さすがにそれでは面倒なので、UserDefaultsの設定を変更し、常時再読み込みするようにしておきます（元の設定に戻すには、最後の<code>YES</code>を<code>NO</code>にして実行します）。</p>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">defaults write ~/Library/Preferences/com.bohemiancoding.sketch3.plist AlwaysReloadScript -bool YES
 </code></pre></div><h3 id="watchとログ">watchとログ</h3>
-<p>開発を進めるにあたって、ファイルを更新したら勝手にビルドされるよう、次のコマンドを実行してwatchしておきましょう。<!-- raw HTML omitted -->ちなみに<code>npm run start</code>をすると、ファイル更新時にプラグインも実行してくれますが、WebViewが絡んでいるとSketchが落ちます……<!-- raw HTML omitted --></p>
+<p>開発を進めるにあたって、ファイルを更新したら勝手にビルドされるよう、次のコマンドを実行してwatchしておきましょう。<small>ちなみに<code>npm run start</code>をすると、ファイル更新時にプラグインも実行してくれますが、WebViewが絡んでいるとSketchが落ちます……</small></p>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">$ <span class="nb">cd</span> my-plugin // ディレクトリへ移動
 $ npm run watch
 </code></pre></div><p>また、次のコマンドを実行しておくと、自動的にログを取得してくれます（コンソール.appの代替）。</p>
@@ -136,7 +141,7 @@ $ npm run watch
 <span class="p">})</span>
 </code></pre></div><h2 id="webviewのデバッグ">WebViewのデバッグ</h2>
 <p>Safariの「開発」を有効にしておくと、「開発 → 自分のマシン名 → WebViewのHTMLで設定しているタイトル」を選択することで、いつものインスペクタでデバッグが可能です。</p>
-<!-- raw HTML omitted -->
+<p class="media"><img src="../../../assets/img/2018/making-sketch-plugin-ui-with-webview/inspecter-with-safari.png" alt=""></p>
 <p>ただ、WebViewのウィンドウはSketchに属している関係でアクティブにならないため、ちょっと使いづらいです。</p>
 <h2 id="webviewを使うときの注意点">WebViewを使うときの注意点</h2>
 <h3 id="sketchからwebviewへなぜか値が渡らない問題">SketchからWebViewへなぜか値が渡らない問題</h3>

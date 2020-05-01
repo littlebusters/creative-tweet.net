@@ -74,7 +74,9 @@
 </ol>
 <h2 id="hugoの準備">Hugoの準備</h2>
 <p>Hugoは、Go言語で作られたStatic Site Generatorです。Go言語自体のインストールは不要で、各プラットフォームのパッケージをインストールすれば使うことができます。</p>
-<!-- raw HTML omitted -->
+<ul class="links">
+	<li><a href="https://gohugo.io/">Hugo - https://gohugo.io/</a></li>
+</ul>
 <p>OSXをお使いでHomebrewがインストールされていれば、次のコマンドでもインストール可能です。</p>
 <pre><code>$ brew install hugo
 </code></pre><p>Hugoでは初期化したりビルドインサーバーを立ち上げたりと、多少なりともターミナルでの操作が必須です。とはいえ、そこまで難しい操作はなく、ターミナルの操作に多少慣れていれば十分に扱えるでしょう。</p>
@@ -84,7 +86,9 @@
 <p>新しいサイトではリソースの位置を変更したため、それに合わせてSublime Textの［Find → Find in Files&hellip;］でディレクトリを指定して一括で書き換えました。</p>
 <h2 id="テンプレート作成">テンプレート作成</h2>
 <p>テンプレート（いわゆるテーマ）については、他のStatic Site Generatorと同じように、テンプレートファイルを作成し、その中にスクリプトを埋め込んでいきます。</p>
-<!-- raw HTML omitted -->
+<ul class="links">
+	<li><a href="http://gohugo.io/overview/introduction/">Hugo Documents</a></li>
+</ul>
 <p>今回はHTMLを使って記述しましたが、Go言語のHTMLテンプレートエンジンである<a href="https://github.com/yosssi/ace">Ace</a>や<a href="https://github.com/eknkc/amber">Amber</a>を使って、JadeやSlimのように記述することもできるようです。</p>
 <p>作成方法などの詳細を書くと長くなってしまいますので割愛しますが、例えば<a href="http://creative-tweet.net/blog.html">ブログ記事一覧</a>はこんな感じになっています。</p>
 <pre><code>{{ partial &quot;head.html&quot; }}
@@ -119,7 +123,9 @@
 </code></pre><p>また次のコマンドを実行するとビルドインサーバーが立ち上がり、表示されたURLへアクセスすればブラウザで確認することができます。ちなみに<code>--watch</code>は、ライブリロードを有効にするオプションです。</p>
 <pre><code>$ hugo server --watch
 </code></pre><h2 id="ビルドとデプロイ環境の準備">ビルドとデプロイ環境の準備</h2>
-<!-- raw HTML omitted -->
+<p class="media">
+	<img src="../../../assets/img/2015/good-bye-wordpress/generate-and-build-deploy.png" alt="">
+</p>
 <p>最終的にビルドしてサーバーへデプロイ（アップロード）する必要があります。</p>
 <p>以前はWordPressを使ったり、WordPress管理外ファイルはFTPSを使っていたり、ファイルの管理面でも一部だけGitで管理していたりと、いろいろとごちゃごちゃになっていました。</p>
 <p>今回は、サイト全体をGitで管理しつつ最終的なデプロイもこれに絡めてやってみようということで、CIサービスの<a href="http://wercker.com/">wercker</a>と<a href="http://deploybot.com/">DEPLOYBOT</a>を使うことにしました。</p>
@@ -139,7 +145,7 @@
 <p>まずは「サイトにログインして、画像をアップして…」という煩わしさがありません。ローカルでほぼ完結するので、プレビューが正しければ、そのままプッシュするだけというのは、実にラクです。</p>
 <p>コメント欄をつけられないなどの課題もありますが、そこは外部サービスに頼ったりすれば解決できるかなと。</p>
 <p>自サイトを実験の場として使っているかたもいらっしゃると思うので、手放しでおすすめできるものではありませんが、記事を書くだけというのであれば、移行を考えてもいいんじゃないでしょうか。</p>
-<!-- raw HTML omitted -->
+<hr class="postscript">
 <p>今回割愛した部分は、また日を置いて公開できればと思います。</p>
 		</div>
 
