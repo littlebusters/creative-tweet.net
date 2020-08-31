@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>https://creative-tweet.net/</loc>
+    <lastmod>2019-12-30T23:28:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://creative-tweet.net/tags/earphone.html</loc>
     <lastmod>2019-12-30T23:28:00+09:00</lastmod>
   </url>
@@ -40,11 +45,6 @@
   <url>
     <loc>https://creative-tweet.net/blog/2019/12/repair-parrot-zik-1.html</loc>
     <lastmod>2019-12-30T23:28:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://creative-tweet.net/tags/advent-calendar.html</loc>
-    <lastmod>2018-12-15T14:20:00+09:00</lastmod>
   </url>
   
   <url>
@@ -423,11 +423,6 @@
   </url>
   
   <url>
-    <loc>https://creative-tweet.net/</loc>
-    <lastmod>2015-04-29T09:30:00+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://creative-tweet.net/sketch-3-basics/</loc>
     <lastmod>2015-04-29T09:30:00+09:00</lastmod>
   </url>
@@ -479,11 +474,6 @@
   
   <url>
     <loc>https://creative-tweet.net/tags/amplifizr.html</loc>
-    <lastmod>2014-12-23T09:30:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://creative-tweet.net/tags/css.html</loc>
     <lastmod>2014-12-23T09:30:00+09:00</lastmod>
   </url>
   
@@ -793,6 +783,11 @@
   </url>
   
   <url>
+    <loc>https://creative-tweet.net/tags/css.html</loc>
+    <lastmod>2013-10-21T09:30:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://creative-tweet.net/tags/preprocessor.html</loc>
     <lastmod>2013-10-21T09:30:00+09:00</lastmod>
   </url>
@@ -945,6 +940,11 @@
   <url>
     <loc>https://creative-tweet.net/blog/2013/01/material-download.html</loc>
     <lastmod>2013-01-15T09:30:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://creative-tweet.net/tags/advent-calendar.html</loc>
+    <lastmod>2012-12-10T09:30:00+09:00</lastmod>
   </url>
   
   <url>

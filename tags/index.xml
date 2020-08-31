@@ -30,15 +30,6 @@
     </item>
     
     <item>
-      <title>Advent Calendar</title>
-      <link>https://creative-tweet.net/tags/advent-calendar.html</link>
-      <pubDate>Sat, 15 Dec 2018 14:20:00 +0900</pubDate>
-      
-      <guid>https://creative-tweet.net/tags/advent-calendar.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Advent Calendar 2018</title>
       <link>https://creative-tweet.net/tags/advent-calendar-2018.html</link>
       <pubDate>Sat, 15 Dec 2018 14:20:00 +0900</pubDate>
@@ -183,15 +174,6 @@
     </item>
     
     <item>
-      <title>CSS</title>
-      <link>https://creative-tweet.net/tags/css.html</link>
-      <pubDate>Tue, 23 Dec 2014 09:30:00 +0900</pubDate>
-      
-      <guid>https://creative-tweet.net/tags/css.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>CSS Nite</title>
       <link>https://creative-tweet.net/tags/css-nite.html</link>
       <pubDate>Tue, 23 Dec 2014 09:30:00 +0900</pubDate>
@@ -318,6 +300,15 @@
     </item>
     
     <item>
+      <title>CSS</title>
+      <link>https://creative-tweet.net/tags/css.html</link>
+      <pubDate>Mon, 21 Oct 2013 09:30:00 +0900</pubDate>
+      
+      <guid>https://creative-tweet.net/tags/css.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Preprocessor</title>
       <link>https://creative-tweet.net/tags/preprocessor.html</link>
       <pubDate>Mon, 21 Oct 2013 09:30:00 +0900</pubDate>
@@ -440,6 +431,15 @@
       <pubDate>Tue, 15 Jan 2013 09:30:00 +0900</pubDate>
       
       <guid>https://creative-tweet.net/tags/presskit.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Advent Calendar</title>
+      <link>https://creative-tweet.net/tags/advent-calendar.html</link>
+      <pubDate>Mon, 10 Dec 2012 09:30:00 +0900</pubDate>
+      
+      <guid>https://creative-tweet.net/tags/advent-calendar.html</guid>
       <description></description>
     </item>
     
